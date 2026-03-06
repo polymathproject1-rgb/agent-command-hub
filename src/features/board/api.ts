@@ -92,6 +92,12 @@ export async function fetchBoardTasks(): Promise<BoardTask[]> {
   }));
 }
 
+const normalizePriority = (value?: string | null) => {
+  const v = (value || 'medium').toLowerCase();
+  if (v === 'urgent' || v === 'high' || v === 'medium' || v === 'low') return v;
+  return 'medium';
+};
+
 export async function createTask(input: {
   title: string;
   description?: string;
@@ -104,7 +110,7 @@ export async function createTask(input: {
     .insert({
       title: input.title,
       description: input.description || null,
-      priority: input.priority,
+      priority: normalizePriority(input.priority),
       board_column_id: input.board_column_id,
       due_date: input.due_date || null,
       created_by_bujji: false,
@@ -117,7 +123,12 @@ export async function createTask(input: {
 }
 
 export async function updateTask(taskId: string, patch: Partial<TaskRow>) {
-  const { error } = await supabase.from('tasks').update(patch).eq('id', taskId);
+  const payload: Partial<TaskRow> = { ...patch };
+  if (typeof payload.priority === 'string') {
+    payload.priority = normalizePriority(payload.priority);
+  }
+
+  const { error } = await supabase.from('tasks').update(payload).eq('id', taskId);
   if (error) throw error;
 }
 
