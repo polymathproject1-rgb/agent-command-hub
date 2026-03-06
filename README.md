@@ -50,6 +50,27 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## Supabase setup
+
+1. Copy env template:
+
+```sh
+cp .env.example .env.local
+```
+
+2. Fill values in `.env.local`:
+
+```env
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
+```
+
+3. SQL bootstrap files are in `supabase/`:
+- `supabase/migrations/20260306080000_init_tasks.sql`
+- `supabase/seed.sql`
+
+Run those in Supabase SQL editor (or via Supabase CLI once installed and linked).
+
 ## What technologies are used for this project?
 
 This project is built with:

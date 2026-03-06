@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { tasks as initialTasks, Task } from '@/data/mockData';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { tasks as fallbackTasks, Task } from '@/data/mockData';
 import GlassCard from '@/components/GlassCard';
+import { fetchTasks, updateTaskColumn } from '@/features/tasks/api';
 
 const columns = [
   { id: 'todo' as const, label: 'To Do', color: 'text-muted-foreground', glowColor: 'bg-muted-foreground' },
@@ -24,17 +26,57 @@ const priorityColors: Record<string, string> = {
   urgent: 'bg-destructive',
 };
 
+const TASKS_QUERY_KEY = ['tasks'];
+
 const TaskBoard = () => {
-  const [tasks, setTasks] = useState<Task[]>(initialTasks);
   const [draggedTask, setDraggedTask] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: TASKS_QUERY_KEY,
+    queryFn: fetchTasks,
+  });
+
+  const tasks = useMemo(() => {
+    if (isError) return fallbackTasks;
+    return data ?? [];
+  }, [data, isError]);
+
+  const moveTaskMutation = useMutation({
+    mutationFn: ({ taskId, column }: { taskId: string; column: Task['column'] }) =>
+      updateTaskColumn(taskId, column),
+    onMutate: async ({ taskId, column }) => {
+      await queryClient.cancelQueries({ queryKey: TASKS_QUERY_KEY });
+      const previous = queryClient.getQueryData<Task[]>(TASKS_QUERY_KEY);
+
+      queryClient.setQueryData<Task[]>(TASKS_QUERY_KEY, (current) =>
+        (current ?? []).map((t) => (t.id === taskId ? { ...t, column } : t)),
+      );
+
+      return { previous };
+    },
+    onError: (_error, _vars, context) => {
+      if (context?.previous) {
+        queryClient.setQueryData(TASKS_QUERY_KEY, context.previous);
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: TASKS_QUERY_KEY });
+    },
+  });
 
   const handleDragStart = (taskId: string) => setDraggedTask(taskId);
 
   const handleDrop = (columnId: Task['column']) => {
     if (!draggedTask) return;
-    setTasks(prev => prev.map(t => t.id === draggedTask ? { ...t, column: columnId } : t));
+
+    moveTaskMutation.mutate({ taskId: draggedTask, column: columnId });
     setDraggedTask(null);
   };
+
+  if (isLoading) {
+    return <div className="text-sm text-muted-foreground">Loading tasks...</div>;
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto">
