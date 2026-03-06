@@ -98,6 +98,16 @@ const normalizePriority = (value?: string | null) => {
   return 'medium';
 };
 
+const toLegacyColumnKey = (columnName?: string | null) => {
+  const key = (columnName || '').toLowerCase();
+  if (key === 'to do') return 'todo';
+  if (key === 'doing') return 'doing';
+  if (key === 'needs input') return 'needs-input';
+  if (key === 'done') return 'done';
+  if (key === 'canceled') return 'done';
+  return 'todo';
+};
+
 export async function createTask(input: {
   title: string;
   description?: string;
@@ -105,6 +115,12 @@ export async function createTask(input: {
   board_column_id: string;
   due_date?: string | null;
 }) {
+  const { data: columnRow } = await supabase
+    .from('board_columns')
+    .select('name')
+    .eq('id', input.board_column_id)
+    .maybeSingle();
+
   const { data, error } = await supabase
     .from('tasks')
     .insert({
@@ -112,6 +128,9 @@ export async function createTask(input: {
       description: input.description || null,
       priority: normalizePriority(input.priority),
       board_column_id: input.board_column_id,
+      column_key: toLegacyColumnKey(columnRow?.name),
+      agent_name: 'Rei',
+      agent_emoji: '🦐',
       due_date: input.due_date || null,
       created_by_bujji: false,
     })
@@ -123,9 +142,18 @@ export async function createTask(input: {
 }
 
 export async function updateTask(taskId: string, patch: Partial<TaskRow>) {
-  const payload: Partial<TaskRow> = { ...patch };
+  const payload: Partial<TaskRow> & { column_key?: string } = { ...patch };
   if (typeof payload.priority === 'string') {
     payload.priority = normalizePriority(payload.priority);
+  }
+
+  if (payload.board_column_id) {
+    const { data: columnRow } = await supabase
+      .from('board_columns')
+      .select('name')
+      .eq('id', payload.board_column_id)
+      .maybeSingle();
+    payload.column_key = toLegacyColumnKey(columnRow?.name);
   }
 
   const { error } = await supabase.from('tasks').update(payload).eq('id', taskId);
