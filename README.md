@@ -50,26 +50,38 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## Supabase setup
+## ClawBuddy API setup (multi-agent ready)
 
-1. Copy env template:
+This app uses a **Vite dev proxy** so the webhook secret stays server-side during development.
+
+1. Create local env for Vite server + frontend:
 
 ```sh
-cp .env.example .env.local
+cp .env.local.example .env.local
+cp .env.server.example .env
 ```
 
-2. Fill values in `.env.local`:
+2. Set values in `.env` (server-only at dev time):
 
 ```env
-VITE_SUPABASE_URL=...
-VITE_SUPABASE_ANON_KEY=...
+CLAWBUDDY_API_URL=https://.../functions/v1/ai-tasks
+CLAWBUDDY_WEBHOOK_SECRET=...
 ```
 
-3. SQL bootstrap files are in `supabase/`:
-- `supabase/migrations/20260306080000_init_tasks.sql`
-- `supabase/seed.sql`
+3. Set values in `.env.local`:
 
-Run those in Supabase SQL editor (or via Supabase CLI once installed and linked).
+```env
+VITE_AGENT_NAME=Rei
+VITE_AGENT_EMOJI=🦐
+```
+
+4. Start frontend (proxy is built in):
+
+```sh
+npm run dev
+```
+
+Optional: `server/index.mjs` is included if you want a standalone backend proxy later.
 
 ## What technologies are used for this project?
 

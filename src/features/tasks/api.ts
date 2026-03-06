@@ -1,42 +1,92 @@
-import { supabase } from '@/integrations/supabase/client';
 import type { Task } from '@/data/mockData';
 
-export type DbTaskRow = {
-  id: string;
-  title: string;
-  agent_name: string;
-  agent_emoji: string;
-  priority: Task['priority'];
-  progress: number | null;
-  column_key: Task['column'];
-  created_at: string;
+const DEFAULT_AGENT_NAME = import.meta.env.VITE_AGENT_NAME || 'Rei';
+const DEFAULT_AGENT_EMOJI = import.meta.env.VITE_AGENT_EMOJI || '🦐';
+
+const toUiColumn = (column?: string): Task['column'] => {
+  switch ((column || '').toLowerCase()) {
+    case 'to_do':
+      return 'todo';
+    case 'doing':
+      return 'doing';
+    case 'needs_input':
+      return 'needs-input';
+    case 'done':
+      return 'done';
+    case 'canceled':
+      return 'done';
+    default:
+      return 'todo';
+  }
 };
 
-const mapRowToTask = (row: DbTaskRow): Task => ({
-  id: row.id,
-  title: row.title,
-  agentName: row.agent_name,
-  agentEmoji: row.agent_emoji,
-  priority: row.priority,
-  progress: row.progress ?? undefined,
-  column: row.column_key,
+const toApiColumn = (column: Task['column']) => {
+  switch (column) {
+    case 'todo':
+      return 'to_do';
+    case 'doing':
+      return 'doing';
+    case 'needs-input':
+      return 'needs_input';
+    case 'done':
+      return 'done';
+    default:
+      return 'to_do';
+  }
+};
+
+type ApiTask = {
+  id: string;
+  title: string;
+  priority?: string;
+  column?: string;
+  assignees?: { name?: string }[];
+};
+
+const mapTask = (t: ApiTask): Task => ({
+  id: t.id,
+  title: t.title,
+  priority: (t.priority?.toLowerCase() as Task['priority']) || 'medium',
+  column: toUiColumn(t.column),
+  agentName: t.assignees?.[0]?.name || 'Unassigned',
+  agentEmoji: '🤖',
 });
 
-export async function fetchTasks(): Promise<Task[]> {
-  const { data, error } = await supabase
-    .from('tasks')
-    .select('*')
-    .order('created_at', { ascending: true });
+async function callClawBuddy(payload: Record<string, unknown>) {
+  const res = await fetch('/api/clawbuddy', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...payload,
+      agent_name: DEFAULT_AGENT_NAME,
+      agent_emoji: DEFAULT_AGENT_EMOJI,
+    }),
+  });
 
-  if (error) throw error;
-  return (data as DbTaskRow[]).map(mapRowToTask);
+  const data = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    throw new Error(data?.error || 'ClawBuddy API request failed');
+  }
+
+  return data;
+}
+
+export async function fetchTasks(): Promise<Task[]> {
+  const json = await callClawBuddy({
+    request_type: 'task',
+    action: 'list',
+  });
+
+  const tasks = Array.isArray(json?.tasks) ? json.tasks : [];
+  return tasks.map(mapTask);
 }
 
 export async function updateTaskColumn(taskId: string, column: Task['column']) {
-  const { error } = await supabase
-    .from('tasks')
-    .update({ column_key: column })
-    .eq('id', taskId);
-
-  if (error) throw error;
+  await callClawBuddy({
+    request_type: 'task',
+    action: 'update',
+    task_id: taskId,
+    column: toApiColumn(column),
+  });
 }
