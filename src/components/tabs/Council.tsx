@@ -24,7 +24,11 @@ const Council = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: si * 0.1 }}
-          className="p-0 overflow-hidden"
+          className={`p-0 overflow-hidden transition-shadow duration-300 ${
+            session.status === 'active'
+              ? 'shadow-[0_0_20px_hsl(187_92%_43%/0.15)]'
+              : 'shadow-[0_0_15px_hsl(160_84%_39%/0.1)]'
+          }`}
         >
           <button
             className="w-full p-5 flex items-start gap-3 text-left hover:bg-secondary/20 transition-colors"
@@ -32,14 +36,14 @@ const Council = () => {
           >
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
-                <Badge variant="outline" className={session.status === 'active' ? 'border-accent/40 text-accent' : 'border-primary/40 text-primary'}>
+                <Badge variant="outline" className={session.status === 'active' ? 'border-accent/40 text-accent animate-glow-pulse' : 'border-primary/40 text-primary'}>
                   {session.status}
                 </Badge>
                 <h3 className="text-sm font-medium text-foreground">{session.question}</h3>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
                 {session.participants.map((p) => (
-                  <span key={p.name} className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/50 text-xs text-secondary-foreground">
+                  <span key={p.name} className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/50 text-xs text-secondary-foreground border border-transparent hover:border-primary/20 transition-colors">
                     {p.emoji} {p.name}
                     <span className="font-mono text-muted-foreground">{p.sent}/{p.limit}</span>
                     {statusIcons[p.status]}
@@ -68,7 +72,7 @@ const Council = () => {
                   {session.messages.map((msg, mi) => (
                     <motion.div
                       key={mi}
-                      className="flex items-start gap-3 p-3 rounded-lg bg-secondary/20"
+                      className="flex items-start gap-3 p-3 rounded-lg glass-card border border-secondary/50"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: mi * 0.08 }}
@@ -77,7 +81,7 @@ const Council = () => {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
                           <span className="text-sm font-medium text-foreground">{msg.name}</span>
-                          <span className="text-xs font-mono text-muted-foreground">#{msg.number}</span>
+                          <span className="text-xs font-mono text-primary bg-primary/10 px-1.5 rounded">#{msg.number}</span>
                           <span className="text-xs text-muted-foreground font-mono ml-auto">
                             {formatDistanceToNow(parseISO(msg.timestamp), { addSuffix: true })}
                           </span>

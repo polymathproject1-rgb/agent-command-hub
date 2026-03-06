@@ -4,11 +4,18 @@ import { tasks as initialTasks, Task } from '@/data/mockData';
 import GlassCard from '@/components/GlassCard';
 
 const columns = [
-  { id: 'todo' as const, label: 'To Do', color: 'text-muted-foreground' },
-  { id: 'doing' as const, label: 'Doing', color: 'text-accent' },
-  { id: 'needs-input' as const, label: 'Needs Input', color: 'text-warning' },
-  { id: 'done' as const, label: 'Done', color: 'text-primary' },
+  { id: 'todo' as const, label: 'To Do', color: 'text-muted-foreground', glowColor: 'bg-muted-foreground' },
+  { id: 'doing' as const, label: 'Doing', color: 'text-accent', glowColor: 'bg-accent' },
+  { id: 'needs-input' as const, label: 'Needs Input', color: 'text-warning', glowColor: 'bg-warning' },
+  { id: 'done' as const, label: 'Done', color: 'text-primary', glowColor: 'bg-primary' },
 ];
+
+const priorityBorder: Record<string, string> = {
+  low: 'priority-border-low',
+  medium: 'priority-border-medium',
+  high: 'priority-border-high',
+  urgent: 'priority-border-urgent',
+};
 
 const priorityColors: Record<string, string> = {
   low: 'bg-muted-foreground',
@@ -46,13 +53,15 @@ const TaskBoard = () => {
             <span className="text-xs font-mono text-muted-foreground bg-secondary rounded-full px-2 py-0.5">
               {tasks.filter(t => t.column === col.id).length}
             </span>
+            <div className="flex-1" />
+            <div className={`h-0.5 w-8 rounded-full ${col.glowColor} opacity-40`} />
           </div>
           <div className="space-y-3">
             {tasks.filter(t => t.column === col.id).map((task, i) => (
               <GlassCard
                 key={task.id}
                 hover
-                className="cursor-grab active:cursor-grabbing p-4"
+                className={`cursor-grab active:cursor-grabbing p-4 ${priorityBorder[task.priority]}`}
                 draggable
                 onDragStart={() => handleDragStart(task.id)}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -70,7 +79,12 @@ const TaskBoard = () => {
                   {task.progress !== undefined && (
                     <div className="flex items-center gap-2">
                       <div className="w-16 h-1.5 rounded-full bg-secondary overflow-hidden">
-                        <div className="h-full rounded-full bg-primary" style={{ width: `${task.progress}%` }} />
+                        <motion.div
+                          className="h-full rounded-full bg-primary"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${task.progress}%` }}
+                          transition={{ duration: 0.8, delay: 0.3 }}
+                        />
                       </div>
                       <span className="text-xs font-mono text-muted-foreground">{task.progress}%</span>
                     </div>
