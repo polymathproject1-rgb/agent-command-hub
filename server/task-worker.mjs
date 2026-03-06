@@ -101,6 +101,22 @@ async function dispatchNewest(columns, tasks) {
   return { ...task, board_column_id: columns.doing };
 }
 
+async function ensureAdopted(task) {
+  const { data, error } = await supabase
+    .from('task_events')
+    .select('id')
+    .eq('task_id', task.id)
+    .eq('event_type', 'dispatch')
+    .limit(1)
+    .maybeSingle();
+  if (error) throw error;
+  if (!data) {
+    await logEvent(task.id, 'dispatch', 'Worker adopted existing assigned task into active execution loop.', {
+      adopted: true,
+    });
+  }
+}
+
 async function tick() {
   const columns = await getColumns();
   const tasks = await fetchTasks();
@@ -115,6 +131,7 @@ async function tick() {
 
   const ts = new Date().toISOString();
   if (active) {
+    await ensureAdopted(active);
     console.log(`[${ts}] active=${active.title} (${active.id})`);
   } else {
     console.log(`[${ts}] no active assigned task`);
