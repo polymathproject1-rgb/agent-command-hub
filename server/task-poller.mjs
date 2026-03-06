@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import { exec } from 'node:child_process';
+import { createClient } from '@supabase/supabase-js';
 
 dotenv.config({ path: '.env.server' });
 dotenv.config();
@@ -10,8 +11,15 @@ const AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 const INTERVAL_MS = Number(process.env.TASK_POLL_INTERVAL_MS || 60_000);
 const ENABLE_DESKTOP_NOTIFICATIONS = process.env.ENABLE_DESKTOP_NOTIFICATIONS === 'true';
+const POLL_SOURCE = process.env.TASK_POLL_SOURCE || 'supabase'; // supabase | clawbuddy
 
-if (!API_URL || !WEBHOOK_SECRET) {
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+
+const useSupabase = POLL_SOURCE === 'supabase' && !!SUPABASE_URL && !!SUPABASE_ANON_KEY;
+const supabase = useSupabase ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+if (!useSupabase && (!API_URL || !WEBHOOK_SECRET)) {
   console.error('[task-poller] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET');
   process.exit(1);
 }
@@ -25,7 +33,7 @@ function desktopNotify(title, message) {
   exec(`osascript -e 'display notification "${safeMsg}" with title "${safeTitle}"'`);
 }
 
-async function call(payload) {
+async function callClawBuddy(payload) {
   const res = await fetch(API_URL, {
     method: 'POST',
     headers: {
@@ -54,33 +62,49 @@ async function call(payload) {
   return json;
 }
 
-function extractTasks(response) {
-  return Array.isArray(response?.tasks) ? response.tasks : [];
-}
+async function fetchSupabaseTasks() {
+  const { data: tasks, error } = await supabase
+    .from('tasks')
+    .select('id,title,created_at,task_assignees(display_name),board_columns(name)')
+    .order('created_at', { ascending: false });
 
-function taskId(task) {
-  return task?.id || task?.task_id || null;
+  if (error) throw error;
+
+  return (tasks || []).map((t) => ({
+    id: t.id,
+    title: t.title,
+    created_at: t.created_at,
+    assignees: (t.task_assignees || []).map((a) => ({ name: a.display_name })),
+    column: { name: t.board_columns?.name || null },
+  }));
 }
 
 async function pollOnce() {
-  const [todo, needsInput] = await Promise.all([
-    call({ request_type: 'task', action: 'list', column: 'to_do' }),
-    call({ request_type: 'task', action: 'list', column: 'needs_input' }),
-  ]);
+  let all = [];
 
-  const todoTasks = extractTasks(todo);
-  const needsInputTasks = extractTasks(needsInput);
-  const all = [...todoTasks, ...needsInputTasks];
+  if (useSupabase) {
+    all = await fetchSupabaseTasks();
+  } else {
+    const [todo, needsInput] = await Promise.all([
+      callClawBuddy({ request_type: 'task', action: 'list', column: 'to_do' }),
+      callClawBuddy({ request_type: 'task', action: 'list', column: 'needs_input' }),
+    ]);
+    all = [...(Array.isArray(todo?.tasks) ? todo.tasks : []), ...(Array.isArray(needsInput?.tasks) ? needsInput.tasks : [])];
+  }
 
   const newTasks = [];
   for (const t of all) {
-    const id = taskId(t);
+    const id = t?.id || t?.task_id;
     if (!id) continue;
     if (!seenTaskIds.has(id)) {
       seenTaskIds.add(id);
       newTasks.push(t);
     }
   }
+
+  const assignedToRei = all.filter((t) =>
+    Array.isArray(t.assignees) && t.assignees.some((a) => String(a.name || '').toLowerCase().includes('rei')),
+  );
 
   const ts = new Date().toISOString();
   if (newTasks.length) {
@@ -91,11 +115,19 @@ async function pollOnce() {
     console.log(`[${ts}] 🚨 NEW TASKS: +${newTasks.length} | ${preview}`);
     desktopNotify('ClawBuddy: New Task', `${newTasks.length} new task(s) detected`);
   } else {
-    console.log(`[${ts}] no new tasks | to_do=${todoTasks.length} needs_input=${needsInputTasks.length}`);
+    console.log(`[${ts}] no new tasks | total=${all.length}`);
+  }
+
+  if (assignedToRei.length) {
+    const top = assignedToRei[0];
+    console.log(`[${ts}] 🎯 ASSIGNED TO REI: ${top.title} (${top.id})`);
+    desktopNotify('Assigned to Rei', top.title || 'New assigned task');
   }
 }
 
-console.log(`[task-poller] started | interval=${INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`);
+console.log(
+  `[task-poller] started | source=${useSupabase ? 'supabase' : 'clawbuddy'} | interval=${INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`,
+);
 await pollOnce().catch((err) => console.error('[task-poller] initial poll failed:', err.message));
 setInterval(() => {
   pollOnce().catch((err) => console.error('[task-poller] poll failed:', err.message));
