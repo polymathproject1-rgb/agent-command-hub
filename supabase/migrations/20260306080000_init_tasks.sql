@@ -13,12 +13,14 @@ create table if not exists public.tasks (
 
 alter table public.tasks enable row level security;
 
-create policy if not exists "Allow anon read tasks"
+drop policy if exists "Allow anon read tasks" on public.tasks;
+create policy "Allow anon read tasks"
 on public.tasks
 for select
 using (true);
 
-create policy if not exists "Allow anon update tasks"
+drop policy if exists "Allow anon update tasks" on public.tasks;
+create policy "Allow anon update tasks"
 on public.tasks
 for update
 using (true)
