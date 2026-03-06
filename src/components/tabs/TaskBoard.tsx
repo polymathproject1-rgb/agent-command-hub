@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Plus, User, Trash2 } from 'lucide-react';
+import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -28,6 +29,7 @@ import {
   updateSubtask,
   updateTask,
 } from '@/features/board/api';
+import { fetchAssignableNames } from '@/features/platform/api';
 
 const PRIORITY_COLORS: Record<string, string> = {
   urgent: 'bg-red-500/20 text-red-300 border-red-500/40',
@@ -380,6 +382,7 @@ function TaskDetailsDialog({
   const [dueDate, setDueDate] = useState(task.due_date || '');
   const [newAssignee, setNewAssignee] = useState('');
   const [newSubtask, setNewSubtask] = useState('');
+  const { data: assignable = [] } = useQuery({ queryKey: ['assignable-names'], queryFn: fetchAssignableNames });
 
   const html = DOMPurify.sanitize(marked.parse(description || '') as string);
 
@@ -448,14 +451,30 @@ function TaskDetailsDialog({
               ))}
             </div>
             <div className="flex gap-2">
-              <Input value={newAssignee} onChange={(e) => setNewAssignee(e.target.value)} placeholder="Add assignee by name" />
+              <Select value={newAssignee} onValueChange={setNewAssignee}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select assignee" />
+                </SelectTrigger>
+                <SelectContent>
+                  {assignable.map((a) => (
+                    <SelectItem key={`${a.type}-${a.name}`} value={a.name}>
+                      {a.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <Button
                 type="button"
                 onClick={async () => {
                   if (!newAssignee.trim()) return;
-                  await addAssignee(task.id, newAssignee.trim());
-                  setNewAssignee('');
-                  await onMutationDone();
+                  try {
+                    await addAssignee(task.id, newAssignee.trim());
+                    setNewAssignee('');
+                    await onMutationDone();
+                    toast.success('Assignee added');
+                  } catch (e) {
+                    toast.error((e as Error).message || 'Failed to add assignee');
+                  }
                 }}
               >
                 Add
@@ -513,9 +532,14 @@ function TaskDetailsDialog({
 
             <Button
               onClick={async () => {
-                await onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
-                await onMutationDone();
-                onClose();
+                try {
+                  await onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
+                  await onMutationDone();
+                  toast.success('Task saved');
+                  onClose();
+                } catch (e) {
+                  toast.error((e as Error).message || 'Failed to save task');
+                }
               }}
             >
               Save Changes

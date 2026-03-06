@@ -43,6 +43,14 @@ export async function fetchAgents() {
   return (data ?? []) as AgentRecord[];
 }
 
+export async function fetchAssignableNames() {
+  const [humans, agents] = await Promise.all([fetchHumans(), fetchAgents()]);
+  return [
+    ...humans.map((h) => ({ type: 'human' as const, name: h.display_name })),
+    ...agents.map((a) => ({ type: 'agent' as const, name: a.name })),
+  ].sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export async function registerAgent(name: string, emoji?: string) {
   const { error } = await supabase.from('agents').insert({ name, emoji: emoji || null, self_registered: true });
   if (error) throw error;
