@@ -306,7 +306,7 @@ function NewTaskForm({
   loading,
 }: {
   columns: BoardColumn[];
-  onCreate: (payload: { title: string; description?: string; priority: string; board_column_id: string; due_date?: string | null }) => void;
+  onCreate: (payload: { title: string; description?: string; priority: string; board_column_id: string; due_date?: string | null; assignees?: string[] }) => void;
   loading: boolean;
 }) {
   const [title, setTitle] = useState('');
@@ -314,13 +314,23 @@ function NewTaskForm({
   const [priority, setPriority] = useState('Medium');
   const [columnId, setColumnId] = useState('');
   const [dueDate, setDueDate] = useState('');
+  const [selectedAssignee, setSelectedAssignee] = useState('');
+  const [assignees, setAssignees] = useState<string[]>([]);
+  const { data: assignable = [] } = useQuery({ queryKey: ['assignable-names'], queryFn: fetchAssignableNames });
 
   return (
     <form
       className="space-y-3"
       onSubmit={(e) => {
         e.preventDefault();
-        onCreate({ title, description, priority, board_column_id: columnId || columns[0]?.id, due_date: dueDate || null });
+        onCreate({
+          title,
+          description,
+          priority,
+          board_column_id: columnId || columns[0]?.id,
+          due_date: dueDate || null,
+          assignees,
+        });
       }}
     >
       <Input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
@@ -353,6 +363,46 @@ function NewTaskForm({
         </Select>
       </div>
       <Input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
+      <div className="space-y-2">
+        <p className="text-sm text-zinc-300">Assignees</p>
+        {assignees.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {assignees.map((name) => (
+              <Badge key={name} variant="secondary" className="gap-2">
+                {name}
+                <button type="button" onClick={() => setAssignees((current) => current.filter((n) => n !== name))}>
+                  ×
+                </button>
+              </Badge>
+            ))}
+          </div>
+        )}
+        <div className="flex gap-2">
+          <Select value={selectedAssignee} onValueChange={setSelectedAssignee}>
+            <SelectTrigger>
+              <SelectValue placeholder="Select assignee" />
+            </SelectTrigger>
+            <SelectContent>
+              {assignable.map((a) => (
+                <SelectItem key={`${a.type}-${a.name}`} value={a.name}>
+                  {a.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Button
+            type="button"
+            variant="secondary"
+            onClick={() => {
+              if (!selectedAssignee || assignees.includes(selectedAssignee)) return;
+              setAssignees((current) => [...current, selectedAssignee]);
+              setSelectedAssignee('');
+            }}
+          >
+            Add
+          </Button>
+        </div>
+      </div>
       <Button type="submit" disabled={loading || !title || (!columnId && !columns[0]?.id)}>
         {loading ? 'Creating...' : 'Create Task'}
       </Button>

@@ -114,6 +114,7 @@ export async function createTask(input: {
   priority: string;
   board_column_id: string;
   due_date?: string | null;
+  assignees?: string[];
 }) {
   const { data: columnRow } = await supabase
     .from('board_columns')
@@ -138,7 +139,18 @@ export async function createTask(input: {
     .single();
 
   if (error) throw error;
-  return data as { id: string };
+
+  const task = data as { id: string };
+
+  const assignees = Array.from(new Set((input.assignees || []).map((a) => a.trim()).filter(Boolean)));
+  if (assignees.length) {
+    const { error: assigneeError } = await supabase.from('task_assignees').insert(
+      assignees.map((display_name) => ({ task_id: task.id, display_name })),
+    );
+    if (assigneeError) throw assigneeError;
+  }
+
+  return task;
 }
 
 export async function updateTask(taskId: string, patch: Partial<TaskRow>) {
