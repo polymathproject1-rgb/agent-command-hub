@@ -9,6 +9,7 @@ import TaskBoard from '@/components/tabs/TaskBoard';
 import AILog from '@/components/tabs/AILog';
 import Council from '@/components/tabs/Council';
 import MeetingIntelligence from '@/components/tabs/MeetingIntelligence';
+import IntegrationGuide from '@/components/tabs/IntegrationGuide';
 
 const sections: Record<string, React.ComponentType> = {
   command: CommandDeck,
@@ -17,6 +18,7 @@ const sections: Record<string, React.ComponentType> = {
   log: AILog,
   council: Council,
   meetings: MeetingIntelligence,
+  guide: IntegrationGuide,
 };
 
 const Index = () => {

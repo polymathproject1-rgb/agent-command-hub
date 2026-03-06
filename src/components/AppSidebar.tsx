@@ -1,4 +1,4 @@
-import { Zap, Users, ClipboardList, FileText, Landmark, Mic, ChevronLeft } from 'lucide-react';
+import { Zap, Users, ClipboardList, FileText, Landmark, Mic, BookOpen } from 'lucide-react';
 import { agents } from '@/data/mockData';
 import {
   Sidebar,
@@ -21,6 +21,7 @@ const navItems = [
   { id: 'log', label: 'AI Log', icon: FileText },
   { id: 'council', label: 'Council', icon: Landmark },
   { id: 'meetings', label: 'Meetings', icon: Mic },
+  { id: 'guide', label: 'Integration Guide', icon: BookOpen },
 ];
 
 const statusColors: Record<string, string> = {
