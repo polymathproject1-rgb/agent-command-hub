@@ -10,6 +10,7 @@ const WEBHOOK_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
 const AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 const INTERVAL_MS = Number(process.env.TASK_POLL_INTERVAL_MS || 60_000);
+const PROGRESS_UPDATE_INTERVAL_MS = Number(process.env.PROGRESS_UPDATE_INTERVAL_MS || 480_000); // 8 min default
 const ENABLE_DESKTOP_NOTIFICATIONS = process.env.ENABLE_DESKTOP_NOTIFICATIONS === 'true';
 const POLL_SOURCE = process.env.TASK_POLL_SOURCE || 'supabase'; // supabase | clawbuddy
 
@@ -25,6 +26,7 @@ if (!useSupabase && (!API_URL || !WEBHOOK_SECRET)) {
 }
 
 const seenTaskIds = new Set();
+const lastProgressPingByTask = new Map();
 
 function desktopNotify(title, message) {
   if (!ENABLE_DESKTOP_NOTIFICATIONS) return;
@@ -79,6 +81,35 @@ async function fetchSupabaseTasks() {
   }));
 }
 
+function isAssignedToRei(task) {
+  return Array.isArray(task.assignees) && task.assignees.some((a) => String(a.name || '').toLowerCase().includes('rei'));
+}
+
+function isDoing(task) {
+  return String(task?.column?.name || '').toLowerCase() === 'doing';
+}
+
+function maybeEmitProgressPings(tasks) {
+  const now = Date.now();
+  const active = tasks.filter((t) => isAssignedToRei(t) && isDoing(t));
+
+  for (const t of active) {
+    const last = lastProgressPingByTask.get(t.id) || 0;
+    if (now - last >= PROGRESS_UPDATE_INTERVAL_MS) {
+      const ts = new Date().toISOString();
+      console.log(`[${ts}] 📈 8-MIN PROGRESS UPDATE REQUIRED | task=${t.title} (${t.id})`);
+      desktopNotify('Progress Update Due', `${t.title}`);
+      lastProgressPingByTask.set(t.id, now);
+    }
+  }
+
+  // cleanup finished tasks from tracking map
+  const activeIds = new Set(active.map((t) => t.id));
+  for (const id of lastProgressPingByTask.keys()) {
+    if (!activeIds.has(id)) lastProgressPingByTask.delete(id);
+  }
+}
+
 async function pollOnce() {
   let all = [];
 
@@ -102,9 +133,7 @@ async function pollOnce() {
     }
   }
 
-  const assignedToRei = all.filter((t) =>
-    Array.isArray(t.assignees) && t.assignees.some((a) => String(a.name || '').toLowerCase().includes('rei')),
-  );
+  const assignedToRei = all.filter((t) => isAssignedToRei(t));
 
   const ts = new Date().toISOString();
   if (newTasks.length) {
@@ -121,12 +150,13 @@ async function pollOnce() {
   if (assignedToRei.length) {
     const top = assignedToRei[0];
     console.log(`[${ts}] 🎯 ASSIGNED TO REI: ${top.title} (${top.id})`);
-    desktopNotify('Assigned to Rei', top.title || 'New assigned task');
   }
+
+  maybeEmitProgressPings(all);
 }
 
 console.log(
-  `[task-poller] started | source=${useSupabase ? 'supabase' : 'clawbuddy'} | interval=${INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`,
+  `[task-poller] started | source=${useSupabase ? 'supabase' : 'clawbuddy'} | poll=${INTERVAL_MS}ms | progress=${PROGRESS_UPDATE_INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`,
 );
 await pollOnce().catch((err) => console.error('[task-poller] initial poll failed:', err.message));
 setInterval(() => {
