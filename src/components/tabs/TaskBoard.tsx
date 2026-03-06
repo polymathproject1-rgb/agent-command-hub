@@ -78,7 +78,7 @@ function progress(subtasks: BoardTask['subtasks']) {
 
 const TaskBoard = () => {
   const queryClient = useQueryClient();
-  const [activeTask, setActiveTask] = useState<BoardTask | null>(null);
+  const [activeTaskId, setActiveTaskId] = useState<string | null>(null);
   const [draggedTaskId, setDraggedTaskId] = useState<string | null>(null);
   const [newDialogOpen, setNewDialogOpen] = useState(false);
 
@@ -122,11 +122,12 @@ const TaskBoard = () => {
     mutationFn: deleteTask,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: queryKeys.tasks });
-      setActiveTask(null);
+      setActiveTaskId(null);
     },
   });
 
   const columnTasks = (columnId: string) => tasks.filter((t) => t.board_column_id === columnId);
+  const activeTask = activeTaskId ? tasks.find((t) => t.id === activeTaskId) || null : null;
 
   const onDrop = (columnId: string) => {
     if (!draggedTaskId) return;
@@ -198,7 +199,7 @@ const TaskBoard = () => {
                   <TaskCard
                     key={task.id}
                     task={task}
-                    onOpen={() => setActiveTask(task)}
+                    onOpen={() => setActiveTaskId(task.id)}
                     onDragStart={() => setDraggedTaskId(task.id)}
                   />
                 ))}
@@ -213,10 +214,16 @@ const TaskBoard = () => {
           <TaskDetailsDialog
             task={activeTask}
             columns={columns}
-            onClose={() => setActiveTask(null)}
-            onUpdate={(patch) => updateTaskMutation.mutate({ taskId: activeTask.id, patch: patch as never })}
-            onDelete={() => deleteTaskMutation.mutate(activeTask.id)}
-            onMutationDone={() => queryClient.invalidateQueries({ queryKey: queryKeys.tasks })}
+            onClose={() => setActiveTaskId(null)}
+            onUpdate={async (patch) => {
+              await updateTaskMutation.mutateAsync({ taskId: activeTask.id, patch: patch as never });
+            }}
+            onDelete={async () => {
+              await deleteTaskMutation.mutateAsync(activeTask.id);
+            }}
+            onMutationDone={async () => {
+              await queryClient.invalidateQueries({ queryKey: queryKeys.tasks });
+            }}
           />
         )}
       </AnimatePresence>
@@ -362,9 +369,9 @@ function TaskDetailsDialog({
   task: BoardTask;
   columns: BoardColumn[];
   onClose: () => void;
-  onUpdate: (patch: Partial<BoardTask>) => void;
-  onDelete: () => void;
-  onMutationDone: () => void;
+  onUpdate: (patch: Partial<BoardTask>) => Promise<void>;
+  onDelete: () => Promise<void>;
+  onMutationDone: () => Promise<void>;
 }) {
   const [title, setTitle] = useState(task.title);
   const [description, setDescription] = useState(task.description || '');
@@ -432,7 +439,7 @@ function TaskDetailsDialog({
                     type="button"
                     onClick={async () => {
                       await removeAssignee(a.id);
-                      onMutationDone();
+                      await onMutationDone();
                     }}
                   >
                     ×
@@ -448,7 +455,7 @@ function TaskDetailsDialog({
                   if (!newAssignee.trim()) return;
                   await addAssignee(task.id, newAssignee.trim());
                   setNewAssignee('');
-                  onMutationDone();
+                  await onMutationDone();
                 }}
               >
                 Add
@@ -465,7 +472,7 @@ function TaskDetailsDialog({
                     checked={s.completed}
                     onCheckedChange={async (checked) => {
                       await updateSubtask(s.id, { completed: !!checked });
-                      onMutationDone();
+                      await onMutationDone();
                     }}
                   />
                   <span className={`text-sm ${s.completed ? 'line-through text-zinc-500' : ''}`}>{s.title}</span>
@@ -474,7 +481,7 @@ function TaskDetailsDialog({
                     className="ml-auto text-zinc-400 hover:text-zinc-200"
                     onClick={async () => {
                       await deleteSubtask(s.id);
-                      onMutationDone();
+                      await onMutationDone();
                     }}
                   >
                     ×
@@ -490,7 +497,7 @@ function TaskDetailsDialog({
                   if (!newSubtask.trim()) return;
                   await addSubtask(task.id, newSubtask.trim());
                   setNewSubtask('');
-                  onMutationDone();
+                  await onMutationDone();
                 }}
               >
                 Add
@@ -505,8 +512,9 @@ function TaskDetailsDialog({
             </Button>
 
             <Button
-              onClick={() => {
-                onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
+              onClick={async () => {
+                await onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
+                await onMutationDone();
                 onClose();
               }}
             >
