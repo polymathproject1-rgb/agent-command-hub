@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { SidebarProvider } from '@/components/ui/sidebar';
+import AppSidebar from '@/components/AppSidebar';
 import Header from '@/components/Header';
 import CommandDeck from '@/components/tabs/CommandDeck';
 import AgentProfiles from '@/components/tabs/AgentProfiles';
@@ -9,60 +10,45 @@ import AILog from '@/components/tabs/AILog';
 import Council from '@/components/tabs/Council';
 import MeetingIntelligence from '@/components/tabs/MeetingIntelligence';
 
-const tabs = [
-  { id: 'command', label: '⚡ Command Deck' },
-  { id: 'agents', label: '🤖 Agents' },
-  { id: 'tasks', label: '📋 Task Board' },
-  { id: 'log', label: '📝 AI Log' },
-  { id: 'council', label: '🏛️ Council' },
-  { id: 'meetings', label: '🎙️ Meetings' },
-];
+const sections: Record<string, React.ComponentType> = {
+  command: CommandDeck,
+  agents: AgentProfiles,
+  tasks: TaskBoard,
+  log: AILog,
+  council: Council,
+  meetings: MeetingIntelligence,
+};
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState('command');
+  const [activeSection, setActiveSection] = useState('command');
+  const ActiveComponent = sections[activeSection] || CommandDeck;
 
   return (
-    <div className="min-h-screen bg-background p-4 md:p-6 lg:p-8 max-w-[1400px] mx-auto space-y-6">
-      <Header />
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full bg-background">
+        <AppSidebar activeSection={activeSection} onSectionChange={setActiveSection} />
 
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="glass-card h-auto p-1.5 flex flex-wrap gap-1 bg-transparent border border-secondary">
-          {tabs.map((tab, i) => (
-            <motion.div
-              key={tab.id}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-            >
-              <TabsTrigger
-                value={tab.id}
-                className="text-xs sm:text-sm font-medium font-heading data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-none rounded-lg px-3 py-2 text-muted-foreground hover:text-foreground transition-colors"
+        <div className="flex-1 flex flex-col min-w-0">
+          <div className="p-3">
+            <Header activeSection={activeSection} />
+          </div>
+
+          <main className="flex-1 p-4 md:p-6 overflow-auto">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeSection}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2 }}
               >
-                {tab.label}
-              </TabsTrigger>
-            </motion.div>
-          ))}
-        </TabsList>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="mt-6"
-          >
-            <TabsContent value="command" className="mt-0"><CommandDeck /></TabsContent>
-            <TabsContent value="agents" className="mt-0"><AgentProfiles /></TabsContent>
-            <TabsContent value="tasks" className="mt-0"><TaskBoard /></TabsContent>
-            <TabsContent value="log" className="mt-0"><AILog /></TabsContent>
-            <TabsContent value="council" className="mt-0"><Council /></TabsContent>
-            <TabsContent value="meetings" className="mt-0"><MeetingIntelligence /></TabsContent>
-          </motion.div>
-        </AnimatePresence>
-      </Tabs>
-    </div>
+                <ActiveComponent />
+              </motion.div>
+            </AnimatePresence>
+          </main>
+        </div>
+      </div>
+    </SidebarProvider>
   );
 };
 

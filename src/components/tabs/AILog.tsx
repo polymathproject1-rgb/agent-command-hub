@@ -6,11 +6,11 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { logEntries } from '@/data/mockData';
 import { formatDistanceToNow, parseISO } from 'date-fns';
 
-const categoryStyles: Record<string, { bg: string; text: string }> = {
-  observation: { bg: 'bg-primary/15', text: 'text-primary' },
-  general: { bg: 'bg-muted', text: 'text-muted-foreground' },
-  reminder: { bg: 'bg-warning/15', text: 'text-warning' },
-  fyi: { bg: 'bg-accent/15', text: 'text-accent' },
+const categoryStyles: Record<string, { bg: string; text: string; dot: string }> = {
+  observation: { bg: 'bg-primary/15', text: 'text-primary', dot: 'bg-primary' },
+  general: { bg: 'bg-muted', text: 'text-muted-foreground', dot: 'bg-muted-foreground' },
+  reminder: { bg: 'bg-warning/15', text: 'text-warning', dot: 'bg-warning' },
+  fyi: { bg: 'bg-accent/15', text: 'text-accent', dot: 'bg-accent' },
 };
 
 const AILog = () => {
@@ -37,22 +37,23 @@ const AILog = () => {
       </div>
 
       <ScrollArea className="h-[500px]">
-        <div className="space-y-3 pr-3">
+        <div className="timeline-connector space-y-3 pr-3">
           {filtered.map((entry, i) => {
             const style = categoryStyles[entry.category];
             return (
               <motion.div
                 key={entry.id}
-                className="glass-card p-4 flex items-start gap-3"
+                className="relative glass-card p-4 flex items-start gap-3 glow-border-hover border border-transparent transition-all duration-200"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
+                <div className={`timeline-dot ${style.dot}`} style={{ borderColor: 'currentColor' }} />
                 <span className="text-lg mt-0.5">{entry.agentEmoji}</span>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <span className="text-sm font-medium text-foreground">{entry.agentName}</span>
-                    <Badge variant="outline" className={`text-xs border-0 ${style.bg} ${style.text}`}>
+                    <Badge variant="outline" className={`text-xs border-0 ${style.bg} ${style.text} animate-glow-pulse`}>
                       {entry.category}
                     </Badge>
                   </div>

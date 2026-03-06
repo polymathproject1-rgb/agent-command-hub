@@ -22,15 +22,18 @@ const CommandDeck = () => (
       <MetricCard icon={Clock} label="Avg Response" value="1.2s" trend="-0.3s" index={3} />
     </div>
 
+    {/* Gradient divider */}
+    <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
       <GlassCard className="lg:col-span-3" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
         <h3 className="text-sm font-semibold text-foreground mb-3 font-heading">Recent Activity</h3>
         <ScrollArea className="h-[320px]">
-          <div className="space-y-3 pr-3">
+          <div className="space-y-1 pr-3">
             {activityFeed.map((event, i) => (
               <motion.div
                 key={event.id}
-                className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
+                className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-all duration-200 glow-border-hover border border-transparent cursor-default"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 + i * 0.05 }}
@@ -54,7 +57,7 @@ const CommandDeck = () => (
           {agents.map((agent, i) => (
             <motion.div
               key={agent.id}
-              className="p-3 rounded-lg bg-secondary/30 border border-secondary"
+              className="p-3 rounded-lg bg-secondary/30 border border-secondary glow-border-hover transition-all duration-300"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + i * 0.1 }}

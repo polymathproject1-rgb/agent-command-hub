@@ -80,8 +80,10 @@ const MeetingIntelligence = () => {
         <MetricCard icon={Clock} label="Avg Duration" value={`${avgDuration}m`} index={3} />
       </div>
 
+      <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <GlassCard initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        <GlassCard glow initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
           <h3 className="text-sm font-semibold text-foreground mb-4 font-heading">Meeting Type Distribution</h3>
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
@@ -94,14 +96,14 @@ const MeetingIntelligence = () => {
           </ResponsiveContainer>
         </GlassCard>
 
-        <GlassCard initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+        <GlassCard glow initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
           <h3 className="text-sm font-semibold text-foreground mb-4 font-heading">Monthly Trend</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={monthlyTrend}>
               <XAxis dataKey="month" tick={{ fill: '#9ca3af', fontSize: 12 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: '#9ca3af', fontSize: 12 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={{ backgroundColor: 'rgba(17,24,39,0.9)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#f9fafb' }} />
-              <Bar dataKey="count" fill="#10b981" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="count" fill="hsl(160 84% 39%)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </GlassCard>
@@ -169,7 +171,7 @@ const MeetingIntelligence = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.03 }}
             >
-              <div className="glass-card overflow-hidden">
+              <div className="glass-card overflow-hidden glow-border-hover border border-transparent transition-all duration-200" style={{ borderLeftColor: typeColors[meeting.meeting_type] || 'transparent', borderLeftWidth: '3px' }}>
                 <button
                   className="w-full p-4 flex items-center gap-4 text-left hover:bg-secondary/20 transition-colors"
                   onClick={() => setExpandedId(expandedId === meeting.id ? null : meeting.id)}
@@ -263,12 +265,12 @@ const MeetingIntelligence = () => {
 
                         <div className="flex items-center gap-2 pt-2">
                           {meeting.fathom_url && (
-                            <a href={meeting.fathom_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs hover:bg-primary/20 transition-colors">
+                            <a href={meeting.fathom_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs hover:bg-primary/20 hover:shadow-[0_0_10px_hsl(160_84%_39%/0.2)] transition-all">
                               <ExternalLink size={12} /> Open Recording
                             </a>
                           )}
                           {meeting.share_url && (
-                            <a href={meeting.share_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-accent text-xs hover:bg-accent/20 transition-colors">
+                            <a href={meeting.share_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-accent text-xs hover:bg-accent/20 hover:shadow-[0_0_10px_hsl(187_92%_43%/0.2)] transition-all">
                               <Share2 size={12} /> Share Link
                             </a>
                           )}
