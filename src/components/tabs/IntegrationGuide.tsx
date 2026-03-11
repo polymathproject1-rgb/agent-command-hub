@@ -17,6 +17,7 @@ const DOC_SLUG = 'kanban-api';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const WEBHOOK_SECRET = import.meta.env.VITE_AGENT_COMMAND_WEBHOOK_SECRET || '';
 const AGENT_API_URL = `${SUPABASE_URL}/functions/v1/ai-tasks`;
 
 function CopyButton({ value, label }: { value: string; label?: string }) {
@@ -153,7 +154,7 @@ const IntegrationGuide = () => {
             </p>
             <div className="space-y-2">
               <EnvVarRow name="AGENT_COMMAND_API_URL" value={AGENT_API_URL} />
-              <EnvVarRow name="AGENT_COMMAND_WEBHOOK_SECRET" value="(set in .env.server)" />
+              <EnvVarRow name="AGENT_COMMAND_WEBHOOK_SECRET" value={WEBHOOK_SECRET} secret />
               <EnvVarRow name="SUPABASE_URL" value={SUPABASE_URL} />
               <EnvVarRow name="SUPABASE_ANON_KEY" value={SUPABASE_ANON_KEY} secret />
             </div>
@@ -326,7 +327,7 @@ x-webhook-secret: $AGENT_COMMAND_WEBHOOK_SECRET`}
               title=".env.server"
               language="env"
               code={`AGENT_COMMAND_API_URL=${AGENT_API_URL}
-AGENT_COMMAND_WEBHOOK_SECRET=your-webhook-secret-here`}
+AGENT_COMMAND_WEBHOOK_SECRET=${WEBHOOK_SECRET || 'your-webhook-secret-here'}`}
             />
             <CodeBlock
               title="Minimal Node.js agent"
