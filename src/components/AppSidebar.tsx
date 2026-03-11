@@ -45,11 +45,11 @@ const AppSidebar = ({ activeSection, onSectionChange }: AppSidebarProps) => {
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3 overflow-hidden">
           <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-primary/15 shrink-0 glow-primary">
-            <span className="text-xl">🐾</span>
+            <img src="/logo.svg" alt="ACH" className="w-6 h-6" />
           </div>
           {!collapsed && (
             <div className="min-w-0">
-              <h1 className="text-sm font-bold font-heading text-foreground truncate">ClawBuddy</h1>
+              <h1 className="text-sm font-bold font-heading text-foreground truncate">Agent Command Hub</h1>
               <p className="text-[10px] text-muted-foreground font-mono truncate">Command Center</p>
             </div>
           )}

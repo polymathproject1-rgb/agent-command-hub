@@ -7,10 +7,10 @@ import { componentTagger } from 'lovable-tagger';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
-  const clawBuddyUrl = env.CLAWBUDDY_API_URL || '';
-  const clawBuddySecret = env.CLAWBUDDY_WEBHOOK_SECRET || '';
+  const agentApiUrl = env.CLAWBUDDY_API_URL || '';
+  const agentApiSecret = env.CLAWBUDDY_WEBHOOK_SECRET || '';
 
-  const target = clawBuddyUrl ? new URL(clawBuddyUrl) : null;
+  const target = agentApiUrl ? new URL(agentApiUrl) : null;
   const targetOrigin = target ? `${target.protocol}//${target.host}` : undefined;
   const targetPath = target?.pathname || '/functions/v1/ai-tasks';
 
@@ -23,13 +23,13 @@ export default defineConfig(({ mode }) => {
       },
       proxy: targetOrigin
         ? {
-            '/api/clawbuddy': {
+            '/api/agent-tasks': {
               target: targetOrigin,
               changeOrigin: true,
               secure: true,
               rewrite: () => targetPath,
               headers: {
-                ...(clawBuddySecret ? { 'x-webhook-secret': clawBuddySecret } : {}),
+                ...(agentApiSecret ? { 'x-webhook-secret': agentApiSecret } : {}),
               },
             },
           }

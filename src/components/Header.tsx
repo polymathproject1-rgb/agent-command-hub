@@ -35,7 +35,10 @@ const Header = ({ activeSection }: HeaderProps) => {
       <Breadcrumb className="hidden sm:block">
         <BreadcrumbList>
           <BreadcrumbItem>
-            <span className="text-muted-foreground text-xs font-mono">🐾 ClawBuddy</span>
+            <span className="text-muted-foreground text-xs font-mono flex items-center gap-1.5">
+              <img src="/logo.svg" alt="" className="w-4 h-4" />
+              Agent Command Hub
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>

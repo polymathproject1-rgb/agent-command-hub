@@ -50,7 +50,7 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## ClawBuddy API setup (multi-agent ready)
+## Agent API setup (multi-agent ready)
 
 This app uses a **Vite dev proxy** so the webhook secret stays server-side during development.
 

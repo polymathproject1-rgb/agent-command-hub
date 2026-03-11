@@ -10,13 +10,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const CLAWBUDDY_API_URL = process.env.CLAWBUDDY_API_URL;
-const CLAWBUDDY_WEBHOOK_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
+const AGENT_API_URL = process.env.CLAWBUDDY_API_URL;
+const AGENT_API_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
 const DEFAULT_AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const DEFAULT_AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 
-if (!CLAWBUDDY_API_URL || !CLAWBUDDY_WEBHOOK_SECRET) {
-  console.warn('[clawbuddy] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET');
+if (!AGENT_API_URL || !AGENT_API_SECRET) {
+  console.warn('[agent-hub] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET in env');
 }
 
 function withAgent(payload) {
@@ -27,16 +27,16 @@ function withAgent(payload) {
   };
 }
 
-async function callClawBuddy(payload) {
-  if (!CLAWBUDDY_API_URL || !CLAWBUDDY_WEBHOOK_SECRET) {
+async function callAgentAPI(payload) {
+  if (!AGENT_API_URL || !AGENT_API_SECRET) {
     throw new Error('Missing server env: CLAWBUDDY_API_URL / CLAWBUDDY_WEBHOOK_SECRET');
   }
 
-  const res = await fetch(CLAWBUDDY_API_URL, {
+  const res = await fetch(AGENT_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-webhook-secret': CLAWBUDDY_WEBHOOK_SECRET,
+      'x-webhook-secret': AGENT_API_SECRET,
     },
     body: JSON.stringify(withAgent(payload)),
   });
@@ -50,7 +50,7 @@ async function callClawBuddy(payload) {
   }
 
   if (!res.ok) {
-    const error = new Error(`ClawBuddy API error (${res.status})`);
+    const error = new Error(`Agent API error (${res.status})`);
     error.details = data;
     throw error;
   }
@@ -62,9 +62,9 @@ app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
 
-app.post('/api/clawbuddy', async (req, res) => {
+app.post('/api/agent-tasks', async (req, res) => {
   try {
-    const data = await callClawBuddy(req.body || {});
+    const data = await callAgentAPI(req.body || {});
     res.json(data);
   } catch (err) {
     res.status(500).json({
@@ -81,7 +81,7 @@ app.get('/api/tasks', async (req, res) => {
       action: 'list',
       ...(req.query.column ? { column: req.query.column } : {}),
     };
-    const data = await callClawBuddy(payload);
+    const data = await callAgentAPI(payload);
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message, details: err.details || null });
@@ -90,7 +90,7 @@ app.get('/api/tasks', async (req, res) => {
 
 app.post('/api/tasks', async (req, res) => {
   try {
-    const data = await callClawBuddy({ request_type: 'task', action: 'create', ...req.body });
+    const data = await callAgentAPI({ request_type: 'task', action: 'create', ...req.body });
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message, details: err.details || null });
@@ -99,7 +99,7 @@ app.post('/api/tasks', async (req, res) => {
 
 app.patch('/api/tasks/:taskId', async (req, res) => {
   try {
-    const data = await callClawBuddy({
+    const data = await callAgentAPI({
       request_type: 'task',
       action: 'update',
       task_id: req.params.taskId,
@@ -113,7 +113,7 @@ app.patch('/api/tasks/:taskId', async (req, res) => {
 
 app.post('/api/tasks/:taskId/assign', async (req, res) => {
   try {
-    const data = await callClawBuddy({
+    const data = await callAgentAPI({
       request_type: 'assignee',
       action: 'assign',
       task_id: req.params.taskId,
@@ -127,5 +127,5 @@ app.post('/api/tasks/:taskId/assign', async (req, res) => {
 
 const port = Number(process.env.PORT || 8787);
 app.listen(port, () => {
-  console.log(`[clawbuddy-api] listening on http://localhost:${port}`);
+  console.log(`[agent-hub-api] listening on http://localhost:${port}`);
 });

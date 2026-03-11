@@ -52,8 +52,8 @@ const mapTask = (t: ApiTask): Task => ({
   agentEmoji: '🤖',
 });
 
-async function callClawBuddy(payload: Record<string, unknown>) {
-  const res = await fetch('/api/clawbuddy', {
+async function callAgentAPI(payload: Record<string, unknown>) {
+  const res = await fetch('/api/agent-tasks', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -66,14 +66,14 @@ async function callClawBuddy(payload: Record<string, unknown>) {
   const data = await res.json().catch(() => ({}));
 
   if (!res.ok) {
-    throw new Error(data?.error || 'ClawBuddy API request failed');
+    throw new Error(data?.error || 'Agent API request failed');
   }
 
   return data;
 }
 
 export async function fetchTasks(): Promise<Task[]> {
-  const json = await callClawBuddy({
+  const json = await callAgentAPI({
     request_type: 'task',
     action: 'list',
   });
@@ -83,7 +83,7 @@ export async function fetchTasks(): Promise<Task[]> {
 }
 
 export async function updateTaskColumn(taskId: string, column: Task['column']) {
-  await callClawBuddy({
+  await callAgentAPI({
     request_type: 'task',
     action: 'update',
     task_id: taskId,

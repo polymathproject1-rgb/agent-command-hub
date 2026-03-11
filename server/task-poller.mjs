@@ -5,14 +5,14 @@ import { createClient } from '@supabase/supabase-js';
 dotenv.config({ path: '.env.server' });
 dotenv.config();
 
-const API_URL = process.env.CLAWBUDDY_API_URL;
+const API_URL = process.env.CLAWBUDDY_API_URL;         // env key kept for backward compat
 const WEBHOOK_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
 const AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 const INTERVAL_MS = Number(process.env.TASK_POLL_INTERVAL_MS || 60_000);
 const PROGRESS_UPDATE_INTERVAL_MS = Number(process.env.PROGRESS_UPDATE_INTERVAL_MS || 480_000); // 8 min default
 const ENABLE_DESKTOP_NOTIFICATIONS = process.env.ENABLE_DESKTOP_NOTIFICATIONS === 'true';
-const POLL_SOURCE = process.env.TASK_POLL_SOURCE || 'supabase'; // supabase | clawbuddy
+const POLL_SOURCE = process.env.TASK_POLL_SOURCE || 'supabase'; // supabase | api
 
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
@@ -21,7 +21,7 @@ const useSupabase = POLL_SOURCE === 'supabase' && !!SUPABASE_URL && !!SUPABASE_A
 const supabase = useSupabase ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
 if (!useSupabase && (!API_URL || !WEBHOOK_SECRET)) {
-  console.error('[task-poller] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET');
+  console.error('[task-poller] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET in env');
   process.exit(1);
 }
 
@@ -35,7 +35,7 @@ function desktopNotify(title, message) {
   exec(`osascript -e 'display notification "${safeMsg}" with title "${safeTitle}"'`);
 }
 
-async function callClawBuddy(payload) {
+async function callAgentAPI(payload) {
   const res = await fetch(API_URL, {
     method: 'POST',
     headers: {
@@ -117,8 +117,8 @@ async function pollOnce() {
     all = await fetchSupabaseTasks();
   } else {
     const [todo, needsInput] = await Promise.all([
-      callClawBuddy({ request_type: 'task', action: 'list', column: 'to_do' }),
-      callClawBuddy({ request_type: 'task', action: 'list', column: 'needs_input' }),
+      callAgentAPI({ request_type: 'task', action: 'list', column: 'to_do' }),
+      callAgentAPI({ request_type: 'task', action: 'list', column: 'needs_input' }),
     ]);
     all = [...(Array.isArray(todo?.tasks) ? todo.tasks : []), ...(Array.isArray(needsInput?.tasks) ? needsInput.tasks : [])];
   }
@@ -142,7 +142,7 @@ async function pollOnce() {
       .map((t) => t.title || '(untitled task)')
       .join(' | ');
     console.log(`[${ts}] 🚨 NEW TASKS: +${newTasks.length} | ${preview}`);
-    desktopNotify('ClawBuddy: New Task', `${newTasks.length} new task(s) detected`);
+    desktopNotify('Agent Command Hub: New Task', `${newTasks.length} new task(s) detected`);
   } else {
     console.log(`[${ts}] no new tasks | total=${all.length}`);
   }
@@ -156,7 +156,7 @@ async function pollOnce() {
 }
 
 console.log(
-  `[task-poller] started | source=${useSupabase ? 'supabase' : 'clawbuddy'} | poll=${INTERVAL_MS}ms | progress=${PROGRESS_UPDATE_INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`,
+  `[task-poller] started | source=${useSupabase ? 'supabase' : 'api'} | poll=${INTERVAL_MS}ms | progress=${PROGRESS_UPDATE_INTERVAL_MS}ms | desktop_notify=${ENABLE_DESKTOP_NOTIFICATIONS}`,
 );
 await pollOnce().catch((err) => console.error('[task-poller] initial poll failed:', err.message));
 setInterval(() => {

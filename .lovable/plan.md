@@ -4,7 +4,7 @@
 
 ## Overview
 
-Transform ClawBuddy from a tabbed single-page dashboard into a sidebar-driven SaaS application with enhanced glass-morphism, glow effects, and premium interactions throughout.
+Transform Agent Command Hub from a tabbed single-page dashboard into a sidebar-driven SaaS application with enhanced glass-morphism, glow effects, and premium interactions throughout.
 
 ## Architecture Change
 
@@ -33,7 +33,7 @@ New:
 
 ### 1. New: `src/components/AppSidebar.tsx`
 - Collapsible sidebar using shadcn `Sidebar` component
-- Top: 🐾 ClawBuddy logo + branding with emerald glow
+- Top: Agent Command Hub logo + branding with emerald glow
 - Navigation items for all 6 sections (Command Deck, Agents, Tasks, AI Log, Council, Meetings) with Lucide icons and active state highlighting
 - Bottom section: mini agent status panel (3 dots showing active/idle/error)
 - Glass-morphic background, border-right glow accent
