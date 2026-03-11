@@ -84,6 +84,145 @@ const IntegrationGuide = () => {
   const [docContent, setDocContent] = useState('');
   const [activeTab, setActiveTab] = useState<'api' | 'registry' | 'docs'>('api');
 
+  const fullGuideText = `# Agent Command Hub — Integration Guide
+
+## Environment Variables
+
+AGENT_COMMAND_API_URL=${AGENT_API_URL}
+AGENT_COMMAND_WEBHOOK_SECRET=${WEBHOOK_SECRET}
+SUPABASE_URL=${SUPABASE_URL}
+SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
+## API Endpoint
+
+All task operations use a single POST endpoint:
+
+POST ${AGENT_API_URL}
+Content-Type: application/json
+x-webhook-secret: ${WEBHOOK_SECRET}
+
+## List Tasks
+
+{
+  "request_type": "task",
+  "action": "list",
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+Filter by column (to_do, doing, needs_input, done, canceled):
+
+{
+  "request_type": "task",
+  "action": "list",
+  "column": "to_do",
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+## Create Task
+
+{
+  "request_type": "task",
+  "action": "create",
+  "title": "Build the landing page",
+  "priority": "high",
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+Priority values: low, medium, high, critical
+
+## Update Task (move column, change title/priority)
+
+{
+  "request_type": "task",
+  "action": "update",
+  "task_id": "uuid-of-the-task",
+  "column": "doing",
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+{
+  "request_type": "task",
+  "action": "update",
+  "task_id": "uuid-of-the-task",
+  "title": "Updated task title",
+  "priority": "critical",
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+## Assign Task
+
+{
+  "request_type": "assignee",
+  "action": "assign",
+  "task_id": "uuid-of-the-task",
+  "names": ["Rei", "Kira"],
+  "agent_name": "YourAgent",
+  "agent_emoji": "🤖"
+}
+
+## Full curl Example
+
+curl -X POST "${AGENT_API_URL}" \\
+  -H "Content-Type: application/json" \\
+  -H "x-webhook-secret: ${WEBHOOK_SECRET}" \\
+  -d '{
+    "request_type": "task",
+    "action": "create",
+    "title": "Deploy v2 to production",
+    "priority": "high",
+    "agent_name": "DeployBot",
+    "agent_emoji": "🚀"
+  }'
+
+## Minimal Node.js Agent
+
+const API_URL = process.env.AGENT_COMMAND_API_URL;
+const SECRET = process.env.AGENT_COMMAND_WEBHOOK_SECRET;
+
+async function createTask(title, priority = 'medium') {
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-webhook-secret': SECRET,
+    },
+    body: JSON.stringify({
+      request_type: 'task',
+      action: 'create',
+      title,
+      priority,
+      agent_name: 'MyAgent',
+      agent_emoji: '🤖',
+    }),
+  });
+  return res.json();
+}
+
+async function moveToDoing(taskId) {
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-webhook-secret': SECRET,
+    },
+    body: JSON.stringify({
+      request_type: 'task',
+      action: 'update',
+      task_id: taskId,
+      column: 'doing',
+      agent_name: 'MyAgent',
+      agent_emoji: '🤖',
+    }),
+  });
+  return res.json();
+}
+`;
+
   const addHuman = useMutation({
     mutationFn: () => createHuman(humanName, humanRole),
     onSuccess: () => {
@@ -122,22 +261,25 @@ const IntegrationGuide = () => {
 
   return (
     <div className="space-y-6">
-      {/* Tab navigation */}
-      <div className="flex gap-1 p-1 rounded-lg bg-zinc-900/50 border border-white/10 w-fit">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
-              activeTab === tab.id
-                ? 'bg-primary/15 text-primary shadow-sm'
-                : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
-            }`}
-          >
-            <tab.icon size={14} />
-            {tab.label}
-          </button>
-        ))}
+      {/* Tab navigation + Copy All */}
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        <div className="flex gap-1 p-1 rounded-lg bg-zinc-900/50 border border-white/10 w-fit">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                activeTab === tab.id
+                  ? 'bg-primary/15 text-primary shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
+              }`}
+            >
+              <tab.icon size={14} />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <CopyButton value={fullGuideText} label="Copy Entire Guide" />
       </div>
 
       {/* API Reference Tab */}
