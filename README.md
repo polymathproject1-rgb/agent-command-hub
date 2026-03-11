@@ -64,8 +64,8 @@ cp .env.server.example .env
 2. Set values in `.env` (server-only at dev time):
 
 ```env
-CLAWBUDDY_API_URL=https://.../functions/v1/ai-tasks
-CLAWBUDDY_WEBHOOK_SECRET=...
+AGENT_COMMAND_API_URL=https://.../functions/v1/ai-tasks
+AGENT_COMMAND_WEBHOOK_SECRET=...
 ```
 
 3. Set values in `.env.local`:

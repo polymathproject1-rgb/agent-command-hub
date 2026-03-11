@@ -10,13 +10,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const AGENT_API_URL = process.env.CLAWBUDDY_API_URL;
-const AGENT_API_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
+const AGENT_API_URL = process.env.AGENT_COMMAND_API_URL;
+const AGENT_API_SECRET = process.env.AGENT_COMMAND_WEBHOOK_SECRET;
 const DEFAULT_AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const DEFAULT_AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 
 if (!AGENT_API_URL || !AGENT_API_SECRET) {
-  console.warn('[agent-hub] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET in env');
+  console.warn('[agent-hub] Missing AGENT_COMMAND_API_URL or AGENT_COMMAND_WEBHOOK_SECRET in env');
 }
 
 function withAgent(payload) {
@@ -29,7 +29,7 @@ function withAgent(payload) {
 
 async function callAgentAPI(payload) {
   if (!AGENT_API_URL || !AGENT_API_SECRET) {
-    throw new Error('Missing server env: CLAWBUDDY_API_URL / CLAWBUDDY_WEBHOOK_SECRET');
+    throw new Error('Missing server env: AGENT_COMMAND_API_URL / AGENT_COMMAND_WEBHOOK_SECRET');
   }
 
   const res = await fetch(AGENT_API_URL, {

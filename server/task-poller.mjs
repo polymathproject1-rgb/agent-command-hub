@@ -5,8 +5,8 @@ import { createClient } from '@supabase/supabase-js';
 dotenv.config({ path: '.env.server' });
 dotenv.config();
 
-const API_URL = process.env.CLAWBUDDY_API_URL;         // env key kept for backward compat
-const WEBHOOK_SECRET = process.env.CLAWBUDDY_WEBHOOK_SECRET;
+const API_URL = process.env.AGENT_COMMAND_API_URL;         
+const WEBHOOK_SECRET = process.env.AGENT_COMMAND_WEBHOOK_SECRET;
 const AGENT_NAME = process.env.DEFAULT_AGENT_NAME || 'Rei';
 const AGENT_EMOJI = process.env.DEFAULT_AGENT_EMOJI || '🦐';
 const INTERVAL_MS = Number(process.env.TASK_POLL_INTERVAL_MS || 60_000);
@@ -21,7 +21,7 @@ const useSupabase = POLL_SOURCE === 'supabase' && !!SUPABASE_URL && !!SUPABASE_A
 const supabase = useSupabase ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
 if (!useSupabase && (!API_URL || !WEBHOOK_SECRET)) {
-  console.error('[task-poller] Missing CLAWBUDDY_API_URL or CLAWBUDDY_WEBHOOK_SECRET in env');
+  console.error('[task-poller] Missing AGENT_COMMAND_API_URL or AGENT_COMMAND_WEBHOOK_SECRET in env');
   process.exit(1);
 }
 

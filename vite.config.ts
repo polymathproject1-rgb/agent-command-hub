@@ -7,8 +7,8 @@ import { componentTagger } from 'lovable-tagger';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
-  const agentApiUrl = env.CLAWBUDDY_API_URL || '';
-  const agentApiSecret = env.CLAWBUDDY_WEBHOOK_SECRET || '';
+  const agentApiUrl = env.AGENT_COMMAND_API_URL || '';
+  const agentApiSecret = env.AGENT_COMMAND_WEBHOOK_SECRET || '';
 
   const target = agentApiUrl ? new URL(agentApiUrl) : null;
   const targetOrigin = target ? `${target.protocol}//${target.host}` : undefined;
