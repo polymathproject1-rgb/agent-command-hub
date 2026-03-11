@@ -17,6 +17,7 @@ const sectionLabels: Record<string, string> = {
   log: 'AI Log',
   council: 'Council',
   meetings: 'Meetings',
+  guide: 'Integration Guide',
 };
 
 interface HeaderProps {
