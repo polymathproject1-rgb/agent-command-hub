@@ -18,7 +18,7 @@ const DOC_SLUG = 'kanban-api';
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 const WEBHOOK_SECRET = import.meta.env.VITE_AGENT_COMMAND_WEBHOOK_SECRET || '';
-const AGENT_API_URL = `${SUPABASE_URL}/functions/v1/ai-tasks`;
+const AGENT_API_URL = import.meta.env.VITE_AGENT_COMMAND_API_URL || `${SUPABASE_URL}/functions/v1/ai-tasks`;
 
 function CopyButton({ value, label }: { value: string; label?: string }) {
   const [copied, setCopied] = useState(false);
