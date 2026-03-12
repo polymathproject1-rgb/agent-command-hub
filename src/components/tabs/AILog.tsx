@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { RefreshCw, Loader2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { logEntries } from '@/data/mockData';
+import { useAILogs } from '@/hooks/useAILogs';
 import { formatDistanceToNow, parseISO } from 'date-fns';
 
 const categoryStyles: Record<string, { bg: string; text: string; dot: string }> = {
@@ -11,35 +12,63 @@ const categoryStyles: Record<string, { bg: string; text: string; dot: string }> 
   general: { bg: 'bg-muted', text: 'text-muted-foreground', dot: 'bg-muted-foreground' },
   reminder: { bg: 'bg-warning/15', text: 'text-warning', dot: 'bg-warning' },
   fyi: { bg: 'bg-accent/15', text: 'text-accent', dot: 'bg-accent' },
+  heartbeat: { bg: 'bg-blue-500/15', text: 'text-blue-400', dot: 'bg-blue-400' },
+  task_start: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', dot: 'bg-emerald-400' },
+  task_end: { bg: 'bg-orange-500/15', text: 'text-orange-400', dot: 'bg-orange-400' },
 };
 
+const defaultStyle = { bg: 'bg-muted', text: 'text-muted-foreground', dot: 'bg-muted-foreground' };
+
 const AILog = () => {
+  const { logs, loading, refetch } = useAILogs();
   const [filter, setFilter] = useState('all');
 
-  const filtered = filter === 'all' ? logEntries : logEntries.filter(e => e.category === filter);
+  const filtered = filter === 'all' ? logs : logs.filter(e => e.category === filter);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <Loader2 size={20} className="animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-bold font-heading text-foreground">AI Log</h2>
-        <Select value={filter} onValueChange={setFilter}>
-          <SelectTrigger className="w-[160px] glass-card border-secondary">
-            <SelectValue placeholder="Filter" />
-          </SelectTrigger>
-          <SelectContent className="glass-card border-secondary">
-            <SelectItem value="all">All Categories</SelectItem>
-            <SelectItem value="observation">Observation</SelectItem>
-            <SelectItem value="general">General</SelectItem>
-            <SelectItem value="reminder">Reminder</SelectItem>
-            <SelectItem value="fyi">FYI</SelectItem>
-          </SelectContent>
-        </Select>
+        <div className="flex items-center gap-2">
+          <Select value={filter} onValueChange={setFilter}>
+            <SelectTrigger className="w-[160px] glass-card border-secondary">
+              <SelectValue placeholder="Filter" />
+            </SelectTrigger>
+            <SelectContent className="glass-card border-secondary">
+              <SelectItem value="all">All Categories</SelectItem>
+              <SelectItem value="observation">Observation</SelectItem>
+              <SelectItem value="general">General</SelectItem>
+              <SelectItem value="reminder">Reminder</SelectItem>
+              <SelectItem value="fyi">FYI</SelectItem>
+              <SelectItem value="heartbeat">Heartbeat</SelectItem>
+              <SelectItem value="task_start">Task Start</SelectItem>
+              <SelectItem value="task_end">Task End</SelectItem>
+            </SelectContent>
+          </Select>
+          <button
+            onClick={refetch}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+          >
+            <RefreshCw size={12} /> Refresh
+          </button>
+        </div>
       </div>
 
       <ScrollArea className="h-[500px]">
         <div className="timeline-connector space-y-3 pr-3">
+          {filtered.length === 0 && (
+            <p className="text-sm text-muted-foreground text-center py-8">No log entries yet.</p>
+          )}
           {filtered.map((entry, i) => {
-            const style = categoryStyles[entry.category];
+            const style = categoryStyles[entry.category] || defaultStyle;
             return (
               <motion.div
                 key={entry.id}
@@ -49,17 +78,17 @@ const AILog = () => {
                 transition={{ delay: i * 0.05 }}
               >
                 <div className={`timeline-dot ${style.dot}`} style={{ borderColor: 'currentColor' }} />
-                <span className="text-lg mt-0.5">{entry.agentEmoji}</span>
+                <span className="text-lg mt-0.5">{entry.agent_emoji || '🤖'}</span>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <span className="text-sm font-medium text-foreground">{entry.agentName}</span>
+                    <span className="text-sm font-medium text-foreground">{entry.agent_name}</span>
                     <Badge variant="outline" className={`text-xs border-0 ${style.bg} ${style.text} animate-glow-pulse`}>
                       {entry.category}
                     </Badge>
                   </div>
                   <p className="text-sm text-foreground/80">{entry.message}</p>
                   <p className="text-xs text-muted-foreground font-mono mt-1">
-                    {formatDistanceToNow(parseISO(entry.timestamp), { addSuffix: true })}
+                    {formatDistanceToNow(parseISO(entry.created_at), { addSuffix: true })}
                   </p>
                 </div>
               </motion.div>

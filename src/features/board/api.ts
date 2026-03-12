@@ -1,4 +1,4 @@
-import { supabase } from '@/integrations/supabase/client';
+import { boardSupabase as supabase } from '@/integrations/supabase/board-client';
 
 export type BoardColumn = {
   id: string;
@@ -115,6 +115,9 @@ export async function createTask(input: {
   board_column_id: string;
   due_date?: string | null;
   assignees?: string[];
+  agent_name?: string;
+  agent_emoji?: string;
+  created_by_bujji?: boolean;
 }) {
   const { data: columnRow } = await supabase
     .from('board_columns')
@@ -130,10 +133,10 @@ export async function createTask(input: {
       priority: normalizePriority(input.priority),
       board_column_id: input.board_column_id,
       column_key: toLegacyColumnKey(columnRow?.name),
-      agent_name: 'Rei',
-      agent_emoji: '🦐',
+      agent_name: input.agent_name ?? 'Rei',
+      agent_emoji: input.agent_emoji ?? '🦐',
       due_date: input.due_date || null,
-      created_by_bujji: false,
+      created_by_bujji: input.created_by_bujji ?? false,
     })
     .select('id')
     .single();

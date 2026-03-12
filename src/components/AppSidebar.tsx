@@ -1,4 +1,4 @@
-import { Zap, Users, ClipboardList, FileText, Landmark, Mic, BookOpen } from 'lucide-react';
+import { Zap, Users, ClipboardList, FileText, Workflow, Radar, FileInput, Fingerprint, BookOpen } from 'lucide-react';
 import { agents } from '@/data/mockData';
 import {
   Sidebar,
@@ -19,8 +19,10 @@ const navItems = [
   { id: 'agents', label: 'Agents', icon: Users },
   { id: 'tasks', label: 'Task Board', icon: ClipboardList },
   { id: 'log', label: 'AI Log', icon: FileText },
-  { id: 'council', label: 'Council', icon: Landmark },
-  { id: 'meetings', label: 'Meetings', icon: Mic },
+  { id: 'automations', label: 'Automations', icon: Workflow },
+  { id: 'ops', label: 'OpCenter', icon: Radar },
+  { id: 'forms', label: 'Forms', icon: FileInput },
+  { id: 'identity', label: 'Identity', icon: Fingerprint },
   { id: 'guide', label: 'Integration Guide', icon: BookOpen },
 ];
 

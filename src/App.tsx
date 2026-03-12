@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 import AuthPage from './pages/Auth';
+import PublicForm from './pages/PublicForm';
 import { supabase } from './integrations/supabase/client';
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
+            <Route path="/form/:slug" element={<PublicForm />} />
             <Route path="/auth" element={<AuthPage isAuthed={isAuthed} />} />
             <Route path="/" element={isAuthed ? <Index /> : <Navigate to="/auth" replace />} />
             <Route path="*" element={<NotFound />} />

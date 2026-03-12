@@ -1,7 +1,9 @@
-import { Search, Bell, Settings, User } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Bell, Settings, User, LogOut } from 'lucide-react';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Input } from '@/components/ui/input';
 import { agents } from '@/data/mockData';
+import { supabase } from '@/integrations/supabase/client';
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -9,14 +11,26 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const sectionLabels: Record<string, string> = {
   command: 'Command Deck',
   agents: 'Agents',
   tasks: 'Task Board',
   log: 'AI Log',
-  council: 'Council',
-  meetings: 'Meetings',
+  automations: 'Automations',
+  ops: 'OpCenter',
+  lexa: 'Lexa AI Phone',
+  nova: 'Nova AI SDR',
+  forms: 'Forms',
+  identity: 'Identity',
+  meetings: 'Jane Meeting Assistant',
   guide: 'Integration Guide',
 };
 
@@ -81,9 +95,29 @@ const Header = ({ activeSection }: HeaderProps) => {
         <Settings size={16} />
       </button>
 
-      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/40 to-accent/40 flex items-center justify-center border border-primary/20">
-        <User size={14} className="text-foreground" />
-      </div>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/40 to-accent/40 flex items-center justify-center border border-primary/20 hover:border-primary/40 transition-colors">
+            <User size={14} className="text-foreground" />
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-48 bg-zinc-900 border-white/10">
+          <DropdownMenuItem className="text-xs text-muted-foreground cursor-default focus:bg-transparent">
+            Profile
+          </DropdownMenuItem>
+          <DropdownMenuSeparator className="bg-white/10" />
+          <DropdownMenuItem
+            className="text-xs text-red-400 cursor-pointer focus:text-red-300 focus:bg-red-500/10 gap-2"
+            onClick={async () => {
+              await supabase.auth.signOut();
+              window.location.href = '/';
+            }}
+          >
+            <LogOut size={14} />
+            Log out
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </header>
   );
 };

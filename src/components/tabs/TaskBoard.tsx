@@ -14,7 +14,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { supabase } from '@/integrations/supabase/client';
+import { boardSupabase as supabase } from '@/integrations/supabase/board-client';
 import {
   addAssignee,
   addSubtask,
@@ -164,15 +164,7 @@ const TaskBoard = () => {
         </Dialog>
       </div>
 
-      <div className="md:hidden flex gap-2 overflow-x-auto mb-4 pb-1">
-        {columns.map((c) => (
-          <div key={c.id} className="shrink-0 px-3 py-1.5 rounded-full bg-zinc-800 border border-white/10 text-sm">
-            {c.name}
-          </div>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+      <div className="flex gap-4 overflow-x-auto pb-4">
         {columns.map((column) => {
           const items = columnTasks(column.id);
           const color = column.color || FALLBACK_COLORS[column.name.toLowerCase()] || '#6b7280';
@@ -180,7 +172,7 @@ const TaskBoard = () => {
           return (
             <div
               key={column.id}
-              className="rounded-lg border border-white/10 bg-white/[0.02] min-h-[70vh] flex flex-col"
+              className="rounded-lg border border-white/10 bg-white/[0.02] min-h-[70vh] min-w-[280px] w-[280px] flex-shrink-0 xl:min-w-0 xl:w-auto xl:flex-shrink xl:flex-1 flex flex-col"
               onDragOver={(e) => e.preventDefault()}
               onDrop={() => onDrop(column.id)}
             >

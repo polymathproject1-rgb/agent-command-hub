@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, TrendingUp, CheckSquare, Clock, Search, Globe, Sparkles, ExternalLink, Share2, ChevronDown } from 'lucide-react';
+import { Calendar, TrendingUp, CheckSquare, Clock, Search, Globe, Sparkles, ExternalLink, Share2, ChevronDown, ArrowLeft, RefreshCw, Loader2 } from 'lucide-react';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -9,7 +9,8 @@ import { Switch } from '@/components/ui/switch';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import MetricCard from '@/components/MetricCard';
 import GlassCard from '@/components/GlassCard';
-import { meetings } from '@/data/mockData';
+import { useNavigation } from '@/contexts/NavigationContext';
+import { useFathomMeetings } from '@/hooks/useFathomMeetings';
 import { format, parseISO, formatDistanceToNow, isAfter, subDays } from 'date-fns';
 import DOMPurify from 'dompurify';
 
@@ -20,9 +21,18 @@ const typeColors: Record<string, string> = {
   'external': '#a78bfa',
   'team': '#fb923c',
   'planning': '#2dd4bf',
+  'content': '#f472b6',
+  'review': '#fbbf24',
+  'all-hands': '#e879f9',
+  'interview': '#a3e635',
+  'group': '#94a3b8',
+  'onboarding': '#67e8f9',
+  'workshop': '#f87171',
 };
 
 const MeetingIntelligence = () => {
+  const { navigateTo } = useNavigation();
+  const { meetings, loading, error, refetch } = useFathomMeetings();
   const [searchQuery, setSearchQuery] = useState('');
   const [typeFilter, setTypeFilter] = useState('all');
   const [dateRange, setDateRange] = useState('all');
@@ -33,7 +43,7 @@ const MeetingIntelligence = () => {
 
   const filtered = useMemo(() => {
     let result = [...meetings];
-    if (searchQuery) result = result.filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase()));
+    if (searchQuery) result = result.filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase()) || m.attendees.some(a => a.toLowerCase().includes(searchQuery.toLowerCase())));
     if (typeFilter !== 'all') result = result.filter(m => m.meeting_type === typeFilter);
     if (dateRange !== 'all') {
       const days = parseInt(dateRange);
@@ -47,32 +57,113 @@ const MeetingIntelligence = () => {
       return b.duration_minutes - a.duration_minutes;
     });
     return result;
-  }, [searchQuery, typeFilter, dateRange, hasActionItems, externalOnly, sortBy]);
+  }, [meetings, searchQuery, typeFilter, dateRange, hasActionItems, externalOnly, sortBy]);
+
+  // Compute unique meeting types for filter dropdown
+  const availableTypes = useMemo(() => {
+    const types = new Set(meetings.map(m => m.meeting_type));
+    return Array.from(types).sort();
+  }, [meetings]);
 
   const typeDistribution = useMemo(() => {
     const counts: Record<string, number> = {};
     meetings.forEach(m => { counts[m.meeting_type] = (counts[m.meeting_type] || 0) + 1; });
     return Object.entries(counts).map(([name, value]) => ({ name, value, color: typeColors[name] || '#6b7280' }));
-  }, []);
+  }, [meetings]);
 
   const monthlyTrend = useMemo(() => {
     const counts: Record<string, number> = {};
     meetings.forEach(m => {
-      const month = format(parseISO(m.date), 'MMM');
+      const month = format(parseISO(m.date), 'MMM yyyy');
       counts[month] = (counts[month] || 0) + 1;
     });
-    return Object.entries(counts).map(([month, count]) => ({ month, count }));
-  }, []);
+    return Object.entries(counts)
+      .map(([month, count]) => ({ month, count }))
+      .reverse(); // chronological order
+  }, [meetings]);
 
   const totalMeetings = meetings.length;
   const thisWeek = meetings.filter(m => isAfter(parseISO(m.date), subDays(new Date(), 7))).length;
   const openActions = meetings.reduce((acc, m) => acc + m.action_items.filter(a => !a.done).length, 0);
-  const avgDuration = Math.round(meetings.reduce((acc, m) => acc + m.duration_minutes, 0) / meetings.length);
+  const avgDuration = totalMeetings > 0 ? Math.round(meetings.reduce((acc, m) => acc + m.duration_minutes, 0) / totalMeetings) : 0;
 
   const getInitials = (name: string) => name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
 
+  // Render summary with markdown-to-HTML conversion (headers, bold, lists)
+  const renderSummary = (summary: string) => {
+    if (!summary) return null;
+    let html = summary
+      .replace(/^## (.+)$/gm, '<h3 class="text-xs font-semibold text-primary mt-3 mb-1 uppercase tracking-wider">$1</h3>')
+      .replace(/^### (.+)$/gm, '<h4 class="text-xs font-semibold text-foreground mt-2 mb-1">$1</h4>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/^  - (.+)$/gm, '<li class="ml-4 text-xs text-foreground/70">$1</li>')
+      .replace(/^- (.+)$/gm, '<li class="text-xs text-foreground/70">$1</li>')
+      .replace(/\n/g, '<br/>');
+    // Wrap consecutive <li> in <ul>
+    html = html.replace(/((?:<li[^>]*>.*?<\/li><br\/>)+)/g, '<ul class="list-disc space-y-0.5 my-1">$1</ul>');
+    html = html.replace(/<br\/><\/ul>/g, '</ul>');
+    return (
+      <div
+        className="text-sm text-foreground/80 prose prose-invert prose-sm max-w-none max-h-[300px] overflow-y-auto scrollbar-thin"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(html) }}
+      />
+    );
+  };
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[400px] gap-4">
+        <Loader2 size={32} className="text-primary animate-spin" />
+        <p className="text-sm text-muted-foreground font-mono">Loading meetings from Fathom...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="space-y-6">
+        <button
+          onClick={() => navigateTo('ops')}
+          className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors group"
+        >
+          <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+          <span className="font-mono">OpCenter</span>
+        </button>
+        <GlassCard className="text-center space-y-4">
+          <p className="text-sm text-destructive">Failed to load meetings</p>
+          <p className="text-xs text-muted-foreground font-mono">{error}</p>
+          <button
+            onClick={refetch}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm hover:bg-primary/20 transition-colors"
+          >
+            <RefreshCw size={14} /> Retry
+          </button>
+        </GlassCard>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
+      {/* Back to OpCenter */}
+      <div className="flex items-center justify-between">
+        <button
+          onClick={() => navigateTo('ops')}
+          className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors group"
+        >
+          <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+          <span className="font-mono">OpCenter</span>
+        </button>
+        <button
+          onClick={refetch}
+          className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+          title="Refresh from Fathom"
+        >
+          <RefreshCw size={12} />
+          <span className="font-mono">Refresh</span>
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard icon={Calendar} label="Total Meetings" value={String(totalMeetings)} index={0} />
         <MetricCard icon={TrendingUp} label="This Week" value={String(thisWeek)} index={1} />
@@ -114,7 +205,7 @@ const MeetingIntelligence = () => {
           <div className="relative flex-1">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <Input
-              placeholder="Search meetings..."
+              placeholder="Search meetings or attendees..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-9 bg-secondary/30 border-secondary"
@@ -124,12 +215,9 @@ const MeetingIntelligence = () => {
             <SelectTrigger className="w-[140px] bg-secondary/30 border-secondary"><SelectValue /></SelectTrigger>
             <SelectContent className="glass-card border-secondary">
               <SelectItem value="all">All Types</SelectItem>
-              <SelectItem value="standup">Standup</SelectItem>
-              <SelectItem value="sales">Sales</SelectItem>
-              <SelectItem value="1-on-1">1-on-1</SelectItem>
-              <SelectItem value="team">Team</SelectItem>
-              <SelectItem value="planning">Planning</SelectItem>
-              <SelectItem value="external">External</SelectItem>
+              {availableTypes.map(t => (
+                <SelectItem key={t} value={t}>{t}</SelectItem>
+              ))}
             </SelectContent>
           </Select>
           <Select value={dateRange} onValueChange={setDateRange}>
@@ -159,131 +247,141 @@ const MeetingIntelligence = () => {
             <Switch checked={externalOnly} onCheckedChange={setExternalOnly} />
             External Only
           </label>
+          <span className="text-xs text-muted-foreground font-mono ml-auto">
+            {filtered.length} of {totalMeetings} meetings
+          </span>
         </div>
       </GlassCard>
 
-      <ScrollArea className="h-[600px]">
-        <div className="space-y-3 pr-3">
-          {filtered.map((meeting, i) => (
-            <motion.div
-              key={meeting.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.03 }}
-            >
-              <div className="glass-card overflow-hidden glow-border-hover border border-transparent transition-all duration-200" style={{ borderLeftColor: typeColors[meeting.meeting_type] || 'transparent', borderLeftWidth: '3px' }}>
-                <button
-                  className="w-full p-4 flex items-center gap-4 text-left hover:bg-secondary/20 transition-colors"
-                  onClick={() => setExpandedId(expandedId === meeting.id ? null : meeting.id)}
-                >
-                  <Badge
-                    className="text-xs shrink-0"
-                    style={{ backgroundColor: `${typeColors[meeting.meeting_type] || '#6b7280'}20`, color: typeColors[meeting.meeting_type] || '#6b7280', borderColor: `${typeColors[meeting.meeting_type] || '#6b7280'}40` }}
-                    variant="outline"
+      {filtered.length === 0 ? (
+        <GlassCard className="text-center py-12">
+          <p className="text-sm text-muted-foreground">No meetings match your filters</p>
+        </GlassCard>
+      ) : (
+        <ScrollArea className="h-[600px]">
+          <div className="space-y-3 pr-3">
+            {filtered.map((meeting, i) => (
+              <motion.div
+                key={meeting.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.03 }}
+              >
+                <div className="glass-card overflow-hidden glow-border-hover border border-transparent transition-all duration-200" style={{ borderLeftColor: typeColors[meeting.meeting_type] || 'transparent', borderLeftWidth: '3px' }}>
+                  <button
+                    className="w-full p-4 flex items-center gap-4 text-left hover:bg-secondary/20 transition-colors"
+                    onClick={() => setExpandedId(expandedId === meeting.id ? null : meeting.id)}
                   >
-                    {meeting.meeting_type}
-                  </Badge>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground truncate">{meeting.title}</p>
-                    <p className="text-xs text-muted-foreground font-mono">
-                      {formatDistanceToNow(parseISO(meeting.date), { addSuffix: true })} · {meeting.duration_display}
-                    </p>
-                  </div>
-                  <div className="hidden sm:flex items-center gap-1 shrink-0">
-                    {meeting.attendees.slice(0, 3).map((a, ai) => (
-                      <span
-                        key={ai}
-                        className="flex items-center justify-center w-7 h-7 rounded-full bg-secondary text-xs font-mono text-secondary-foreground -ml-1 first:ml-0 border border-background"
-                        title={a}
-                      >
-                        {getInitials(a)}
-                      </span>
-                    ))}
-                    {meeting.attendees.length > 3 && (
-                      <span className="flex items-center justify-center w-7 h-7 rounded-full bg-secondary text-xs font-mono text-muted-foreground -ml-1 border border-background">
-                        +{meeting.attendees.length - 3}
-                      </span>
-                    )}
-                  </div>
-                  {meeting.action_items.length > 0 && (
-                    <Badge variant="outline" className="shrink-0 border-primary/30 text-primary text-xs">
-                      {meeting.action_items.filter(a => !a.done).length} actions
-                    </Badge>
-                  )}
-                  {meeting.has_external_participants && <Globe size={14} className="text-accent shrink-0" />}
-                  <motion.div animate={{ rotate: expandedId === meeting.id ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                    <ChevronDown size={16} className="text-muted-foreground" />
-                  </motion.div>
-                </button>
-
-                <AnimatePresence>
-                  {expandedId === meeting.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
+                    <Badge
+                      className="text-xs shrink-0"
+                      style={{ backgroundColor: `${typeColors[meeting.meeting_type] || '#6b7280'}20`, color: typeColors[meeting.meeting_type] || '#6b7280', borderColor: `${typeColors[meeting.meeting_type] || '#6b7280'}40` }}
+                      variant="outline"
                     >
-                      <div className="px-4 pb-4 border-t border-secondary pt-4 space-y-4">
-                        <div
-                          className="text-sm text-foreground/80 prose prose-invert prose-sm max-w-none"
-                          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(meeting.summary.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br/>')) }}
-                        />
-
-                        {meeting.action_items.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold text-foreground mb-2 font-heading">Action Items</h4>
-                            <div className="space-y-1.5">
-                              {meeting.action_items.map((item, ai) => (
-                                <div key={ai} className="flex items-center gap-2 text-sm">
-                                  <input type="checkbox" checked={item.done} readOnly className="rounded border-secondary accent-primary" />
-                                  <span className={item.done ? 'line-through text-muted-foreground' : 'text-foreground'}>{item.task}</span>
-                                  <span className="text-xs text-muted-foreground ml-auto font-mono">→ {item.assignee}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <Sparkles size={12} className="text-primary" />
-                          <span>{meeting.ai_insights}</span>
-                        </div>
-
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <span className="font-medium text-foreground">Attendees:</span>
-                          {meeting.attendees.join(', ')}
-                        </div>
-
-                        {meeting.external_domains.length > 0 && (
-                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <Globe size={12} />
-                            <span>External: {meeting.external_domains.join(', ')}</span>
-                          </div>
-                        )}
-
-                        <div className="flex items-center gap-2 pt-2">
-                          {meeting.fathom_url && (
-                            <a href={meeting.fathom_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs hover:bg-primary/20 hover:shadow-[0_0_10px_hsl(160_84%_39%/0.2)] transition-all">
-                              <ExternalLink size={12} /> Open Recording
-                            </a>
-                          )}
-                          {meeting.share_url && (
-                            <a href={meeting.share_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-accent text-xs hover:bg-accent/20 hover:shadow-[0_0_10px_hsl(187_92%_43%/0.2)] transition-all">
-                              <Share2 size={12} /> Share Link
-                            </a>
-                          )}
-                        </div>
-                      </div>
+                      {meeting.meeting_type}
+                    </Badge>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground truncate">{meeting.title}</p>
+                      <p className="text-xs text-muted-foreground font-mono">
+                        {format(parseISO(meeting.date), 'MMM d, yyyy · h:mm a')} · {meeting.duration_display}
+                      </p>
+                    </div>
+                    <div className="hidden sm:flex items-center gap-1 shrink-0">
+                      {meeting.attendees.slice(0, 3).map((a, ai) => (
+                        <span
+                          key={ai}
+                          className="flex items-center justify-center w-7 h-7 rounded-full bg-secondary text-xs font-mono text-secondary-foreground -ml-1 first:ml-0 border border-background"
+                          title={a}
+                        >
+                          {getInitials(a)}
+                        </span>
+                      ))}
+                      {meeting.attendees.length > 3 && (
+                        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-secondary text-xs font-mono text-muted-foreground -ml-1 border border-background">
+                          +{meeting.attendees.length - 3}
+                        </span>
+                      )}
+                    </div>
+                    {meeting.action_items.length > 0 && (
+                      <Badge variant="outline" className="shrink-0 border-primary/30 text-primary text-xs">
+                        {meeting.action_items.filter(a => !a.done).length} actions
+                      </Badge>
+                    )}
+                    {meeting.has_external_participants && <Globe size={14} className="text-accent shrink-0" />}
+                    <motion.div animate={{ rotate: expandedId === meeting.id ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                      <ChevronDown size={16} className="text-muted-foreground" />
                     </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </ScrollArea>
+                  </button>
+
+                  <AnimatePresence>
+                    {expandedId === meeting.id && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-4 pb-4 border-t border-secondary pt-4 space-y-4">
+                          {meeting.summary ? (
+                            renderSummary(meeting.summary)
+                          ) : (
+                            <p className="text-xs text-muted-foreground italic">No summary available for this meeting</p>
+                          )}
+
+                          {meeting.action_items.length > 0 && (
+                            <div>
+                              <h4 className="text-xs font-semibold text-foreground mb-2 font-heading">Action Items</h4>
+                              <div className="space-y-1.5">
+                                {meeting.action_items.map((item, ai) => (
+                                  <div key={ai} className="flex items-center gap-2 text-sm">
+                                    <input type="checkbox" checked={item.done} readOnly className="rounded border-secondary accent-primary" />
+                                    <span className={item.done ? 'line-through text-muted-foreground' : 'text-foreground'}>{item.task}</span>
+                                    <span className="text-xs text-muted-foreground ml-auto font-mono shrink-0">→ {item.assignee}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Sparkles size={12} className="text-primary" />
+                            <span>{meeting.ai_insights}</span>
+                          </div>
+
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="font-medium text-foreground">Attendees:</span>
+                            {meeting.attendees.join(', ')}
+                          </div>
+
+                          {meeting.external_domains.length > 0 && (
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                              <Globe size={12} />
+                              <span>External: {meeting.external_domains.join(', ')}</span>
+                            </div>
+                          )}
+
+                          <div className="flex items-center gap-2 pt-2">
+                            {meeting.fathom_url && (
+                              <a href={meeting.fathom_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs hover:bg-primary/20 hover:shadow-[0_0_10px_hsl(160_84%_39%/0.2)] transition-all">
+                                <ExternalLink size={12} /> Open in Fathom
+                              </a>
+                            )}
+                            {meeting.share_url && (
+                              <a href={meeting.share_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-accent text-xs hover:bg-accent/20 hover:shadow-[0_0_10px_hsl(187_92%_43%/0.2)] transition-all">
+                                <Share2 size={12} /> Share Link
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </ScrollArea>
+      )}
     </div>
   );
 };
