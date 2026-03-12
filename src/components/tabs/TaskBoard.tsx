@@ -430,14 +430,14 @@ function TaskDetailsDialog({
 
   return (
     <Dialog open onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl bg-zinc-900 border-white/10">
-        <DialogHeader>
+      <DialogContent className="max-w-3xl max-h-[85vh] bg-zinc-900 border-white/10 flex flex-col">
+        <DialogHeader className="shrink-0">
           <DialogTitle>Task Details</DialogTitle>
         </DialogHeader>
 
-        <div className="grid gap-3">
+        <div className="grid gap-3 overflow-y-auto pr-1 min-h-0">
           <Input value={title} onChange={(e) => setTitle(e.target.value)} />
-          <Textarea value={description} onChange={(e) => setDescription(e.target.value)} rows={6} />
+          <Textarea value={description} onChange={(e) => setDescription(e.target.value)} rows={6} className="max-h-[30vh] overflow-y-auto" />
 
           <div className="grid grid-cols-3 gap-2">
             <Select value={priority} onValueChange={setPriority}>
@@ -471,7 +471,7 @@ function TaskDetailsDialog({
 
           <div>
             <p className="text-sm mb-2 text-zinc-300">Description preview (markdown)</p>
-            <div className="prose prose-invert max-w-none text-sm bg-zinc-800/50 rounded-md p-3" dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="prose prose-invert max-w-none text-sm bg-zinc-800/50 rounded-md p-3 max-h-[25vh] overflow-y-auto" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
 
           <div>
@@ -566,27 +566,28 @@ function TaskDetailsDialog({
             </div>
           </div>
 
-          <div className="flex items-center justify-between pt-2">
-            <Button variant="destructive" onClick={onDelete} className="gap-2">
-              <Trash2 className="h-4 w-4" />
-              Delete Task
-            </Button>
+        </div>
 
-            <Button
-              onClick={async () => {
-                try {
-                  await onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
-                  await onMutationDone();
-                  toast.success('Task saved');
-                  onClose();
-                } catch (e) {
-                  toast.error((e as Error).message || 'Failed to save task');
-                }
-              }}
-            >
-              Save Changes
-            </Button>
-          </div>
+        <div className="flex items-center justify-between pt-3 border-t border-white/10 shrink-0">
+          <Button variant="destructive" onClick={onDelete} className="gap-2">
+            <Trash2 className="h-4 w-4" />
+            Delete Task
+          </Button>
+
+          <Button
+            onClick={async () => {
+              try {
+                await onUpdate({ title, description, priority, board_column_id: columnId, due_date: dueDate || null } as never);
+                await onMutationDone();
+                toast.success('Task saved');
+                onClose();
+              } catch (e) {
+                toast.error((e as Error).message || 'Failed to save task');
+              }
+            }}
+          >
+            Save Changes
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
