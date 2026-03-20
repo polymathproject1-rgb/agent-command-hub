@@ -1,0 +1,178 @@
+[music]
+ 
+Hi, welcome to another video.
+So, Claude Code now has built-in
+scheduled tasks. You can basically tell
+Claude to run a prompt on a schedule,
+and it'll keep doing it in the
+background while you keep working.
+This is super useful for things like
+monitoring deployments, babysitting pull
+requests, or just reminding yourself to
+do something later. And the best part,
+it's ridiculously easy to set up. So,
+let's get right into it. The main way to
+use this is through the /loop command.
+It's a bundled skill in Claude Code, so
+you don't need to install anything. You
+just type /loop, give it an interval,
+and tell it what to do. For example, if
+you want Claude to check your deployment
+every 5 minutes, you type / loop 5
+minutes check if the deployment finished
+and tell me what happened. That's it.
+Claude parses the interval, converts it
+to a crone expression behind the scenes,
+schedules the job, and confirms the
+cadence and job ID. Super simple.
+Now, the interval syntax is pretty
+flexible, too. You can put the interval
+at the beginning, like /loop 30 minutes,
+check the build, or you can put it at
+the end with the word every, like/ loop,
+check the build every 2 hours. And if
+you don't specify any interval at all,
+it defaults to every 10 minutes, which
+is a reasonable default for most things.
+The supported units are S for seconds, M
+for minutes, H for hours, and D for
+days. Now, keep in mind that since cron
+has 1 minute granularity, seconds get
+rounded up to the nearest minute, and
+intervals that don't divide evenly, like
+7 minutes or 90 minutes, get rounded to
+the nearest clean interval. Claude will
+tell you what it picked, so there's no
+guessing. Here's something that's kind
+of great. You can loop over other
+commands. So if you have a slash command
+or a skill you've already set up, you
+can schedule that to run on repeat. For
+example, /loop 20 minutes/re-pr.
+Every 20 minutes, Claude will run your
+PR review command automatically,
+which is pretty amazing if you ask me.
+Now, if you don't need something running
+on a loop and you just want a one-time
+reminder, you can do that, too. Just
+type something like, "Remind me at 300
+p.m. to push the release branch." Or you
+can say, "In 45 minutes, check whether
+the integration tests passed."
+Claude figures out the time, schedules a
+single fire task, and it deletes itself
+after running. No cleanup needed. To
+manage your scheduled tasks, you can
+just ask Claude in plain English. Say,
+"What scheduled tasks do I have?" And
+it'll list everything. Say, "Cance
+cancel the deploy check job," and it'll
+remove it. Under the hood, Claude uses
+three tools. Chron create to schedule
+new tasks, cron list to see all your
+tasks, and crondelete to cancel them.
+Each task gets an 8 character ID and you
+can have up to 50 scheduled tasks in a
+single session.
+Now let me talk about how these actually
+run behind the scenes. Theuler checks
+every second for tasks that are due and
+puts them in a queue at low priority.
+This means your scheduled prompts fire
+between your turns, not while Claude is
+in the middle of responding to you. If
+Claude is busy when a task comes due, it
+waits until the current turn finishes,
+which makes sense because you don't want
+your monitoring task interrupting your
+actual work.
+All times are interpreted in your local
+time zone, which is really convenient.
+So, a Quran expression like 09 starst
+star means 9 a.m. wherever you are, not
+UTC.
+Now, there's something called jitter
+that's worth knowing about. To avoid
+every claude session hitting the API at
+the exact same time, theuler adds a
+small random offset.
+For recurring tasks, it can fire up to
+10% of their period late capped at 15
+minutes.
+So, an hourly job might fire anywhere
+from the top of the hour to about 6
+minutes past.
+For oneshot tasks scheduled at the top
+or bottom of the hour, there's up to 90
+seconds of early jitter. The offset is
+based on the task ID, so the same task
+always gets the same offset, which is
+consistent at least.
+If exact timing matters to you, just
+pick a minute that isn't 0 or 30. Like,
+use 3 9 star star instead of 09 starst
+star and the oneshot jitter won't apply.
+One thing to keep in mind is the 3-day
+expiry.
+Recurring tasks automatically expire
+after 3 days. The task fires one final
+time and then deletes itself.
+This is basically a safety net so you
+don't accidentally leave a forgotten
+loop running forever.
+If you need something to run longer than
+3 days, you'll have to cancel and
+recreate it. or better yet use the
+desktop scheduled tasks or GitHub
+actions for durable scheduling that
+survives restarts. And that's actually
+the main limitation here. These are
+session scoped tasks. They only fire
+while clawed code is running and idle.
+If you close the terminal, everything is
+gone. There's no catch up for missed
+fires either. If a task's time passes
+while Claude is busy, it fires once when
+Claude becomes idle, not once per missed
+interval. And restarting Claude code
+clears all tasks.
+So for anything truly critical or
+longunn, you'll want GitHub actions with
+a schedule trigger or desktop scheduled
+tasks.
+But for the day-to-day stuff, like
+monitoring a deployment while you're
+working on something else or getting a
+reminder to check on a long build,
+session scoped tasks are perfect.
+If you want full control, Claude accepts
+standard five field crone expressions.
+That's minut
+day of month, month, and day of week.
+All fields support wild cards, single
+values, steps, ranges, and
+commaepparated lists. So star/5 star
+starst star for every 5 minutes 09
+starst star 1-5 for weekdays at 9 a.m.
+that kind of thing.
+And if you want to disable scheduled
+tasks entirely, maybe in a CI
+environment where you don't want them,
+just set the environment variable
+cla_code
+disabled cron equals 1.
+That turns off theuler completely.
+I think this is a really solid addition
+to claude code. It's one of those
+features where once you start using it,
+you wonder how you worked without it.
+Being able to say, "Hey, check on this
+every 10 minutes and let me know while
+you keep coding." That's a huge quality
+of life improvement. Overall, it's
+pretty cool. Anyway, share your thoughts
+below and subscribe to the channel. You
+can also donate via Superthanks option
+or join the channel as well and get some
+perks. I'll see you in the next video.
+Bye.

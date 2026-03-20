@@ -1,0 +1,150 @@
+All right then, gang. It has been a
+ 
+while in the making, but it is finally
+here. The Claude Code Masterclass
+available now over on netinja.dev. The
+course is $15 to buy. But if you use the
+promo code Claude Ninja, all one word,
+you can grab it at half price for just
+$7.50. Anyway, I've spent the last six
+or seven weeks putting this together,
+trying to pack in as much genuinely
+useful, practical content as possible,
+and I've really enjoyed making it. So
+whether you're completely new to Claude
+Code, you've been using it a little bit
+but without any real structure or
+workflow, or even if you're slightly
+skeptical about AI tools in general,
+this course is built with you in mind.
+It's also not a vibe coding course. In
+my experience, AI is at its most
+powerful when it's paired with some
+coding experience and project knowledge.
+And that's the angle this course takes
+throughout. Anyway, we start off with
+the fundamentals and that means getting
+Claude Code installed and set up
+properly, going through some key
+settings and commands and then dropping
+it into a real project to analyze an
+existing codebase and start making
+changes. From there, we dig into how to
+manage context effectively, how Claude's
+tools work under the hood and how
+permissions are handled, and how to
+create custom commands for the kinds of
+tasks that you're going to be doing all
+the time. We also take a proper look at
+hooks, including building our own hook
+to automatically format code whenever
+Claude Code edits a file so it fits
+neatly into a realworld workflow. Once
+we've covered the basics, we'll move on
+to a specd driven development workflow
+that I use all the time now in my own
+projects. And to do that, we'll be using
+a mixture of custom commands, claude
+codes, planning mode, and extended
+thinking with the Opus model to
+implement new features in a structured
+way. It's a simple three-step workflow
+that keeps me firmly in the loop. It
+lets me review every code change and
+then jump into the weeds to make manual
+edits whenever I want. And honestly, I
+think that level of control is essential
+if you're going to be using AI as part
+of your development cycle. After that,
+we'll look at MCP servers and how they
+let Claude code interact with things
+outside of your codebase. In particular,
+we'll use the Figma MCP server to pull
+in design information and a Firebase
+server to communicate directly with a
+backend. Then we'll move on to skills,
+which let us bake in more predictable
+patterns and outcomes by essentially
+teaching Claude how to do certain things
+in a specific preferred way. So that
+might be how schemas and data models are
+created or how database queries are
+structured, that kind of thing. On top
+of that, we'll do a proper deep dive
+into sub aents and how they can improve
+your workflow using isolated context
+windows and by running tasks in
+parallel. We'll also be making three sub
+aents of our own which are going to fit
+nicely into that specd driven workflow
+that we set up in the course. And while
+we're learning all of this, we'll be
+building a project called Pocket Heist,
+which is designed to add a little bit of
+mischief to the workplace. The idea is
+that co-workers can assign each other
+little heists around the office using
+secret code names. It's a fun little
+project, but it also gives us a solid
+realistic app to demonstrate the
+benefits of using Claude code as we
+build it out. Now, once the core
+functionality and design of the
+application are all in place, we're
+going to bring GitHub into the workflow
+as well, and we'll use the Claude GitHub
+app to automatically review pull
+requests and have it work independently
+on open issues. After that, we'll deploy
+the app to Vel and set up automatic
+deployments whenever the production
+branch updates. On top of all of that,
+we'll take a look at a slightly newer
+tool, the clawed code for the web tool,
+which lets us spin up tasks remotely in
+the cloud and open pull requests
+directly on GitHub without running
+anything locally. And again, we're going
+to be doing all of this in a structured,
+refined way that fits nicely into a
+development workflow. Not vibe coding,
+not oneshotting the whole application,
+but instead using claude code to make us
+10 times more productive. So whether
+you're completely new to claude code and
+aentic coding or if you have some
+experience with it but haven't really
+figured out how to fit it nicely into
+your own workflow or even if you're an
+AI skeptic then this course is designed
+for you. It's packed full of tips,
+tricks, and things I've learned over the
+last year since its release and it's
+going to put you in a much better
+position to harness the power of AI in
+your own projects. So again, use the
+promo code Claude Ninja to get the
+course for half price, just $7.50, 50,
+but that code's only available for the
+next few weeks. After that, it's going
+to be full price of $15, which is still
+less than most courses sell for to be
+honest. So, I'll leave the link to this
+course down below the video. Or if you
+want access to my entire library of
+masterclass courses and pro exclusive
+shorter courses, not found anywhere
+else, you can sign up for a Net Ninja
+membership and get instant access to all
+of them, including this brand new Claude
+Code Masterass as well. That's just $9 a
+month and you can even get your first
+month half price by using this promo
+code right here. So again, I'll leave a
+link to the pro membership page below
+the video as well. Anyway, I really,
+really hope you enjoyed the course. I've
+had loads of fun making it and I'm going
+to see you all in the next one.
+Heat. Heat. N.
+again.

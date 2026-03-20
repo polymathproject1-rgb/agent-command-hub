@@ -1,0 +1,379 @@
+The smartest entrepreneurs making six to
+ 
+seven figures online are one-person
+business machines who use Claude Code to
+do 90% of their work. So, in this video,
+I'm going to show you step-bystep how to
+use Claude Code to find a winning AI
+business idea, build an irresistible
+offer, build an MVP and high converting
+website to sell it, handle marketing for
+you, and help you close five [music]
+bigger deals. One person, no team, no
+agency, just you and Claude Code running
+the entire operation.
+>> How is this possible?
+>> Let me show you. Now, as an ex big tech
+software engineer turned AI
+entrepreneur, I built apps that got
+$200,000 offers, scaled 150 plus AI
+businesses, and I spend most my time
+building, shipping, and showing other
+people how to do the same. I've been
+using Cloud Co since it launched. And
+I'm not exaggerating when I say it's the
+most powerful tool in my stack right now
+for all of my AI businesses, even my
+content stuff. Like these YouTube videos
+right here, I use Cloud Code to help
+with ideation, planning, scripting, even
+the thumbnails. See, cloud code is a
+fullon junior level engineer. Like it
+can you're giving it a go and it plans,
+reasons, writes files, runs commands,
+reads your whole codebase, iterates all
+on its own. It's like AI Superman. And
+according to anthropic, cloud code can
+autonomously handle full software
+development tasks end to end. And based
+on my experience, dash I created right
+here is very true. Developers using in
+production are shipping 30 to 50%
+faster. And for a solo founder, that's
+an entire unfair advantage right there.
+But the tragedy is that most people only
+use cloud code to build the MVP of their
+app. Well, I'm going to show you how to
+use it for everything. Okay, everyone
+wants a million dollar idea. Everyone
+thinks about it all wrong. You are one
+of those people. You say,
+>> "I don't know what to build."
+>> Is this an idea people would even buy?
+So, instead of taking any action, you
+get analysis paralysis. Months pass by
+with no progress. Here's how to use
+cloud code to fix that. You use it
+research and reasoning abilities to do
+the ideation for you. Let me show you. I
+open Cloud Code and I give it a
+structured prompt. something like, "You
+are your product researcher. Scrape the
+top 50 product hunt launches from the
+last 30 days. Analyze a problem each
+product solves. Identify patterns in the
+pain points and give me the top five
+underserved opportunities ranked by
+market size and buildability for a solo
+developer." Buildability. What a funny
+word. Claude Cole would then browse,
+read, synthesize, and hand me a rank
+list of ideas with reasoning. See,
+Claude isn't like Chat GP which gives me
+a generic list. This is a full-on
+agentic system doing real research in
+real time. But here, I take it even one
+step further. I take the top idea and I
+say, "Now find me five Reddit
+communities where this painoint is
+discussed." Pull the most upvoted post
+complaining about this problem.
+Summarize the language people use to
+describe the frustration. And this
+prompt right here gives me a full on
+market research debrief and the exact
+words my customers use to describe their
+own problem. That's literal marketing
+gold. And I'll show you how to turn this
+gold into profits when we discuss
+marketing later in the video. Now,
+before committing to an idea, I asked
+Claude Code to search their competitors,
+analyze their pricing, look at the
+reviews on G2 or Trust Pilot, and tell
+me the top three complaints users have
+about the existing solutions. Whatever
+the complaints are, that gap right
+there, that's my product. The whole
+ideation phase used to take me weeks,
+you know, finding that gap, doing the
+market research. But now, it's a 2-hour
+cloud code session, and I walk out with
+a validated idea, competitive analysis,
+and customer language, all from one
+tool. All right, now that you've got
+your idea, let's actually build. And
+look, I completely vibe code my apps
+now. I'm a software engineer who's been
+coding for over 10 plus years, and I
+still let cloud code do the heavy
+lifting. It's just faster. And for an
+MVP, speed is everything. All we care
+about is getting out there to the
+market, getting some feedback, and
+iterating on any of the changes needed.
+With all that being said, here's the
+thing most people don't realize about
+Cloud Code. You're not limited to one
+agent doing one task at a time. Cloud
+Code supports agent teams. Basically, a
+bunch of sub agents working together to
+do a task. And this is where it actually
+gets very insane. [music]
+Imagine you're building a complex app
+and there are multiple tracks of work
+happening simultaneously. You've got the
+backend API, the database schema, the
+front-end UI, the authentication layer,
+the third party integrations. Normally,
+even with AI coding tools, you tackle
+these one by one. With Cloud Code sub
+agents, you spin up parallel agents that
+each handle a specific slice of the
+build concurrently. One sub agent is
+building your API endpoints. Another is
+setting up your database models. Another
+is scaffolding the front end. They all
+work simultaneously. They share context
+and they report back to the main agent
+which orchestrates everything. It's like
+when a senior level engineer is telling
+the junior level engineers to do
+everything while the senior level
+engineer just drinks on coffee. They ask
+why I quit corporate. And I'm not the
+only one taking advantage of this. Two
+of my 170 entrepreneurs that I work with
+one-on-one to help scale their one
+person businesses are building a chef
+app right now for a client I brought to
+them. And both of them are software
+engineers, but they're using cloud code
+to build the entire app. They're using
+sub agents very, very nicely. In fact,
+one sub agent is handling all the
+backend routes and business logic.
+Another sub aent is handling the
+database and schema migrations and
+another sub aent is building the UI
+components in parallel while the main
+agent is doing all the work that each
+sub aent is completing and is stitching
+everything together. So these two
+software engineers who are working on
+this app are more managers than they are
+actually engineers for this. And here's
+the MVP they currently have built in
+just a matter of days. It's pretty solid
+if you ask me. So, even if you don't
+know how to code, you don't have the
+funds to hire a developer team, and you
+are completely on your own, you can
+still build any app that you want.
+Before you move on to marketing, which
+is where most people fail at, possibly
+you as well, you're the best building
+practices when using cloud code. Before
+you start any session, drop in a short
+product brief. Two paragraphs, what the
+app does, who this for, the tech stack,
+and what you're building today. Make
+sure that's all covered. That alone
+would double the quality of everything
+Cloud Code ends up producing. And also
+stay in sprints. Give it one clear task
+per session. Build authentication flow.
+Connect to this API. Add a dashboard
+that shows X. Don't throw the whole app,
+the entire prompt, all at it at [music]
+once. Do everything sprint by sprint and
+the thing comes together faster. If you
+do everything sprint by sprint, the
+overall app comes together faster. Okay,
+now comes marketing. Pay attention
+because this is where it gets genuinely
+ridiculous. Most people finish their
+build and then go, "Okay,
+>> okay, now I figure out marketing and
+let's go ahead and do it."
+>> That's the wrong order. You start
+marketing before you finish building.
+The moment [music] you start coding, the
+moment you put your first prompt into
+cloud code, you better post about on X,
+on LinkedIn, Instagram. Show your build
+process. Tease what your product is
+going to be doing. Build the audience
+before the product is even ready.
+>> Wait, wait, wait, wait, wait. Hey, you
+said cloud code do the marketing for me.
+>> I know. Keep listening. I am about to
+review my four-step Cloud Code pipeline
+that I use to create content at scale.
+Step one, I prepare a Google doc with
+all of the written expost, LinkedIn
+post, YouTube video scripts that have
+performed well for my social medias. I
+pass this all into Cloud Code as a
+knowledge base. Then I give Cloud Code a
+voice memo or a quick bullet list of
+everything that I've been building or
+learning that week. Step three, Cloud
+Code takes all my updates, writes three
+different X posts in my voice, a
+LinkedIn post, and a short form script
+for an Instagram reel or YouTube short.
+And finally, once I approve these
+written posts and scripts, I have Claude
+Code auto post these on the respective
+platform using potato API. And for the
+video content, well, I have to manually
+record these videos. Nothing I can do
+about that as of right now. Maybe in the
+future, Cloud Code can make AI avatars
+of myself and just use that to record
+videos of me. I'm even using Cloud Code
+to create AI thumbnails for me and some
+of them perform really well. I mean,
+look at this one. It's not too shabby at
+all. Now, for written marketing, if
+you're building a B2B tool, Cloud Code
+can also run your outreach pipeline.
+Give it your ICP, your offer, and your
+tone, and it will draft personalized
+outreach DMs for LinkedIn code email
+sequences and follow-up messages. You
+can review these messages, these emails,
+approve them, and boom, Claude Cole will
+go ahead and send them. This is all very
+important because marketing is what
+takes a great app from zero to $10,000
+MR. And now you don't have to choose
+between building and marketing because
+cloud code can handle both. Do one sub
+agent for marketing and one sub agent
+for building. Okay, so now you got
+clients coming in, the marketing is
+working, you got eyeballs on your
+product and people are interested. This
+is where most technical people
+completely fumble. A potential client
+says send me proposal and suddenly the
+developer who can build anything in a
+week with cloud code takes two weeks to
+[music] write a two-page document. This
+used to be an old proposal that I was
+spend weeks on. This is my new style
+proposals that I have cloud code write
+in [music] like 2 minutes. And these
+proposals are fully customized, clientf
+facing, and they look amazing. Now, to
+have a proposal like this, here's my
+exact process you can copy. Before I
+write a proposal, I use a transcript of
+my sales call with the client [music]
+and pass it into Claude. I then tell
+Claude to draft a proposal to a solution
+that hits all the client's pain points.
+This is a $2,000 software proposal I
+sent to a client recently. completely
+oneshot prompting this with Claude. The
+proposal it generates is specific. It
+speaks their language. It represents the
+actual business. It doesn't sound like a
+template. It sounds like I spent a week
+studying their company. But this right
+here, like 2 minutes, easy. Now, compare
+your proposal to the person who spent 2
+days agonizing over how to word the
+scope of work for this project the
+client is asking you [music] to build.
+You're moving faster than that person.
+You're closing faster. And your proposal
+quality is honestly higher because cloud
+code doesn't get emotional or second
+guess itself the way we do when we're
+trying to impress a client. [music]
+>> Oh, you're so experienced in this, but
+what about us who aren't as much?
+>> And just so you understand the
+importance of a good proposal, one of my
+mentees in my agent rise program, Gleb,
+sold a NAND automation for $5,000. He
+then got a follow-up project with the
+same client for $22,000. His proposals
+were all incredibly unique and tight.
+And what was the reason he was able to
+get these follow-up deals with the same
+exact client? Well, his proposals were
+very well thought out. Every proposal he
+sends, he runs through his exact Claude
+code research and write process first
+[music] that we just talked about in
+this video. The clients read the
+proposal and they say that this guy
+actually understands our business. And
+they're right because Claude Code did
+the analysis. It knows a business like
+the back of your hand. Abdul, another
+mentee of mine, is charging $50 to $100
+an hour on straightforward builds
+[music] because his outreach and
+proposals are so targeted that clients
+don't even push back on the rate because
+they feel like everything is so
+customized to them. Another example, my
+student Shubam closed a $20,000 deal for
+an AI system that was projected to take
+3 [music] months to finish. He built it
+in 3 weeks using cloud code. So if you
+want hands-on help building this entire
+system we're talking about the cloud
+code, the workflow, the sub aent setup,
+the content pipeline, the proposal
+process, that is literally what my
+membership is built around. I work
+directly with you and I help you land
+paying clients guaranteed. Link is in
+[music] description. Now at this point,
+you're almost ready to start a one
+person AI business with Cloud Code. But
+here's the last part, the [music] very
+important part that most people get
+wrong, the routine. This is how a
+typical Cloud Code day should look like.
+Morning, you open cloud code. You run a
+sub agent research session on your
+target market. What's trending? What
+problems are being complained by Reddit
+and Twitter? Any new competitor moves.
+Midm morning, you go into build mode,
+sprintbased, one task at a time, sub
+agents handling parallel tracks if the
+build is complex. Afternoon, you have
+your content pipeline running. Cloud
+code takes your build notes, your
+readme, and turns them into posts, a
+short form script, and a thumbnail
+brief. total time on your end, maybe 20
+minutes of reviewing and [music]
+approving all the short form and written
+content it makes. By evening, you got an
+interested prospect. Cloud code
+researches them, writes a proposal,
+builds a pricing tiers. You review it,
+you send the email to them, boom, done.
+Now, you wait for that sales call to
+come in. That entire pipeline right
+there was one day's worth of work. And
+if you do that for 7 days straight, you
+can expect some change. And that right
+there is an entire oneperson business
+operating like a multi-person business,
+all because of Cloud Code. And this is
+why Sam Outman said a oneperson
+billiondollar company is coming. But
+actions speak louder than words. So, if
+you want to see me use Cloud Code to
+build an AI solution worth multiple five
+figures, watch this video

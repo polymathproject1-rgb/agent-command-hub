@@ -1,0 +1,967 @@
+If you just started using Claude Code,
+ 
+or even if you've been using it for a
+while, you're probably only getting
+about 10% of what Claude Code has to
+offer. They've released a tremendous
+amount of features and functionality in
+the last 6 months. And in this video,
+I'm going to cover it all. Whether
+you've never used Claude Code before or
+you've been using it since launch, I
+promise if you stick with me until the
+end of the video, you'll walk away
+learning something new. I'm going to go
+through every single aspect of Claude
+Code. Plus, I'll show you how to build
+and launch an entire application with
+it. Even if you've never coded a day in
+your life, check out the chapters below.
+This video is meant for you to jump
+around if you'd like. And if you're
+interested in Claude Code, make sure to
+leave a like or a hype down below so I
+know you're interested in more Claude
+Code content, and I'll make sure to make
+way more videos about Claude Code.
+Claude Code's the most powerful AI app
+building tool out there, and I can't
+wait to show you all about it. Let's get
+into it. So, let's get into the basics.
+After this, we'll get into more advanced
+Claude Code concepts, and then I'll show
+you how to build and launch your own
+app. If you already know the basics,
+feel free to skip ahead. All the
+chapters are marked down below so you
+can jump to more of the advanced stuff
+you've never heard of before. But let's
+get started with installation. Today I'm
+going to install clawed code into
+cursor. The reason why I'm going to
+install it into cursor is if cursor ever
+comes out with more interesting
+functionality. We'll be able to combine
+the cursor functionality with clawed
+code. You don't need to pay for cursor.
+You can download the free version right
+now. So make sure to do that.
+cursor.com. And in here, we're going to
+install Claude Code. When you're in
+Cursor, all you need to do is open up a
+new project. So, you just click open
+project. You create a new folder in that
+window that pops up and you're good to
+go. Claude Code installation. Very, very
+simple. We take this command right here
+and I'll make sure to put it down below
+in the description for you. We go back
+into cursor. We open up the terminal,
+which if you're on Mac is control day,
+or else you can just go to view terminal
+in your menu at the top. This will pop
+open your terminal like you see here. I
+personally like to move this to the
+right hand side. So we'll do panel
+position right. Then we close that chat
+and we move that down below and we're
+good to go. Then you paste in that
+command from down below and you hit
+enter and that is going to install
+claude code for you. Now all you need to
+do is type in claude. Once that's done
+installing you hit enter and now claude
+code's going to open up for you. You're
+good to go. You're ready to start
+building some magical application. So
+now we're good to go. Let me give you a
+quick introduction of the UI here. here.
+So over on the left hand side is going
+to be all the files you're going to
+create once you start giving prompts to
+claude code. Over on the right hand side
+is claude code. This is where you're
+going to give commands to the AI agent.
+Build me this, change that, debug this,
+launch that, and claude code will do all
+the hard work for you. Again, you do not
+need any programming experience here.
+Claude Code's going to do all the hard
+technical work for you. Before we start
+building out our application, I'll show
+you other couple parts of the UI here.
+uh a lot of the configuration of claude
+code is done through what's called slash
+command. So for instance, if I do
+slashmodel
+and hit enter, we're going to get
+options of different models we can use.
+Now depending on which plan you're on,
+there's like I think a $20 version, a
+$100 version, a $200 version. If you're
+just starting off and want to
+experiment, feel free to do $20 version.
+You probably won't be able to do too
+much with it. You're going to want to
+get to the$100 or $200 version if you
+want to get really serious. $100 is
+totally fine. But depending on which
+plan you're on, you're gonna have a few
+options here. You need to have the $100
+option to use Opus, which is their best
+model. But as long as you're on that
+plan, you have a few options. I like to
+use Opus plan mode. And the reason why I
+like to use Opus plan mode is basically
+it uses Opus, their best model for all
+the planning. And I'll show you how plan
+mode works in a second. And then it uses
+Sonnet for the execution. And the reason
+why that's a good idea is Opus is going
+to make such indepth detailed plans that
+you don't need the smartest model to do
+the execution because the plans will be
+so good. So I like to use Opus plan
+mode. That'll make the model selection
+dynamic for you and that's going to be
+really good. It's also going to save you
+a good amount of money. So stick with me
+here. Do slashmodel. Go to Opus plan
+mode if you're on the$100 or $200
+version. If you're on the $20 version,
+you can stick with Sonnet. You're good
+to go. That's your model picker. One
+last thing I'll show you before we start
+building out the application and then I
+get into the more advanced functionality
+is plan mode. And so if you hit shift
+tab, you will see a couple things. So
+first it'll do accept edits on. This
+basically goes into YOLO mode where the
+agent will just go and build out
+anything for you without asking for
+approval. We're actually going to use
+that quite a bit. Claude code's really
+good. I trust it to do whatever it
+wants. But we're going to hit it one
+more time. Shift tab one more time. That
+puts us in plan mode. And plan mode's
+excellent. You want to be using this a
+tremendous amount. This is a critically
+critically important part. And again, if
+you're if you're already familiar with
+plan mode, feel free to skip ahead to
+the next chapters. But plan mode is
+really important because this is where
+you're going to be going back and forth
+with the AI model without the model
+doing any coding. So a lot of time
+before you want claude code or the agent
+to go and make changes to the code, you
+want to make sure the agent knows
+exactly what you want to do, right? And
+this is where I use plan mode. I confirm
+with plan mode what the agent's going to
+do before it does it. So I make sure
+that everything the agent does is
+exactly to my liking. A lot of people
+complain, "Oh, you can't trust the AI
+agents. They do crazy things. They're
+not cooperative. They're getting
+dumber." No, no, no, no. Skill issue. If
+you're using plan mode the correct way,
+the agent will always do what you want
+it to do. So, we're in plan mode now.
+For the example for this video, what
+we're going to build, we're going to
+build an advanced notetaking app. So,
+allow you to do really cool looking
+notes, AI functionality, a whole bunch
+of things we're going to build out
+together. So, let's first do this. Let's
+go into plan mode and let's ask for a
+plan from Claude. And I'll put this
+prompt down below, too, so you can steal
+it so you can work along with me here.
+So, here's the initial prompt I'm going
+to do with plan mode. This is going to
+build out the initial code for us. Then
+we'll go into the more advanced
+functionality in Claude Code. I can show
+you some neat tricks. I want to build an
+advanced note-taking app. The user
+should be able to take notes in a
+beautiful, powerful, easy to use editor.
+Be be able to save notes into folders
+and organize them however they want and
+even use AI functionality. Let's build a
+PRD for this app. And what a PRD is a
+products requirement document which will
+basically outline everything we want in
+the application. getting this PRD built
+out first is really critical because it
+will give context to the AI on where
+we're going. What's the road map and
+what's the end goal we want to get to.
+So, I'm going to hit enter on that.
+Again, feel free to steal it from down
+below and work along with me here.
+Claude Code is now going to get to work
+here. You're going to see it working and
+thinking it is creating a comprehensive
+PRD for the advanced note-taking
+application. And it's actually pretty
+quick. I compare this to other AI app
+builders out there. Claude code's
+probably the quickest out of all of them
+to be quite honest with you. All right,
+so it looks like Claude has built a plan
+out for us for this application.
+Advanced note-taking app, product
+requirements document. Okay, so it gives
+us an executive summary of exactly what
+it's going to build. It talks about the
+rich text editor, so it's going to allow
+us to do some very nice editing, make
+really good-looking documents. The
+organization system with bookmarks and
+folders and everything involved. That's
+nice. Trashing, being able to archive
+and throw away notes. I like that. AI
+functionality. So, we can do smart
+summarization, smart search,
+autotagging. That's pretty cool. I like
+that a lot. Grammar and style checking.
+Listen, the reason why I love making
+applications like this, people ask, "Oh,
+Alex, why do you always make note-taking
+apps and calendar apps?" Because my
+favorite thing to do is build apps that
+I use every single day. Rip out those
+apps I was paying for and use the ones I
+built and save money. So, if you're
+working along with me here, you're going
+to have a note-taking app that you can
+use moving forward and it's going to be
+awesome to use. It's going to have
+collaboration and then it talks about
+all the technical stuff. So the front
+end, Nex.js, that's good. Backend, we'll
+get into that a little bit as well as
+the infrastructure. All right, so let's
+do this. I want to keep this simple. So
+at any point when you're chatting with
+the AI agent, you can hit the escape
+button, which will allow you to add more
+context before it continues. So I'm
+going to do that. I'm going to say for
+this first version, let's just focus on
+the front end and getting a working
+local version up and running. We can
+demo. So, instead of spending a ton of
+time setting up the back end and the
+database, let's just get a working
+version running that just uses the front
+end and we can add that on afterwards.
+So, I'm going to hit enter. It's going
+to add that context to the AI and it
+will update our plan for us. So again,
+when you're in plan mode, at any point,
+you can hit escape, you can add more
+context, you can make different
+requests, and then you hit enter, and it
+goes back and fixes whatever it was
+doing. All right, so we have our updated
+plan here. Looks really good. I'm going
+to do one more thing before we execute
+on it. I'm going to hit the escape
+button. I'm going to say, let's do this
+step by step, one step at a time. So
+let's just start building out the front
+end. So I hit enter on that. And now the
+AI agent is going to get to work on our
+PRD. It's going to start building out
+the application for us. Now in a second
+once it builds out V1, I'm going to get
+into more of the advanced functionality
+here. But we'll get this started and see
+what V1 looks like and I'll start
+showing you some more interesting things
+you can start doing with Claude Code. as
+it works here. You can just hit yes if
+you want to approve this step by step.
+Otherwise, I just say yes and don't ask
+again because I I've worked with Claude
+code long enough to know it is an
+awesome AI agent and it very rarely
+makes any kind of critical mistakes. So,
+I'm just going to give it the go-ahhead
+to do everything it wants to do. Okay,
+looks like the agent finished work on
+our initial app v1. Let's take a look at
+what we got here. So, let's take a look.
+It will tell you which local host to go
+to to make your app work. For me, it's
+going to be 3003 because I'm building a
+100 different apps at one time here.
+Let's pull it open. Boom. We got an
+error. This is actually a good thing.
+This is a good thing. I'm going to show
+you how to debug. Debugging very, very
+important with claude code. It's like
+the number one question I get is what
+happens when I run the bugs. I'll tell
+you exactly how to do it here. When
+you're looking to debug, it's really
+simple. We're going to lean on cloud
+code here. So, we're going to take a
+look at here. We're going to take our
+error. I'm going to highlight everything
+on the screen. You really have two ways
+of debugging. Way number one, which I'm
+going to show you right here, is copying
+and pasting the error in debug. Number
+two option you have is screenshots. You
+can also paste images into clawed code.
+But for these text errors, like you see
+here, I like to just copy and paste.
+Let's take this. I went in here. I say I
+say, hey, let's hold up for a second. It
+looks like there's an error. And then
+I'm going to paste in the error. It's
+just going to say pasted text, lines,
+whatever. We hit enter on that. It is
+going to look at the error. It's going
+to figure out what's going on in 99.9%
+of the time where I just give an error
+to claude code. It figures out how to do
+it in one shot. So, it is going to start
+working here and is going to fix our
+error for us. It is fixing our errors
+for us. It's deleting code. It's adding
+code. Great. Now, let's see if we got a
+success here. All right. Status app
+working. Let's take a look to see what
+we got here. Let's check out the V1.
+Pull it over here. Wow, look at this
+note AI. Okay, so we got a whole lot
+going on here. We have the main editing
+area which is right here in the middle.
+This this is a test. Wow, that looks
+really nice. Uh it's a rich text editor,
+so we have tons of different options. We
+can do headers, we can do quotes, bullet
+points, upload images. That is sick.
+Over to the left, let's see what we got
+here. We have a folder system, so we can
+create different folders. We have the
+notes listed out here, so we can switch
+between the two different notes. We can
+delete, we can bookmark. This is
+awesome. And there's even a settings.
+This is amazing. This looks really,
+really good for a V1 for a oneshot. This
+is the power of clawed code and using
+the plan mode correctly is you get these
+types of V1s which is awesome. Tons and
+tons built out already. We have a lot
+more we need to cover here and we're
+going to build this out. So much more.
+Add a ton more functionality including
+AI functionality to this app which we'll
+go over. But I want to go over some more
+advanced functionality with you now
+inside Claude Code. Just as a side note,
+as a small little feature they added
+over the last couple months, they now
+have what's called background tasks. You
+can see that right here, one background
+task. And now Cloud Code basically has
+the ability to run your application on
+its own and have that go in the
+background so that as you're building
+out your application, it can actually
+read your server logs. Before you
+actually had to open up a brand new
+terminal to run your app. Now claude
+code can do it for you and put it in the
+background which allows it to monitor
+your app and do other things while it's
+building out and do multiple. It's
+basically it's multitasking ability
+which is really really awesome. So this
+made Claude code a lot better to use the
+background tasks. Let's also talk about
+claude.md.
+This is the rules file for the claude
+agent. So what we're going to do is
+we're going to go into claude here and
+we're going to do slashinit. And what
+slashinit is going to do is create us a
+claude.md
+file which is going to be our rules file
+which will allow us to customize the
+claw AI agent even further. So what
+happens when you do slashing is not only
+creates a claw.md file it actually goes
+through your entire application
+everything you built and creates custom
+rules for you so that claude has more of
+context around what it's built and what
+it's going to build. So, this is really
+important to do after you build out that
+v1 is to do slashinit
+to get that new clawed rules file that
+automatically generates a ton of context
+for the clawed agent. But what we're
+going to do in a second is add even more
+context and more rules that will make
+the agent even more powerful. So, as you
+see here over on the left hand side, it
+created a claw.md file. And what it
+actually did was it put in a lot of
+context that's important, right? It has
+what the app is. It has the entire tech
+stack it's using. It has all the
+information around like the data
+structures and how the data actually
+works as well as wow everything around
+state management. Look at all this
+really nice information it has. That is
+awesome. It built that out all
+automatically with this slash in it. So
+you want to use slashinit the moment
+your v1 of your app is built. But we're
+going to add a few more things here. So
+what I'm going to paste in down below
+and I'll put this down below in the
+description as well as a whole new set
+of rules I want you to put in here. So
+these are nine new rules which basically
+guides the agent a little bit more and
+will prevent errors in the future. And
+basically what it does is it tells the
+agent, hey, whenever you run errors,
+think about it step by step. Always do
+full investigation before you make any
+changes. Check with me before you do
+anything major. And always break
+problems down into small little tiny
+steps and never be lazy. And what this
+will do is prevent a whole lot of errors
+that the agent might make in the future.
+Again, I'll put this down below, but I'm
+going to hit save on that. And now our
+rules file is good to go. The agent
+should be even more powerful than it was
+before. Several more features I want to
+go over here with you. Next, I want to
+talk about the different thinking modes.
+So, let's do this. I want to add in AI
+functionality into our app. So, I want
+to have the ability to talk to an AI and
+say, "Hey, write out this entire note
+for me or summarize this note for me."
+So, let's plan this out with Claude
+code. We'll go back in here. Here we'll
+go into planning mode again with shift
+tab plan modes on. Now I want to talk to
+you about thinking modes. So let's first
+do this. Let's build out our prompt.
+Again we just give a very simple command
+on what we want Claude to build. I want
+you to now add AI functionality
+that allows us to generate text in notes
+or summarize
+notes. Feel free to come up with other
+ideas. But here is now thinking modes.
+So with claude you have several thinking
+modes. I just use three. Think, think
+harder, and ultra think. So if you in
+any of your commands use those terms,
+think, think harder or ultraink, it will
+actually control the amount that Claude
+reasons as it's working. Right? So if
+you say think, you can see it just
+turned purple. If you say think harder,
+you can see it turned orange. Or if I
+say ultra think, you can see it turned
+rainbow. And that's this super amount of
+thinking. And whatever term you use is
+the amount it's actually going to think.
+So for this one, this is a pretty
+standard simple kind of functionality.
+So I'm just going to say kind of in the
+middle, let's do think harder about
+this. And it's going to make the AI
+think harder. So depending on the type
+of functionality you want to build out.
+If it's really simple, you just say
+think. If it's kind of moderate like
+we're doing here with this AI
+functionality, I'm going to say think
+harder. But if it's like a super big
+maybe if it's even V1 like we were doing
+before, it probably could have helped if
+I said ultra think, but you do ultra
+think for the super complex problems
+you're looking to solve. These think
+modes were added a few months ago and
+they are really, really helpful. Will
+help you get much better results from
+the prompting you do with the agent. So,
+make sure to write that down as well.
+All right, looks like the planning is
+done and wow, look at this. It came up
+with a lot of ideas that it could build
+out. They came up with like a fivephase
+system of adding AI functionality.
+That's because we did the think harder.
+Let's do this though. Let's keep it
+simple for now. Let's just get the basic
+AI functionality in. Let's say this. I
+just hit escape. This looks great. Let's
+just implement the basic AI
+functionality though. And then I hit
+enter on that and is going to start
+implementing the basic functionality.
+But that is the different think modes.
+really important to use, really
+important to take advantage of because
+that's what is going to get you awesome
+results from the AI8. So, I'm going to
+hit enter on this and it is going to
+implement all that AI functionality
+stuff in a second. If you're newer to
+coding, I will show you how to actually
+implement the AI API. So, you can
+implement AI functionality into this. If
+you already know how to do all that, you
+can skip over to the next chapter.
+Again, feel free to skip to any of the
+chapters you want. Also, leave a like
+down below if you've learned anything at
+all. So far, it lets me know that you
+really enjoy Claude Code content and I
+should make more of it and and if you
+really liked it, make sure to leave a
+hype. That's I guess the new YouTube
+functionality and really gives me
+awesome feedback and helps the video out
+a ton. So, it is now going in and is
+building and executing on that think
+harder plan we did that will add a lot
+of really cool AI functionality. All
+right, looks like it's all done. Let's
+see what we got here. I'm going to pull
+this over. Let's see what they added.
+Okay, so we have this new AI
+functionality here. I click that
+continue writing improve selected text
+and summarize notes. So we have three
+new pieces of AI functionality. We can
+have the AI continue the writing of our
+note, improve any text we highlight or
+summarize the note we have open. All we
+need to do to get this to work is add
+the API key. I'll add I'll go through
+towards the end and add that on and show
+you how you can add more features and
+function to that. I want to continue
+covering the different tips and features
+of claude code. Before we do that, next
+I want to talk about slash commands. So
+we talked about this a little earlier
+with slashmodels and slash init. You
+have a lot of different slash commands
+you can use inside of clawed code. But
+what's really cool here is you can
+actually create your own custom slash
+commands that do whatever you want. So
+let's build our own custom slash
+command. I want to build a slash command
+that does security reviews. So, I'm
+going to go and I'm going to say here, I
+want to build a slash command into
+clawed code that does a security review.
+Can you build me a slash security custom
+slashcomand?
+And I'm going to hit enter. And now what
+Claude Code's going to do is build its
+own custom slash command for security
+reviews that will review all our code
+and take a look at security as we're
+building out our code. So it is going in
+here. I'm going to hit yes. It is going
+to build out this command so that moving
+forward all we need to do every time we
+make a change is type in slash security
+and it'll review all our code to check
+for security issues. And you can do
+slash commands for anything you want.
+Anything you want. If you just want to
+do code reviews, security reviews, if
+you want to have it improved code,
+whatever you could think of, you can ask
+Claw to build out those custom
+slashcomands for you. I just really like
+the custom slash command for
+security/security.
+So, it's going to build that out for us.
+Anything you want to build, you just ask
+Claw to build it for you. So, what
+you're going to need to do to use the
+new custom slash command is you're need
+to refresh Claude code so it picks up on
+it. So, I opened up a new terminal. I
+did claude and now we're going to do
+slash security. And now we have our own
+custom slashcomand we're using here. And
+now it's going in and performing
+security analysis for us which is
+awesome. So now it is going through and
+again any custom slash command you can
+think of any kind of process you want to
+automate you can do that just by asking
+claude to build out that custom slash
+command for you. So this is going to do
+the full security analysis for us. So
+the next feature I want to show you is
+sub agents. What sub agents allow you to
+do is basically have your clawed code AI
+agent spin up other agents to do work
+for you. And these agents can have very
+specific roles for very specific things.
+They get their own context. So it's like
+your own employees doing work for you.
+So one very simple sub agent we can have
+set up is a code review sub agent. And
+this is a sub agent that will optimize
+and review all your code for you. And
+it's going to have its own context. So,
+it's the context it's going to have for
+it is basically just everything about
+your code and how it works. And it'll be
+focused on just this one task, which
+makes it super powerful. So, I'm going
+to go into Claude here and I'm going to
+set up this sub aent. I'm going to say,
+can you build me a code review sub
+agent? This is a sub agent that will
+review and optimize all my code to make
+sure it's efficient. And I'm going to
+hit enter on that. And now Claude Code's
+going to build out this sub agent for
+us. And this is a sub agent. It will be
+able to spin up whenever it wants,
+whenever it makes changes to make sure
+our code is as optimized as possible.
+These sub aents are super powerful. If
+you're on a marketing team, you can set
+up sub agents for creating content, for
+writing emails, for writing blog posts,
+and these are going to be sub agents
+that are built just for those specific
+tasks so they become really good at it.
+For this example and for what I'm going
+to show you here, we're just going to
+build the code review sub agent out. But
+this is also a great thing if you want
+to go into Claude Code and say, "Hey, I
+want to build some sub aents based on
+what you know about my app. What are
+some ideas you have for sub aents I can
+build out?" I love using Claude for
+that. Just bouncing ideas. What slash
+command should I make? What sub aent
+should I make? And going in and having
+that conversation, having Claude Code
+build those out for you. As this is
+building, make sure to subscribe and
+turn on notifications as well. I put out
+multiple videos a week about building
+with AI and I'm sure they will only make
+you better vibe coders. So, I'm going to
+hit yes on this and it's going to build
+out that code review sub agent for us.
+And now at its own will, it'll be able
+to spin up that sub agent whenever it
+makes changes. So, it's always reviewing
+our code. All right, looks like the code
+reviewer sub agent is done building.
+Now, all you need to do to use your sub
+agent is ask Claude to use the sub
+agent. A lot of the time it'll use it
+automatically if it's doing something
+that it knows would be a good use for
+that agent. But if you want you could
+also just evoke it manually just by
+saying hey use the code review sub agent
+here. So now you have an entirely new AI
+agent to do whatever you need that
+Claude will use at its beck and will or
+when you ask for it to be used. So that
+is really awesome. That is sub aents.
+Again you can just bounce off claude
+code and say hey what are other sub
+aents I should build based on my
+application and it will build it out for
+you. Let's go into another new feature
+that is really really cool and that is
+output styles. This is a brand new slash
+command we can use to change the output
+style of claude. So if you do
+slashoutput style and hit enter on that,
+you out of the box get a few different
+output styles you can use. And basically
+what this does is change the way Claude
+talks to you when you're working with
+it. Out of the box you get explanatory
+and learning. If you are brand new to
+building with AI, I would highly
+encourage you to use the new explanatory
+mode. And basically what that does is it
+explains everything it's doing as it
+goes along. So you can learn what the AI
+is doing. There's also learning mode,
+which basically challenges you as it
+works to have you write your own code
+alongside the AI. Listen, if you want to
+write code, if you want to learn how to
+write code, go with learning. But I
+would recommend using explanatory mode.
+And what that will allow you to do is
+again claude will handhold you through
+everything it does so you can learn what
+it's doing which I recommend if you are
+brand new to coding with AI but you can
+also change this to whatever you want.
+So if I click escape here I go back to
+output styles you can see output style
+new. You can create your own output
+styles. So if you want to create an
+output style where claude code isn't so
+chatty and it gets directly to the point
+you can create a new direct output
+style. Or if you want to create one
+where it explains certain concepts in
+different ways, you can do that as well.
+This is completely customizable. So any
+way you want to customize Claude code to
+talk to you, you can do that. I
+recommend using explanatory mode, which
+is the default output style you can
+change to if you're brand new. But those
+are output styles. Really, really cool,
+new, interesting way to have Claude Code
+interact with you. So, let's continue
+building out our app. And I'll give you
+a few more tips for prompting and how to
+actually build out the app. What I want
+to do next is implement the AI
+functionality into our app. So, I'll
+show you how to implement AI
+functionality. Again, in our note-taking
+app, we have a few different pieces of
+AI functionality we're going to
+implement. So, we need an API key from
+OpenAI to get this to work. So, if
+you've never implemented an API key
+before, go to platform.openai.com.
+Log that. Once you're logged in, go to
+dashboard in the top right and then go
+over to your API keys right here. And
+then from here, you can create a new
+secret key. Give this a name. We're go
+note takingaking and I'm going to click
+create secret key. And that will show us
+a key you can copy and paste. Once you
+copy that, you can go to enenv.local and
+we can go in here and then you just
+paste your key right here next to next
+public open AAI API key. Paste that and
+hit save. Once that's saved, you have
+plugged in AI functionality into your
+app and you're good to go. You can start
+testing this out. So, let's do this.
+Let's go back in and I'm going to come
+over here. I'm going to hit the AI. I'm
+going to say summarize note. Let's see
+what happens here when I click summarize
+note. Let's see if our AI functionality
+works. Summary. And it summarizes our
+entire note for us. That's amazing.
+Let's go in here. Let's try a few things
+out. Here is how the New England
+Patriots are doing. Now, let's
+autocomplete this. Let's do continue
+writing. Let's see what happens now.
+Let's see what the AI will do. Here's
+how the New England Patriots are doing.
+The New England Patriots have shown
+great resilience this season with their
+strong defense and precise offensive
+plays. Despite facing tough competition,
+they have managed to secure important
+victories and climb up the rankings. So,
+look at that. It autocompleted our notes
+for us. The AI works. It really is that
+simple. We had Claude Code build out the
+AI functionality. And we took our API
+key from OpenAI and we put it in. I like
+using OpenAI for the API stuff. It makes
+it really simple to use. I've had very
+little issues using OpenAI's different
+APIs. Uh but there you go. That's how
+you get the AI functionality working in
+your app. I'm going to give you another
+tip. When it comes to doing more complex
+things in your app as well, I found this
+to work really well, especially when you
+get into bigger and more complex
+functionality. I like to have a co-pilot
+AI working with me. And this is how it
+works. So if you go into any AI you're
+paying for right now, even if you're
+not, you can use gpt5 for free right
+now. Go to chatgbt.com.
+Open up this window, pull it to the
+side. So you have claude code in one
+window, you have chat GPT in another
+window. I like to use a second AI as a
+co-pilot for everything I'm doing. So if
+I come back here in a claude code, I go
+into planning mode and I talk about
+another piece of functionality I want.
+Let's say I want the ability to draw in
+notes. So, I'm going to go in plan mode
+and send that. I want the ability to
+draw in notes. What that's going to do,
+obviously, is build out a plan. But what
+I like to do for really complex
+functionality, even though this really
+isn't that complex a functionality, is I
+like to take the plans and doublech
+checkck with a co-pilot AI that plan.
+And a lot of the time, what's going to
+happen is that co-pilot AI will actually
+come up with new and interesting ideas
+for implementing that functionality. So,
+here we go. We have a plan built out for
+implementing drawing inside of our
+notes. Let's do this. Let's take the
+plan. Let's highlight it, copy it, and
+let's go into our AI co-pilot here, and
+let's explain what we're doing. I am
+building out a note takingaking app
+where I want to implement drawing
+functionality. Here is the Here is the
+plan the AI came up with. What do you
+think? And I paste in the plan. and I
+hit enter and I'm just going to have
+this other AI check it over and
+sometimes what it does is it actually
+comes up with recommendations on how to
+improve the plan, right? The AI
+landscape is changing all the time.
+Every other day there's a new better
+model. I like to open up whatever the
+best model is at the moment. To me,
+that's GPT5. And just have them review
+plans that Claude comes up with. And a
+lot of times it'll come up with little
+tiny improvements it can make to the
+plan. So it says great start. This is a
+sensible plan using Excel Excaladraw and
+other plugins is a welltrodden path. And
+then it gives me a bunch of
+recommendations. And now here we go.
+What I change in your plan. We can copy
+and paste this and take that and paste
+it in and say another AI came up with
+some changes.
+What do you think? And paste that in.
+And now we have two AIs working together
+coming up with better ideas and better
+plans to build out better functionality.
+I find that using these two AIs to
+bounce ideas off of helps the plans
+improve and helps us get way better
+code. And yes, it might take a little
+bit longer because we're doing two AIs
+here. But I find actually get a lot of
+time saving by having the AI come up
+with those better plans. So this is a
+really important strategic step to use
+on any of your complex steps. So, a
+couple more things I want to go over
+with you. Let's go over prompting tip.
+So, prompting is everything, right? If
+you put in the right type of prompt, if
+you ask Claude to do things the right
+way, you'll get much better results.
+Couple prompting tips here. Number one,
+be specific, right? So, let's build out
+that drawing functionality. So, I'm
+going to say I want to give the user the
+ability to draw in a note. I want it so
+they can change the color of the pen as
+well as the thickness of the pen, too.
+I'm being very specific. I'm being
+specific about exactly what I want the
+change to be. The more specific you are,
+the better it'll be. And also giving
+examples is really critical, too. I'm
+going to say I want it to behave just
+like Excal. So, Excaladraw is a really
+awesome app online that lets you to draw
+on your screen. And so, I'm giving it
+other examples as well. You want to give
+it examples of other sites. In fact, you
+can take it a step further and even use
+screenshots. So, I pulled open
+Excaladraw here. here. If I actually
+screenshot this so they see what the UI
+looks like and then I go back into cloud
+code, I can actually paste in that
+screenshot and now it's going to have
+that as context. So when building out
+functionality, when talking to Claude
+Code, you want to include as much detail
+and as much context as possible,
+including screenshots. Anything you want
+to build out, if you have examples of
+what you want it to look like,
+screenshot it and put it in, and that'll
+give you way better results. So, be
+detailed, include context, use plan mode
+as much as you can, and have that side
+chat AI up on the side so you can bounce
+ideas back and forth between the
+different AIs. Using those tips helped
+me build Creator Buddy, which now has
+thousands of users, is at 300K ARR. It
+helped me build and launch that app
+completely by myself with no help at
+all. And now it's production grade and
+making a good amount of money. You can
+do the same thing if you use these tips
+and use all the features I showed you as
+well. Claude code is spectacularly
+powerful. And if you learn everything I
+showed you here, you go back, you review
+the parts that maybe you don't
+understand as well, I promise you will
+come out of this being able to build
+anything you want. If you learned
+anything at all, make sure to leave a
+like and it lets me know I need to build
+more Claude Code content. And also leave
+a hype if that's an option for you as
+well. That helps with the algorithm a
+ton. Let me know what your favorite
+features or tips are in the comments
+section below. I'd love to hear what was
+the most helpful from this video. All I
+do is create amazing videos about AI.
+So, subscribe and turn on notifications.

@@ -1,0 +1,1675 @@
+What if AI did 80 to 90% of the work in
+ 
+your business and all you have to do is
+just review that output? I'm not talking
+about using a chatbot where you copy
+paste things. I'm talking about actual
+real AI systems that could run on your
+behalf. AI systems that read your files,
+connect your tools, and execute real
+work your way following your process in
+your voice. That's what cloud code makes
+possible. And the crazy thing about it
+is that you do not need to write a
+single line of code. Now, real quick, if
+you notice, this video is quite long.
+So, if you don't have the time to watch
+this video in its entirety, I recommend
+for you to save it so you can learn to
+implement cloud code later. Because by
+the end of watching this video, you'll
+know exactly how cloud code works and
+you'll know how to implement it into
+your workflow so it can get 80 to 90% of
+the work done in your business. So, you
+can focus on the higher leverage work as
+a business owner. You know, the work
+that'll pay you $1,000 an hour or more.
+First, I'll show you how cloud code
+works in a visual way so that you can
+understand the building blocks and how
+you could use it in your business. Then
+I'll walk you through step by step how
+to get started with cloud code with a
+starter kit on GitHub that you can get
+in the link in description. This is the
+exact way I use cloud code to do real
+work in my business. Finally, I'll show
+you live how I build a real AI system on
+cloud so you can see exactly how all the
+pieces connect and how you could
+potentially use it in your business to
+regain hours and contribute actual value
+in your business. Your first question as
+a business owner is probably why cloud
+code? How does it actually work and
+how's it different from other AI and
+automation tools? So if we were to map
+on an axis, high autonomy as in the tool
+is actually able to do work for us with
+us just asking it to do it and how easy
+it is to set up. Cloud code would be at
+the top right and that is where we want
+to be as a business owner. We want to be
+able to tell something to do it and it
+does the work the way that we want it
+done. Now if you compare it to other
+tools let's say chat GPT. Chat GPT is
+pretty easy to set up but it doesn't do
+the work for you. It just asks it just
+answers back um some questions. It might
+be able to write some text but that's
+it. Now if you compare this to NA10 and
+Zapier there is improved agent
+capabilities but the problem with these
+tools is that we need to build every
+path like node 1, node 2, node 3, node
+4. While we could just ask cloud it
+could figure out the plan what are the
+things that need to get done and it will
+actually do the work for you. Then
+there's tools or SDKs like Langraph,
+Google ADK and Crew AI which still allow
+us to have high autonomy but the problem
+is that it takes weeks of building and
+as business owners we do not want to
+spend weeks technically building and
+coding on Python and doing all that
+stuff. Um ideally we want to be using
+something that is out of the shelf that
+we could ask it to build something and
+it's able to build an AI agent very
+quickly and start doing work as soon as
+possible for us so we can regain back
+more time and leverage. Now the best
+thing about cloud code is that I know
+there's code in it, it can actually code
+for you. But when you connect it to
+external tools and you give it uh
+specific agent skills, it can actually
+do work for you. You do not need to
+build infrastructure for these agents to
+work the orchestration and so on. Cloud
+code will do that all for us which is we
+can thank anthropic for that for
+building all the infrastructure. So
+simply describe in plain English what
+you want and cloud will build it whether
+it's coding or whatever digital assets
+you want it to build for you. So you
+basically get developer level power
+without being a developer and that is a
+complete game changer as a business
+owner. So let me show you how it works
+exactly. So if we were to take a normal
+AI chatbot, which is how most people use
+Claude or Gemini or uh Chat GPT, it
+would look, you know, on a rudimentary
+level, it would be you as a user sending
+a prompt or a question or sending text
+to the language model and then the
+language model takes your text, it
+reasons, and then it gives you a
+response back. So this is how most
+business owners are using AI. Now, if
+you're using AI right now in this way,
+well, you're technically going to be
+doing all of the work in your business
+cuz AI is just being a consultant for
+you or a very smart advisor. In this
+case, you're probably just chatting with
+AI as a chatbot and you're just copy
+pasting all the time. Sam Alman
+predicted that soon we're going to be
+seeing one person billiondoll companies.
+And he's not wrong. Now is the best time
+to build a business based on leverage,
+specifically AI agents and digital
+assets. And if you're watching this, you
+probably think so, too. That's exactly
+why I have a daily newsletter called the
+chief leverage officer. Every day, I'll
+share actionable insights on how I'm
+building a AI million-doll oneperson
+business. The thinking behind the
+systems, what's working, what's not, and
+where AI leverage is headed. If you want
+to build a business that runs without
+you, not by hiring a team, but by
+building AI leverage, that's what I
+write about. Links in description, and
+if you're watching this, I highly
+recommend it. Now, what makes Cloud Code
+different is that Cloud Code is not a
+chatbot. Now it has other capabilities
+which makes it agentic. So cloud code
+actually works under your local files
+and it can actually code for you. It can
+run commands for you and it could do
+actual work in your computer just as if
+you are interacting with your computer.
+Cloud code can somewhat interact with
+your computer. While with a chatbot
+you're just getting text responses. With
+cloud code you're asking it to do
+something and it actually does things.
+So cloud code in its essence is an
+agent. It's a system that leverages an
+AI model to interact with its
+environment to achieve a user-defined
+objective. That means you can give it a
+goal and AI can reason, plan, and
+execute on the actions to achieve that
+goal and fulfilled tasks. And what makes
+it even better is that you can give
+cloud code access to the external world
+via MCPs and APIs. So this is why cloud
+code is not just a coding agent. It can
+code things. Yes, it can build tools
+like coding tools, Python scripts, but
+it can also interact with the external
+world which makes this a game changer as
+a business owner cuz now you can give AI
+some work and it can interact with your
+notion and it can do work for you as an
+example. And the best thing about this
+is that we do not need to code. Again,
+cloud code has very good orchestration.
+All we need to do is give it the right
+prompt and it will do the work for us.
+Cloud will do the thinking. It will
+interact with our files. It will use
+MCPs, APIs, and track to the external
+world. It will do that work, come back
+and then tell you what work it got done.
+So, this is what an agent does and this
+is how you want an employee to work in
+your business. You tell them what to do
+and it does the work by itself. Now, a
+quick caveat here. This can also extend
+to how other LLMs work. So, this doesn't
+need to be only cloud code. This could
+be Gemini CLI or Codeex. The only thing
+that we're swapping is a language model.
+So regardless if you're watching this
+video, if you use a different AI model,
+the concepts I'm sharing here can still
+be transferable to any other type of AI
+model that you have. And this is why
+it's very important to understand these
+concepts because if you understand how
+your files are structured and how MCPs
+work, APIs work, and how you an agent
+work, this gives you the power to use to
+swap out any language model in the
+future. Now the next thing I want to go
+over is I want to go over how cloud code
+works visually so that later on in the
+walkthrough you understand what's going
+on uh with cloud code. So on the left
+side we have you the user and you can
+interact with cloud code in two ways.
+You could either give it a prompt which
+could be like a question or the way or
+just ask it to do something or you can
+have it packaged into a slash command. I
+like to think of slashcomand kind of
+like a button and when you click this
+button, it runs a prompt that you had
+previously or a workflow that you want
+Claude to do specifically. So instead of
+you asking Claude uh to do something
+over and over again, you could package
+that into a slash command and Claude can
+read that and then interact with your
+files and tools and do that work
+predictably. Now the thing about AI, AI
+doesn't come itself with memory. So AI
+is just the brain. So here's where we
+need to give uh claude the memory. So in
+cloud code, the memory is in a cloud. MD
+file. So within the cloudMD file is
+where we store the information about our
+workspace and where Claude can find the
+tools and files. So all the routing
+rules, memory is on here. So when when
+you give the prompt to claude, it has
+this memory attached to it. So that kind
+of like a map. So it knows how to
+interact with your files and tools to
+execute that task for you. Now you might
+have some stuff in your uh files and
+tools or your codebase or project base
+that you don't want claude to touch. So
+here's where you can have hooks which is
+kind of like can act as guard rails. Or
+if you want claude to interact in a
+specific way, we can have hooks um to
+tell Claude how to do something. So
+every time the claude runs a tool or
+something, it has a hook to it. And then
+the best thing about this is that your
+files and tools, we can store uh skills
+or agent skills. Now, if you don't know
+what agent skills are, I actually uh
+recorded a full video on that in my
+YouTube channel. I put in the cards
+above and the link in description below
+if you want to learn more about skills.
+But what skills does, it pretty much
+gives AI a playbook on how to do work in
+your business or like a standard
+operating procedure. Now this is
+gamecher because AI right out of the box
+won't know how to do things in your
+business but when you give it skills it
+can actually do work predictably in the
+way that you want it to get done and can
+create value in your business that in
+tandem with MCP which is external
+connections to the external world. It
+can interact with external world and now
+can actually create value for you. You
+can have slash commands which can act as
+buttons if you want cloud code to work a
+specific uh workflow. You have a memory
+cloud. MD file that tells cloud how to
+do things. You have hooks, so if you
+don't want cloud code to touch specific
+things. You have agent skills which
+teaches AI how to do work. And you have
+MCP connections which allows cloud code
+to interact with external world and
+deliver actual value in your business.
+Now the way cloud code works is that
+cloud code has a context window. There's
+a limit to how many messages you can
+send cloud code. So if you've ever used
+cloud and you notice that you're out of
+messages and it compacts, there's a
+reason for that. It's because cloud uses
+processing power to process text and the
+more text you give cloud code, the more
+processing power it requires and it
+exponentially increases after a certain
+point where at some point it's not
+financially logical to continue the same
+context window when it's much better to
+just compress the window by creating a
+summary and then spawning a new agent.
+Now this is important because when
+you're working with cloud code if you
+are working with one main agent and it's
+always summarizes summarizes summarizes
+the context that you've given at the
+first agent is going to be completely
+lost by the third or fourth cycle. So in
+order to maintain performance our goal
+is to try to maintain a clean context
+window. Okay? Because over time the
+performance of an AI model degrades as
+you give it more uh context. So there's
+research on this. It said that 11 out of
+12 models drop below 50% at 32 context
+and then at around 100k is when things
+start getting worse and around 150k is
+where you probably will get unreliable
+outputs. So if you find cloud code not
+giving you good outputs you it's likely
+because you're giving it too much
+context. This is why it's very important
+that we use sub aents. So what cloud
+code can do is that ideally you want to
+use it as an orchestrator where you
+spawn sub aents because each sub aent
+will have a fresh context window. So
+instead of going through the cycle where
+you work parallel with one single agent
+um you probably will get 90% better
+results with a multi- aent approach. Not
+only do you save context where the agent
+performs better, but you also get more
+work done because you have other sub
+agents doing smaller tasks. So this is
+why when you're working with cloud code,
+if you're working on a big task or big
+project that has a lot of context, you
+need to explain it. Ideally, you want to
+use the main cloud agent that you're
+speaking with as a planning agent that
+you ask it to spawn sub agents to do the
+work for you and to have the main agent
+review the work that the sub agents uh
+does. Because if you were to use the
+main agent, the ones you're talking with
+to do all the work and plan and
+strategize, the chat window will compact
+and like you'll compact multiple times
+and you're going to get frustrated
+because you by the requirements you
+shared with them in the start, they
+don't know what it is because they're
+working on a summarization of a
+summarization. So this is why it's
+important to understand how sub agents
+work and when to use them and when to
+spawn them when needed. This will also
+help you in terms of designing which sub
+aents to do specific t types of tasks
+and how you could have them all connect
+together. And this is a very important
+concept because context engineering
+right now is going to be very important
+in terms of getting uh AI agents to do
+predictable work that is accurate in
+your business at least for now until
+they fix the context window and once AI
+has unlimited memory then we're going to
+be talking completely different game
+then. Now the way cloud code spawns sub
+aents is that you could ask it in your
+prompt or in a command to spawn the sub
+aent and then it'll go ahead and spawn
+the sub aent and prompt that sub aent on
+what it needs to do. And because sub
+aents also have access uh to your files
+and mcp or the external world it can
+actually do real work in your business
+as well. And cloud code can spawn as
+many sub agents in parallel as you want
+it to. Now, big caveat here. If you're
+not on the max plan, if you're going to
+spawn sub agents on the pro plan, you're
+likely going to use up all your usages
+for the week. So, I recommend using the
+cloud max plan if you are going to plan
+to spawn a lot of sub aents. And the
+great thing about sub agents is that if
+you know how to set them up, you'll
+probably get, let's say, what would you
+get done in a week, probably done in
+like 10 minutes because sub agents can
+do all the work for you. Now, a core
+pillar that allows agents to do real
+work in your business is agent skills,
+which is basically playbooks that your
+agents can run in order to do specific
+tasks in your business. Now, if you're
+again, if you're unfamiliar with agent
+skills, I did record another video, a
+full breakdown. I put the link in
+description and the cards above. You can
+check that out. But basically, in your
+files, you want to have a set of skills
+that you could have that agents could
+quickly pull up like playbooks and run
+them. So, the way this works is let's
+say you have a skill on YouTube
+research. You'd ask, "Hey, can you
+research this video idea for me?"
+Whatever the video is. Um, Claude is
+going to think, "Okay, video." It's
+going to scan through this Claude uh
+skills folder. It's going to find the
+one that matches, which is YouTube
+research. And then it's going to load
+that. It's going to load only the skill.
+Now, the reason why we wanted package in
+the skill is because package skills
+allows Claude to only get what is
+relevant to the specific task and not
+pollute the context window. Cuz if
+Claude were to read all of this as like
+one single prompt, it would pollute the
+context window and then it would compact
+and it wouldn't be as efficient with
+work. So pack so skills is kind of like
+packaged prompts, instructions,
+everything in one place to do a specific
+task uh predictably. So Claude will scan
+the uh YAML front matter which is pretty
+much kind of like the title and the
+description and then once it matches the
+keyword that we asked it for which is
+researchers video it will pull up that
+skill. So for example um research this
+video will pull up the YouTube research
+skill. It'll have the skill that MD file
+over here with the name YouTube research
+description analyze videos for insights
+tools YouTube MCP notion MCP. Okay with
+the instructions. So now the agent will
+know how to do this task. It will know
+that it will use these two tools and it
+will have instructions on how to do it
+specifically and the prompt on how to
+think about it on how to do the analysis
+and so on. And then we give it access to
+notion and YouTube.
+Now the agent can actually do real
+valuable work because you've given it
+access to tools. You've given it access
+to instructions and how to do things
+specifically in your business and what
+to do with that information. And then
+once it does all this work, it can then
+save that um let's say this research
+plan or this research analysis into your
+folder. So now you can actually see the
+folder and interact with it. And if
+there's anything wrong with the folder
+or with the research, you can prompt it
+again to say, "Hey, look up this
+keyword, check this, run this with
+another skill that you want." So now
+skills stack upon each other and you
+could work uh with agents kind of like
+an employee doing work for you in your
+business. Previously, in order to run a
+business as a business owner, you'd call
+yourself a CEO, but I like to call that
+as chief everything officer. So you'd be
+in charge of everything. You need to do
+everything yourself or review everything
+yourself. Content, research, reports,
+email, scheduling, data entry. You'd
+probably be doing at least some of these
+tasks yourself. if you don't have
+delegated and even if you have delegated
+you probably will have to do some of
+this stuff as a CEO because you need to
+manage things in your business. So this
+will likely take you 40 hours a week.
+Now because cloud code exists you can
+cloud code can be your CEO. So now cloud
+code does the things that you were doing
+before. So content, email research,
+reports, scheduling, data entry, cloud
+can do that. So what would take you 40
+hours a week now cloud code can probably
+do 36 hours of that and you just take it
+just takes you 4 hours of your time
+where you just direct it and give it
+feedback on what to do. So you can
+pretty much get the same output of what
+you did before with 10x less of your
+time. So this is why using cloud code is
+one of the highest leverage things uh
+you could do as a business owner and it
+starts by understanding how cloud code
+works. So with that being said let's
+dive into the walkthrough real quick. If
+you find this video helpful, I'm running
+a paid 3we cohort called Your First AI
+Employee, where our goal is to turn
+Cloud Code into an AI employee in your
+business that generates you at least
+$10,000 a year in value. We're going to
+X-ray your business to find where AI
+would fit. Then, we work to build your
+first AI employee that saves you at
+least 10 hours a week and generates you
+$10,000 a year. This isn't going to be a
+generic system. It's going to be one
+built customized to you, your process,
+your standards, and your voice. If you'd
+like to join me and other business
+owners, links in the description and
+there's limited spots I accept every
+month. Okay, so the best way for us to
+get started to learn how Cloud Code
+works is for us to build something live.
+So, we're going to build a YouTube
+breakout analysis, which is our goal is
+to have Claude spawn sub agents that
+will scrape through the all of YouTube
+with specific keywords. will find the
+breakout videos, which is specific
+videos that have a ton of views for the
+channel that has smaller amount of
+subscribers. That's why they're called
+breakout views. So, we can take that
+data and we could then use that to
+position our videos to get the most
+amount of views possible. So, here's how
+it's going to work. So, I'm going to ask
+Claude, hey, research this video idea
+for me, which whatever video idea it is.
+And then Claude is going to be able to
+go through claud. It's going to
+understand what skills we have and then
+it's going to run through the YouTube
+research skill which we're going to
+build together. And then it's going to
+connect to the YouTube MCP uh as well.
+And then it's going to spawn sub agents
+called YouTube researchers which with
+specific keywords that will um then look
+up YouTube. they'll get their own
+results and then they'll give it back to
+the main claude or the orchestrator
+agent and then let us know uh which
+videos uh performed best. So that's what
+we're going to build. So let's dive in.
+All right. So in order for us to get
+started, the first thing we need to do
+is we need to download Visual Studio
+Code. So we can go ahead and download
+it. It's completely for free. Or if you
+prefer flexibility and you potentially
+would like to use Gemini, um you can
+download Google Anti-gravity. So, both
+of these are really good options. I'm
+going to go ahead with Visual Studio
+Code because a lot of the extensions
+that I use work perfectly on Visual
+Studio Code and some of them don't quite
+work that well on anti-gravity. So, once
+you have VS Code uh installed, the first
+thing we need to do is we need to
+install the Cloud Code extension. So, we
+go to extensions on the left side and
+then what we're going to do here is
+we're going to search Claude
+and then we're going to go ahead and
+install it over here.
+Okay. So, you're going to get a prompt
+over here that's going to show you how
+to use cloud code. You can go ahead and
+read this. I'm just going to click on
+mark done because I'm already familiar
+with cloud code. Now, the next thing I'm
+going to do is I need to clone a get
+repository because if I just start
+working cloud code or VS code, I don't
+have a folder open here. So, and if you
+open up a empty folder, cloud will still
+work, but it won't have the basic
+infrastructure that cloud works with.
+So, I actually created a cloud code
+business starter kit which has all of
+the infrastructure in order to get cloud
+code to work uh right away. Instead of
+you needing to do go through the trial
+and error trying to get things set up,
+reading the developer documents, I put
+it all neatly over here. So, you can go
+ahead and grab this from the link in the
+description below and you can get
+started there. The instructions on how
+to set it up are over here, but I'm
+going to go through step by step right
+now. So, I'm gonna grab this link.
+I'm going to grab this link and I'm
+going to go to uh Visual Studio Code.
+I'm going click clone GitHub repository.
+Clone from URL. I'm going to go ahead
+and open it up to where I have my
+YouTube walkthroughs. I'm going to
+select repository as destination.
+Okay. So, I'm going to click open and
+boom, it opened up the folder. So if you
+look in the left side, if we open this
+up, we can see the cloud folder. So the
+cloud folder is where uh we have the
+things that claude works with. So
+agents, so if we have custom agents,
+commands like I explained uh previously
+and then skills. So I created some
+skills already so that if you want to
+create an agent, if you want to build
+anything, you can ask Claude and it will
+already know uh the correct format in
+order to create these things. So I did
+that. So there's skills and then there's
+the settings.json which is where hooks
+stay and what gives permission for what
+claude uh claude to do. So these are the
+permissions that claude has uh that
+could work in this uh folder which is
+read, glob, gp, bash and so on. And then
+there's hooks. So every time a new skill
+is created or renamed, claude will
+update the cloud. MD file. So the cloud
+md file again is the explanation on how
+uh this repository works. And this claud
+file is given to every single cloud
+agent. So then the cloud agent will know
+exactly how to work in this code space
+or knowledge base if you like to call
+that. Again markdown files are just text
+files. If you're not a developer and
+you're confused what MD stands for, just
+think of it as like a text file that is
+written in a specific format. So these
+hashtags are kind of like headers. Two
+hashtags like a header. Uh asterisks are
+kind of like bold. So it just looks like
+that. So if I want to read this in a
+more in a way that is more friendly, I
+can click on control shiftv, click on it
+all together and it's going to open up a
+preview. Okay, so technically this is
+just a prompt. If you just look just
+like a nicely formatted prompt. So we
+work with AI via prompts. So if I look
+through this cloud and MD, uh this is
+what every cloud agent will get. So it
+will understand um how the directory
+works, the routing. Um the number one
+important thing here with working with
+AI is routing because when AI agents
+start to work, we want them to
+understand where to find the things to
+do the work properly. The last thing you
+want is AI to not have the context to do
+the work correctly and then it does a
+completely wrong output. So this is why
+it's important to have the routing
+because when AI knows the routing, it
+can look for the right tools to do the
+right amount of work or the right
+context to do the right work. Okay. So
+routing over here if you want to create
+a skill or use these skills and so on
+and then it'll go over the folder
+structure which looks like so and MCP
+servers will be configured on MCP JSON.
+I want to do a quick recap before I go
+through the walkthrough so you can
+understand what's going on and you don't
+get lost. So the cloud folder is pretty
+much a so the docloud folder is where
+we're going to store our agents. So
+custom agents or sub agents, commands
+which is the buttons on or like packaged
+prompts that we want cloud to do work
+predictably. Skills which is agent
+skills which is packaged SOPs, knowledge
+playbooks and then the hooks
+configuration. Now it's in acloud folder
+because this is what allows Claude to
+automatically discover these tools and
+to have Claude work on it immediately
+instead of us having it stored in a
+different file format. This is
+automatically stored when Claude is
+launched. So whenever I open a new uh
+cloud or a new agent or I have multiple
+agents, all these agents will be reading
+the cloud folder immediately. Okay,
+similar with the cloud.MD folder as
+well. And then at the bottom there's a a
+option to work with plan mode or normal
+mode. So I can switch between those
+those modes by clicking shift tab on my
+keyboard. Now, you want to use plan mode
+when you are building stuff because you
+want Claude to sort of interview you and
+pretty much go through Claude on all of
+the requirements and what you're going
+to build step by step. That way, you do
+not make mistakes because if you just
+ask Claude to do something, it's not
+going to have the context to do it the
+way that you wanted to do to do it. So,
+plan mode is very helpful. Now, once
+once you're done with plan mode, you can
+click shift tab again and then you can
+toggle between asking Claude to plan or
+asking Claude to just do the work uh
+already. So, if I want to get started,
+what I'm going to do is I'm going to
+click on cloud open over here. Because I
+already have Cloud configured on my VS
+Code, I can just get started. If this is
+the first time you're sending this up,
+you're going to be prompted over here to
+log in. All you need to do is use your
+cloud.AI subscription. You do not need
+to use the API. So, if you already have
+a subscription to Cloud, just log in uh
+following the instructions over here.
+So, our goal again like I mentioned is
+we're going to build a YouTube breakout
+researcher. and let's see how what we
+build. So, let's start. Hey, Claude. Um,
+my goal is to build a YouTube breakout
+researcher. Um, in order for us to get
+started, we're going to need to get
+access to YouTube uh MCP. So, the goal
+is this. I want to I want you to uh find
+an MCP server that is capable of finding
+a YouTube channel, their views, their
+subscriber count, and when the video was
+published, and potentially any other uh
+requirements for us in order to find
+their breakout score. So, a breakout
+score is basically the um number of
+views divided over the number of
+subscribers on the channel. So ideally,
+we want to identify videos that have the
+highest breakout scores so we could
+model our videos on those videos so we
+can get the most amount of uh traffic to
+our channel. Does this make sense? Okay.
+So, I'm going to get started by uh
+asking Claude to find an MCP server
+because if we don't have the MCP server,
+then we can't really find the breakout
+videos. So, it went ahead. It understood
+and it's calling the create MCP skill.
+So, I'm going to do that. Um in the
+meantime, I'm going to open up a new
+chat over here.
+and we're going to do two things at
+once. So, I'm going to ask Claude, "Hey
+Claude, I'd like to work on building a
+skill where specifically we uh scrape
+through YouTube to find breakout
+videos." Now, a breakout video is a
+video that has substantially more views
+than a number of subscribers. Ideally,
+we want to find find out breakout videos
+that have a 2x score or more. Now,
+here's how the skill is going to work.
+Um, I'm going to give you a video idea
+and from that video idea, I want you to
+find five core angles or five core
+perspective shifts. And then from those
+core perspective shifts, I want us to
+identify five keywords for each core
+angle or perspective shifts. Then once
+we get through all those keywords, the
+next thing I want to do is I want us I
+want us to spawn a sub agent for each
+one of those five keywords that will be
+searched uh in parallel. And then later
+on, I want you to consolidate all of
+that information and create a report for
+us. Now, specifically, I want you to
+make sure that the videos that we look
+for are at least 5 minutes or longer and
+are not shorts. We do not want YouTube
+shorts cuz we post long form video. So,
+5 minutes or longer only. And I want you
+to create this where it's a phased based
+uh process where you ask me uh where we
+approve the keywords and so on so that
+we can work on in case um we want to
+make any adjustments. Okay. So I'm going
+to have that work and I'm also going to
+tell it uh by the way we're currently
+setting up the MCP. So uh don't worry
+about that for now. We're working on
+that in parallel. Okay. So now I'm going
+to go back over here and it's going to
+look for Okay. So, it's spawning an MCP
+finder agent to search the best YouTube
+MCP server options. So, I have this
+agent already set up over here called
+MCP-finder.
+So, Cloud already knew that this
+existed. So, it's running this custom
+agent.
+Okay. So, while it's running, it's going
+through the skills and it's actually
+creating the skill. So, I'm going to go
+ahead and stop this very quickly.
+And what what I'm gonna say is I want to
+do this plan. So can we do
+can we do what I shared earlier
+but plan it together? Okay. Um the
+reason why I'm going to do plan here
+which I forgot about it. So cloud code
+has three different options. It has um
+the normal option which you just ask it
+it will start building things. Then
+there's a uh plan mode. So in this case,
+creating a new skill, plan mode would be
+best because then um we do not want
+Claude to make assumptions. We want
+Claude to create a plan. We review it
+and then we work. So it's asking me
+right now for the parallel search,
+should each of these five sub agents
+search all five keywords for their
+angles or should we respond 25 agents,
+one for keyword? Um 25 agents would be
+way too much. So I'm say five agents.
+How many breakout videos should we aim
+find per angle or keyword? I would say
+um
+top three to five per angle is good.
+Sometimes it's really hard to find 10.
+Uh what should the final report include?
+Video details, title views,
+subprocesses. I'm going to go ahead and
+say um yeah, we can do all this. I would
+say the most important important is the
+title templates
+so that we can um brainstorm different
+ways we can implement our core ideas
+into those uh title templates and then
+future have the option to download the
+thumbnails so we can use those as
+inspiration.
+So I'm going to click enter. Where
+should the research agent output itself?
+Research YouTube breakout video idea. I
+think that's fine. Submit answer. Okay.
+So, let's see here. It actually is um
+web searching and looking at these
+GitHub repositories over here um to find
+the MCP servers. So, let's see here. For
+title template, should we extract exact
+pattern struct from breakout video
+titles? Show both templates and actual
+give templates plus real titles for
+contexts. Yes, both. Uh for the breakout
+zero calculation should be be strict
+about 2x minimum short range. Uh 2x only
+show tiered results categorize breakout
+level. I like that. Should the skills
+save thumbnail URLs only or actually
+download the image files? Um download.
+Yeah, let user decide. Okay. What should
+happen if you want to modify the angles
+or keywords during approval? Interactive
+edit. You suggest changes are
+regenerate. You directly edit a person
+list and continue. Okay. Interactive
+edit. After five aent after the five
+agents finish searching parallel. Should
+I show you raw results before
+consolidating? Okay, I'm going to say
+share with me the consolidated report,
+but also compile all of the agent
+results into a
+uh consolidated
+folder, consolidated file. So, I'm click
+submit answer. Okay, so the MCP finder
+agent is still looking. Okay, perfect.
+Now I have a complete picture. Let me
+summarize the complete workflow. We'll
+build phase one, phase 2, phase three,
+phase 4, phase 5. Okay, so output
+structure. So it's going to create a new
+folder where it's going to create these
+outputs for us. So it organizes it uh
+for us. Does this capture everything
+correctly? Any adjustments before I
+start building? Okay, so it found the uh
+best MCP server for our use case. So I'm
+going say yes, let's go ahead. Yes,
+let's go ahead and install this MCP. So
+uh because this MCP server is on GitHub,
+I believe it'll be able to set up. So
+now cloud is telling me that I need to
+get an API key. So I can follow these
+instructions. Go to Google cons. Go to
+Google Cloud Console. So if I click on
+that, it will pull up my Google Cloud.
+So I'm now on my Google Cloud. If I go
+back, I need to go to click a new
+project, enable YouTube data API, create
+API credentials, and so on. So I'm going
+to go ahead and skip this. So I'm just
+going to copy over the API and we'll get
+started. All right. So I got the API
+key. I'm going to share it and then
+Claude is going to configure the MCP for
+us. Okay. So it went ahead and it
+created an MCP folder over here and it
+added the API key. So I'm going click on
+yes. So if I go to MCP.json, we could
+see the API key over here and then we
+could see the MCP that we're using. So
+this is how Claude gets access to the
+external world via the MCP.json
+uh file over here. Go ahead and close
+that out. Okay. So it seems like this
+agent is still planning. Okay. So
+apparently it says it recognized the MCP
+server is connected. So the way that I
+could check if an MCP is set up
+correctly. I could type /mcp manage MCP
+servers. Continue in terminal and it's
+going to open up a new terminal. So
+click on enter. So it is actually
+connected. So yes proceed. So I can type
+MCP. So we have two MCP servers. It
+seems like project MCPS and YouTube. So,
+and notion which is I connected globally
+on my computer. So, that's good. So,
+we're all set. So, it ask are we done
+configuring
+MCP? Okay. So, now it's asking me, do
+you want claw to use YouTube MCP tools
+without asking permission each time? I'm
+going to say yes. Uh because we're going
+to use sub agents in the future. If we
+do not add this, then the sub aents will
+fail. So, I'm going to say yes.
+So what's going to happen here in the
+settings.json
+right now we have read glob gp bashbash
+it's going to add those tools within
+that mcp server that claude can edit.
+Okay so it created over here mcp YouTube
+excuse me underscore asterisk. Hopefully
+this will work. If if it doesn't work
+then we'll likely have claude to
+actually put in the real uh tool names
+over here.
+Okay. So, let's go back here
+and let's click on yes. So, it's going
+so it's checking what tools are
+available from the MCP so we can build
+the agent properly. Um, let's see what
+happens. So, you'll notice that Claude
+will ask you. You can just say yes,
+allow if you want it to stop asking you
+for permissions on yes. So, I'm going to
+ask if we're done setting up the MCP
+here. Okay. So, apparently we'll need to
+reload and test, but I think the MCP
+servers are already working. So, I'm
+going to ask, can you test searching for
+a breakout video for
+business for productivity?
+Sorry. Uh, productivity
+for business owners. Click enter and
+let's just see if it works. If not, then
+we'll have to restart to get the MCP to
+work. All right. So, this agent just
+finished searching how to use all the
+tools. So, apparently, it's going to
+update the tools needed. So, it
+identified all the tools we needed. So,
+and it uh in the plan folder. So,
+meanwhile, while that's working, I'm
+going to go ahead and um I'm going to
+restart cloud code because the MCP
+servers aren't quite uh the U2 MCP
+server isn't quite connecting. So, in
+order for me to do that, I'm going to
+click control shiftp and I'm going to
+type reload
+reload window. And what's this going to
+do? It's going to pretty much refresh uh
+uh Visual Studio Code. So, I'm going to
+ask it to test again.
+Sometimes MCP uh servers are quite
+like miseratched. Sometimes it works,
+sometimes it doesn't. So this is why we
+need to test it. Okay, let's continue.
+So this is why using the plan mode is
+very helpful because Claude can get all
+of the context and put it into a a plan
+folder which is over here claude plans.
+And when you work in a different uh when
+you compact when the window compacts or
+you're working with a new agent, we can
+continue. So looks like the MCP server
+is connecting. So it actually worked
+when we restarted it. And over here it
+says um that we already have it
+permissions set up. So it's going to
+verify the settings and then continue
+building. Okay. So it's going to create
+the YouTube breakout search agent now.
+So I'm going to do this. I'm going to
+ask can you make sure to read
+uh create agent skill
+before creating the agent so that I want
+I want them to I want claude to build it
+right the first time instead of us going
+back and forth. So I'm going to make
+sure ask it to read the create agent
+skill before creating the agent. Yeah.
+So now this is the thing with claude is
+that sometimes you need to guide it. So
+it's creating this directory when we
+don't quite need it.
+Okay, because we already have one that
+exists over here. So, we already have an
+existing agents folder.
+Okay, I'm going to click on yes. Okay,
+so you can see here that um we used the
+YouTube MCP. It worked great. So, it
+found um some good performing videos,
+but as you can see here, the breakout
+score aren't that high. So, 0.6 6 0.3 0
+uh2 and so on. So this is good. So we're
+we're already set. So uh let's continue
+on this chat. So yes, allow. So cloud
+made a mistake here. So it fixed it and
+it went ahead and created this markdown
+file over here.
+Um if you notice, it's not the same as
+this file. Whoops. As this file over
+here. This is how an agent should be
+structured. Okay. So now Claude will
+need to update that. This is why I've
+created these skills over here which
+teaches Claude the standard formatting
+to do things. So this is very important
+because Claude right off the box doesn't
+have context. So this is why it's very
+important. So you see it just made these
+updates over here.
+It made the update. So if I open up the
+folder you can see now it's uh you can
+see now it is it is using that the
+correct way. Um, also with with using
+agents, you can choose which model to
+use. So here we're using Sonnet because
+we could potentially even use Haiku over
+here. So if you want to uh conserve
+tokens, you use Haiku. I'm going to
+stick to Sonnet. It seems fine for this.
+This is why having custom agents is
+helpful because you can decide what
+tools to use. Like for example, MCP
+Finder doesn't need YouTube search
+tools. So it's it's custom. And I can
+use this prompt that is predictable,
+right? It uses a predictable prompt
+instead of having Claude need to create
+it all the time. So I could ask Claude
+to spawn sub agents, but now I'm going
+to rely on Claude to create the prompt
+to send that sub agent to do that work.
+But if I create a custom agent, I'm more
+in control of the prompt of what it does
+and so on. So this is why uh agents are
+really helpful. Uh, skills are really
+helpful because skills is what gives
+pretty much context to agents on how to
+do the work. Okay, let's continue here.
+Seems like it got stuck here. So, I
+think we're done setting up the MCP. So,
+we likely will not need this tab
+anymore. So, I'm going to close this.
+Um, if you close a tab and you're
+wondering where it went, you can always
+uh click this drop-own menu over here
+and you can always find your past
+conversations. So, don't worry about
+losing work. Okay, it's created this. So
+quality criteria search all five
+keywords filtered all results. So now
+it's creating the it's identifying the
+agent to make sure the agent does the
+work correctly. So I'm going click on
+yes. Also I notice it has three to five
+diverse breakout videos. I don't think
+that's necessary.
+All right. So now it's going to start
+working on the skill. So it's going to
+create the skill directory.
+Yes. So if we pay attention to the
+skills over here, we should see a new
+skill. So YouTube breakoutf finder.
+We're going to find we're going to so
+create a new folder. So this is how
+Claude scans for um YouTube. So, I'm
+going to make sure make sure
+to read create skill
+to know how to create this skill,
+please. Now, this is the thing about
+claude. Sometimes it takes a while. So,
+this is where you want to think about
+splitting up your work into multiple
+parts and then have multiple agents work
+at the same time. Um, I'm working on
+this on a video, so I want to show you
+guys everything. But if I was doing this
+myself or do this again, I'd probably
+split this up into number one, creating
+the agent, number two, creating the
+skill, and number three, creating the
+MCP, trying to do all those three things
+at the same time. So, instead of us
+taking, let's say, 30 minutes, we could
+potentially get it done in like 20
+minutes. So, it went ahead and created
+the skill over here. And what I'm going
+to do is I'm going to click on control
+shiftV so you guys can read this
+clearly. So uh YouTube breakout video
+finder that's the that's the name the
+title. So this is YAML front matter
+which is literally like a title and a
+description. Okay. So what claude does
+when it looks for skills it looks for
+the title and description so it knows to
+run the skill. So when to use user says
+find breakout videos user wants discover
+blah blah blah output where to output it
+it output it over here and so on files
+produced report agent results thumbnails
+if you wanted to get the thumbnails and
+then goes through the five phases over
+here. So okay so now we're going to test
+the workflow. Okay. So, next thing I
+want to double check is review the the
+agent if it actually understands what
+what the breakout score is. Okay, it
+does view breakout score. Okay, so I'm
+going to do this. I'm going to ask, can
+you review the workflow from the skill
+to running uh YouTube
+breakout search as sub agents for those
+for each batch
+of five keywords
+before we run it? So, I'm going to ask
+it to review and then once it's
+reviewed, then we can get started by
+testing it out. Um this is very
+important because this technically is a
+workflow. Um because we're starting with
+a skill. There's like three phases and
+then from the three phases it's going to
+spawn uh sub aents. It's going to go
+through keywords and then the sub aents
+need to extract an output and then from
+that output we're going to ask cloud to
+um analyze that output give us a
+compiled analysis and then we could use
+that analysis to download thumbnails. So
+this is a complete workflow. So I want
+to make sure everything is working and
+make sure claude. Okay. So um here's
+what Claude missed. So spawn parallel
+agent. So we need to do this. So looking
+at skill instructions
+format might not be clear enough for the
+agent. Agent expects angle name as a
+string keyword as an array. So just the
+prompt should be more structured. Yes,
+fix it please. Also as you as you work
+um with building skills since I'm
+building this live when you build it on
+your own time like workflows like so
+you'll have to test and see what works
+best for you and your your own business.
+So maybe there's a specific style of
+output you want. Maybe you want the
+agents to um do something else. You can
+go ahead and customize it based on how
+you want it. Okay. So I think it fixed
+it. Did you fix it? Are you ready to go?
+And what I'm going to do is I'm going to
+close these tabs. I'm going to open up a
+new Claude chat over here. And I'm going
+to ask Also, I forgot to mention the
+beginning of the video. Ideally, we
+should probably be using Opus. I've been
+using Sonnet. So, I'm going to switch to
+Opus, which we should been should have
+been using from the start. So, this is
+why it might have not have been making
+the best decisions possible. So, it's
+important that you use the right model.
+Not that Sonnet is bad, but Opus is
+available, so might as well use the best
+model possible. Okay, so it's ready. So,
+I'm going to go ahead and open up in a
+new tab. All right. So, before I run the
+workflow, I'm going to double check to
+make sure all the MCP connections are
+connected. So, I'm going to click
+control shiftp and I'm going to click
+reload and I'm going to put in reload so
+that to make sure everything is uh
+restarted just in case cuz sometimes MCP
+connections don't quite work. So, I'm
+going to ask cloud code, hey Claude, can
+we do a research to find breakout videos
+specifically for cloud code for business
+and productivity? Click enter and let's
+see what happens. So ideally it should
+open up the skill immediately. It should
+be able to pick up the skill. So it did.
+YouTube breakout finder skill to search
+for breakout videos. So it went through
+the skill and read through it. So it's
+going to extract the core angles. Here
+are the five distinct angles. Okay. I
+don't I don't like the comparison. Can
+we doic AI? Okay. So extract the five
+core angles. I didn't like the fifth
+one. So I'd like aentic AI. Agentic
+employees. So as you use a skill, you
+want to make sure you guide AI cuz
+sometimes AI doesn't do the perfect
+thing or you would basically explain
+your thought process on why this is
+better. So you can update the skill.
+Okay. So yes looks good. Let's so now
+it's going to identify identify 25
+keywords. No looks good. Let's continue.
+So from these keywords it's going to
+look online to find uh videos that might
+match our style. So here it went. It's
+spawning five agents. So agent 1 2 3 4 5
+and it's loading the instructions from
+that agent.mmd folder which is uh this
+one over here. So it's actually pulling
+this out. And by the way I changed the
+model to opus just to see how it would
+work better. Um I do like opus better
+than son cuz sometimes opus does do a
+better job in terms of uh tool calling.
+But that doesn't mean you can't use
+sonnet. You could use sonnet or haiku.
+Really depends on on what you want. you
+want to really customize things to what
+matches your business best. So, as you
+can see here, the MCP is working. The
+sub agents are actually uh running the
+MCP and are getting uh videos. So, it's
+going through automate business tasks
+get 20 look for long long videos and
+order it based on view count. So, it's
+finding the most viral videos or the
+videos that got the most views for all
+of these keywords. And the benefit of
+running sub aents is that these are all
+are all running in the background. So it
+doesn't take the context window of the
+main agent. So once once these sub aents
+are done, I can continue working with
+this agent. So let's say I was working
+on a a YouTube video, I shared the
+YouTube idea with with the agent and I
+want to continue working with it so it
+doesn't lose context. I would use sub
+agents in this case. So this is why it
+keeps the main context window very clean
+and doesn't pollute it. And if I were to
+ask the main agent to do all the search
+itself, it probably can, but it will
+eventually for certain reach the 100%
+capacity of the context window and then
+it will compact again. So this is a game
+that you have to learn is understanding
+the context windows limits and knowing
+how you could split that work with sub
+aents and so on. All right, so this
+might take a while. So just let cloud
+code cook while you work on something
+else. So this is very powerful because
+now you do not need to do this work
+yourself. So if you were to do this,
+you'd probably go on YouTube searches
+keywords itself and probably do the
+analysis yourself or use a tool or a
+software or probably hire a VA to do
+this when now we can just have AI scrape
+over 125 keywords and then from those
+keywords identify which video title
+would you like to use the best. So now
+this really gives you a better chance in
+terms of positioning your YouTube videos
+to get more views. All right, so all
+five search agents have completed and um
+it's found some excellent breakout
+videos. Here's a preview of what we
+found. Workflow automation, how to
+instantly build AI agents in NA10 using
+Claude. Well, that's great. So um would
+you like to down the thumbnail images
+for inspiration or just save the URLs in
+the report? For now, let's just save the
+URLs in the report and then we can
+select which videos we want
+the thumbnails from to download. So
+instead of doubting or thinking or
+guessing whether a video will get views,
+you might as well just figure out what
+works and just emulate from it. Okay, so
+now it's generating the consolidated
+report. It went ahead and created a new
+folder over here. So, research YouTube
+breakout cloud code uh business
+productivity and it should create a a
+report that we could read which is going
+to be in a markdown uh file. All right.
+So, it created a report here um with the
+top title how to action and time frame.
+How to instantly build AI agents how I
+code project app solo. How to get
+unlimited cloud code free. So it's
+giving us the title templates that we
+could use as a foundation to build the
+title. Okay. So don't sell NA10
+workflow, sell AI infrastructure. So
+this could be another thing. Don't build
+on NA10, build on cloud code. So these
+are ideas now I can have to create the
+okay AI agent explained like your five
+AI agents explained. So and so on. And
+then there's breakout videos by tier. So
+it's sorted based on tier. So let me do
+this. Let me click control shiftV so
+it's easier to read. So yeah, this is
+much better. So I can go through this
+and I can figure out how to take action
+with this. So all these videos, the
+links are here. So I can click on watch
+if I want to check this out and it will
+open up the video. Same thing here. And
+all the thumbnail URLs are here as well.
+So if you want to download this, you can
+check it out. So yeah. So what would
+have taken you who knows like hours
+searching YouTube or hiring a VA to do
+this spending a whole day to find out
+analytics or what what video would work.
+You basically have a research report
+that you can make datadriven decisions
+to predictably grow your YouTube
+channel. And this is what I've been
+using to grow my YouTube channel. And if
+you look at my recent videos, most of my
+recent videos are breakout videos
+because I take this I follow this uh
+scientific approach. So, I don't just
+guess what video will do well. I use
+data to figure out what titles will work
+and then I plug and play those in. So,
+I'm going to say let's continue. Let's
+download
+the uh thumbnails. Okay. So, now it's
+going to create the thumbnails folder
+and then it's going to go ahead and
+download them and place them in here so
+that we could preview them and then we
+could think about how we could
+potentially create um these these uh
+thumbnails for us. So now you could then
+remix. So you could pick a title that
+got the highest breakout score and then
+you can pick the thumbnail that got the
+highest breakout score and then just
+combine them and then you have a higher
+chance of getting more views on YouTube.
+All right. So apparently there was an
+error. So I asked Claude to fix it. So
+now it's actually downloading it. So if
+I click on one of these, pull this on
+the right side. So this is one of the
+thumbnails. So this could give me an
+idea. All right. So cloud code is
+downloading all these thumbnails. So if
+you check them out. So you can you you
+can potentially get inspiration from
+these like so and then you can get some
+idea. Most of these has a face on the
+right side and then the and then
+something on the left side. So now you
+can start to see the patterns. How can
+you create a thumbnail that will for
+sure get viewed? So yeah, now you can
+see how cloud code can save you hours of
+your time. Instead of you downloading
+all of this manually, needing it to
+organize in the folder, Claude can do
+that. If you want to search online,
+scrape stuff, Claude can do a lot of
+work. So this is just one of the
+examples. All right. So, next step is
+let's say you have this report and you
+have all these thumbnails and the next
+thing you want to do is you want to
+store this somewhere where someone in
+your team or other people can easily
+view it because having it all stored uh
+within your local files might not be the
+best way for other people to view that.
+So, let's say I want to connect this to
+uh notion. So, I went ahead and I asked
+notion to create this database and I
+created a quick database for the
+breakout scores with all of the
+properties already. So what I'm going to
+do is I already have notion MCP
+connected to my cloud code. So if I go
+to here MCP and go to manage MCP servers
+and continue in terminal. So I can see
+that we have YouTube connected and we
+have uh user MCPS which is notion notion
+hosted. So for this one I'm going to use
+notion hosted because I found it to work
+better. Uh Claude was able to use it. So
+I'm going to use that. So I'm going to
+close this over here. Close this tab.
+Close that. and we're gonna get started.
+So, what I'm gonna ask is I'm gonna make
+sure that
+this one over here, I'm going to take
+this link.
+I'm going to paste that over here. And
+okay, so I'm going to I have the copy I
+have the data source ready. So, I'm
+going to ask Cloud Code, hey Cloud Code,
+I'd like to create the slash command
+that once I'm finished with creating a
+YouTube report, I'd like us to save all
+of the videos that we identified that
+are breakout videos and the thumbnails
+into a notion database. Now I want to
+make sure that you fill out all the
+properties in this data source and
+[snorts] we also paste the thumbnail uh
+within the page content so we can uh see
+it in a gallery view so can quickly uh
+scan through it. Um does this make
+sense?
+So I'm going to make sure I put it in
+plan mode again cuz again I'm going to
+be building something. Um, if I were to
+just ask it uh right away, then it would
+probably make a lot of mistakes because
+it will forget some of the context. So,
+so first it's checking if it can find
+the the uh database, which it did over
+here. It found it. And then it's going
+to explore the skills and YouTube data
+path. So, over here it's reading through
+the report and it's trying to learn. It
+read through uh the skills and so on. I
+think it actually spawned a sub agent
+over here
+while it's doing this. So Claude can
+spawn sub agents and still work on
+stuff. So if you want to do that, just
+make sure you ask Claude whenever you're
+like working on a task, you say, "Hey
+Claude, can you spawn sub agents in the
+background and can we continue working
+on this while those agents work?" So
+this is why Claude is super powerful,
+man. You can have as many sub agents
+working in the background for you. So
+what would take you 8 hours of work
+before will take not 2 hours would take
+like 30 minutes or 10 minutes. So you
+can get a lot of work done. Technically,
+I could ask Cloud Code to to spawn like
+I can have five different tabs and I
+could do research for five different
+videos at the same time and get five
+different reports if I really wanted to.
+So, hypothetically, if you're working
+with like, let's say, five YouTube
+clients, if you're an YouTube agency
+client, you could do that pretty much do
+that and then serve five clients at
+once. Instead of you needing to hire
+five VAS, you just have Cloud Code and
+you spend like what $100 a month, $200 a
+month, and you get like a lot of value
+out of that. And this also extends to
+like other stuff in your business. This
+is in this video I'm just going over
+YouTube. This could be something else.
+This could be like writing content. This
+could be like um breaking up content
+from long form into short form. This
+could be like any task that you would
+that AI could potentially do is
+completely scalable now with cloud code
+because just the ability to spawn sub
+agents is very high leverage.
+Okay. So apparently it found our
+existing breakout video database. It's
+going to fetch the schema to understand
+the properties. So now it has a complete
+picture. Let me check existing research
+output understand how breakout videos
+are stored after research YouTube
+research session. So now it has
+everything. It's going to create a plan
+for us. Okay. So here's the plan. We're
+going to create a slash save to notion
+and read through this. So create a slash
+command/save to notion that saves
+breakout videos from YouTube research
+report to existing notion database with
+uh thumbnails embedded. Okay.
+Cool.
+Okay, cool. This works. Okay, so I'm
+going to ask it change the slash command
+name to
+save YouTube to notion cuz I want to
+make sure
+it's because I put save to notion. This
+might be something else. Let's say I
+want to save something else to notion.
+So I want to be careful where it says
+save YouTube to notion. But other than
+that, I think it's good. So, it updated
+the plan and I'm going to say yes and
+auto accept. If you want to review in
+more detail, then you can say yes,
+manually accept. So, it's going to
+create the command file. I I hope that
+it creates a command file correctly. So,
+I'm just going to be really safe here
+and I'm going to say double check. Can
+you doublech check the format of the
+command
+of the
+slash command with create command skill.
+Okay, because I did the work previously
+in creating this um repository or
+workspace by having all of these
+structures set up previously. So we're
+going to make sure. So that's why I
+asked it to reference it because
+sometimes again this is an example of
+context. Like even though like Claude
+might have read it at the start of the
+chat over here, it went through my whole
+codebase, it still forgets things. So
+this is why I make sure to remind it. So
+So it went ahead
+and updated it.
+So hopefully it will work. Okay. So
+we'll know if it works if I type slash
+and I'll be able to see it. So, if I put
+type/ YouTube to not if I put type/save
+to notion, I still don't see that. So,
+we're going to we're going to check it
+now once it creates it. So, I'm going to
+go ahead and refresh reload window so
+that if the command is working, we'll be
+able to see it. Once Claude creates the
+uh slash command, I can open up a new
+chat and I can type slashsave
+and I should be able to see it. So, save
+YouTube to notion. If you don't see it,
+then you always again you want to make
+sure you uh reload the window or you
+make sure that Claude actually created
+the command correctly. So I'm going to
+click on this save uh tab and then I'm
+going to make sure that I select
+the actual report. So I'm going to ask
+it to uh claude
+code business productivity because let's
+say you have multiple reports and you
+want one specific report and you don't
+want another report. So you want to
+specify. So I asked save YouTube to
+notion cloud code business productivity
+and cloud said I'll save the breakout
+videos from YouTube research to notion.
+Let me find let me first find the most
+recent research report. So I was going
+to go ahead and save all 12 videos. So
+let's do this. Let me see if I could
+open this up so we could see it work at
+the same time.
+put on notion here and
+[snorts]
+all right. So, as you see, it just added
+all of the videos in one shot. That's
+sick. That's so cool. And then I want to
+make sure the thumbnails are shown. So,
+great. Even the thumbnails are here.
+Awesome.
+So now it's going to add the next three
+videos which is the 5x tier. So if I
+work with uh notion, I can always go
+here to property visibility and I can
+put out the breakout score and I could
+put in the uh channel number of
+subscribers. So I can adjust what I
+want. I can put the the URL as well and
+I can even sort it based on uh breakout
+score or views. So, I'm going to do by
+breakout score. So, apparently this one
+got the highest
+breakout score for this title and this
+thumbnail, right? So, you can now use
+this as an analysis. So, yeah, this is
+sick. This is awesome. Now, you could
+get work done and share it with your
+team on notion um by connecting YouTube
+and notion MCP. So, in less than an
+hour, we built a complete AI system that
+gets YouTube breakout videos for us.
+Now, what would happen if you spent 3
+weeks in building AI systems and how
+much more you could get done? That's
+exactly what I'm doing in a new
+challenge called your first AI employee
+which I'm running on February. Our goal
+is to first X-ray your complete
+business. So we're going to find
+opportunities where you could use AI
+agents in cloud code and then we're
+going to delegate those activities to
+cloud code so cloud code can become an
+actual employee in your business. And
+ideally, this employee will generate
+value in your business and generate
+business outcomes where at minimum, our
+goal is to have Cloud Code generate you
+$10,000 a year extra in value generated
+or revenue generated. Now, if you want
+that, I put that link in description.
+We're going to get started soon, and I'm
+only taking 10 spots. And if you found
+this video valuable and you want to
+apply what we just did, you can re-watch
+this video again, and you can grab the
+GitHub repository uh starter link in the
+description below. And a like and
+subscribe would be very helpful. I'll
+see you guys in the next

@@ -1,0 +1,502 @@
+Marketing agencies charge $5 to $10,000
+ 
+a month for what I'm about to show you
+how to build for free. I built an AI
+marketing tool using Cloud Code that
+audits any website, copy, SEO, funnels,
+competitors, and generates a client
+ready PDF report, all with one prompt.
+And by the end of this video, you'll
+have this exact tool installed on your
+computer, and I'll show you how people
+are already using this to land paying
+clients. Here's the thing that nobody is
+talking about. Businesses are desperate
+for marketing help right now, but they
+can't afford agencies. And on the flip
+side, you got people who want to start
+an AI automation agency that don't have
+the tools to deliver. This solves both
+problems. What I built is an AI
+marketing skill for Claude Code. It's 15
+different commands that analyze
+websites, generates email sequences,
+creates ad copy, audits SEO, scans
+competitors, and even produces a
+professional PDF report you can send to
+clients. Let me show you how this works,
+and then I'm going to show you step by
+step how to install it so you can run
+this on your own website as well. All
+right. So, I'm going to run this on a
+real website so you can see exactly what
+this does. So, I'm going to go ahead and
+type /market audit on a recognizable
+website like calendar.com. So, I'm going
+to go ahead and press enter. So, as you
+can see, there are five agents right now
+launching in parallel. And again, all of
+this is inside this tool in GitHub that
+is completely available for free. It's
+going to be linked in the description.
+I'm going to show you exactly how to
+access this. And as you can see, it's
+going to go through and run all of the
+sequences and all of the different
+skills that are inside. So, I'm going to
+quickly fast forward this. And there you
+go. So, completed the audit 75 out of
+100. And it created this really nice
+audit report in PDF. Give the executive
+summary. It gives the score breakdowns
+about the content and messaging, the
+conversion optimization, the SEO and
+discoverability, and a bunch of other
+stuff. And then most importantly, the
+key findings right here. So, you can see
+it has critical, high, medium to low.
+This is the type of report that
+marketing agencies charge thousands of
+dollars for and we did this in 2 minutes
+completely for free. By the way, inside
+my community, I teach the full playbook
+for how to turn tools like this into
+paying AI business. Link is going to be
+description if you're interested. Check
+it out. But let me show you how to
+install this now step by step and how
+you can run this on any website
+including your own if you have a
+business already. All right, so the
+first thing we need to do is install
+Visual Studio Code or anti-gravity. Uh
+for those of you who already have this
+installed, go ahead and feel free to
+skip this. But uh Visual Studio Code is
+basically a place where you can use
+cloud code and you can see the files,
+the folders, everything everything else
+in one nice cohes cohesive environment.
+So go ahead and click on download for
+Mac. I've already downloaded. So once
+you uh download Visual Studio Code,
+you're going to open it up and it's
+going to look something similar to this.
+Now obviously Cloud Code is already
+open, but I'm going to show you how to
+install this. If you don't have this
+installed, you're going to head over to
+the extensions here and you're going to
+search for cloud code. Let me get rid of
+this. You're going to search for cloud
+code.
+Cloud code. There you go. This is going
+to be the first one. It says cloud code
+for VS Code as you can see on the right
+hand side. So, it's going to uh show
+this. Make sure it's by Entropic. You're
+going to click on install and it's going
+to install and automatically it will
+this little sign right here on the top
+right hand corner. It will appear. So,
+as soon as you click on this, now clot
+code is available inside your Visual
+Studio Code. So, it's literally that
+simple. Uh, again, I'm going to put the
+link in the description for the Visual
+Studio Code. So, that way you can
+download it from there. By the way, you
+can use, you know, Google's anti-gravity
+as well. It's kind of the same type of
+situation, the same IDE. All right. So,
+once you have this installed, you're
+going to head over to the GitHub. This
+link is going to be again in the
+description. I created this GitHub repo
+so that way you can just have access to
+this completely for free. So, what
+you're going to do, you're going to come
+in installation. You're going to copy
+this. You can just copy it from here.
+It's just one command installation. It's
+going to install everything. And I'm
+going to show you how it looks in a
+little bit. So, when we go back to our
+Visual Studio Code, so I'm going to need
+to paste that command inside my
+terminal. Now, you can click on your Mac
+and open the terminal from here. This
+little black box or the simple one is
+just to click on the toggle on top right
+here. And as you can see, it opens up
+the terminal. And by the way, you want
+to make sure that you're saving this
+inside a folder. So just create a folder
+and open it inside Visual Studio Code.
+Or you don't have to do that if you want
+if you don't want to do that. Now all
+you have to do is paste that command.
+You press enter and this is going to go
+ahead and install everything for you. As
+you can see right here, it installed
+everything, right? The market, copy,
+email, social, and by the way, I'm going
+to go through this in a little bit. It
+says installation complete. Now you have
+access to all of these commands, right?
+All of these u marketing related
+commands. The first one is the audit. So
+this is basically the main one that's
+going to run five agents and do the full
+marketing audit. Okay. So that's how you
+can have access to all of this inside
+your clot code. Now to check this all
+you have to do is come here plus slash
+or press uh enter slash and if I look
+for market there you go. All of these
+slash commands are now available for me.
+Okay. So now let's go ahead and run this
+on a local business website cuz kalani
+is obviously a big website a big
+company. Uh, I want to do something for
+like a local business. So, let's say we
+have uh I just searched for San
+Francisco Metsa cuz I'm near San
+Francisco. So, let's go ahead and say
+select this first one. Welcome to
+Knobill Aesthetics, right? Met spas run
+marketing campaigns all the time.
+They've got the cash because their
+clientele is pretty um you know,
+high-end and usually they charge a lot
+of money. So, they have the budget to
+run marketing. So, I'm just going to go
+ahead and literally just copy their
+website, right? So, I'm just going to do
+copy and then we're going to go back to
+my Visual Studio Code and we're going to
+do a full market audit on this. So, that
+way uh while while it's running, I'm
+going to explain exactly what's going
+on. So, I'm just going to type market
+audit and I'm just going to paste this.
+So, I'm going to press enter. Now, what
+you will see is let me get rid of the
+terminal here so that way you can see
+what's going on. As you can see, now
+it's going to go ahead and thinking it
+says update tool. all of these five six
+different steps that you're seeing here,
+this is coming in from our um GitHub
+repository. So now it's going to ask me
+a bunch of questions uh permissions to
+allow it to access multiple domains. So
+I'm just going to say yes. So just make
+sure you go through that and I'm going
+to let this run in the background while
+I explain exactly what's going on and I
+can explain this uh GitHub repository.
+All right. So what right now is when we
+installed that you have these five
+parallel agents that are running each
+one agent is for content and message
+analysis, conversion optimization, SEO
+discovery. All of this is coming in from
+our skills. So, inside this GitHub
+repository, you've got 1 2 3 4 5 6 7 8 9
+10 11 12 13 14 15 different skills that
+uh you have access to this market audit,
+which is the one that we just add. So,
+if I click on this, inside each of these
+folders, there's an skill.md, which is a
+markdown file, which basically gives
+Claude the ability to become a expert on
+a specific topic, right? Because
+obviously claude code is a general AI
+assistant. If you want to give it the
+ability to become expert or give it
+instruction to do something specific
+which you call you basically put that
+instruction in a file called skill.md.
+Now as you can see inside this market
+audit skill I have full instructions on
+what it's supposed to do. So the first
+one fa the first phase is discovery in
+pre-analysis. And what this one does
+says before launching sub agents perform
+these discovery steps. It's going to
+fetch the target URL which is basically
+our website that we added. It's going to
+detect the business type. What kind of
+business is this? Right? Is it SAS? Is
+the e-commerce local business creator
+course or whatever it need? It's going
+to identify key pages the homepage. So
+it's going to have full access to that
+internet or the website and it's the
+phase two is going to be running
+analysis par parallel sub aing
+execution. So it's going to launch five
+sub aents simultaneously using cloud
+code sub aent capability. Each sub agent
+receives a business type. So sub aent
+one is going to research and focus on
+market content. Sub aent two is going to
+fe feature on market conversion, market
+competitive, uh and then market
+technical and market strategy. Each of
+these agents are doing something
+separately and they're all running
+simultaneously. So as you can imagine,
+this is a very powerful tool because you
+have multiple agents running at the same
+time and doing their own thing. And if I
+go back to my uh oh it's asking for more
+permissions. So as you can see right
+here if I go to the top. So the first
+two phases are done. Now it's launching
+five parallel marketing sub aents. And
+all of this is happening by the way
+according to this markdown file because
+in this market audit skill.md file we're
+giving these specific instructions and
+that's exactly what clot code is
+following right now. Right? So that's
+why it's going through and asking these
+different permissions. It's going to go
+ahead and ask for allow them to search
+the query for different things. So I'm
+just going to go ahead and keep allowing
+this thing. And afterwards, um, as you
+can see right here, so after all of this
+is done, uh, it's going to in the bottom
+or in the the last phase is just
+displaying, uh, the summary, right? And
+then afterwards, we can actually run a
+report, a PDF report on this. So let's
+go ahead and let this. So another few
+skills. Um, so the next one that I want
+to point out, obviously it has all 15
+skills. I'm not going to go through all
+of them. This is another one that's kind
+of an important one. This is a market
+competitor. So you can, by the way, run
+these separately as well if you just
+want to find out who are the competitors
+and do competitor analysis for a
+particular website. Instead of running
+/market- audit, you just run /market-
+competitors, right? And same thing if
+you want to have funnels, landing page,
+all of that stuff is separate ones as
+well. You don't have to run the market
+audit. Uh but the competitor for
+instance this is going to do what this
+is going to do is going to identify the
+comp competitors across three tiers. You
+got direct competitors, indirect
+competitors and aspirational competitors
+and it's going to take a look out and
+it's going to look for different
+discovery methods obviously and then
+afterwards it's going to collect the
+data and then it's going to do a proper
+analysis framework. So again all of this
+is being done based on this skill.md
+file that you have access to. So all you
+have to do is just through from your
+cloud code just basically run these
+commands depending on what you're
+looking for and everything else will be
+automatically run inside C clot code
+based on the file that it has access to.
+So that's where again you don't have to
+have any coding background. This is just
+basically giving you the ability to
+become a full marketing agent and have
+start your own agency without the need
+for you to build anything because cloud
+code takes care of it all of it by
+itself with this tool that you have
+access to. All right. So, it looks like
+it finished the sub agents. Says all
+five sub aents have completed. Let me
+synthesize the score and write a final
+report. So, I'm going to allow this one
+more time. And I think now it's writing
+the marketing audit. So, let's go ahead
+and let this finish. All right. And it
+looks like it went through and finished
+everything. So, updated uh update
+to-dos. All done. So, as you can see
+right here, it generated this marketing
+audit complete business knobill
+aesthetics met spa. It gave a marketing
+score of 64 out of 100 and different
+versions. So now obviously this is uh
+not that great to look at because it's
+inside our cloud code. Now if we want to
+generate that nice PDF report just like
+we showed for the calendarly one. So all
+I have to do is now again same thing
+because we have access to that PDF
+report generate PDF report right this
+one market report PDF. So all we have to
+do is inside clot code press slash or
+enter slash I'm going to look for market
+oops market. And as you can see right
+here, market-report-
+PDF. I'm just going to press tab so that
+way uh it fills it in. And all I have to
+do is press enter. So now it's going to
+do is it's going to generate a PDF of
+this uh report with that nice kind of
+formatting and visuals and everything.
+So I'm just going to allow Python 3 to
+be installed. Um and it's going to go
+ahead and generate on lefth hand side.
+So right now, as you can see on the left
+hand side, I have that marketing report
+for kalle.com. So now it's going to
+generate another one for this Knobill
+aesthetics. All right, perfect. So it
+generated the P PDF report. So PDF
+report generated successfully. And then
+on the left hand side, as you can see
+right here, I have my Knobill uh
+aesthetics PDF. So I'm just going to
+click on this and this is going to open
+this thing up. Let me maximize this a
+little bit. There you go. Look how nice
+looking. This is way better to read than
+uh the cloud code one. So there you go.
+You have your marketing audit report,
+right? Knobill Aesthetics, the website,
+the date, you've got the overall score.
+So, you got 64 out of 100, which is C
+minus, and it gives you the executive
+summary of what this is about, why the
+scores, and then on the bottom, you have
+the score breakdown of what's, you know,
+what's good, what's average, what's C
+minus, what could be approved, right? As
+you see right here. So, the only thing
+that's good is the brand and the trust.
+Everything else is average, which means
+there's lots of room for improvement.
+And if I scroll down to the bottom, you
+have these key findings, right? severity
+and then the findings. So the first one
+is critical Botox package pricing
+inconsistency. The Botox page lists 100
+units at 1,400 save 400 while the
+specials page list the same package at
+1500 save 300. Now again these are the
+really cool critical findings that that
+this tool generates that you can
+literally send this to this business and
+say hey look here are the uh reports
+that I found. Here are the critical
+mistakes. Uh let's jump on a call. I
+would love to show you how you can
+improve. And that's why I was talking
+about as far as as far as making money
+with this is like if you send something
+like this for free to a client, to a
+business, they're surely going to take
+this because there's so much value in
+this for free that they would love. And
+a lot of times, by the way, a lot of
+these businesses, they're not there to
+do all of this by themselves, right? So
+if you provide them something free that
+shows them that you know what you're
+talking about and especially these
+critical findings and what are the
+different prioritized action plans that
+you can do then that's something that
+they will highly most likely jump on a
+call with you and you can provide a
+service saying hey you know on a $2 to
+$5,000 a month marketing retainer
+depending on where you live. So that's
+where the price would be different. Uh
+you can say hey I'm going to I'm going
+to provide these services for you. I can
+make these improvements for you. Right?
+And that's where in the bottom you have
+these action plan that you can literally
+just follow this. You don't have to do
+much. Just literally follow what um um
+cloud code is giving you. Right? So that
+was the first critical finding. The
+second is zero metadata description
+across entire site. Google autogenerates
+all search snippets results and blah
+blah blah. Right? So the uh
+click-through rates from um search
+engines. So it's just talking about
+that. Now, of course, there's a bunch of
+other stuff here that you can focus on.
+And again, you have this prioritize
+action plan, quick wins, fix the Botox
+package pricing in inconsistently
+immediately, right? Add metadata, add
+FAQ page, JSON, LD, schema markup.
+Again, a lot of these businesses, they
+don't know what these things are, right?
+So, that's why I'm saying if you send
+this as a as a PDF report and give them
+this value already because this they
+will understand, right? that the Botox
+package pricing can get that they will
+definitely understand but this they
+won't. So that's where you can jump in
+and say hey I can fix this and it's very
+like I said all you have to do is
+literally talk to clot code and tell it
+to how do I do this and it will generate
+uh step-by-step plan for you again. So
+it gives you the quick wins for this
+week, medium to uh medium-term 1 to 3
+months, strategic 3 to 6 months. And
+this is where you can act as that
+consultant who can be on a retainer,
+right? So all of this is generated nice
+and um well, you know, very easy to
+read. And at the bottom, this is the
+competitive landscape, right? You have
+it talks about the different competitors
+for this particular uh med spa. You have
+Haze Valley Medical Aesthetics, Skin
+Spirit, San Francisco, Serenity, Medspa.
+These are, by the way, real businesses
+that liv that's that that are in San
+Francisco. And as you can see right
+here, it talks about their social proof,
+their pricing, their content, right? So
+all of this is something that could be
+very very wellreceived by a client and
+all of all of the descriptions, by the
+way, everything the methodology in the
+bottom it describes. So that way when a
+client sees this, they don't get
+confused. Okay. So again, super cool
+tool to uh play with. So check out again
+the GitHub repository is going to be
+completely for free. You guys can just
+download it just like I showed you. Run
+it on your own business on your own
+local business. See uh um see the
+results and again if you're interested
+in learning actually how to build the
+system and how to price this properly uh
+check out the community link is going to
+be description. If you like this video
+make sure you like subscribe and let me
+know in the comments if you want me to
+build any other uh skills uh with cloud
+code that would be useful for another
+industry. I would love to uh build this
+out for you guys. Thanks for watching
+and I'll see you in the next one.

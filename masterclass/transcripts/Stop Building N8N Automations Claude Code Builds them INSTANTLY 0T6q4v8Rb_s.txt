@@ -1,0 +1,449 @@
+Cloud code is changing how we build AI
+ 
+automations. We can now go from
+transcript or prompt to working NAD
+workflows in minutes. So in this video,
+I'll show you how to set up clot code
+even if you're a beginner. Show you the
+clot skill we built that automatically
+builds, tests, debugs, and optimizes
+your NAD workflows. And I'll show you
+why NAN skills still matter, maybe even
+more than before. So this entire
+automation here was built from a client
+transcript thrown into cloud code which
+then used our NAD scale to plan, build
+and debug this entire workflow here. All
+these executions are done by cloud code.
+So it's basically an automation for a
+medical equipment supplier that scrapes
+leads through Google maps, scrapes their
+website, uh enriches it with their email
+and also qualifies them. Now before we
+dive into the setup, let's quickly
+address the elephant in the room with
+all these new tools, cloth code, cloth
+co-work, and naden. Where does each one
+fit in? So the way I see it, cloud code
+is great for building applications, SAS,
+custom software, and in helping us build
+NAN automations faster. It is very
+powerful, but it's also a bit more
+technical. NAN is still great, I think,
+for deploying automations, especially
+deterministic automation systems because
+it's easy for non-developers to
+understand, debug, and improve over
+time. And then claude co-work which I
+covered in a previous video I see more
+as a day-to-day productivity tool for
+office sales and marketing related tasks
+that generally require you to iterate
+and have a lot of human in the loop. Now
+what does this mean? If you're someone
+offering AI services to businesses
+basically we're getting new tools in our
+arsenal to provide value to clients. We
+can use cloud code to build custom
+software for businesses. then I think
+there's going to be a huge increasing
+demand for personalized and niche
+specific software in the upcoming years.
+For automation workflows, I think
+there's still a big benefit to
+delivering NAD systems to clients. Why?
+Because it's easier to deploy on clients
+accounts compared to code. It helps with
+adoption because clients can actually
+understand what's happening and it's
+generally really easy to integrate NAD
+into their text stacks. But we can now
+use cloud code ourselves to build these
+nad workflows a lot faster. And then
+cloud co-work I see as a great tool to
+teach people in companies because it can
+increase employees productivity a lot.
+Now there's a lot of hype right now and
+a lot of people are talking about NM
+being dead but I would much more see
+this as another great tool in our
+arsenal that we can use to provide value
+to businesses. So it's not about
+choosing one over the other. It's about
+knowing when to use what. And if you're
+a service provider, you should have a
+holistic approach and use the best tools
+for each use case. So I definitely
+recommend starting to play around with
+cloud code these days. So how do you set
+up cloud code? First, you have to have
+Node.js installed on your computer. So,
+if you haven't yet, you can just go to
+their website and you can download it.
+Second, you need to have an IDE. An ID
+is basically a text editor for code.
+There are many IDs you can choose from.
+Uh, VS Code, cursor, anti-gravity, and
+many more. I'll use anti-gravity in this
+video, but you can choose any of these
+and they'll work almost the same. You
+can just download it for free here. Now,
+once you've downloaded it, you will land
+on a screen like this. Now, the first
+thing we have to do is open a new
+folder. Doesn't really matter. You can
+just create a new one. for example and
+then demo and we open it. Yes, I trust
+the authors. Now once you have that
+done, we need to install cloud code. Now
+the easiest way to do this in most ids
+is through a plugin. So we can here go
+here on the left side and we go. You see
+that my plugin is already installed here
+in extensions. You can just look up clot
+code. You can just click here on install
+and the plug-in will appear here. If it
+doesn't appear, you might have to
+restart anti-gravity. So once we have
+done that, you can start using cloth
+code here on the side. This one we can
+close for now, but I prefer uh using
+cloud code right in here. So I can
+double click on the screen here. Open a
+new folder and then this little icon
+appears here. And then we have cloud
+code open here. Now in order to use
+cloud code, we first have to log into
+our cloud account. The way we do that is
+by using a slash and typing in login.
+And if you click here, you can connect
+it to your cloud account. Mine is
+already connected. Now, if you're going
+to use this a lot, the Cloud Max plan
+makes a lot of sense at $100 a month,
+but you can you can start on the pro
+plan and pay more usage based. Now, once
+you've done that, there's one more thing
+we want to do, which is go to settings
+and turn on dangerous mode. This just
+means that it's not going to ask for
+permission in each of the steps, which
+will speed up the workflow quite a lot.
+So, we can just go slash command and go
+general config.
+And then you just check the allow
+dangerously skip permissions. and you go
+here to cloud code initial permission
+mode and you select bypass permissions.
+Again, you might have to restart your ID
+for these changes to appear in your
+account. Now, don't worry if you're not
+a coder and ID feels a little bit uh
+intimidating at the start. On the left
+side, we'll have our folders. In this
+case, it's just the folder that I
+created, but we don't have anything in
+the folders yet. But here, generally, we
+can see everything that's stored in this
+project. Now, you might have seen some
+videos before of people just prompting
+Claude to get an NN JSON and copy and
+paste it in. The difference is with this
+workflow, uh Claude is actually going to
+build it actively onto our account, test
+it, debug it, and make sure it's
+production ready. Now, we can't just
+tell Cloud here to build that N workflow
+because Cloud doesn't have specific
+context around how Nad works and how to
+build well on NAN. So, so we're going to
+import the skill that we built
+internally. And that scale will
+basically give cloud context on how to
+work with NAN connect it to our NAN
+account get access to all the software
+credentials from us and we define the
+process of how to actively build test
+and debug the workflows in this skill.
+So how do we import this skill? Now in
+my AI community, my AI accelerator uh we
+have a section here with cloud skills
+where we list all the cloud skills for
+cloud code and cloud co-work uh that
+we've built. So if you're in my
+community, you can go to this section to
+get our entire library of skills. Now,
+in this case, we're going to use the NN
+skill. So, we can just click on that
+one. We can download the zip file. We
+save it. We then open the folder
+and we drag in the zip file into the
+project that we opened in anti-gravity,
+which in this case was NAN demo. So, I
+just drag that in that folder. Then I
+unzip it. And if we now go back to
+anti-gravity, you'll see it now has
+access to these folders. You can see we
+have two plugins, the NAN and the NAN
+PRD generator. And here we have the
+skills. And you don't have to understand
+this completely uh but basically here we
+have uh we give claude access to files
+on how to do this process of building
+NAD automations the right way. We now
+have these folders here but we still
+have to give Claude access to actually
+use the skills. So how do we do that? We
+just rightclick here on NAD and we click
+on copy path. Then we go here we had a
+slash command and we go to plugins. So
+we can click on manage plugins. We first
+go to marketplaces and we paste in the
+path.
+We click add and you can see it now
+appears here. Then we go to plugins and
+all the way at the bottom you'll see two
+skills appear. NAD and NAD prd
+generator. We're going to install both.
+So we click on install install for this
+project and the same for the NAN PRD
+generator.
+So now we have installed the two skills.
+Generally you have to restart
+anti-gravity for the skills to appear.
+Uh once you have done that you can again
+go to the slash command and now we can
+just type in nan prd generator
+and you can see now the skill is loaded
+and we can start using it. You can see
+it already asked me to throw in a
+discovery call transcript with a
+potential AI automation client or a
+prompt. Now the reason we start with a
+PRD or product requirement document uh
+generator skill is because planning for
+almost anything we do with cloud code is
+the key step that we want to get good at
+and where we want to spend most of our
+time. These coding agents are becoming
+really good at executions and fig
+figuring stuff out on the fly. But if we
+send them on the wrong path, we're going
+to waste a lot of time and credits and
+and this is really why NAN skills are
+still extremely important because you
+actually understand what needs to be
+built, how to correct the model if it
+goes on the wrong path, which APIs to
+use, etc. Because although it's
+impressive, this is definitely not a
+magic bullet yet. So let me show you a
+quick example. I'll throw in a
+transcript with a client that I had all
+the way at the beginning of my career in
+AI. And now with this PRD generator
+skill, the model will first analyze the
+transcript and start asking me some
+questions to understand and lay out the
+road map of what needs to be built in
+Naden.
+By the way, if you didn't yet, it's
+generally good to change this to bypass
+permissions. Otherwise, it's going to
+ask you for permissions all the time. So
+now it's starting to ask some more
+questions in order to get a better idea
+of what needs to be built in Naden. So
+where should business listings uh be
+sourced from? And again, this is where
+your NN skills really come into play,
+right? So in this case, this client
+wanted to build a lead generation
+automation, right? The one I showed at
+the beginning of the video. So in this
+case, I would choose Google Maps. So
+leads should be scraped from Google
+Maps. Then what enrichment service
+should be used for contact details? I
+would use full enrich, but of course you
+can also define another one. How many
+leads should be generated per search
+query? Uh for the test, let's just do
+three.
+Who should be able to trigger the
+workflow? Anyone with the link.
+Now, it also asked me questions about
+error handling. Where should
+notifications be sent when the workflow
+completes or encounters errors? Uh let's
+say email. How should leads be scored?
+And what's the primary ICP criteria for
+scoring leads? Let's say business size
+signals.
+So now we got the entire PRD here and
+now we can actually start building the
+automation. So of course it's going to
+be good to actually review this and make
+sure that everything's fine. Uh but once
+you've done that you can invoke the next
+skill which is the NAN skill that's
+actually going to help us build out the
+automation. So we can use the plugin
+again or we can just tell Claude okay
+based on this NAN PRD let's build the
+NAN workflow by using the NADN skill.
+So you can see it loaded the skill. So
+again, first it start asking me some
+questions. It asked me for my NAN
+instance URL and my API key in order for
+CLA to be able to access and build it
+out on my account. So you can find your
+NAN uh URL by just uh taking the first
+part here of your of the URL inside of
+your NAN account. Right? We can paste
+that in.
+Right? Then it asks for the API key.
+Where do we get the API key? We can just
+go to settings in NAN, right? We go to
+NAN API and we can just create a new
+one. Create an API key. Test NAN.
+We can copy this, paste it in.
+And then thirdly, what it will ask me is
+a credentials template workflow in NAN
+with your configured services. So the
+way we've built this skill is for the
+skill to ask for a credentials template.
+Now, what's the idea here is you can
+basically just set up uh a one-time
+credentials template with all the nodes
+you often use, right? Ideally, maybe all
+the nodes you you ever use. It can be a
+template here of 100 different nodes
+where you already filled out the
+credentials. And what we can then do is
+copy and paste that link and give it to
+cloud so it has access to all the
+credentials of all our softwares. And if
+we're going to then build out
+automations on a regular basis through
+cloud code, we don't have to copy and
+paste all the different API keys of all
+the softwares we generally use all the
+time. So in this case to keep it simple,
+I just put a few nodes in here that it
+might need access to. So I can just copy
+that URL,
+give it to Claude
+and through that it will have access to
+all the specific software credentials.
+You can see it's starting to create an
+env file. And AENV file is generally
+where all your API keys are stored
+inside of a code editor. Now, I'm not
+going to open it so you can can't see
+all my API keys, but here they will all
+be stored. So, you can see it creates an
+to-do list with all the nodes it has to
+add. So, you can see it's already
+starting to build it. So, if I go back
+to Naden, we can actually see it
+building it. So, here we go. Lean Sara,
+right? You can see this. This is what
+Claude is building now in real time. So
+if we go to executions, you can see the
+way we've built this skill is to build
+it node by node. Basically like a human
+would actually build this and test each
+node before moving on to the next one to
+make sure it actually works, right? And
+it will also debug each of the steps
+before moving on to the next one. And
+that's why this can really speed things
+up. If I just put this side by side,
+you'll see that this it's building this
+in in in real time. So in this case he
+used ampify to scrape wool maps. It's
+now going to add loop a loop node to
+process leads one at a time
+and you can see it's running it here
+testing it.
+You can see it succeeded.
+So now you see it has the loop node and
+slowly but surely it's going to build
+out the entire workflow. Now the nice
+thing is we can also just run another
+one in a second screen. So we can just
+start building another automation here.
+Let's say from a prompt by just invoking
+again the NAN PRD generator,
+right? I can and I can run two windows
+at the same time and start building
+multiple automations at the same time.
+Now if you see it go on the wrong path
+or doing something wrong, you can always
+just jump in here and correct the model
+anytime you want. So, for example, in
+this case, I see in the to-do list, it
+didn't actually add in the full enrich
+API to uh get the email from the
+potential lead. Also, because I didn't
+give it the exact API details of full
+enrich um so in this case, I could add
+that to the context here while it's
+working. So I could say uh actually
+before outputting in in the Google sheet
+we need to use the full enrich API to uh
+get the emails to make sure we also
+always get the emails um from the
+companies even if they're not present in
+Google maps. Um so I'll share below the
+documentation of the full enrich API to
+get emails.
+This is generally good. You just go to
+the website and you copy and paste in
+the documentation about the specific API
+call you want to use.
+and then share it and it will update the
+to-do list and start changing its
+approach. But if you have a credentials
+template with a lot of your common uh
+nodes you use with the credentials uh
+you it's really only mostly about
+steering the model to use the right
+nodes and let it build it out. So it now
+finished the workflow. Um it actually
+figured out that it needed uh the first
+and last name in order to get the email
+from the full enrich API. So, it added a
+website scraper in here in order to
+scrape the first and last name of the
+business owner in order to actually get
+uh the email from the full enrich API.
+Now, the point of all of this is it's
+not a magic bullet yet. As you can see,
+you do have to steer the model. You have
+to be there. You have to instruct it.
+You sometimes have to uh add in API
+details or documentation, but it can
+definitely speed things up when building
+it out. It can give you ideas of how to
+approach automations in a different way.
+Uh it can optimize workflows too, right,
+that you've already built or debugged
+them. Uh so I do recommend playing
+around with this because this is the
+worst that it will get and it will only
+get better. And if you want access to
+this skill and all the other skills that
+we're building out, you can also check
+out my AI accelerator in the link in the
+description below. We also do weekly AI
+workshops. Uh we have oneonone unlimited
+tech help available and uh also
+blueprints on how to start your own AI
+business. So if that's interesting to
+you, you can check it out in the link in
+the description. Also, if you want to
+learn how to build your own uh skills in
+a simple way through cloth co-work, you
+can check out uh my video here above.

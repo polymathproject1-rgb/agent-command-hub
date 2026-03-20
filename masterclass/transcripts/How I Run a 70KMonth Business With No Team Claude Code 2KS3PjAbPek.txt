@@ -1,0 +1,733 @@
+I'm going to show you the exact content
+ 
+system I'm using right now to generate
+$70,000 per month. And I am doing this
+with no team, just using Claude code. I
+built a system that finds what to post
+every single morning based on what's
+trending in my niche. It literally
+writes the content for me, then
+critiques itself. It builds everything I
+need to film, and it posts to every
+single platform hands-free on autopilot.
+And all of this runs under one tool with
+30 plus commands, six different services
+in one command line interface. The tool
+is called Claude Code. And I have been
+using this the last 2 months and it's
+genuinely changed my life with
+everything it's able to do for me. Not
+only am I harnessing the power of Claude
+code, but I'm actually using different
+applications and APIs and MCP servers
+directly under that. For example, I'm
+using Appify and Blot. Appify does the
+research and the scraping for me. Blot
+autopublishes and creates the posts for
+me. And in this video, I'm going to show
+you the exact setup I'm using. And by
+the end, you're going to see why Agentic
+Workflows are the future of how we work.
+Otherwise, you will get left behind. So,
+without further ado, I'm going to show
+you this system now. All right, guys.
+So, I have this huge diagram here that I
+actually generated using Claude Code, of
+course. And let me break this down. This
+is essentially my system I'm using right
+now to make $70,000 per month through my
+content business. And I'm going to show
+you each of these right now. So, first
+of all, we have our discovery engines.
+This is what finds what's trending for
+us. So you can see right here, it finds
+what's trending before anyone else. We
+have these different slash commands. So
+essentially inside of Claude code, I
+just type in morning and what it will do
+is it will give me a daily AI briefing
+with the top three script opportunities.
+And this runs every single morning
+automatically when I hit this morning
+command. From there, I have a trending
+command that actually searches eight
+plus AI categories, scores and ranks
+different topics, and then creates a
+viral potential score based on all of
+those. Then you know for YouTube I have
+the same thing. We scrape all of my
+competitors on YouTube finds the
+different keywords and basically
+analyzes things that I should make
+content about that day. Along with this
+we also have all of these data sources
+here. So inside of cloud code we are
+able to search real-time AI news. We use
+ampify scrapers which I'm going to show
+you how I'm using in this video. We have
+tweet scrapers, YouTube scrapers,
+content cue JSON, all of this stuff. And
+then you can see right here this
+actually creates winning patterns for my
+short form content. For example, you
+could see this as an example. Google
+plus free equals massive engagement
+based on my previous posts on Instagram.
+And then also here's another one without
+needing expensive thing also resonates.
+Here's another one. New release plus
+visual wow equals high shares. Anyways
+guys, we don't need to dive into all of
+this to understand like my content
+system. But what we do need to
+understand is how claude code can do all
+of this for us without us needing to
+necessarily know what's going on in the
+back end. Moving on real quickly, I'm
+just going to talk about the script
+factory cuz this is really, really
+important. I'm going to show you my
+Instagram here. I grew from zero to
+about 16,000 followers. Here we had this
+video go viral. This is actually that
+script that it says, hey, you know, that
+is a winning hook style. Let's go ahead
+and use more of that. Basically, our
+script factory, we have multiple things
+inside of here. So, if I use the command
+script and then give a topic, it's going
+to go ahead and automatically trigger a
+very specific prompt that it's going to
+generate in order for it to create a
+script in my exact tone. Then, same
+thing for hooks. It's going to actually
+AB test five different hooks for me to
+try out. And this is a big part about
+this. We have a self-critique engine for
+it gives me every single script for me
+to actually approve. It's going to go
+through and automatically check and say,
+"Hey, is this good? Is this bad? If it's
+bad, it's going to redo it." All that
+stuff on autopilot. Then quickly I'm
+going to talk about the full output. So
+I get video scripts with YouTube tags,
+B-roll links, captions, YouTube
+descriptions, Google doc resources. So
+essentially for my Instagram here, I say
+like comment this and I'll send you a
+resource. That resource is actually
+created automatically with this claude
+code system. And we have all these other
+things. Again, I don't need to dive into
+the nitty-gritty of all this. And then
+we also have video production here,
+which is, you know, super helpful for me
+for YouTube. Then performance and
+analytics. Again, it's able to analyze
+my entire short form content after it's
+posted. And it actually checks what's
+working, what's not, and it saves all
+this information to my local data inside
+of my cloud code system. Then we can
+publish and distribute this. So
+essentially, you can see here that we
+use Blot for auto posting. It's going to
+automatically post my reels, my Tik
+Toks, my YouTube shorts, Twitter posts,
+LinkedIn posts, all of this stuff
+directly inside of Claude Code. All
+right, so moving on to Claude Code and
+how I actually use this system. This is
+Claude Code inside of Cursor. This is
+where I personally actually want to use
+this. And on the lefth hand side of my
+screen here, you can see I have my
+clawed code short systems command. This
+is my command center. All of these
+different commands here have specific
+tasks. And this right here saves me so
+much time. For example, if I want to
+scrape my previous Instagram reel, what
+I do is I simply just type in reel. And
+this is going to check my latest
+performance and give feedback. So, what
+I'm going to do is I'm going to send
+this off. It's going to go through and
+look at my system overview. And what
+it's going to do is it's going to look
+at this real skill here, which I could
+actually pull this up. And this is a set
+of instructions that gets invoked every
+single time I say command reel. So this
+way I don't need to paste in this very
+specific prompt every single time. Check
+your latest re's performance and get
+feedback. So it shows the purpose. It
+shows the workflow. Use the appy scraper
+to get the most recent post and it goes
+ahead. It actually has this specific
+actor which essentially just goes and
+scrapes Instagram. That is what that
+actor means. It pulls the captions, the
+likes, the comments, etc. and compares
+it to historical data. So, it's actually
+referencing the top performing content
+JSON file, which is basically a
+database, a collection of all of the
+previous performing videos that I've
+scraped and then breaks down the hook
+effectiveness, the script structure, the
+call to action, topic fit, and then from
+here, it's going to compare it to my
+average views and break down what
+exactly worked and what could be
+improved here. And so, that right there
+is the prompt. So, what I'm trying to
+say here is for me to run that workflow,
+all I have to do is come here and say
+real and it automatically knows to go
+scrape my last Instagram video and do
+all those things for it. And just like
+that, about 1 minute, 2 minutes later,
+we have this output here. So, latest
+real check post. Google just snuck seven
+free AI features into your apps and
+nobody is talking about them. This was
+posted today about 6 hours ago. Looks
+like, you know, it has a decent amount
+of views. The engagement rate is okay.
+This is the most important part. It's
+breaking down what worked and what could
+be improved. Because if you create short
+form content or any content for that
+matter, it's really important for you to
+understand like what styles work for
+you. So, I'm really trying to dial this
+in before. This took me so much time
+having to go through and make notes of
+every single video. And you can see it
+even gives me my recommendation for next
+steps here. Let's say that we don't want
+to have to look at this inside of
+cursor. What I'm going to do is I'm
+going to come to Claude Code and just
+say, "Hey, this is amazing. Could you go
+ahead and turn this into an HTML
+dashboard in a Swiss Apple style design
+for me to be basically see all this
+information in one place so I can
+understand everything about this
+Instagram reel and how I could make it
+better. So, I'm going to send that
+prompt off and what it's going to do is
+it's going to spin up a little vibecoded
+interface that it's actually going to
+open up in my browser over here. And so,
+I'm going to let it do its thing and
+we'll come back to that. All right. So,
+take a look at this. I didn't even have
+to open this up in my browser. Claude
+code just automatically opened up this
+HTML file that I could actually take a
+look at and interact with. Real check
+posted 6 hours ago. It breaks down the
+hook and the caption. Breaks down the
+views, the engagement rate, shows the
+comment rate, the comment to like ratio,
+all of this stuff. This is crazy. It
+even shows comparisons to my previous
+videos. So, the viral video that I have,
+the other seven Google AI tools video,
+it had 10,000 views at this point in
+time, and this one has 1565. So, it
+might not hit that same virality as that
+last one. And it has a performance
+benchmarks hook analysis. This is
+probably the most important part here,
+the analysis. So, it's breaking down
+what worked, what could be improved.
+It's saying that there is a content
+overlap risk because I've covered some
+of the same tools in my previous videos.
+Features feel less new. Interesting.
+Like, this is a really broken down and
+thoughtful breakdown of this previous
+video that I posted. And again, this was
+done inside of Claude Code and simply,
+you know, just using that one command
+and then saying, "Hey, turn this into a
+dashboard." Let me show you one more
+thing here that could be pretty helpful
+for you guys to see. So I have this
+command that is one of my favorites to
+use. Probably what it is is just
+resource script. So let me just like
+paste this in here. Resource script. And
+so what this does is this builds a short
+form script built around a resource, not
+a tool. So what I mean by this, it's
+going to find something that is just a
+really compelling and interesting topic.
+And then what I could do is I could then
+use that as a resource for the video.
+So, and say, "Hey, I just found this
+free system prompt from this company. Do
+you want it? If so, comment X and I'll
+send it to you." And so, that
+automatically gets scraped. And instead
+of me having to like come up with the
+idea for the video, it automatically
+builds the like framing and the the
+script and the idea for that video based
+on this resource. It's just been the
+best tool for me to make some of the
+best content possible. All right, so I'm
+going to show you real quickly the
+resource that I found to show you
+exactly what I mean. I'm going to show
+you one more use case and then I will
+show you how you can build something
+similar like this out. So this is the
+resource that I found a curated list of
+25 free AI tools that directly replace
+paid software subscription. It even
+generated the script. I tested every
+free AI tool out there. 25 of them
+replace over $600 a month in paid
+software. And that's great. The script
+is great. But where is the resource? And
+the resource is right here. It created
+this markdown file. And I could go
+through. It shows the design and images
+tools, Adobe Photoshop, Chachabt image
+editing, which is free. So, it has all
+these different paid versions versus
+these alternative versions here, which
+is pretty cool. So, what I could do is I
+could just like tell Claude Code to,
+hey, turn that into a Google document,
+and what it would do is it' go create a
+Google document, share that link with
+me, and then I could add that to my
+Instagram real automation that
+automatically like sends that to every
+single one of the people that comments
+for that resource. All right, so let's
+talk about what happens when I post a
+YouTube video. So, I built this system
+inside of Cloud Code that will
+automatically take that YouTube video
+and potato turns that into five
+different pieces of content on
+autopilot. It reads the transcript of
+the video and it rewrites that content
+for every single platform on autopilot.
+I don't have to touch it. Claude Code is
+handling all this for me. So, it goes
+from being one YouTube video to five
+platform posts. This is a LinkedIn post,
+Instagram reel, Tik Tok, X or Twitter
+post and on threads as well. And one
+thing to mention is it's not using the
+same caption that's copy and pasted.
+It's not just taking the YouTube
+transcript and posting that on LinkedIn.
+It's rewriting these each for each
+platform based on the content style that
+those platforms prefer. On top of all
+this, it schedules them. It posts them.
+All of this is done directly inside of
+Blato inside of Claude Code. So, I'm
+going to show you how to set this up now
+and exactly how it works. All right. So,
+I guess first things first, let me
+actually go ahead and show you this in
+action. So, I'm gonna open up a new
+thing inside of Claude Code here, and
+I'm gonna say, I want you to go and
+scrape my last YouTube video, get the
+transcript, and from that transcript, I
+want you to create a LinkedIn post about
+this video and what I talked about
+inside of it. All right, so I'm going to
+send that off to Claude Code. And now,
+what it's going to do is it's obviously
+going to scrape that YouTube video. And
+what I should do, actually thinking
+about it now, is I should just turn this
+into a command. So, what I would say
+after it goes ahead and does this is I'd
+be like, "Hey, turn that into a
+command." So, whenever I say scrape
+YouTube, it automatically goes through
+this process. And here we go. It's
+looking through my YouTube. So, I'm just
+going to submit that. Also, inside of
+Cloud Code, I do suggest or inside of
+cursor, I do suggest I would do whatever
+you want to do, but I select bypass
+permissions here. So, that way I don't
+need to approve everything. It just
+automatically runs on autopilot instead
+of me having to like go through and
+approve all this stuff. So, looks like
+it found my last YouTube video here. So,
+this is the most powerful AI app builder
+I've ever used. So, it's downloading the
+autogenerated subtitles for the video.
+And guys, one thing I really want to
+mention with Claude Code, I was scared
+to begin using it cuz I was like, man, I
+don't understand this interface. I don't
+understand what it's doing. It looks
+like it's doing so many complex things.
+And the thing is, if you run into an
+issue, you don't know how a specific
+task should be done inside of Claude
+Code, either ask it, "How do you do
+this?" or just say, "Figure it out." And
+I'm telling you, it sounds like the most
+vibe coder thing ever. Like for example,
+I did not know how to extract the
+transcript from a YouTube video, but I
+just said go and find a way to scrape
+that and it'll go and find like an API
+platform that does that for free, for
+example. So, it's really good at just
+going off and like iterating and working
+through the best way to do something
+until it actually figures out how to do
+it. So, just like this, we now have this
+LinkedIn post. So, we just hit a turning
+point in AI app development. Okay, this
+looks good. What I could do is I could
+automatically just tell it to post this
+right now. So, what I'm going to say is
+I want you to actually use one of the
+templates inside of potato that formats
+this into a tweet and turns it into a
+carousel post along with the caption of
+the, you know, that you have here. Okay.
+So, what I'm talking about here is let
+me go over to potato and again I'm going
+to show you how to actually enable this
+and set this up yourself here shortly.
+So, what I want to show you is the fact
+that there's different templates in
+here. So, some of these are okay, some
+of them are really good. like this would
+be great for like an infographic or
+something or you know breaking news
+something like that. These are pretty
+solid but I really like this one right
+here or you know I like this one even
+more. So essentially what this is this
+is a template like this tweet card. So
+you've probably seen these types of
+carousel posts on Instagram or Tik Tok
+or LinkedIn all over the place. So what
+I could do is I could either generate a
+video or a post inside of potato but
+since I'm using Claude Code and the MCP
+inside of Claude Code which I'm going to
+show you exactly how to set up I don't
+need to go ahead and do this myself. So,
+it's going to reference this and go
+ahead and generate a tweet like this
+based on that previous video that I just
+scraped in again. And again, I don't
+need to do anything aside from say
+scrape my previous YouTube video and
+turn it into a carousel post and post it
+on LinkedIn and Tik Tok. So, what I'm
+going to do is I'm going to come back
+here. This is live in action now. So,
+what it's doing is it's actually
+creating this visual. And looks like the
+carousel is ready to post. LinkedIn is
+live. Tik Tok is processing. So, let me
+go ahead and just go over to LinkedIn.
+See if I actually see this posted. And
+again, I'm going to show you exactly how
+to do this. And boom, just like this, we
+have this new LinkedIn post. So, we just
+hit a turning point in AI app
+development. For the past few years,
+every AI builder created web apps,
+things that run into a brow or run in a
+browser, can't access your camera, etc.
+That just changed, blah blah blah. Okay.
+And then what it did is it even
+generated these like tweet card styled
+carousel posts breaking down what I talk
+about in that video. So, again, this is
+automatically pulled from my YouTube
+post, my last YouTube video that I
+posted. It went from this YouTube post
+to this repurposing on LinkedIn as well
+as Tik Tok. So, let me check Tik Tok
+now. And just like that, we now have
+this Tik Tok post here. All right. So,
+what you're going to do to actually set
+this up is you're going to go sign up
+with a Blot account. I'm going to come
+into my account here. And so, settings,
+you're basically just going to log into
+your accounts. So, I logged into my
+LinkedIn and my Tik Tok. Extremely easy.
+Right now, these are the only platforms
+that I'm giving it access to. However,
+you just simply just log in. It's very,
+very simple to do. And then what you're
+going to do in order to actually begin
+using this inside of our cloud code is
+we're going to come to API and we don't
+even need to copy our API key. What we
+do is they actually have an MCP server
+now. So essentially we don't need to
+like explain like oh you need to use
+this you know the posting API all this
+stuff. The MCP will know how exactly how
+to use that. So, we're just going to
+click on copy setup command and we're
+going to come back to claude code or you
+could see inside of here, we could even
+use claude co-work as well, which is
+another alternative for this. So, what
+we do is we just paste this in. And I
+already did this. What it's going to do
+is it's literally going to go and set
+this up entirely for you. And I don't
+know what it does on the back end, but
+it just works magic and, you know,
+builds it in perfectly. And then you
+could come here and just say, hey, what
+can you do with the Blot MCP? And then
+this will give us a good guide of like
+everything that it could actually do for
+us. And we could we could begin working
+this into our system that we have built
+out. Of course, what I have is a pretty
+comprehensive system that is like an
+entire content army of agents that is
+tackling all these tasks for me. But you
+could have it do something very simple
+like, you know, if you write a blog post
+manually and you like writing blog
+posts, it could automatically just like
+repurpose that into different content
+for you on autopilot without you having
+to manually do that yourself. So, for
+example, you could see it can post stuff
+for us. It could create posts, schedule
+posts, create threads, it could generate
+carousels, slideshows, YouTube
+transcripts, it could scrape all this
+stuff. So, it could do so many different
+things. So, that is potato. If you want
+to use it, there's going to be a link in
+the description to do so. As for
+pricing, I obviously want to show this
+for you guys. So, you could have a 7-day
+free trial and test this out yourself.
+See if even something that's worth
+considering. And then you have a starter
+plan, creator plan, agency plan. Of
+course, the agency plan is pretty
+expensive. However, you know, I believe
+the $29 per month plan should get you
+pretty far. You could have 20 social
+media accounts, etc., and up to 900 Tik
+Tok posts per month. So, it could get
+you really far and if you want to
+automate your content, this is a great
+way to do it for, you know, relatively
+cheap way. Moving on to our last hack in
+this video. So, what if AI could control
+any of the apps that you're already
+using? So, technically, we can do this
+because we could connect to APIs, but
+this does mean that we have OOTH set up
+per app. We have token refresh logic. We
+have all these different technical
+things that will just be a massive
+headache for us to actually go through
+in order to actually set up the apps we
+want to use. and we will have to pay per
+service for every single app that we're
+going to try to connect to. So the
+solution for this that I personally use
+is Zapier MCP. Think of this as a way
+for your AI to use all the tools that
+you already use directly. So inside of
+Zap Your MCP, we have 8,000 plus app
+integrations with over 30,000 plus
+actions based on this one Zapier MCP
+connection. It makes it extremely easy
+to tap into these. So here is how it
+works in our system, which is the really
+important part. Cloud code. We obviously
+have our commands, all of that stuff in
+there. We have our specific skills that
+we have in our system that's really
+complex. And then we have Zapier MCP
+that handles the connection to our app.
+So, of course, we use potato, we set up
+the potato mcp. However, that's just one
+application that we are using. We had to
+go and configure that manually. If we
+want to connect any of the apps we use,
+we're going to use a zap year MCP in
+order to do that. Just it's going to
+make our life so much easier. Here are
+some of the things that it does in my
+content system. When a new script is
+done, you know, I'll just go to Cloud
+Code and say, "Hey, I filmed it." Slack
+automatically will ping my editor
+because it has access to the Slack
+application. When the video is posted,
+it could actually go and log that video
+into Google Sheets along with the
+metric. So, it could call the command in
+cloud code to go and analyze my video
+and then automatically post that to
+Google Sheets using the Zap Your MCP.
+And if there's a new deal, then the
+calendar event is created, a milestone
+hit, you know, email the sponsor, all
+that stuff based on just through Gmail.
+These are all the things it could do. Of
+course, can't cla code Code just call
+APIs itself? Yes, it can. But it is an
+absolute pain to have to set up every
+single one of these apps you're using in
+Claude Code. So, now that we talked
+about this real briefly, I'm going to
+show you exactly how you could plug this
+into your system. Right now, what you're
+going to do is you're going to come to
+zapiermcp.com.
+Actually, zapier.com/mcp.
+There's going to be a link in the
+description to do this. So, what we're
+going to do is we're just going to click
+on start building. Login or sign up to
+an account if you don't already have
+one. And then inside here, we're just
+going to click on create new MCP server.
+Then we could select whatever we want.
+If we're using cursor, we could do that.
+But I'm just going to click on cloud
+code. And now for the fun part. We get
+to select any of the apps that we want
+to connect to. Let's say we want to give
+Claude Code access to our Gmail. I'm
+going to click on this. And I could
+either select individually each of these
+specific tasks that it could perform, or
+I could just select all, and it's going
+to select every single thing that Gmail
+can do inside of Zapier, which is a lot
+of different things. And now we have
+that connected to our server. Then I
+could come do the same exact thing for
+Google Sheets as I mentioned earlier.
+You know, we could automatically like
+scrape the scripts that we have and or
+the performance of the videos and add
+that to Google spreadsheets. So I'm
+going to go ahead and do that. Now, if
+we use Slack or HubSpot as our CRM, I
+could just instantly go here, select
+tools, connect to HubSpot CRM, and done.
+Just like that, we have that added. So
+in order for us to connect this to
+Claude Code, I'm just going to simply
+click on connect. We need to obviously
+have Claude Code installed. And then I'm
+going to copy this command. I'm going to
+come to Cloud Code and then say
+literally I'm just going to give it that
+command and it's going to go off and do
+its thing and actually build in this MCP
+server. All right, so let's summarize a
+bit and kind of really understand what
+it is that we have built out inside of
+Claude code and how this work. It starts
+with the Claude MD file. So we write our
+rules with our tone and how we work. So
+for example, right here is our
+instructions. My business system rules,
+always check CRM before outreach, use my
+brand voice, all these different things.
+So we craft this as we use this every
+single day. We type one command and an
+entire workflow runs. So I could write
+trending and it will go scrape all the
+trending posts for me and all the
+trending news in the AI space and then
+create a script for me based on that. So
+all I have to do is type in that command
+and it pulls all this information goes
+through this entire set of workflows.
+Then we added MCP servers that connect
+our system to everything. We could use
+all the different apps that we use such
+as notion, Slack, GitHub, any of these
+different tools that we use on a
+day-to-day basis using either the APIs
+that Cloud Code sets up for you or the
+MCP tools that just like condense those
+all into one. And as I mentioned, our
+memory compounds across all of our
+sessions. So, you can see inside of our
+memory file, it actually breaks down
+what it learned today or through the
+specific task that you went through as
+long as you're being proactive and like
+telling it what it did good and what it
+did bad at. And all of these pieces now
+stack together. So we have our claude MD
+which is our rules. We have our slash
+commands which are our complex workflows
+that are condensed into a single word.
+MCP servers, our hooks and our memory.
+And this is the entire claude code
+system. And guys, I know that we talked
+in this video about my content system
+that I built. However, you can do this
+for your entire business, whatever it is
+that you do or any of the tasks you do
+on a computer. So this does not need to
+be based around content. The things that
+Claude Code can do really are
+phenomenal. like I've been blown away
+the last two months using it. So I
+really suggest that you start using this
+as your personal operating system. Ask
+it questions on you know things that it
+could actually automate for you. Do
+whisper flow and just at the end of the
+day say hey I did all these things and
+you know here were the things that were
+the toughest for me. Here's what I spent
+the most time on. And it could reverse
+engineer and actually build systems for
+you to help alleviate some of the tasks
+on your plate. So I hope you guys got
+some value from this video. This one I
+put a ton of time and energy into. I've
+been playing around with Cloud Code
+religiously and I really wanted to show
+you guys what it's capable of because
+it's been blowing my mind. So, if you
+guys got some value from this video,
+please let me know what you think in the
+comments. Leave a like. It supports the
+channel so much. Subscribe for more
+content like this. And without further
+ado, happy Claude coding and I hope you
+guys enjoy playing around with it
+yourself if you haven't

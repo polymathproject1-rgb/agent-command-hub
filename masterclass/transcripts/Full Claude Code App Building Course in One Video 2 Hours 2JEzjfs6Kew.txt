@@ -1,0 +1,4733 @@
+In this video, I'm going to walk through
+ 
+a full app build using Claude Code from
+start to finish. And if you've been
+using tools like Lovable, Bolt, or
+Replet to build your apps and you're
+getting stuck and you want to get
+started with Claude Code, then this is
+going to be the video that you want to
+watch. I'm going to walk through the
+entire process from choosing the right
+tech stack to building the app
+foundations to setting up the database,
+authentication, payments, and deploying
+it to a domain using Versel. And there's
+going to be very minimal editing through
+this. So, you're going to see the entire
+process from start to finish. This is
+definitely one that you're going to want
+to save for later and watch in bits if
+you're building step by step. Now, if
+you don't know me, my name is Chris and
+for the last 15 years, I've been
+designing apps and advising startups on
+product and design. And if you want to
+see more stuff like this in your feed,
+just click like and subscribe down below
+before we get started. And with that
+said, let's get into building our full
+application using Claude code. [music]
+build.
+>> So, let's start building our app with
+Claude code. And what we're going to do
+is we're basically going to go through
+all of these steps in this video. And I
+know this looks long, but this isn't
+going to be that difficult to go through
+step by step. And you can follow it
+through the entire video with Claude
+Code as well to build your app idea as
+you go. We're basically going to go
+through planning some Claude Code basics
+and how to get set up with Claude Code.
+your first prompt, how to set up your
+app, how to set up GitHub in for your
+project, then to test your database,
+test authentication, add payments,
+design your app, add the features for
+your app, create a landing page, which
+we're going to do in a separate tool,
+actually for this specific app project.
+I'm going to show you some reasons why
+you might keep it in the project or do
+it separately. We're going to then do
+some testing on our full app project.
+And then we're going to talk about other
+tools that you can integrate here like
+analytics, email sending, all of that
+sort of stuff. And then we're going to
+actually deploy our app to a live domain
+using Versell. So what is the structure
+that we're going to do here? Well, we're
+going to keep it very very simple for
+this app. So we're basically going to
+have a landing page which we're going to
+build in a different tool. We're going
+to then go through to a signup form
+which is going to be done using Clerk.
+So that will be a sign up or a login
+page. And this will have all of these
+things. This is all covered by Clerk
+automatically. So we don't have to worry
+too much about that. We're then going to
+add payments where we want to basically
+prompt the user to sign up to our app.
+And we're going to do this by prompting
+them to sign up to a free trial that
+then converts them into a paid user. And
+we're going to do make this kind of like
+a mandatory step to keep it really
+simple so that you have to sign up to
+the free trial to get into the app. And
+then you can manage your subscription
+once you get inside the app. This is
+just a really simple setup that I like
+to do straight away. So you have one
+path into your app that all users are
+going to go through and then you can
+kind of change that later if you want to
+kind of tweak how you're doing the
+pricing. The user is then going to be
+able to get into the app and actually
+use all of the app features. And we're
+going to need to make sure that we cover
+account management and subscription
+management here as well, which we're
+going to do with some of the tools that
+we're using in our tech stack. Now,
+before we get stuck in, let's just do
+some very quick app planning. Now, I
+like to go into a bit more detail with
+this generally, but we're just going to
+go through this really quickly here for
+this idea that I'm going to show you how
+I've built it going step by step. And in
+my course, in my school community, it
+actually breaks down the planning kind
+of process in a lot more detail over a
+lot more lessons to help you kind of
+make your app idea just incredibly good
+and validate it in the market. But we're
+just going to figure out these five
+things to start off with. And these are
+the kind of five things I like to start
+with if you're not kind of doing any
+detailed planning, which is basically
+who is it for. So the app that we're
+going to be building today is an app
+that I want to create basically to help
+vibe coders plan their app projects and
+to help people working on apps that are
+already building them in tools like
+lovable to actually create features with
+more success, avoid any bugs and just
+like have that planning layer basically
+around building apps. So it's to help
+five coders and app builders to plan and
+build their app with faster and with
+less bugs. So that's who it's for. So
+that kind of answers like our what
+problem does it solve a little bit. So
+we want to think about are we solving a
+problem with this app. So the problem is
+like managing context between sessions
+storing planning information because
+this is kind of being stored in just
+like markdown files in someone's project
+in the code base at the moment which can
+be useful but it's also maybe not like
+an ideal way of managing that kind of
+planning part of building an
+application. and also like build issues,
+bugs, etc. So, I think there's a bunch
+of problems that we're solving here. The
+core problem is like basically managing
+this context and planning your app
+across multiple sessions and kind of
+building it faster and helping you
+actually have visibility of like how to
+manage that context properly. So, how
+does it do this? We're going to add some
+key features in the MVP. So we're going
+to add like basically information for
+all aspects of your app and we're going
+to also add feature tracking and context
+and we're also going to add like a
+knowledge feature here as well for
+documentation etc. So this is going to
+have all of the information that we need
+to kind of build an app successfully.
+What is the pricing model here as well?
+So we need to define a pricing model up
+front that we're going to do for this
+app. So I like to keep it really simple
+to start off with. So again, we're going
+to basically just do a free trial
+period, which will probably be like 3
+days, and then a paid monthly
+subscription to start off with, and we
+might introduce annual later. I always
+think it's good to start off with a
+monthly subscription because then if the
+app doesn't work out, even if you have
+some paying customers or you want to
+move on to a new project, it actually
+makes it a little bit easier rather than
+giving people the option for an annual
+plan up front. That can be quite a
+commitment to a long-term project for
+someone if they've paid for that to use
+that software. You might think, well,
+why wouldn't you want to continue
+working on it if someone has paid for an
+annual plan? But sometimes if you're
+building something, you maybe get a few
+users on it, but you realize at some
+point that it's not the right path
+forwards. And so then you might want to
+move on to something else. And I think
+just like monthly gives you an easier
+starting point for that. So we're going
+to do free trial with a paid monthly
+subscription. And then what is it
+called? So I bought a domain called
+scribe.dev. So it's going to be called
+scribe. and Scribe is going to be your
+go-to kind of planning and build partner
+for building any application using any
+sort of vibe coding or AI coding tool
+whether that's lovable replicate cursor
+claw code whatever it is so for this app
+build what text stack are we going to
+use here and these are all the component
+pieces of your app basically the app
+kind of foundations that you need to
+know to kind of piece together to build
+a working application we're going to be
+building a web application here so this
+is the same sort of application that you
+would build if you were building in
+lovable or replet or bolt or any of
+those tools. But because we're using
+flawed code to build, we need to know a
+little bit more about the tools that
+we're piecing together to actually make
+our app work. And so these are broken
+down into these categories. So we've got
+the front end, which is basically the
+visual layer, the layer that you see on
+the screen that covers all of your
+interactions and logic. The kind of back
+end, which is where all the functions
+are happening and everything is being
+worked out behind the scenes that is
+sending information back to the front
+end to display to the user. the database
+where we're storing all of the
+information that a user might be saving
+against their account because they're
+going to be logging in and logging out
+and signing up to accounts on our app.
+We want to basically store any data
+there that they're creating in their app
+and that is stored in a database. We've
+also got authentication which is how we
+allow users to log in and sign up to our
+app. We're going to have payments which
+is how we accept payments in our app as
+well. And we're going to have a tool
+that we use to deploy our app and also
+APIs. So, if you don't know what an API
+is, basically an API is like an external
+tool or a service that you can use where
+you basically send information to it.
+The API does something behind the scenes
+and then it sends the information back
+to your app. So, if you want to use AI
+functionality in your app, for example,
+you would add an AI API. So, we use like
+the Clawude or the OpenAI API here to
+actually do that AI functionality. So,
+for the front end, we're going to be
+using React, Nex.js, and Tailwind. And
+we're using Next.js because this is kind
+of a go-to framework for web
+applications. and AI knows it really
+really well. There's a ton of data that
+it's been trained on in Nex.js
+applications and the models are just
+very good at building them. For back
+end, we're going to be using Convex and
+for our database, we're going to be
+using Convex as well. It's a little bit
+like Superbase, but it's written in your
+code. You also get a dashboard on their
+website, which makes it really, really
+easy to see what's going on and it makes
+it easy to make changes as well. For
+authentication, we're going to be using
+Clerk, which is basically a go-to tool
+for like authentication that can scale
+up to thousands and thousands of users.
+And this is kind of one of the industry
+standard pieces of tech for
+authentication. For payments, we're
+going to be using Polar, which is
+basically a payment provider that acts
+as a merchant or record. So they handle
+all the international tax, which is
+perfect if you're building a software
+application where users can come from
+anywhere around the world, which you
+don't kind of get that piece if you use
+Stripe. For deployment, we're going to
+be using Versel, which is again an
+industry standard for deploying app
+frontends. Our back end is going to be
+deployed and convex, and our front end
+is going to be deployed with Versel. And
+that's going to be the part where you
+can kind of go on a website URL and
+access the application. And then for our
+APIs, we're going to be using the Claude
+API for any AI functionality in our app.
+We're going to go through building this
+app with Claude Code today. So now that
+we've done planning, let's get stuck
+into Claude Code Basics. I'll show you
+how to set it up and then we'll get
+started building our app with our first
+prompt. So this is Claude Code here.
+I've just gone to
+claude.com/prouct/callclude-code.
+And all you have to do to set up Claude
+Code on your computer is basically to
+copy this command here to the clipboard.
+So just click this copy to clipboard
+icon and then all you have to do is run
+a terminal. So open a terminal on your
+machine and then paste that command,
+press enter, and that will install
+Claude Code on your computer. Now the
+terminal might be a little bit scary.
+We're actually going to use a couple of
+different ways of using Claude Code
+through this app build. So you don't
+just have to use the terminal here, but
+you do have to use the terminal here
+just to install Claude Code on your
+machine. So now that we've got Claude
+Code installed, we're going to go and
+get Cursor. So if you don't have Cursor
+already, Cursor is going to be the tool
+that we use to build our app in. And
+we're going to run Claude Code in
+Cursor. Basically, if you don't know
+what Cursor is, Cursor is basically an
+IDE, which is an integrated development
+environment. You don't need to know what
+that means. It's basically an
+application that you can use on your
+computer to write code using AI and also
+to preview your app as you're building
+it. It's one of the best tools for
+building applications with AI. And I
+think the features that it has pairs
+really, really well with clawed code,
+which is why I'm going to be doing this
+using clawed code and cursor for this
+tutorial, but you can use claw code with
+any other IDE like VS Code or you can
+just use it directly in the terminal if
+you really want to as well. That is a
+more complex way of using it compared to
+this. So get cursor if you haven't for
+the purposes of this video. And then
+once you've got cursor, we're going to
+open up cursor. And then we're going to
+create a new project. All you have to do
+is click open project here. And you just
+create a new folder for this project. So
+I'm going to create a folder called
+scribe. We're going to open that. And
+then I'm just going to maximize this to
+this size. And then this is the view
+that you're going to get when you start
+in cursor. And you might think, well,
+where is everything here? Where is the
+stuff? Well, basically what this has
+opened is an empty folder because what
+we're going to be doing is creating code
+files in this folder. And if you jump
+over to the editor view here, so my
+setup has changed a little bit here
+actually. But what you're going to get
+is you're going to get two views at the
+top here where you have this agents view
+and this editor view. In the agents
+view, you have your agents on the right
+hand side or it might be on the lefth
+hand side for you depending on how it's
+set up. But I've got my agents here on
+the right hand side, which is basically
+a chat box, which is very similar to any
+other sort of AI coding tool or vibe
+coding tool that you've used. You might
+have used Lovable or Bolt or Replet or
+any of these tools and be looking to get
+into Claude code or Cursor. This is
+basically just the setup that we have
+here. And we're going to actually be
+running a browser preview inside of
+Cursor to see our app as we're building
+it. Now, we're not actually going to use
+this agent chat in Cursor. And we're not
+going to be creating any new agents
+because we're going to be doing this
+entirely using clawed code. So I am just
+going to hide those for now. I'm just
+going to get those out of the way. And
+then in the editor view, just to show
+you what this looks like. And just to
+open this side panel here, the editor
+view. Now you can see there's the title
+scribe up here. This is basically our
+folder with all of our files in, but
+there's no files in it at the moment
+because we haven't started our project.
+So we're going to start building our
+project. We're going to go back to the
+agents view just with this screen here.
+So on this editor view there's one thing
+that we're going to do before we start
+using claude code and that is just to
+install the claude code extension in
+cursor. And the reason that we're doing
+this is because this is a more friendly
+user interface than using the terminal.
+So if you go into extensions which is
+this kind of squares like icon up here
+and find claude code and then just
+install claude code for VS code that
+will enable you to run claude code in
+its own sort of user interface inside of
+cursor. You can use it in the terminal.
+We might have to use it in the terminal
+for some parts of this, but for the most
+part, we're just going to be using it in
+the claw code extension in cursor. So
+once you've got that installed, all
+we're then going to do is switch back to
+this agent view here. And I'm going to
+go to this dotted menu up here and I'm
+going to click clawed code open. And
+that is just going to open clawed code
+for me. I'm going to close this on the
+left hand side. So now all we have in
+the middle of our screen and cursor is
+just clawed code. And this is just a
+chat box at the bottom that is very
+familiar if you've used any sort of AI
+tool, any sort of AI chat tool or vibe
+coding tool. There are a few key
+commands that are worth knowing with
+Claude Code before we get started. And
+these are all accessed by using forward
+slash and then you get a menu here which
+kind of gives you all of the different
+options for commands that you can do.
+The ones that we're going to be using
+for the most part are new conversation
+and clear conversation, attaching a
+file, and then you're going to need to
+log in also to get started. So, you need
+to log in to your Claude account or you
+can use the Claude API for this, but if
+you have a Clawude account, that's going
+to be the way that you're going to be
+able to get the most out of Claude code.
+Even if you just have a pro account,
+you're going to get a bunch of usage of
+Claude code on that. You can also select
+the model, and there's a bunch of other
+stuff that you can do here as well. So,
+we'll get into those as we kind of go
+through this, but for the most part, all
+we need to know is new conversation,
+clear conversation, attach file, and
+then select model so that we can select
+the AI model that we're using. For the
+most part, we're going to be using Opus
+4.5 for this. But those are the kind of
+key things to get started. So, let me
+log to Claude Code here so that this is
+set up and ready to go. And basically,
+you just connect your Claude.ai
+subscription. I'm going to authorize
+Claude Code to access my subscription.
+And let's go back to cursor. We copy
+this authentication code and then go
+back to cursor. Paste it in here. Click
+continue. And that will connect your
+Claude account to cursor. And now you've
+got Claude code up and running in
+cursor. We can now put in our first
+prompt to start building our app. So now
+we've got Claude code up and running in
+Cursor. I'm going to break down the
+first prompt that we're going to put in
+here to build our application. And this
+prompt that I've created is pretty
+in-depth. So, this is my prompt here for
+Scribe, the app that we're going to
+create. And I want to break it down and
+the key components here. You don't have
+to write a first prompt that's this
+long, but I like to go really, really
+detailed with my prompts to make sure
+that the AI is going to get as close to
+kind of my vision that I have in my head
+for the product. Now, I've worked with
+apps and designed apps for the last 15
+years. So, I kind of know exactly what I
+want to get out of it. And you can be a
+bit more vague when you're prompting
+Claude code and get Claude code to
+actually figure out what it needs to do
+with the application for you instead of
+being this detailed. But the kind of key
+things that I'm calling out here is
+first I'm calling out the text stack
+that we're going to use. So we're going
+to build our app with Nex.js using React
+and Tailwind with clerk for
+authentication and convex.dev for
+database and backend. That gives claude
+code context of how we're going to build
+it. The app should be a planning app for
+vibe coders and app builders who are
+planning their app and tracking
+progress. That's the context about our
+app. What is it? Who is it for? What
+problem does it solve? I'm also
+outlining the architecture for the app
+here as well. So, I want the app to
+store information about apps. And then
+it's going to have this level
+navigation. It's going to have these
+pages in it. The AI chat is going to
+come out from a lefthand panel. And
+after that, I'm going to break down the
+key pages in the application. And then
+the user journey for the application as
+well. So, these are the key pages that I
+want to create. I'm going to have a PRD,
+a text stack, a knowledge, and a
+features page. And when the user signs
+up, they're going to go through these
+steps. They're going to basically create
+their first app, choose their text
+stack, create their app project, and
+then on each of these pages within an
+app, here's what you're able to do. Here
+are the features and how it works. I've
+kind of explained those in detail there.
+I've also added in here the technology
+that I want to use. So that any APIs
+that I want to use in this as well. So
+there's a piece in here around AI kind
+of chat, which I'm going to be using
+Claude for. So we're going to use the
+Claude API for that. And there's a piece
+in here around scraping data from
+websites as well, which we're going to
+use the fire crawl API for. So those are
+the two APIs that we're going to be
+using here. I've also added in a little
+bit about design, but just very very
+basic. So the UI should be minimal and
+clean with plenty of white space,
+rounded border radius, and soft shadows.
+And I've also added in some fonts I want
+to use here as well from Google Fonts.
+So you can call that stuff out
+specifically in this first prompt. And
+I've also said create a project plan.mmd
+file in this project with the full
+project plan broken down step by step so
+that we can track progress over multiple
+sessions. And that's going to allow
+Claude to basically have context of our
+project if we work with it in multiple
+sessions. It might not build out the
+full project in one go here. We're going
+to have to work back and forth with it
+step by step to actually get all of
+these things working as it starts to put
+together our app. And this just means
+that we are able to give Claude code the
+context of our full project by just
+referencing this file whenever we start
+a new session with Claude code. And that
+is really important for basically to
+kind of help Claude code have an
+understanding of our project without
+having to reread the entire codebase
+every single time we start working with
+it, which makes it quicker. It saves us
+money and just makes it easier for
+Claude codes to actually work on our
+code as well. So let's copy and paste
+this into Claude code here and we're
+going to put it into planning mode as
+well. So this is really really important
+just before you get started. So just do
+a shift and tab and that is going to
+basically put it into plan mode here.
+We've got this v.config.ts
+file here which we don't have to worry
+about because that was from a previous
+version of this project. I've actually
+decided to go with nex.js instead of v
+for this project. So don't worry about
+that. We've got plan mode selected here.
+So let's send this off to claude code.
+This looks a bit weird in this full
+view. And actually, let's set up cursor
+a little bit better to make it more
+familiar if you're coming from a vibe
+coding tool. And this is the way that I
+like to work with it as well. So, what
+you can do here is just do split editor
+view in the top right and just split
+that. So, we've got Claude code on the
+left hand side. I'm going to make that a
+little bit smaller on the left. So,
+we've got our Claude code chat on the
+left. And then what I'm going to do is
+go back into the agent sidebar here in
+cursor and just do a new agent just so I
+can access this browser feature here.
+So, I'm just going to go to this browser
+icon and click browser tab. And that's
+going to add a browser tab in our cursor
+window here. Let's close those tabs. And
+now we're basically going to be able to
+have our app preview on the right hand
+side and claude code working on the left
+hand side here for us. So whilst that
+goes and plans our project out and it's
+going to come back and ask us a few
+questions. You can see there it's asking
+can it do web search? Basically we're
+going to just say yes and that will let
+Claude code do any of these actions.
+Whilst Claude Code is setting up our
+project and creating the plan, we're
+going to do a couple of things here.
+We're going to go to Convex and Clerk
+and actually set up our accounts for
+those whilst Claude Code is busy
+building our app. One thing to note here
+as well before you actually put your
+first prompt in and send it to Claude
+Code is I have actually changed the
+model here by doing forward/model and
+then selecting Opus as the model that
+I'm using for this. So I'm using Opus
+generally for these first prompts and
+for more complex features to just give
+Claude code a better chance of building
+it successfully and just being able to
+constantly kind of work on the code
+without losing context and just using
+that higher powered model generally
+gives a better result from the first
+prompt. So, I found it to be a really
+really good way of getting started,
+although it can be a little bit more
+expensive, especially if you're only on
+the pro plan, but I would definitely
+recommend starting off with something
+like Opus 4.5 to start planning and
+building your project from your first
+prompt. So, as Claude Code goes through
+planning here, if you've added the line
+about creating a project plan file into
+your project, as we've done in our first
+prompt here, it's going to create this
+project plan. MD file here which you can
+see on the right is basically the full
+plan to build this application in a lot
+of detail and all of the steps through
+all of the different phases of kind of
+building this app and all of the kind of
+database schema. Everything that we kind
+of need here. This is kind of like a
+little bit like a PRD but more just like
+a task list for Claude code to work
+through. Claude Code is also going to
+give us its task list in Claude Code on
+the left hand side here as well. But we
+do have that project plan file in our
+project now. So you can see the only
+file that I've got in here is project
+plan.mmd. If I open that, it's got all
+of that information in as we kind of
+were looking at before. I'm going to
+close that lefthand panel. And basically
+Claude Code here has now got a few
+questions that it's going to ask us. And
+it will do this based on your app kind
+of prompt, your first prompt as well.
+Any questions that it doesn't understand
+exactly what you want to do with, it's
+going to ask you some questions in the
+chat. So you can just answer those. And
+this is where working with claude code
+is a little bit more like working with a
+programmer or a developer. Basically,
+it's like having a person there that you
+can ask questions to and that is going
+to ask you questions back about what you
+want to get out of your project and how
+you want it to be built. And if you
+approach it with this kind of mindset
+rather than just thinking it's just a
+kind of application that you can send
+kind of requests to. It's more of like a
+person that you're collaborating with,
+then you're going to get much better
+results as you continue to prompt it.
+So, I'm going to answer these questions
+here from Claude Code. It's basically
+asked about the AI chat, a couple of
+questions, the knowledge base that we're
+creating in this app, the feature
+descriptions, and onboarding state
+persistence. So, I'm going to answer
+these questions, and it's going to
+finalize the plan for this, and then
+start building our application. So, now
+we finished planning. You can see we've
+got our full implementation plan from
+Claude Code. Here we've got the text
+stack, the design system, implementation
+phases. So phase 1 2 3 4 all of these
+pages to kind of build each of these
+different pages and features within our
+app that AI chat panel and then the
+polish as phase 11. And because we
+created that project plan MD file if we
+stop halfway through building this and
+then pick it up again with claude code
+it's going to know how far we got
+through that project plan and it's going
+to be able to continue building it. So
+it doesn't have to do it all in one go
+and we kind of work with it iteratively
+as we're building this app. We've got
+the schema all of the setup for this app
+and the components and files. Database
+schema is here. the environment
+variables that we need to add in
+dependencies. And then if we're happy
+with this plan in Claude Code, we can
+just say yes and auto accept. You can do
+yes and manually improve edits if you
+really want control over everything that
+Claude Code is doing, but I would
+recommend just doing yes and auto
+accept. It's still going to ask you
+questions about running stuff in the
+terminal and running certain commands.
+So yes and accept. And then we're going
+to start building our app project. So
+let's get this app built and see the
+first version that this creates from our
+first prompt. And you can see Claude has
+just created a to-do list here basically
+and it's just starting to ask us all of
+these actions that it's going to do and
+it's going to work through this to-do
+list as it starts to build our app. So
+whilst claw code is building the first
+version of our app, what we're going to
+do is we're going to go and create our
+accounts and our projects in convex and
+clerk. And so Convex is the tool that
+we're using for our backend and our
+database. And Clerk is the tool that
+we're using for authentication here. And
+you can get projects set up with these
+for free. So you don't have to pay
+anything to sign up and you only have to
+start paying once you exceed a certain
+amount of usage or a certain number of
+users. So it's a really great place to
+start to get your application up and
+running. And so in Convex, what we're
+going to do is go to convex.dev. You can
+create an account on Convex. I'm just
+going to log into my account here and
+create a new project. You click create
+project and give the project a name. So
+we're going to call this scribe. And
+then this will create a project in
+Convex where we basically have a
+development and a production
+environment. So we basically once we're
+ready to go to our live version, we can
+create our production deployment in
+Convex. But to start off with, we're
+going to be working in a development
+version of Convex to kind of get
+everything set up and working to add in
+our data, add in our environment
+variables, all of that sort of stuff. So
+this is all we need to do in Convex for
+now. And we're going to go through and
+connect our Convex account in cursor
+using claude code or the terminal. We're
+going to create a project in clerk as
+well. So if you go to clerk.com, sign up
+for account. And then all we're going to
+do here is click create application. It
+will ask you to do this when you first
+create an account for clerk anyway and
+call this scribe. And then it gives you
+kind of an idea of what this is going to
+look like on the right hand side as
+well. What authentication methods do we
+want to accept? Do we want to have
+email? Do we want to have Google? I am
+going to just have email sign up for now
+just to make this easy and then we can
+set up Google authentication later. So,
+I think email and password is the
+easiest thing to kind of get things up
+and running here and then you can set up
+Google authentication later because you
+do have to go through the Google Cloud
+Console to like figure that stuff out
+and that can be a little bit tricky. We
+might do that later in this video. Well,
+let's see how much time we've got going
+through building this. And that has set
+up again in Clerk. You have a
+development and a production instance of
+Clerk. So, we can work in our
+development environment and basically
+create a bunch of stuff in our
+development environment. It doesn't
+matter what we create, test users, all
+of this stuff to kind of get things up
+and running. That's going to allow us to
+create our database backend and our
+authentication setup in the app that
+we're building with Claude Code in
+Cursor here. And so that's all you need
+to do to get those things set up. With
+that, we're ready to set these up in our
+app. And when Claude Code gets to the
+point where it's building those, we're
+going to then go in and test them and
+set it up whilst it's doing it. So Claw
+Code has now fully built our
+application. You can see here the build
+status. So, it's gone through and fixed
+a bunch of type errors in the TypeScript
+as well as it was kind of going through
+building this app and it's given us the
+next steps that you need to launch here.
+Now, it might not be in this exact
+format for you, but what it's going to
+do is it's going to break down what it's
+built and what you need to do next to
+actually get your local development
+server up and running so that you can
+see this app kind of in the browser here
+that we've got as our preview window.
+What we need to do here is to get
+everything set up in this project so
+that we can create that local
+development environment. And a local
+development environment or a local
+development server is basically a server
+that we're going to run locally on our
+computer to actually serve our
+application to be able to access our
+application without it being published
+to like a website or deployed to any
+sort of real environment. And we're
+going to do that using a couple of
+terminal commands here. And we're going
+to go through this step by step and set
+up all of the things that it's telling
+us to do here. So we need to get some
+environment variables. But let's just go
+through this step by step. So first we
+need to set up convex. And this is going
+to allow us to connect this command
+here. MPX convexdev is going to allow us
+to connect to the convex project we
+created in the previous step. And to do
+this, we're going to run this in the
+terminal. So these commands like this
+mpx convex dev mpm rundev. These are
+commands that you run in the terminal.
+So we're going to open a terminal window
+here. So you can do this by going to
+terminal and then clicking new terminal
+in cursor. And that is going to open a
+terminal at the bottom here. And we're
+just going to paste in mpx convex dev.
+And then that is going to ask us if we
+want to log to our convex account. So
+I've got an error here. And this is
+where AI can often go a little bit wrong
+sometimes. So I'm getting an error here
+with running this MPX convex dev
+command. So I actually just asked here
+like what does this mean when I try to
+run this MPX convex dev command and I
+get this error. It basically says that
+convex should be initialized first. So,
+we're going to copy this command back
+over to cursor and run this in our
+project instead. That isn't working,
+which means AI is hallucinated again.
+So, what I'm going to do is I'm actually
+just going to ask Claude code here. So,
+I'm going to say running MPX convex dev
+gives me this error message. We're going
+to copy this error message in. What is
+causing this? So, we're going to get
+clawed code to help us fix this error
+that we're getting here. I'm going to
+close that terminal. So, we've just got
+this one terminal here. This error is
+caused by the placeholder value I added
+to yourv.local file. So basically claude
+code I think tried to add a bunch of
+placeholder values to our project
+instead of the actual URLs and the
+environment variables that we should
+have to try and basically verify that
+the app would build without any errors.
+So it's just removed those there. So
+let's try running this again. And we're
+getting another error here. So let's pop
+it back into claw code. So it looks like
+basically the terminal here is in the
+wrong directory. And I'm doing this as a
+non-technical person, so I'm not a
+developer. So I'm figuring this stuff
+out as we go as well. So basically, we
+just need to navigate to the right
+directory in our convex project. So
+let's copy this command. We need to
+basically navigate to this project in a
+terminal. I'm just going to do a new
+terminal here so that it's clean. Let's
+navigate to this project, mpx convex
+dev. And this is now letting us set up
+convex properly. So what we're going to
+do is we're going to configure this by
+choosing an existing project. I'm
+already logged into Convex here. It will
+ask you if you want to log in to Convex
+if you haven't logged in to Convex using
+the terminal before this step. So I'm
+going to choose an existing project and
+then we're going to choose Scribe. And
+this is basically going to connect this
+application to our Scribe project in
+Convex that we have set up here. We're
+going to be connecting these two things
+together. So Claude Code will be able to
+make changes to Convex in the Convex
+code files in our codebase. And then
+Convex will be updated on the dashboard
+side when we have a look at Convex on
+convex.dev. dev here which is what we
+want. So that's all ready to go. It says
+convex functions ready. So we can now
+move on to the next step here which is
+to get our clerk keys. So go to
+dashboard.clarker.com. Create a new
+application. Copy the next publishable
+key and the clerk secret key and set up
+a web hook and copy the clerk web hook
+secret. And we're going to add these
+tov.local.
+So it's missed out a little bit of the
+steps here. So I'm going to open.local.
+And what we need to do is we need to put
+all of these in here. So these have now
+been updated by clerk which is great. So
+now we're going to add in these details
+for the publishable key, the secret key,
+and the web hook secret from clerk. And
+then we're also going to add in the
+anthropic API key and the fire crawl API
+key here. So if I go to clerk here, you
+can just see on this next.js tab for the
+setup guide. It's basically got set your
+clerk API keys here. And I've just
+turned these to toggle to view them on.
+And so we're going to copy these over
+from clerk here into our project here.
+So our clerk publishable key and our
+clerk secret key. And then we're going
+to create a web hook in clerk so that we
+can copy that over as well. So let's go
+to configure in clerk and I'm just going
+to search for web hooks in this search.
+We can click on web hooks here. And now
+we're going to be able to set up a clerk
+web hook. Now when we create a web hook
+in clerk, we need to add an endpoint URL
+to this. So I'm going to go back to
+cursor and I'm just going to ask claude
+code what endpoint URL should I use when
+setting up my clerk web hook. So we need
+to use our convex http actions URL not
+your next.js app URL. So based on your
+convex deployment your web hook endpoint
+should be this. So here we go. We're
+just going to copy this over. However,
+looking at the current setup the web
+hook is configured as a next.js API. So
+if you're running the next.js app, use
+this for local development. you'll need
+to use a tunnel service like Enro in the
+clerk dashboard. So we might have to set
+this up slightly differently for local
+development here using this method. We
+might not even need the clerk web hook
+secret to actually get this up and
+running. So what I'm going to do is I'm
+just going to set the API keys here, the
+anthropic and the firewall API key. And
+then we're going to do mpm rundev to see
+if we can get this up and running and to
+see what things work and what things
+don't work here before we actually do
+anything else. So, I've just added my
+Antropic and my Firecrawl API key here.
+I'm going to create a new terminal. And
+we're going to just do mpm rundev to get
+this app up and running basically. And
+then see if any errors come back. And
+npm rundev is a pretty standard command
+for basically getting a local app up and
+running. It says it wants to open
+localhost 3000 right now, which is
+basically I'm only going to just do this
+in open in cursor browser. This is the
+way that we're going to view our local
+application and we'll be able to see it
+kind of here in cursor and a local host
+URL is basically a URL to access our
+local development server. So that's up
+and running correctly and we can see
+here we've got welcome to scribe plan
+your apps track features build great
+products which is nice cuz that's the
+channel sign in to scribe. Welcome back.
+This is basically our clerk sign up here
+with our email address. We can click
+sign up and we're going to go to the
+sign up page here using Clerk and we can
+go through and test that this
+application works. Now, now that we've
+got this set up, we've got it up and
+running. What we're going to do is we're
+going to go through and test everything
+to see if it works. Test our database,
+test authentication, and see if we need
+to fix anything here to get this app
+working. So, now Claude Code has built
+the first version of this application.
+Let's just go through and see what works
+and what doesn't. And we're trying to
+basically check here the authentication
+part of this and the database part of
+this as well. So what we're looking for
+is that when we sign up with clerk that
+a user gets created with clerk and that
+we can access our app. And we also want
+to see that if we create anything in the
+app here related to our database. We
+also see stuff created in the database
+as well. So the first thing that I'm
+going to do here is I'm actually going
+to go back over to our convex dashboard
+and just to check here in the data
+section that we do actually have tables
+that have been created. So we have them
+here. So we've got apps, chat messages,
+features, knowledge, docks, prds,
+releases, stacks, and users. And that is
+everything that we need in our app. And
+those tables have been created, which is
+great. So let's go back to cursor. And
+now we want to check that when we sign
+up, we are actually creating an account
+in clerk. So let's sign up here. One
+thing that I would want to do in clerk
+actually before we try signing up is
+just configure this so that when you
+sign up, we don't require an email
+verification code. So we're not going to
+just going to turn off. So disable email
+verification at signup. It says it might
+result in lowquality emails, but for the
+development version of this, we're going
+to be the only person or AI is going to
+be the only thing that tests this. So,
+that is absolutely fine. So, let's save
+that. We can come back here later and
+turn it on when we move to a production
+instance in Clerk. So, let's continue
+through here. Add a password. Let's
+continue signing up to our app. And
+whilst that is loading, I'm going to go
+back over to Clerk. I'm just going to go
+to overview. And we can see here that
+this account has signed up. So the sign
+up is working correctly. And let's go
+over to Convex and look at users. So the
+users table is empty currently. So we
+might want to make sure that users are
+being added. This is still rendering.
+I'm actually going to open the console
+here. And to do that, you just go to
+this icon in the right hand side, top
+right hand side of the browser window in
+cursor. And this gives you your
+development console here. And we can
+basically see the issues that are
+happening here. So it says access to
+fetch the clerk from origin has been
+blocked by cause no access header is
+present in the requested resource. So
+we're going to copy this over. So
+basically there's an issue here with
+clerk in letting us sign into this app.
+So let's try and fix this issue with
+clawed code. So, what we're going to do
+with claude code is either you can
+create a new conversation or you can do
+for/clear to clear the context of your
+existing conversation. And the reason
+that we're going to do this is because
+we've got to the end of this first task
+here of building the app. And every time
+we want to build a new feature or do
+something different in our app, we want
+to start a new conversation or clear the
+context. So, the claude code is starting
+from scratch and we're also not using up
+loads of our tokens by just sending off
+a load of tokens for every single
+request that we're making. that will
+save our usage and make it a lot easier
+to save a little bit of money and tokens
+when we're kind of using claude code.
+So, because I want to keep this
+information up here in this chat, I'm
+actually just going to do a new window
+here, a new chat, and we're going to
+change this to edit automatically. And
+then I'm just going to ask Claude code
+and paste in this error so that we can
+try and fix it. Okay, so here Claude
+code has basically said that this is a
+known issue with clerk and it's to do
+with the clerk telemetry endpoint and
+not the authentication flow. So what
+it's done is basically disabled this in
+our settings and it says this will
+basically not affect the way that clerk
+functions. It just might affect some of
+the analytics that we get back from
+clerk. So that's absolutely fine for
+whilst we're building our application
+here. So I'm happy with that. And you
+can see on the right here that reloading
+this after signing in has taken me to
+this screen here which is the welcome
+screen. So, welcome to Scribe. Start
+planning your next great app. So, let's
+create a new app. Name your app. So,
+let's call it Scribe. We're going to do
+something meta here. We're going to plan
+Scribe with Scribe, which is something
+that I love to see startups do is to use
+their own tool to actually build the
+product. So, it's going to be called
+Scribe. Let's go to the next step here.
+It is going to be a web app. That's what
+we're building. And the styling is
+pretty good already to be fair. Add the
+builder. We're going to choose claude
+code. That's what we're building it
+with. Add a front end next.js. And we're
+also using React, TypeScript, and
+Tailwind. For the back end, we're using
+Convex. Database, Convex.
+Authentication, we are using Clerk. And
+then APIs, we're going to use Claude.
+And then we click create app. Now, what
+I would like to, it says you can skip
+this. There's actually no way of
+clicking skip here. So, what I'm going
+to do is in this project, because I
+can't use Scribe to do this, which I
+actually would do, I'm going to create a
+new folder in my project and call it
+planning. And what I'm going to do in
+this planning folder is basically add
+some documents here. So I'm going to
+create a file and it's going to be
+called features.md. And what we're going
+to do here is we're going to create a
+list of built. We're going to break this
+up by built features and to-do. And so
+I'm just going to create a list of
+features that I want to build here. So
+this one is going to be add in skip
+button to the text stack on boarding
+screen. And this is something that I
+would recommend doing is just like
+keeping a track of what you want to
+build, what you're working on currently,
+and what you've completed as you're kind
+of working through this. And we're also
+going to be creating documents in here
+to outline different features as we kind
+of build them as well. And that's going
+to be the problem that Scribe is trying
+to solve here as well. Let's click
+create app. We've got some issues in
+NextJS and these are the familiar issues
+that you probably have seen if you've
+vibe coded anything before. So convex
+server error, uncle error, not
+authenticated here. So, I'm going to put
+this back into clawed code. What we're
+going to do is we're going to do
+forward/clear to clear the conversation
+and we're going to say when I click
+create app at the end of the onboarding
+flow, I get this error and the app does
+not proceed. Can you investigate and fix
+anything that might be causing this? So
+that's one way that I like to prompt for
+fixing bugs with AI coding tools is just
+to say where the thing happened, give it
+the error message and then say
+investigate and fix instead of just
+saying to fix because then it will go
+and have a look in your codebase a
+little bit deeper to try and understand
+what is going on here. So it's
+investigating the authentication error.
+It must be authentication in some
+capacity. That's what it's identified as
+is related to convex as well. So if I go
+back to convex here and look at apps,
+you can see that no apps have been
+created. So there's some sort of issue
+with our connection to convex from our
+application here. And the issue that
+it's found here is that it doesn't have
+this or doconfig.js file in the code and
+it requires that to actually process the
+authentication from clerk. So we're
+going to add that. So I'm just going to
+say yes and then don't ask again. And
+that will hopefully fix this issue with
+our app. So we need to go through and do
+some things here. So basically just
+follow the instructions that cord code
+is giving me. And you can do the same.
+Just follow the instructions that Claude
+code gives you. Basically, we need to
+add an environment variable to Convex
+and it's called clerk_jwtisssuer
+domain. So, I'm going to go over to
+convex and we can go to settings and
+then environment variables here in
+convex to basically add any environment
+variables. So, we're going to do we're
+going to add this in and then we're
+going to go back and we're going to add
+so you can find this URL in your clerk
+dashboard under configure JWT templates
+or in your clerk domain settings. It
+typically looks like clerk.youapp.com.
+So, we're going to go to clerk and have
+a look for this. And because I don't
+know exactly where to find this
+information, I'm using DIA here, but you
+can use comet or you can use atlas from
+openai or any kind of AI browser here to
+just query the tab that I'm working in.
+I'm looking at clerk here. I've just
+asked how do I find my clerk frontend
+API URL. So go to clerk dashboard API
+keys copy the front-end API URL. So
+let's go to API keys and we've got here
+our front end API URL. So this is what
+we're going to copy here our front end
+API URL. So we've found that. So let's
+go back to let's go back to convex not
+cursor and go to our environment
+variables and we need to set that in our
+environment variables. So now we've done
+that. Create a JWT template in Clerk if
+not already done. Go to your Clerk
+dashboard. Navigate to configure JWT
+templates. Create a new template named
+Convex and leave the default settings.
+So let's go to Clerk. We'll go to
+configure and we're going to search for
+JWT templates. So there's JWT templates.
+No templates are added here. So we're
+going to add a new template. We're going
+to call this convex and we're going to
+leave everything else the same. And then
+we just save this. There we go. So now
+we've added our JWT template. We've got
+a convex JWT template here which is
+leave the default settings. Convex will
+automatically validate the token after
+the completing these steps. Redeploy
+your Convex functions. Okay. So we're
+going to rerun MPX convex dev in the
+terminal. So let's go back to the
+terminal where convex is running which
+is here. And we're going to do control
+and C to stop that process. And then
+we're just going to do MP MPX convex dev
+to get that rer running again in our
+project. So, we're getting this new
+error here when I refreshed the app. So,
+we're just going to copy and paste this
+into the same chat with claude code
+because it's related to the same issue.
+So, in that case, it's okay to use the
+same chat to try and fix these. So,
+let's just say we're getting this error
+related to this convex and clerk setup.
+Help me fix this error. So, claw code is
+going to help us fix this. Basically, I
+think there's just some issue with the
+way that JWT and the front end URL is
+set between Convex and Clerk. So, what
+it says here is that the the config
+looks correct. The error message
+indicates the issue is that the JWT
+audience claim doesn't match convex. You
+need to configure a JWT template in
+Clerk with the correct audience. So,
+this is what we've done. New template.
+Select convex. Clerk has a built-in
+convex template. Okay. So, maybe we just
+didn't use quite the right template in
+Clerk. So, let's go back to Clerk. I'm
+going to delete this template. Let's
+delete the template here. Add a new
+template. And we're going to click.
+Okay. So, that's what I missed. It's
+just called convex. And that's already
+set up. So, let's save that. And it's
+already got all of the information that
+it needs in there. That makes a lot more
+sense. Now, we've got this convex
+template in here. We need to restart
+Convex again. So, let's do Ctrl + C to
+stop that from running. MPX convex dev
+to rerun our backend in Convex. Now,
+that's ready to go. Let's refresh our
+app and see if we can go through and
+create our account here correctly or
+create our app correctly. Let's add a
+backend, add a database, add
+authentication which is clerk, add APIs
+which is claude and then create our app.
+Let's see what happens. Okay, so we have
+an error related to the tip tap document
+editor basically. So this is just this
+one line here. So tiptop error SSR has
+been detected. Please set immediately
+render. Okay, so let's do go back to
+claude code do for/clear to clear this
+conversation. We say we're getting an
+error related to tip tab and fix this
+error. And we've got the file name here
+as well. So we've got
+markdown-editor.tsx.
+So we're going to reference that in the
+chat. And any way you can point the AI
+to the specific file that it's happening
+in is going to use less tokens as well
+and it's going to cost you less money.
+So we'll say this is happening on line
+23 in markdown editor.tsx. So let's send
+that to claude code. So there we go.
+We've updated that and now we're in our
+account in the app here on the right
+hand side. I can see that clerk. We've
+got this menu here. This is not the
+actual clerk like profile management.
+We've got scribe as our app and then
+create new app. So we can go create new
+app. That would take us back into this
+flow. There isn't a way of closing that.
+So we need to add a close option to the
+onboarding flow. This is saying saved.
+You can download the MD file for this.
+But there's not actually anything in
+this document. This is the product
+requirements document for your app.
+There would be an AI chat on the left
+hand side here which we can chat to. One
+thing that I like to do here is I'm
+going to add in some information to the
+documentation so that we can check that
+the AI context is actually working.
+We've got our stack which if I go to the
+stack page has our text stack for this
+app project. We've got knowledge which
+has a knowledge base where we can
+quickly create these. Add content to
+your PRD to enable AI generation for
+these. So add knowledge will let me add
+from a URL or from scratch. If I do from
+scratch, this creates a new document
+which I then go to the document editor.
+You can also open up the chat here to
+chat with this document. back to
+knowledge. And then if I go to features,
+we get a release view and a progress
+view which has our backlog, progress,
+testing, complete and live. And we can
+add features to each of these. We can
+also go to the release view, add a
+release. And so I'm going to say MVP is
+my release. Then we're going to add a
+feature to the MVP. It says add a PRD
+first to get feature ideas. So that
+would generate feature ideas from our
+PRD. And this has all come from this
+first prompt by the way though, which is
+why I think the first prompt is really
+good to add as much detail as possible.
+If I create a feature from scratch here,
+I can add the feature name, give it a
+status, backlog in testing progress, and
+we can add it to a release as well as
+adding a description here and then
+create the feature. This is looking
+pretty good like straight away. I'm
+going to go over to convex though
+because the point of what we're trying
+to do here is to test the database is
+working and the authentication is
+working. So if I go into my data, I can
+now see that an app has been created. No
+features have been created. Knowledge
+dock has been created. PRD has been
+created for that app. A release has been
+created which I just added. A text stack
+has been created. These should all be
+connected to the same ID. So if I go to
+releases here, it's got the same ID
+here. Basically 72 75. It doesn't. So it
+okay, it doesn't have the same ID. So
+the user there's a clerk ID for these. I
+just want to make sure that these are
+being like connected to the user. Let's
+go back to our app and let's try and log
+in as a different user. So, I'm going to
+go sign out here. And we've got one
+issue come up here. So, let's fix that.
+Cannot update a component router while
+rendering a different component app
+layout to locate. This is related to a
+specific file. So, again, let's copy
+this error over. I'm going to clear the
+chat history in Claude code as usual.
+And we're going to say when logging out
+of my account, I get this error. This is
+happening in line 31 of the layout.tsx
+file. Can you investigate and fix this
+issue? And Claude Code is says it's
+found the issue. On line 31, it's being
+called directly during render, which
+causes the React error. The fix is to
+wrap the redirect in a use effect hook
+so it happens after the render cycle
+completes, not during rendering. And
+this is the difference that is added
+here. So, we're going to just say yes
+and don't ask again. So, you don't
+necessarily need to know like all the
+code that's going on here. If you're
+nontechnical like me, maybe you don't
+care about looking at the difference in
+the code. Sometimes it can be useful
+just to see like what the AI is editing
+just so that you have the confidence
+that it's not touching anything that it
+shouldn't be touching. So, that's fixed
+that issue. So, let's sign up. Let's
+sign up with a different email address
+here. Chris one.com. We're going to go
+into my test emails now. Let's sign up.
+So, we go through the new Scribe 2.
+We're going to create a desktop app for
+this. We're going to build it with claw
+code. We need to add some different
+frameworks here for sure. I'm just going
+to select the same ones for now. Convex.
+Convex. Let's do Superbase. We're not
+doing Superbase and the authentication
+with Convex. That doesn't make any
+sense. And we're going to use OpenAI for
+this one instead. Let's create an app.
+We've created the app here. Okay. So,
+let's try logging out to make sure that
+sign out happens without any errors.
+Great. And let's try logging back into
+an account here just to see that works
+with email and password. Okay, so that
+is all working correct. And we've got a
+feature here. We logged into this one.
+Let's sign out and let's log back into
+chris1est.com.
+I did so I did a slightly different
+password there. So based on that setup,
+we now have clerk working correctly. We
+have convex working correctly. Things
+are being created in our database. We
+have all the right tables in our
+database. users are being created in our
+clerk dashboard here when we're signing
+up. So, everything is set up correctly
+here in our app as far as I can tell.
+Now, what we're going to do is go on to
+adding payments before we start doing
+any more features here and testing the
+app a bit more thoroughly. So, before we
+set our payments here actually in the
+project, we're going to do one more
+thing, which is to set up Git and GitHub
+for our application here. And if you
+don't know what Git or GitHub is, it
+basically is version control for your
+codebase. And GitHub is a kind of secure
+cloud storage for your GitHub
+repository. So it's a way of storing all
+of our code in the cloud somewhere
+that's not on our local machine. And
+it's the source of truth for all of the
+code in our project. And we're going to
+use GitHub as the source of truth rather
+than the code that exists on our local
+machine that we've got here in this
+project on the left. And the way that
+we're going to do that is we're going to
+install and set up a couple of things
+first. And then we're going to do a
+couple of things in the terminal just to
+get this up and running. All we have to
+do then is just commit to our repository
+in GitHub or submit a pull request
+anytime we make a significant change to
+the code in this project here. And that
+is going to give us version control in
+GitHub so that we can kind of go back to
+a previous version of our project at any
+point as well. And so all we have to do
+first is to go to GitHub, create an
+account on GitHub if you don't already
+have one. and go to github.com and then
+you'll come through to a screen like
+this. What we're going to do is we're
+going to create a new repository. So
+click on new to create a repository.
+Give the repository a name. So this is
+going to be scribe. I'm going to say
+repository for the scribe app. We're
+going to add that in here. We're going
+to choose the visibility. I'm going to
+say this is private and we're going to
+create our repository here. Then this is
+going to create an empty repository in
+our GitHub account. What we want to do
+is copy this here, this URL here, the
+httpscribe.git,
+whatever your kind of repository URL is
+here. Copy that to your clipboard. The
+next thing that we're going to want to
+do is we're going to install the GitHub
+CLI. This just means that we can
+interact with GitHub in our terminal in
+cursor or wherever coding tool you're
+using. And so all you have to do is
+download that for Mac or or use this
+install command in the terminal. You can
+copy and paste that into a terminal
+either in cursor or just open a blank
+terminal and install a GitHub CLI. That
+way once you've done that, go back to
+cursor here. What we're going to do is
+we're going to add a new terminal here
+and we're going to paste this and we're
+going to basically say do this command
+and we're going to do this command
+first. So the first thing you want to do
+is to do git status. Now, this will tell
+you if Claude Code has created a git
+repository for this project already
+because a lot of the time it does do
+that just automatically without you
+asking. So, I'll do git status here and
+what I can see is that there is a git
+repository that has been created. We're
+on the branch main and there's a bunch
+of changes we haven't actually committed
+to this repository. So, that's great. We
+do have a git repository that's been
+created for this project already. So, if
+you don't have one, if you don't have a
+repository here, you can do git in it to
+create one. And if you do have one like
+we've got here, we can do git remote add
+origin and then paste the GitHub URL
+that we copied here. And that is going
+to add a remote git repository to this
+project. Once you've added that, you can
+check that that has added correctly by
+doing git remote-v.
+And that will basically tell us the
+remote origin that we've just added here
+to make sure that we've got that
+correct. And now that we set up our
+GitHub remote repository, what we're
+going to do here is we're going to do a
+couple more commands just to make our
+first pull request. And this is going to
+make it a lot easier to make changes
+going forwards. So all we have to do
+first is to do this command first. We're
+going to do git add- a. What this does
+is this basically gets all of the
+changes, all of the files in our project
+ready to commit. Then we're going to do
+a get commit-m
+and this commits all of the changes to
+our local repository. All of the latest
+changes in our codebase here. So we'll
+do that. And one thing to note here is
+that - m actually needs a message. So
+we're going to do get commit-m and m is
+basically just to add a message here of
+what we did. So we're just going to call
+this database and authentication. And
+that is going to be our message for this
+commit. It's a good practice to get into
+adding messages with your commits so
+that you know which versions you did
+which features. If you want to restore a
+previous version, you can always go back
+and look at the name of the commit
+before you actually do that. So, we're
+going to add that. And this is going to
+commit all of these changes to our git
+repository. And then what we're going to
+do is we're basically going to push all
+of the code in our project to our remote
+repository. And we're going to do it
+with this command here. Get push- origin
+head. And all that means to break it
+down is head is our local branch of
+code. These are weird words, but we only
+have to do this once per project. Head
+is our local code that we've got here.
+Origin is the remote repository that
+we've already defined. Dash u is
+basically saying that our remote
+repository is upstream from our local
+repository. So that's why we're pushing
+upstream to the remote repository from
+our local codebase. That is all that
+this command means. And this is going to
+basically create a new branch main. And
+that is going to do that in our GitHub
+repository. So if we go back to GitHub
+now and refresh this repository on
+GitHub, you can see that all of our code
+from our local repository has now been
+pushed to this GitHub repository.
+Whenever we're working on it locally is
+all we have to do now is we just do a
+git push if we want to actually push
+that to our repository again. or we can
+create a pull request which you can do
+with the GitHub CLI. We're not going to
+do that now. But that is how to set up
+GitHub for your project in whatever
+coding tool you're using. And now we can
+also get Claude Code to do this for us
+as well. So we can remove this terminal
+link now and let's get back to actually
+building our app. And we're going to add
+payments in next. Now let's get started
+adding payments to our app. And I want
+to add payments to this app in a way
+where we're basically kind of limiting
+certain features to paid users. and
+we're going to keep it pretty simple to
+start off with. So in the app at the
+moment, if you log in, so if I log in
+here to my account in our app that we've
+got up and running here. So once you've
+logged into the app here, you can see
+that there are some AI features in this
+app. Like you've got this AI assistant
+on the left hand side here that you can
+use to kind of create stuff in your
+knowledge base. Also, if you click add
+knowledge from the knowledge base here,
+I do want to add an option to actually
+be able to generate knowledge on a
+specific topic and do like research with
+an AI model to create like a knowledge
+file that you could download as an MD
+file. And also on the features section
+here, if you click add feature, you've
+got this generate kind of features idea
+option. So, what I'm going to do is I'm
+going to basically like create our
+payment plan here so that if you want to
+access these AI features, you have to
+sign up to a monthly subscription plan
+in order to access the AI features. And
+that gives you a certain amount of like
+messages or generations on your kind of
+project. What I'm going to do first is
+we're going to set it up in a fairly
+basic way with Polar. And we're going to
+use Polar for our payments instead of
+Stripe because Polar basically acts as a
+merchant of record which basically means
+that they cover all the international
+tax. You don't have to deal with any
+international tax which can be a massive
+pain if you're using Stripe and you're
+accepting payments from anywhere in the
+world. You have to figure out all that
+tax stuff afterwards, what tax you
+charge in what countries. Polar
+basically covers all of that for you, so
+you don't have to worry about it. And
+we're going to set up Polar by setting
+up an account first on the Polar
+sandbox. So, what we're going to do here
+is we're basically going to set up an
+account in Polar in the sandbox. Going
+to create a product, create a checkout
+link, and then we're going to ask Claude
+Code to help us implement this using
+Polar, and it will guide us through the
+steps to kind of add this to our
+application. And we're going to start
+off by just gating this AI assistant
+feature in the app to this paid plan.
+So, what you're going to do first here
+is go over to sandbox.polar.sh.
+You're going to want to click get
+started and create an account. I'm going
+to log into my account here. This is
+just a dashboard that I had for another
+product. It's going to ask you to create
+a new organization. So, we're going to
+create a new organization here. I'm just
+going to call this Scribe. And this
+organization slug is going to be Scribe.
+I understand the restrictions above.
+Let's create our organization. Let's set
+up our first project. We're It asks you
+then to set up your first product. We're
+actually going to do this manually. So,
+I'm just going to go configure manually.
+We're going to call this Scribe Monthly.
+And we're going to add the description
+Scribe monthly subscription. We're not
+going to add any media here. We're going
+to do this as a recurring subscription
+every 1 month. And we're going to set
+the price to $29 a month. And then we're
+going to not change anything else. Just
+click create product. This is going to
+create a product in our account. And
+then it's going to help us integrate the
+checkout with our NextJS app. So this is
+integrate checkouts with your favorite
+framework. And basically what we have to
+do here on the right hand side. So
+install dependencies, add environment
+variables. we can actually get claude
+code to help us do that. So we don't
+really have to do this all ourself. So
+what I'm going to do is just click view
+documentation and this will take us to
+the documentation that we're going to
+provide to claude code as the URL. And
+if we go back to this, let's just click
+go to dashboard. This will take us to
+our dashboard for Scribe. We've got our
+product Scribe Monthly already set up
+here. You're then going to want to
+create a checkout link. So, the easiest
+way to do this is basically to redirect
+someone to a Polar checkout from our
+application when they want to pay and
+then redirect them back to the app after
+they've paid and they've got an active
+subscription. And then when they get
+back to the app, we want to do a check
+basically to see, have they got an
+active subscription and what features we
+should give them access to. So, let's
+create a checkout link here first. I'm
+going to call this Scribe test. We're
+going to select the products that we
+want in this checkout, which is Scribe
+Monthly. If you want to add a discount
+to test this, we're going to allow
+discount codes. Require billing address.
+We don't really need to do this. At this
+point, we can enable a free trial
+period. We can also do that on the
+product as well. We're not going to add
+a free trial here cuz we just want
+people to pay straight away if they want
+to access those features. So, let's
+create this checkout link for Scribe.
+And that is going to basically, if we
+click on this checkout here, we can see
+this gives us a link to this checkout
+that we're going to use in our
+application. Now, we're going to have to
+set up a couple of other things in Polar
+as well. Here to get started, you're
+going to need to go to settings in
+Polar. Scroll all the way down to the
+bottom and then create a developer token
+here. So, let's click new token. We're
+going to call this Scribe and we're
+going to set the expiration to no
+expiration. We're just going to select
+all on the scopes and then create this
+token. This is going to give us a token
+that we can basically allow our app to
+actually access Polar. Then, we're going
+to want to go back to this
+documentation. Let's copy the URL for
+this documentation. Go over to cursor
+and basically clear this chat in claude
+code. So we're going to clear this
+conversation and then we're going to
+prompt claude code to add in polar for
+payments to our application. One other
+piece of documentation that we do
+actually want to give Claude code here
+as well is basically the embedded
+checkout documentation for polar. So you
+have this framework basically framework
+adapters for payments and checkout with
+next.js. I'm then going to go into the
+checkout section here. We're going to
+click on embedded checkout. And this is
+the option that we're going to do in our
+app. So basically, this kind of opens a
+popup that we can do an embedded
+checkout in. And then that will keep
+users on our application so that they
+don't go to a different page. Let's see
+how Claude Code sets this up so that we
+can actually make sure this works. I'm
+going to paste this URL in here as well.
+So this is the prompt that we're going
+to have here. We're going to say, let's
+add payments to this app using Polar.
+And here is the documentation. We've
+linked to the documentation. I want to
+allow users to create a free account to
+use the app, but then block access to
+the AI assistant feature unless the user
+has an active subscription. We then say
+use the embedded checkout method for
+taking payments using Polar. And I've
+then said create a message on the AI
+chat feature that blurs the chat and has
+an upgrade message if the user does not
+have an active subscription. Also add a
+full width banner above the top
+navigation if a user is not subscribed
+asking the user to upgrade their account
+as well. And we should also check
+subscription status using a polar web
+hook. And then I've also asked Opus to
+ask me for the checkout link, web hook,
+and access token when it needs them. And
+I'm going to use shift and tab just to
+change this to plan mode first. And
+we're going to send this to Opus and
+basically get it to plan these changes.
+Now, the good thing here is that we've
+pushed all of our code to GitHub. So any
+changes that we do here in our code
+locally is not going to actually affect
+any of the code that we have on GitHub.
+That's why it's so crucial to keep the
+kind of main code, the working code that
+you have in GitHub because if you break
+anything locally, you can always just
+recclone that and start from scratch
+again. And we can also do more advanced
+things later like learn how to create
+new branches in GitHub, work in
+different branches and a bunch of other
+stuff as well. For now, we're just going
+to keep it really really simple so that
+we're just working on this locally
+whilst we make these kind of more
+complex changes to our project and not
+actually making any changes to the code
+that we have in GitHub. So let's see
+what Claude code comes back with here as
+it sets up our payment functionality
+using Polar in this app. So now Claude
+Code is starting to ask us some
+questions about the different parts of
+the UI that we're going to add here. So
+where should the upgrade pricing UI
+appear and we're going to add it to the
+modal only and the banner scope here
+should the upgrade banner appear only on
+the app pages or also on other pages
+like the welcome and dashboard page. So
+let's say only on the app pages. So
+inside the app, the same like pages that
+we've got here. We don't want it to
+appear on the welcome kind of an
+onboarding sequence. So let's just do it
+on the app. And now Claude Code has all
+the information it needs to go and
+create a plan for us. So here is the
+plan that Claude code has come back with
+here. So it's a pretty big plan here. So
+add Polar subscription payments to get
+the AI assistant feature. Free users can
+use the app. We see a blurred chat panel
+with an upgrade prompt. Checkout UI.
+We're going to do modal overlay only. No
+dedicated page pricing. Banners scope is
+the app pages only files to create. So
+it's going to add subscriptions.ts as a
+table to convex and then do that
+migration. It's then going to add the
+web hook handler here as well so that we
+can check subscription status. It's
+going to also do a bunch of other things
+here as well. So modifying the database
+schema and installing the polar
+dependencies in the project and adding
+the environment variables to ourv.local
+file. And then it's going to basically
+kind of go through this in this order.
+Key implementation details, web hook,
+user matching, subscription status flow,
+and banner dismissal. So I'm going to
+say yes and auto accept all of these and
+then let Claude Code create a little
+to-do list and go through and make these
+changes in our project. So Claude Code
+has gone through and added the Polar
+Payments integration to our app. It's
+done all of this stuff. The
+implementation is complete and it's
+giving us steps to complete the setup as
+well. So we need to provide the polar
+access token, the polar web hook secret,
+and the polar checkout link. And that is
+in the MV.local
+file. So what we're going to do is it
+says go to polar dashboard settings web
+hooks, add the web hook URL. And it
+gives us the web hook URL here that
+we're needing to add. So we need to add
+that for our local host URL. Select
+event these events and copy the web hook
+secret to yourv.local file. So we've got
+the access token and the polar checkout
+link. So if we go tov.local
+here, what we're going to do is we're
+going to add the access token from polar
+here and all we need to do when we go
+into the actual production version of
+polar rather than the sandbox version of
+polar is to just change these details in
+thev.local
+file and create a new web hook in our
+production instance of polar before we
+actually go live with this. That's all
+that we need to do. And so let's just
+add the details from our sandbox version
+first. So, let's go down and let's copy
+the access token at the bottom in
+settings here. And let's go back to
+cursor and put this access token in
+here. We're also going to go to the
+checkout link that we created here.
+We're going to copy this checkout link
+here and go back to cursor and paste
+that into here. And we're going to save
+that. And then we're going to create the
+Polar web hook as Claude code has
+instructed us to. So, Polar dashboard
+settings web hooks add this web hook
+URL. So, let's go to Polar, go settings,
+web hooks, add an endpoint, and then
+we're going to paste this URL in here.
+We're going to replace this your
+domain.com to localhost 3000. And let's
+just double check that that's correct
+here. Localhost http localhost 3000. So,
+let's go back to Polar. We might need to
+change this to HTTP. And then we're
+going to select the events that it's
+told us. So, subscription created,
+subscription updated, cancelled, and
+active. So let's go back to Polar and do
+created, updated, active, cancelled, and
+these are the ones that we need to
+create here. Let's create this. We need
+to select the raw payload format for
+this. And then click create. It needs to
+be HTTPS. So let's create this. So we've
+now created this web hook URL here, and
+we're going to copy this over and paste
+this. So we've got our web hook secret
+here underneath. So we're going to copy
+this secret, and we're going to go back
+to cursor, and we're going to go to the
+MV.local local file and we're going to
+paste that in here. And then we're going
+to save this file. And now when we have
+these values, just add them to.local and
+the integration will be ready to use. So
+now we're going to test it in our app
+here on localhost. And I'm fully
+expecting that some things are going to
+absolutely break when we try and do
+this. So if I open the AI assistant, it
+says unlock AI assistant upgrade to pro.
+Let's click upgrade to pro. See what
+happens. Okay, so the Polar embedded
+checkout here is actually working. We
+can put our details in here. This is to
+upgrade to this plan. This is $29 a
+month with $580 in taxes. This is just
+the sandbox for Polar. So, we can use
+these card details here. Just copy them
+over. Go back to cursor. Paste these in
+here. I'm going to put 130 123. Card
+holder name Chris. Discount code. We
+don't have one. I'm just going to do
+email. Let's put in the email here. This
+is the same email as I'm using for the
+account that we've logged into here as
+well. And then let's subscribe. And then
+let's see if this gives us access to
+these features in our app. It hasn't
+done. So we're basically getting stuck
+on this. So if I go through here, I'm
+then getting asked like so if I just
+double check on clerk here. We're logged
+in as Chris at telescope.design.
+I've already upgraded to pro on this
+account. So, let's go back to Polar
+because the checkout link is working
+correctly. It's just not checking the
+subscription status correctly. So, that
+means that there's something not working
+quite right with the web hook here. So,
+you can see here we're getting a failed
+response from the web hook request that
+we've got here. And this might be to do
+with the HTTPS and how we set this up.
+And if I go into the developer console
+here, we can see that violation,
+potential permissions policy violation,
+payment is not allowed in this document.
+We've got some issues that we need to
+resolve here related to polar checking
+the subscription status. So let's go
+back to claude code here and try and
+figure this out. So I'm just going to
+ask claude code here to see if it can
+help us figure out this problem. And
+this is how we can like fix these bugs
+as we're getting them in our app. What
+we want to use is this format for
+basically fixing any bug that we're
+getting when we're using any of these
+vibe coding tools. And that is to say
+what caused the bug. What did we do or
+what is happening that is causing this
+error. So I'm saying the web hook for
+polar is failing after a user subscribes
+and is then returned to the app. This
+means we are unable to check the
+subscription status. We're then going to
+give the error message that is
+happening. So I've said in the console
+we're getting this error potential
+permissions policy violation. And then
+I've also given some additional context
+as to what I've done. We set the web
+hook URL to HTTPS localhost when our
+actual local environment is just HTTP
+localhost polar. The web hook couldn't
+accept HTTP for some reason. So, we're
+just going to ask Claude Code what is
+going on here to see if it can help us
+figure out this issue so that we can get
+Polar actually set up on our local
+environment to test it. Basically, what
+it's saying here is that we need to use
+a tunneling service to expose our local
+server to the internet so that Polar can
+actually see it and then check using a
+web hook. And so, we're going to use
+Enro for this, which is recommended. And
+a tunneling service is basically how
+we're going to get our local host
+environment to be exposed to the
+internet so that we can use different
+APIs like the polar web hook here to
+actually get this working in our local
+environment. So let's select this option
+in claude code and it will help us set
+up enrock. So here is our step by step
+for installing enrock basically to go
+through these steps. So on Mac OS with
+homebrew so if you don't have homebrew
+installed you can just Google homebrew
+and install homebrew on your Mac. So,
+we're going to use this command in the
+terminal. So, let's open up a new
+terminal here and we're going to install
+Enro. Now, we've installed Enro. We're
+going to go to enrock.com and sign up
+for a free account. And after signing
+in, we're going to get your OR token in
+the dashboard. So, let's go and do that.
+So, this is enrock.com. You just click
+sign up to create a free account here.
+Now, you've signed up for account on
+Enro, you're going to basically get this
+command to add your authorization token
+to the default enro.yiml
+configuration file. So, this is going to
+add our EnroRock authentication token to
+our Enro config. And we're going to
+basically just copy and paste that
+command back into the terminal here. And
+this is going to save the OR token to
+our configuration file, which is
+basically this step that it's told us to
+do here. Then we're going to start the
+tunnel. So, with your next.js dev server
+running on port 3000, do enro http 3000.
+So, let's copy that over and let's paste
+that into the terminal as well. And then
+we're going to get this forwarding URL
+here which is https darlingly
+unannounced reanita.enrock-free.dev.
+This is the forwarding for our local
+host environment. So this is the URL
+that we can use for our polar web hook.
+So if we go back to polar here and go to
+the sandbox environment, we go to web
+hooks. So let's delete this web hook
+here. Let's delete this web hook with
+all these failed results. Let's add a
+new web hook here with this enro URL
+that we've got here. Select raw. Let's
+select subscription created, updated,
+active, and cancelled. Click create
+here. Oh, we need to add in the for/
+AI/webhooks/polar
+into this here. So, we're going to copy
+that and then paste it onto the end of
+this URL. Let's create this. So, I'm
+just going to check with Claude code
+here because what I've got here is a
+free.dev dev URL whereas claude code is
+saying that I should have a freeapp URL
+with m enro. So let's just ask that
+question. So I just said enrock has
+given me a dev forwarding URL not app.
+Does it need to be app? So he has no it
+doesn't need to be app. The free app was
+just an example. Any enro URL will work
+including.dev domains whatever
+forwarding URL Enro gave you. So we're
+going to do that. So that is basically
+the thing that we're going to add
+here.enrock-free/api/webhooks/
+free/ API/webhooks/polar.
+Let's go back to this. And for some
+reason, we can't add this URL as a web
+hook to polar. So, let's just ask Claude
+code about this. So, we're just going to
+ask Claude code why we can't do this in
+Polar. So, Polar likely requires web
+hook URL to be validated or may have
+restrictions on certain domains. So,
+test if Enro URL is reachable. Update
+this. So we basically just use whatever
+forwarding URL Enrot gave you. So for
+example, if Enro shows this. So we
+should have this available. It's online.
+So let's check that this is working. So
+Claude code has actually given us an
+alternate method to do here. So it seems
+that the free tier of Enro basically
+isn't going to allow us to do this. So
+let's do this instead. MPX local tunnel.
+So we're going to run this through a
+local tunnel and this is going to give
+us a URL that we can use in Polar as the
+web hook. So let's open up a new
+terminal and just paste this command in.
+MPX local tunnel port 3000. So install
+the following packages. Yes, we're going
+to install local tunnel here. So this is
+our URL. So we can copy this in. Go over
+to the Polar Sandbox dashboard. And
+let's use this URL here to test this URL
+instead. Let's create this. That is
+going to create the endpoint for us
+here. So we've now got this. And so now
+we've set up this web hook. Let's copy
+this secret over instead. Go back to
+cursor. I'm just going to update the
+env.local with the different web hook
+secret here and let's save that. So now
+we've saved that. Let's restart our
+application. Just check to see if any
+web hook event has been triggered here.
+No. So let's go back to cursor. Let's
+try upgrading again through polar here.
+What I'm going to check as well is that
+the subscription has also been created
+in convex because we want to store this
+in convex as a subscription that someone
+has paid for in the database as well. So
+let's process this payment. Let's go
+through here. Okay, you already have an
+active subscription. Polar is working.
+It's checking the subscription status
+properly. If I open the console here,
+let's see. So, this is not actually
+checking the subscription status. So,
+what we're going to do is we're going to
+sign out. We're going to try and trigger
+this again. So, let's log in here. And
+this should trigger the web hook to
+check the subscription status. So, it's
+not actually doing that here. So, let's
+ask Claude Cove to make sure that we're
+we're going to say currently the app is
+only checking the subscription status
+after the user completes the
+subscription checkout. We should check
+subscription status every time a user
+logs into their account to allow them to
+access the AI assistant feature. If they
+are subscribed, check subscription
+status using the Polar web hook. And
+then we're going to send this to Claude
+code. What I want to do here is because
+it looks like in the console that the
+subscription status is not being
+checked. Otherwise, we would see
+something here that would basically show
+that it was checking the subscription
+status in this app. So, we're checking
+the subscription status when the user
+completes a checkout, but we're not
+checking it when a user logs in
+basically. So, it says currently we only
+update subscription status when Polar
+sends a web hook. We should also check
+subscription status when a user logs in.
+However, web hooks are pushbased. Polar
+sends them to us. So, we can't use web
+hooks to check on login. Instead, we
+should use the Polar API to check
+Okay, so now we're going to use the
+Polar API here. So, basically, the web
+hook is only going to check it when a
+user subscribes. So, we're going to look
+up basically claude code here. It's
+going to look up the Polar API
+documentation to set this up and then
+it's going to create the API helper to
+check subscription status and add the
+subscription check to clerk web hook on
+user login and then test the
+subscription status sync on login here.
+So this should help us test that a
+customer basically check that a customer
+is subscribed whenever they log into the
+app. So here is a summary of what Claude
+code has set up here. So basically it's
+added a helper to check subscription
+status via the polar API by basically
+looking up subscriptions by customer
+email. It's also updated this. So now
+checks polar subscription status when
+users are created or updated. And it's
+also added a new query to look up users
+by their clerk ID and installed the
+polar SDK. Basically, we have to go
+through these steps to enable
+session.created in clerk web hook. So,
+this connects to clerk, which we're
+using for login and sign up, which makes
+sense. Every time a log a user log
+creates an account or logs in, we're
+going to basically use a web hook from
+clerk to kind of check the subscription
+status against polar there. So, we're
+going to go to the clerk dashboard,
+navigate to web hooks. So, let's go to
+clerk.com. We're going to go to our
+dashboard here. We're going to go to
+configure and then we're going to go to
+web hooks and we're just going to search
+web hooks here. So close to web hooks
+here and then we're going to add an
+endpoint. We click on your existing web
+hook. The one pointing to your enro URL
+or production URL which we don't
+actually have in clerk. So we do not
+have an endpoint yet. Let's just ask
+claude code here. We don't have a web
+hook in clerk set up yet. Help me set
+this up for this project. So, we're
+going to get code to actually just help
+us set up this web hook with the right
+details here. So, go to the clerk
+dashboard and click add endpoint. Set
+the endpoint URL to your enro URL plus
+the web hook path, which we're not
+actually going to do. We're going to do
+it to this local local tunnel URL.
+That's the one that we're doing. We're
+not using Enro for Polar. We're using
+the local tunnel here. So, let's go back
+to here. Add the endpoint. Add this. And
+then it's/ API/ehooks/clerk.
+So let's go to this and then we want to
+subscribe to the events user created,
+updated, deleted, and session created.
+So we're going to search for those user
+created, user deleted, user updated, and
+then session. We're going to go to
+session created here. Let's go back to
+cursor. So session created and then
+click create. And then we're going to
+copy the web hook secret after we've
+created this. So let's click create
+here. Copy the signing secret here. So
+let's copy that over and let's go back
+to cursor. We're going to copy that to
+ourv.local
+file. It has a clerk web hook secret
+here. So, let's go tov.local. We've got
+the clerk web hook secret. Let's add
+this in here. We probably should have
+done this earlier to create the clerk
+web hook, but we're doing that now. So,
+that's okay. So, now all of these
+changes are done. Let's double check to
+see if this is actually going to work.
+So, we've got this set up here. We'll
+actually see message attempts to this
+web hook as well as we'll see them to
+the web hook in Polar. If this is
+working, we're going to refresh this. We
+might just try signing out and signing
+back in again. I'm going to sign out cuz
+we need to do a login to basically
+trigger to check that we are subscribed.
+Let's continue here. This should now
+check with the web hook to see whether
+we're subscribed or not. So, let's open
+the console here. See what is going on.
+Let's refresh this and let's check the
+console. Okay, what we're going to do is
+we're going to try actually signing up
+with a different account here. So, we're
+going to do chris2est.com.
+Let's go to sign up. So, we're going to
+do chris2est.com.
+Enter a password here. Let's continue.
+So, I've just created a new account
+here. Obviously, we're getting this
+upgrade message because we don't have
+access to this. Let's just go through
+the checkout here. So, chris2est.com
+with polar just to make sure that this
+works and then see what it checks.
+Basically, once we have signed up, so
+we're going to add a name here. Let's
+subscribe to Polar. So, let's just sign
+up with a new account here. So, let's
+just do another of my email addresses
+here. So, when we create an account
+here, there is something going on that
+is not loading this app correctly. If we
+have a look in the file here, it's
+basically saying violation potential
+permissions policy violation payment is
+not allowed in this document. So I think
+again if we go back to the polar web
+hook here, there's actually nothing
+happening in this polar web hook. If we
+go to the dashboard here, there is a
+bunch of failed requests to the clerk
+web hook here. So this is again just
+saying that payment is not allowed in
+this document. So let's copy this over
+to claude code. I think this is just
+basically an issue with our local
+development environment and not being
+able to check this functionality here.
+So, we're just going to copy and paste
+these back into Claude code here and
+basically just get it to help us fix
+this issue so that we can test payments
+on our local development server. So,
+Claude Code has fixed this issue
+basically by adding some headers to
+allow the payment and credentials
+features here. But also, I have managed
+to update my web hooks to the Enro URL
+here just in case that this wasn't
+working on local tunnel as well. So, I'm
+actually going to kill that terminal and
+just keep this Enro one running here
+because it seems to have allowed me to
+create a web hook in Clerk and in Polar
+using this Enro web hook URL instead.
+So, we're going to try with that
+instead. We're not getting any errors in
+the console here now and we've managed
+to log into our account. So, let's
+create a test app here. Let's just do a
+web app and then we're going to skip and
+create this step so that we get into the
+app. Now, let's have a quick look in the
+console to see what is going on behind
+the scenes here. It doesn't seem like
+it's checking subscription status. Maybe
+it did that already when I kind of
+logged in. And what I'm going to do is
+basically just upgrade. So, let's go
+through this upgrade process with Polar.
+And what we want to check here is that
+after subscribing, it's going to allow
+us to use this feature, which it has
+done now. It's just checked that. So I
+go in the console here. So we can see
+that on this account after subscribing
+we're now allowed to use this AI feature
+here. We don't have a way of managing
+our payments. We're going to actually
+add that as the next step here. And also
+if I sign out I want to try signing back
+in and then basically seeing if this is
+going to allow me to access the same
+features by checking my subscription
+status. And we should be able to go to
+the web hooks in clerk. So we can log
+back in here and we see we've got access
+to these features still which is great.
+So we can close that and open that.
+Let's go to Polar and let's have a look
+at this web hook here. So we've got
+basically successful events on this web
+hook. Some successful deliveries. If we
+go to clerk and if I refresh this as
+well there's also a successful event
+message attempt in clerk as well. So
+that is now all working correctly. What
+we're going to need to do is when we go
+live on our production environment, we
+want to change these web hooks and the
+web hook secrets to use the production
+URL for our application. And we can
+change that basically in our code before
+we push it live. And also in the web
+hooks here in Clerk and in Polar when we
+set up the actual Polar production
+environment as well. And that's
+basically the same as creating a sandbox
+account in Polar. You just create an
+actual account in Polar. and you do all
+the same things that we've done here and
+just change the details in our app
+project. So that seems like it's now
+working correctly and we're going to go
+on to the next step now which is adding
+account management so that I can update
+my subscription in Polar. Basically
+adding the kind of customer portal to
+this to allow a user to kind of manage
+their subscription from this profile
+menu up here. So now we've added
+payments to our app. Let's add the link
+to the customer portal. You need to have
+this in your app so that someone who
+signed up and upgraded their account. So
+this account is upgraded in my app here.
+Which means I can use this feature of
+like the AI assistant to help me
+basically answer any questions and
+create any documents in my kind of
+account here in this version of Scribe.
+What we need to do is we need to show in
+the user account here in this drop-own
+menu basically a link to manage my
+subscription and then that's going to
+take me to the Polar customer portal and
+it would be the Stripe customer portal
+if you're using Stripe. It's going to
+take me to the Polar customer portal to
+manage my subscription in this app. So,
+what I'm going to do here is I'm going
+to clear the conversation in clawed
+code. One thing that I am going to do
+before I do anything else here actually
+is I'm just going to do a forward
+slashinit in claude code because I
+realized I don't have a claude.md file
+in this project and I want to create a
+clawed md file to give my agent the
+right context every time I start a new
+chat here and that is going to help us
+get a little bit better results because
+claude code is going to have better
+context of our app as we're building it.
+So I would recommend doing for/init
+after you've got kind of your first
+version of your app up and running even
+in a very very basic form and then as
+you continue to build your app to
+continue adding rules and instructions
+to your claude.md file as you go. So you
+can see here Claude is basically going
+to go through and figure out so this has
+now created a claude MD file in our
+project. So I'm going to say yes allow
+it to create that claude MD file. You
+can see it's created this claude.md file
+in this project and this basically just
+outlines everything that Claude needs to
+know when it starts working on the
+project. So basically an overview of the
+data model, authentication flow, convex
+functions and all of that stuff that
+Claude will need to know basically. So
+that has now created that Claude MD
+file. Now let's add our customer portal.
+So we're going to do for/clear again to
+start a new conversation. Again, just do
+that every single time you build a new
+feature. And let's add our customer
+portal in. So, as part of this prompt
+here, what I'm actually going to do is
+go to the polar.sh documentation for the
+customer portal here and just copy this
+URL over to claude code so that it has
+access to the documentation as we build.
+So, let's add a customer subscription
+management portal link in the profile
+menu in the navigation. I'm going to say
+called manage subscription. This should
+link to the Polar customer portal
+following the documentation here. And
+I'm going to put this into plan mode so
+that we can plan this first because this
+might require a few complicated steps of
+like using the Polar web hook or the
+Polar API to be able to figure out
+basically what customer where we are in
+the in this app and then link to the
+right customer portal in a separate
+browser window to actually be able to
+manage our subscription. So now Claude
+has put together a plan for building
+this feature. So essentially we're going
+to add the manage subscription item into
+the profile dropdown. And the polar
+customer portal requires a serverside
+API route to generate an authenticated
+portal URL. The menu will call this API
+directly. Files to modify. Here's the
+files it's going to modify. Add a convex
+query as well so that that connects to
+our database in convex. And then here's
+the implementation details. And we're
+going to verify that by basically
+logging in as a subscribed user and then
+going to that link and seeing if it
+opens the polar customer portal. So I'm
+going to do yes and manually improve
+edits and let Claude code build this
+feature. So now Claude code has built
+this feature for us and you can see if I
+click here in the menu I can see this
+manage subscription link here. Now what
+I'm going to do is I'm not going to
+check it in the cursor browser here. I'm
+actually going to go into my browser and
+check this here just so that it can open
+up a new tab here and I can see how it
+would actually work like in a more
+realistic kind of environment. So let's
+click manage subscription. We're going
+to see what happens here. This should
+open the polar. Okay. So that's now
+opening the polar c. So, I can change my
+subscription here basically and I can
+change my plan, view my subscription and
+see my past orders and that is linking
+to the Polar customer portal completely
+correctly. I think what I'm going to do
+is I'm going to make this open in a new
+tab. So, let's just make that change
+here as well. Update this so that the
+customer portal opens in a new tab, not
+the same tab. So, let's get Claude Co to
+make this change. And then one thing
+that I want to do here as well is I want
+to actually highlight that this is a pro
+user account now. So I want to say that
+this is a prouser in the menu. So that's
+now done. So if I go into here, let's
+try clicking the manage subscription
+link again. That's loading. Opening up a
+new tab. And that is loading the
+customer portal, which is perfect.
+That's great. That's all working
+correctly. So that's now done. So let's
+add a pro label into the drop down here
+for the users profile. Let's add a pro
+label into the users profile dropdown
+when they are on a pro account. So that
+will then add a label there for us. And
+this is how good Claude Code actually is
+at building stuff is that it figured it
+all out from that documentation from the
+app that we've already set up. If I
+click here now, we're going to see a pro
+badge in my account drop down, which is
+great. The customer portal is working
+correctly. So, if I sign up and pay for
+this, I can then go to my customer
+portal, manage that subscription, cancel
+my subscription, and completely manage
+my paid subscription from there. So, now
+we've done that, let's get into building
+a couple of features, and changing the
+design of the app slightly here as well,
+and documenting that in our codebase.
+So, let's go on to just tweaking the
+design a little bit for this app. I want
+to do a few things here with the design.
+The first thing I want to do is I want
+to change the font pairing that we've
+got here. I think adding in custom fonts
+to your app, especially if they're a
+good pairing of fonts or more
+professional looking fonts and fonts
+that aren't just in as well, will have a
+massive impact on how kind of
+professional your app looks and make it
+kind of stand out against a lot of other
+vibecoded apps. I'm actually pretty
+happy with the way that the UI looks for
+a lot of this stuff. I'm actually just
+going to add some soft shadows to like
+cards and navigation elements. And the
+second thing I want to do here is I want
+to show you how to set up the front-end
+design skill in claude code. And then I
+want to show you how to create some
+documentation around your kind of design
+guidelines and your design system inside
+of your codebase. So what we're going to
+do here is we are going to first choose
+some fonts that we want to use. I'm just
+going to go to Google fonts. So what I
+want to do here and if you're looking
+for inspiration for this you can go and
+have a look at dribble or mobin or any
+other kind of visual inspiration for
+like apps and software here and you can
+see like have a look at some font
+pairings that other applications are
+using here. I kind of want to go for
+this is a little bit that's a little bit
+too much but it kind of what I'm aiming
+for is like this kind of serif like
+serif style heading and then a sand
+serif style like a very readable sand
+serif for like the body copy and all the
+rest of the fonts. So I'm going to go
+from that as like my inspiration and the
+fonts that I've kind of landed on here
+or that I want to use that I like the
+look of is I'm going to use Libre
+Baskville. I don't even know if that's
+how to say it. Baskville is a classic
+serif font that is just is very
+traditional font and it is always going
+to look great. Basically, I think this
+is a very readable and very like
+professional looking serif font. So,
+we're going to use Libre Baskil. And
+then the other one I want to use here
+for all of my body copy is a font called
+Manro, which is like a little bit more
+characterful like Sans serif font here
+compared to like Inter and Robboto and
+like all of those other very like
+classic fonts. And this is going to give
+us again a little bit more of that kind
+of professional look and feel for our
+app in terms of installing the Claude
+Code front-end skill. Here is a post.
+This is from a little while ago now from
+November 13th, but it still like gives
+you the right instructions to do it.
+Basically, you copy these commands. So,
+for/plugin marketplace add anthropics
+claude code and then install the plugin.
+And so, we're going to install this
+front-end design at Claude Code plugins
+basically. And that will install the
+front-end skill into claude code for you
+so that you can use it. And you can use
+it just by saying use the front-end
+design skill. So what we're going to do
+here is going to go back to cursor. I'm
+going to clear this chat in claude code
+and then I'm going to add in a prompt
+here to update the fonts, use the
+front-end design skill, and do a few
+other design changes in here as well.
+We're going to do that and then we're
+going to see what it looks like. And
+then after that, we're going to document
+that design system and those design kind
+of guidelines after we've done the
+design here. So, let's write the prompt
+here. So, what I've put in here is I've
+just said I want to make some design
+improvements to the app. Primarily, I
+want to switch out the fonts to use
+Libre Baskville from Google Fonts for
+the headings with a mediumtight letter
+spacing. So, like tightening up that
+letter spacing is just going to make
+this app again feel a little bit more
+premium, a little bit more professional
+and man rope from Google Fonts for all
+of the text in the app. I also want to
+add soft shadows and subtle animations
+and loading states to the app
+throughout, especially on elements like
+cards, tabs, and the top navigation. I'm
+going to add in something else here as
+well, like don't change any of the
+colors or styling. Use the front-end
+design skill to make these changes. And
+we're just going to change this to edit
+automatically and send that off to
+claude code. So, this is going to use
+that front-end design skill. And you can
+see here it's invoking that skill front
+end-design. So, we're going to allow it
+to use that, which basically has all
+these instructions here, which you can
+show more to like view all of the
+instructions there, but it basically
+just tells Claude code not to do AI slop
+design in like a very detailed
+instruction. This is going to go through
+and do those design changes in our app.
+And you can see it's broken down this
+to-do list here of update the fonts,
+update global CSS, enhance the card
+component, enhance the tab navigation,
+enhance the feature card, enhance the
+knowledge card with animations, and then
+add loading state animations to app
+layout, enhance header with shadow on
+scroll and animations, which is great.
+So there are all the things you want to
+do. And if you wanted to be more
+specific about the design changes that
+you want, you can be more specific about
+that. Or you can break them down more
+like one at a time and just do like I
+just want to do the font changes first.
+I just want to do the navigation changes
+next. I just want to do the drop-own
+interaction changes next. I'll do the
+skeleton screens next. And you can add
+all of these things from a design point
+of view. I'm just trying to go through
+this all in one go. And what I'm going
+to do while this is going on is we're
+just going to set up the next prompt
+here. So I'm going to open up a new
+Claude code chat here. And I'm just
+going to say go through the app and
+document the entire design system and
+styling guidelines in a file called
+design system.json.
+This file should outline styling for all
+components, fonts, typography, colors,
+and icons so that I can reference this
+in future for AI coding tools to follow
+these guidelines for anything it builds.
+And what we could you do here as well is
+to document this design system and then
+add that design system into like a set
+of rules in cursor or create a skill in
+claude code that has that kind of
+documented design system to follow those
+rules specifically. I'm just going to
+set this up now. Let's go back to our
+claude code that is running here. And
+then let's wait for it to finish making
+these design changes. So claw code has
+now finished running and I do find this
+front-end design skill tends to be a
+little bit conservative sometimes. We
+can see some stuff that it's added here
+like this little subtle animation of
+like the icon getting bigger when I
+click on each of these tabs. You might
+not be able to see it on the video. And
+things like on the knowledge, you've got
+a subtle shadow on here. And when I
+hover over this, it goes up. It animates
+up with like the icon loading in at the
+same time as well. And then there are
+some other things in here as well around
+like animations on things like modals
+where you've got that X kind of spinning
+which is quite nice. All of these little
+details do add an extra element to your
+products. The one thing that it hasn't
+changed though is it hasn't changed the
+fonts. So, let's ask Claude code to fix
+this. So, let's just say it looks like
+the fonts haven't changed in the app.
+Can you identify why this hasn't worked
+and fix the issue so that we use the new
+fonts? So, we're going to get Claude
+code here to check this font issue so
+that it can update the fonts. Basically,
+this generally tends to happen
+sometimes, but it's often just to do
+with a CSS issue that it hasn't picked
+up quite right. Something to do with
+Tailwind versions and how it uses the
+CSS. So, it's it's probably added it
+into the code, but it's just not
+updating it quite right. I think these
+fonts are actually going to make the
+biggest change in this app design. So,
+now it's going to go through and fix
+this issue. There we go. So, you can now
+see in the app here that we're using
+these new fonts. We've got this heading
+font of Baskville and we've got the body
+font of Manroppe. I want to increase the
+weight of the body font here. Let's say
+to Claude, let's increase the weight
+used for man rope in the app. So, I want
+to increase this weight a little bit. I
+think it's a little bit too thin at the
+moment and too delicate just to make it
+a little bit more readable with a little
+bit heavier weight here on the text. So,
+that has updated that. Let's refresh
+this. So, you can see now this is
+looking a little bit better now. This is
+slightly more readable. This text is
+more readable, a little bit thicker, and
+a little bit less delicate, which is
+great. And this is updated across all of
+the elements in our app as well. So,
+this is now looking really, really
+strong. Okay, great. So, now we've got
+our documents here as well. So, we can
+start writing our document with the
+document editor, which is great. We can
+go back to knowledge here. We've got our
+AI assistant here, which is now using
+this. So, there's one more thing that I
+want to do on the design. We want to
+document our entire design system and
+styling for the components. So, let's
+send that off. And I'm actually going to
+do one other tweak to the design as well
+here whilst we're doing the kind of
+design stuff. I'm going to do for/clear
+on the conversation with Claude code.
+And one thing I'm going to add is I'm
+just going to add my little character
+icon to Scribe. I've used this before
+for like building an app called Inkwell
+as well. It's just a little character
+that I like to use for any of these
+writing apps basically that I build just
+to make it a little bit more fun. And I
+feel like and we're going to name the AI
+assistant here. We're going to name the
+AI assistant Scribble, which feels like
+a little bit more fun. Maybe it doesn't
+fully align with the brand kind of
+direction for the app, but I think it's
+going to be fun. So, now I've added this
+little pencil kind of character here
+that I like to use. We're going to go
+back to Claude Code and we're going to
+say, let's add the icon. What's it
+called in the public folder and add it
+to the public folder. Any images or
+files you want to add, just add it to
+the public folder here. It's called
+logo.png. I want to add logo.png PNG as
+an app icon before the scribe name in
+the header and also rename the AI
+assistant to scribble and use the icon
+there as well. Make sure the icon is in
+the correct aspect ratio. I've just
+added that aspect ratio piece in because
+AI often gets the aspect ratio wrong
+when it adds in images. I have found it
+will like squish them or do them square
+or like do something where it kind of
+makes it look a bit weird. So, we're
+just getting it to use the right aspect
+ratio here. And this should do this
+change pretty quickly. I can see the
+logo. It's a cute character with a
+tilted rectangular shape and eyes and
+mouth. So, it's going to add the logo
+PNG before the scribe name and rename
+the AI assistant to scribble, which is
+great. It's now asking us just to make
+these edits. So, let's allow it to make
+those edits and import that image. And
+now you can see it's added that image in
+the top left here to scribe. We're
+getting some errors whilst it's building
+it. It should hopefully fix this. What
+we can also see here now is that this
+design system.json file has been created
+which basically is outlining all of the
+different colors. All of the different
+components, typography, scale, pros,
+spacing, the different border radiuses,
+shadows, animation, all of this stuff is
+being detailed here in this design
+system.json file, which is great. So,
+we're going to allow it to create that
+file. I'm going to close some of these
+as we're building. And also, we can see
+that Scribble has been added to Scribe.
+And it's even added in the icon here for
+us. Ask me anything about your app. I
+can help with PRD features and more. So,
+we've now got Scribe here, our PRD, our
+text stack, our knowledge, our features.
+Basically, this is now helping us to
+build this Scribe tool to help us plan
+our application fully from our idea
+basically to a full application. So now
+we've done the design stuff, let's go on
+to actually building a couple of
+features here. So let's start to build
+or like change some features, make some
+improvements to some of the features in
+this app. Now, one of the things that I
+want to do here on this features tab
+here with this cambban board is actually
+to allow the user to create their own
+columns and edit the names of those
+columns in the camb board and also
+reorganize those columns if they want to
+as well and maybe even change the color
+here. So you can add like features
+basically from your feature list that
+you've got in this release view here.
+But you can't actually edit much on this
+progress view. You can't edit any of the
+columns. I'm just going to clean up some
+of this stuff here in my clawed code
+chats. So we have this claude code chat
+here that just created the design system
+JSON file and what every it's outlined
+everything that it's done in our app.
+I'm going to close that. Let's leave the
+local environment file open for now. And
+in this chat here, we're just going to
+do for/clear again. And then I'm going
+to add in a prompt to add this feature.
+And the way that I like to build
+features and the reason why I want to
+build a couple of features here before
+we actually deploy anything as part of
+this full build kind of tutorial is to
+give you my framework for building
+features. Now what you can do is you can
+use more like a specdriven development
+framework here to actually outline the
+specification for like a big feature
+that you want to add. So like if I
+wanted to add in an MCP server to this
+app for example as a feature, I might
+want to use an AI like Claude or use
+Claude co-work or even just use Claude
+code to like basically interrogate like
+how that is going to be built. But what
+I'm going to do here is just to use a
+simple framework that you can use to
+kind of get like 80s to 90% of the same
+results and to actually keep you like
+building momentum on building your app
+as well. It will make you much faster to
+just use this framework. So the first
+thing I like to do is to give the AI
+context of what I'm building. And I
+might have broken this down earlier in
+the video, so apologies if I'm repeating
+myself here. So let's give the AI
+context of what we're building here. So
+I'm going to say I want to make the
+progress view on the features tab more
+useful by adding some functionality to
+help users customize it to their own
+project. So adding this context gives
+the AI an idea of like why we're
+building this. And this will help it
+build it in the right way basically.
+Then I'm going to say what I actually
+want the functionality to be. I'm going
+to change this into plan mode as well
+because we're going to get Claude code
+to create a plan for us. First, I'm
+going to say let's allow users to create
+their own columns, to delete columns, to
+rename columns, to change the header
+color of the columns, and to reorder the
+columns and collapse the columns if they
+want. So, that's what we're going to do
+here. I think that's all the changes.
+So, that's outlining the things that we
+want to add. What we can now add to this
+prompt framework is we can also add the
+user journey. So how would a user engage
+with these things? So I'm actually just
+going to let Claude Code do this for me.
+And you don't have to include all the
+parts of this framework. I'm going to
+let Claude Code figure out what it
+thinks is the best implementation of
+adding these features, but you can be
+more specific with the user journey
+here. So you might want to say, well,
+the user clicks a drag handle in the top
+of the column and then drags it to the
+right and left. And I want to add
+animations to the user to do that. But
+I'm just going to see what Claude code
+builds because often it builds a better
+version for you than what you can think
+if you let it kind of do that. And then
+I'm going to kind of tweak it from
+there. And we can always get it to
+revert if we want to. The last part of
+this is you want to add any technical or
+design kind of context here as well. So
+if you're using a specific API or you're
+using like a specific design style or
+you want to change the design in any
+way, you can add that to the prompt here
+as well. I'm not actually going to do
+that. So I'm just going to leave it in
+plan mode. Send this prompt off. and
+we're going to get Claude Code to create
+a plan for this feature for us. So, now
+that we sent this off to Claude Code,
+basically Claude Code is going to ask us
+some questions to clarify what we
+actually want to do here. So, it's
+figured out how it's going to do it, but
+it just needs some answers on what we
+want to do with certain things. And it
+will ask us in the chat in the extension
+here. So, should custom columns be
+scoped per app? So, each app has its own
+column configuration or per user, the
+same column across all apps. So, we're
+going to do per app here for sure. Data
+handling. How should we handle existing
+features when columns are deleted or
+renamed? So we can move it to the
+default column. So basically we'll add
+those features to the backlog. I think
+we should do that basically or we can
+require reassignment. So users must
+manually reassign features before
+deleting a column or prevent deletion.
+So let's do require assignment and then
+default columns. Should there be any
+default columns when creating a new app
+or start completely empty? So let's
+start with defaults which is the backlog
+in progress, testing complete and live.
+So, we're going to do that one and then
+submit our answers to Claude Code. And
+that's the benefit of using plan mode as
+well. It's going to ask you those
+questions before you actually build a
+feature. So, if you're building anything
+big beyond small changes, I would
+absolutely recommend starting in plan
+mode and getting it to build it from
+there. So, now claw code has created a
+plan here for us. So, let's go through
+the plan and always read these plans.
+Always read the detail here. So, it's
+basically adding in customizable canban
+columns. It's going to update the
+database schema and it's going to change
+some stuff in the convex back end to
+allow for this as well. It's going to
+add a migration here and some UI
+components as well as progress view
+refactoring. So, it's going to refactor
+the whole of the progress view to
+accommodate for these changes. So, this
+is an example where AI has kind of
+figured out here and Claude Code has
+figured out here that this change might
+be a little bit bigger than what we
+expected. We just thought we were adding
+in a bit of simple functionality, but
+Claude Code knows that this is going to
+take a lot more to actually go through
+this. So, what we're going to do, and it
+says to verify this, we're basically
+going to have to rerun convex and then
+run the migrations and then basically
+just test that this is going to work
+after that. So, what we're going to do
+is we're going to say yes and auto
+accept to this plan and then let Claude
+code go away and build these features.
+And this might take, you know, 5 10 15
+minutes to go away and build this
+properly. going through this to-do list
+and doing it this way by planning before
+you build is going to give you a much
+better result in the end. So, Claw Code
+has now gone through and made all of
+these changes. So, it's basically
+updated the feature the progress view
+here to allow me to add different
+columns. It's basically saying before I
+use it, I need to do MPX convex dev to
+deploy the schema changes, mpx convex
+run, and then mpm rundev to test the UI.
+So, let's go and do that. We're just
+going to stop these processes from
+running by doing controll and c in these
+terminals. So we're going to do this for
+the back end and for the front end here.
+And then we're going to do mpx convex
+dev to get our convex backend up and
+running. And then we're going to do a
+new terminal here. And we're going to do
+mpx convex run, which seems like it's
+giving an error here. I'm just going to
+do mpm rundev just to see if we actually
+needed to do that step. Sometimes the AI
+can like say things that you don't
+actually always need to do. So, let's
+just run this. Go to the progress view.
+I'm going to add in a column and say
+like test column. We're going to choose
+this to be blue. And I'm going to add a
+column here. That's going to add that
+column. Let's add another column. Say
+test two. Let's do green. And then let's
+allow these to be dragged around. So,
+that's working. That's working pretty
+nicely. Like the animation there is
+working okay as well, which is quite
+nice. And then what I'm going to do is
+I'm going to go over to Convex and just
+see if this is actually working. So
+let's go to the data in our convex
+database and have a look at features.
+This table is empty. We can have a look
+at apps here. So we've got describe apps
+columns. We've got test two and test
+columns. So it's correctly added the
+columns here. There are no features
+because we don't have any yet. This is
+added in the columns and it's got the
+order here in our app as well. So this
+seems to be working correctly. So, we're
+actually just going to remove this
+terminal with mpn MPX convex build. And
+I think that is completely fine. So,
+that feature is now working. We also
+have the ability to collapse these
+columns and to rename these columns as
+well, which opens up this popup in the
+same style with that animation. And we
+can delete these with a friction pop-up
+to delete that as well, which is
+perfect. So, we've now added in this
+feature to our features tab here in the
+app. I'm just going to try adding a
+feature in here as well. So let's say
+like build add custom columns to cambban
+view. We're just going to add this into
+test two. We're going to add list
+release to the MVP and we're going to
+say let's do canban or cananan. So we've
+got this in here now. So if I go over to
+the progress view, this is added to
+this. I can also drag it into test two
+between these two columns. And I can
+also delete this. So let's add a delete
+modal to the features the same as
+deleting the columns. Let's get that
+updated. So let's add a delete dialogue
+for deleting features in the same style
+as deleting a column. And I'm just going
+to do this in the same chat with claude
+code because then it will have context
+of the changes that it just did. So
+we'll understand how to basically where
+that kind of dialogue is for the delete
+column functionality. So it's going to
+look at that. It's creating this new
+file which is a delete feature modal
+which is hopefully going to be in the
+same style here as the delete column
+modal. So let's just check this. Oh, it
+hasn't actually finished doing that yet.
+So claw code has finished adding this
+delete modal. So let's just check that
+this is working here. So this is the
+delete feature here. And we can go
+delete column here. So we're getting
+these same pop-ups here. So I want to
+delete add custom columns to cam add
+custom columns to cam view. This action
+cannot be undone which is great. And if
+I click delete, that is then deleted.
+And so that feature is now done. So we
+now have that feature completely done
+for our app which is perfect. So now
+let's go on to fully testing our
+application before we actually deploy it
+to a real domain. So now we're happy
+with our app. We're almost ready to
+deploy it. The last thing that we have
+to do before we deploy or the last
+couple of things that we have to do
+before we deploy first is to do a full
+test on our complete app just to make
+sure that everything is working in our
+app that everything is working correctly
+in our backend in our front end in our
+database. All of the stuff that we've
+set up here in our APIs, all of that
+stuff is working correctly in our app.
+And what we're going to do is usually I
+would recommend using these AI testing
+tools like Test Sprite or Code Rabbit.
+Two great ones to start using if you're
+interested in doing a full complete
+audit of your application that you've
+built and find anything that you might
+be missing. But because we're building
+with Claude Code, what I'm going to do
+is I'm just going to do a security
+review directly in Claude Code, which
+you absolutely can do if you know the
+things that you're prompting it for.
+What I've pasted in here is I've just
+pasted in a prompt from my master prompt
+library which you can get access to over
+on my free kind of vibe coding
+masterclass over on
+school.com/learnvibecoding.
+But this prompt basically helps us
+review everything in our app. I'm
+actually going to take out one of these
+things because we definitely don't need
+to do multi-tenency and it's going to
+create a report a document. So format
+the report so it could be shared with
+stakeholders or investors during due
+diligence. I'm just going to say create
+this report as MVPR report.m MD in the
+planning folder and we're going to go
+ahead and submit this to Claude code.
+I'm actually going to put it into plan
+mode so it can plan this security and
+code review kind of audit before it
+actually goes through and does it all.
+And this is going to basically just
+review our application to make sure that
+it's ready to deploy. And then we can
+address anything that comes up here in
+this security audit as we go through.
+The thing that we're going to do after
+this once Claude Code has done this is
+we're going to get our app ready to
+deploy on the domain and we're going to
+use Versell to actually deploy it. So
+there's a few things that we have to do
+when we get to that stage as well.
+Mostly just reconfiguring environment
+variables, adding that to convex,
+switching to a production um environment
+in convex, making sure that we're ready
+for our app to be deployed on a domain.
+But let's see what Claude code comes
+back here for this audit. So now Claude
+Code has created our full report here.
+I'm going to drag this over to this
+window here so that we can see exactly
+what we've got going on in our app. So
+basically Claude code because we put
+this in plan mode he's done the security
+audit and then it has basically
+identified all the things that it needs
+to fix here. So critical fixes high
+priority medium priority and hardening.
+So what we want to do here just do
+critical fixes and high priority here.
+So we need to fix subscription web hook
+authorization. Add input validation
+length limits. Implement rate limiting.
+Rate limiting is really important to
+make sure that we've got in our app. Add
+cross entity authorization checks.
+Authentication to scrape endpoint. Fix
+XSS in scrape URL handling. Add content
+security policy headers. So let's just
+say to Claude, we've got this summary
+here in this file. Basically
+unauthenticated AI API endpoints. So
+this is critical. It says like effort
+like 1 to two hours, but we're just
+going to get Claude code to go through
+and pretty much do all of this in one
+go. Let's close the MVP report. I'm just
+going to go into the basically tell
+Claude code what to do here and say
+let's just fix the critical and high
+priority things here. So now Claude Code
+is saying it's going to fix the critical
+and high priority security issues. So
+basically we've now got a to-do list
+here of all of the things that it's
+going to go through and do. So, it's a
+lot of authorization in convex,
+basically authorization, authentication,
+add security headers, and adding rate
+limiting middleware, which is probably
+going to ask us some questions about
+that when we get to it. We don't
+necessarily have to do that, but it can
+stop people from like spamming an API if
+you've got an AI API inside of your
+application. I think it's generally good
+to do. So, let's just let Claude Code go
+through and fix all of these issues. And
+then once that's done, we'll do a final
+test of our app and then get it ready to
+deploy. So now claude code has gone
+through here and it has fixed all of the
+critical and high priority issues here.
+So authorization in convex functioned is
+fixed. Authentication on API endpoints
+is fixed as well. And then this XSS and
+SSRF prevention which I don't even
+really know what that is as a
+nontechnical user. But that's the great
+thing about using these tools and using
+these prompts that are kind of preset to
+like figure these things out is that
+you're going to find stuff like this and
+it's going to fix it and you're going to
+be grateful that you went through those
+steps through that process. We've got
+some rate limiting here as well for our
+API usage and this is added in here. The
+security port has been updated at MVP
+report as well. So basically this is now
+updated on like all of the changes that
+it's done. And this is a great way to
+use clawed code as well is just to
+continually update these files as you do
+stuff. Now, one thing we've got going on
+here in our app. Oh, it is working. It
+was showing a 404 error there for some
+reason, but still all of the
+functionality is working in here, which
+is great. We want to just do a last
+check here that things are working.
+Let's just check our AI functionality
+here is working with the Claud API. So,
+I can see you're planning to build an
+application with the modern text stack.
+Okay, great. AI functionality is working
+there. We might want to add in some more
+features into the chat to be able to
+clear the chat or start a new chat and
+save chat history for example. But I
+just want to check that all of these
+things are working. That's going to
+save. Let's unsave changes. Then it
+saves. This is our stack. So we can
+extract that from the PRD or edit and
+add different things to our text stack
+here. We can remove different things.
+Let's click done. Add in knowledge
+documents here. So quickly create
+pricing strategy, market validation,
+customer persona, and features. We can
+extract features from our PRD here as
+well. And we can add a new release which
+is be release one which we can add. That
+adds a new release here. And we can add
+features to this. We can generate
+feature ideas for this app which we're
+going to see what this functionality
+actually does. So here we've got more
+features that we can add to this app.
+And we can just click to add these
+features to our feature list and then
+drag them into. So we're going to drag
+this one into. We can't actually move
+that for some reason. So that is
+slightly broken, but we'll go and fix
+that. For now, we're going to ignore
+that. And we can create new apps here as
+well, which is great. and we can manage
+our subscription. We're on the pro
+subscription which means we get access
+to the AI assistance. And if I log out
+here of my account, you can see that we
+have the login page here using clerk to
+be able to log in to our app. So that is
+everything we need to do for the
+security audit. And now let's get on to
+actually deploying our app so the real
+people can start to use it. So let's get
+this app ready to deploy. And in order
+to do this, what I'm going to do is I'm
+just going to clear the chat in claude
+code here. And then all I'm going to ask
+Claude code is to say, give me a
+stepby-step plan to getting everything
+ready to deploy using Versell. And then
+we're going to send that to Claude code.
+And what this is going to do is going to
+basically give me a plan to actually
+deploy this app to a domain using
+Versel. There are some things that I
+know that we need to do here. For
+example, we have thisv.local
+file here which has all of our secrets
+in basically for this app. We need to
+add these to our environment variables
+in convex so that all of those are
+secure. We're already ignoring these
+files in this codebase anyway, but we
+need to have those environment variables
+saved securely in convex. What we also
+need to do is we need to be able to
+switch in convex between the development
+version and a production deployment. And
+then in versel, what we're going to do
+is we're going to deploy from GitHub.
+So, we also need to push our app to
+GitHub to update all of our code in
+GitHub. We're then going to use GitHub
+to push that code, that application onto
+a live domain. And we're going to use a
+domain that I've already bought for this
+already. I'm just going to use
+scribe.co.
+I'm going to set it up just on a versel
+domain to start off with, and then I'll
+show you how to connect a custom domain
+to it after that as well. But once
+Claude Code has gone through this, it's
+basically just going to give us a
+breakdown of everything that we need to
+do to actually get this deployed. So
+here's our deployment plan. So based on
+my analysis, here's your step-by-step
+deployment plan. And this looks like a
+lot. Claude is very verbose generally.
+So it's a very long deployment plan
+here. Optional improvements as well. So
+like rate limiting warning. Your current
+rate limit is in memory, which won't
+work reliably on Versailles's multi-
+instance serverless functions
+production. Consider switching to
+upstach or redis with a rate limiter. So
+we should actually probably do that
+before we deploy is to use redis for
+rate limiting on our API usage. We've
+got a bunch of other references and
+stuff in here, but basically this breaks
+down to number one, prepare external
+services. So we need to deploy convex to
+production. So mpx convex deploy
+basically deploys your schema and
+functions to convex production. Note the
+production convex deployment value and
+the next public convex URL. So let's
+just go through this step by step as we
+kind of go through this plan. So let's
+do mpx convex deploy. And that should
+allow us to create a production a
+production deployment in convex. So here
+we go. We've got our production
+deployment here, the name, and we've got
+our next public convex URL here as well.
+Do you want to push your code to your
+prod deployment exuberant buzzard 659?
+Now, we're going to say yes. So, let's
+do that. So, there we go. We have now
+deployed our convex functions to our
+production development in convex. We
+need to keep an eye on like these pieces
+of information here cuz we're going to
+need to use them again. So, number two
+is configure clerk for production. So,
+let's go to clerk. I'm going to resize
+this window here as well so that we've
+got the instructions next to what we're
+doing. We've got clerk open already
+here. So, let's go to clerk. This is
+what we're using for this. So, number
+one, go to clerk dashboard. And this
+really just shows you how easy it is to
+just ask these AI tools exactly what you
+need to do and then just follow it step
+by step. So, go to the clerk dashboard.
+Here we are. Create or select your
+production instance. So, we need to
+create a production instance here. So,
+let's create a production instance and
+clone our development instance. So let's
+go continue. Application domain is going
+to be on. So we say like add your versel
+domain to allowed origins. You'll update
+this after getting your versel URL. So
+we're going to do that after. For now
+like the URL is going to be scribe.co.
+We're going to create an instance of
+that. We can change this later if we
+want to. So now we've created a
+production instance of clerk which is
+great. This will have all new users in
+it when people sign up. And it basically
+allows us to develop things on our
+application using the development
+instance in our local development
+version that we have running in cursor
+with claude code. And then when we push
+it to production, when we make it live
+on our domain, we're going to be using
+the production kind of environment in
+clerk. So copy your production clerk
+secret key and next public clerk
+publishable key. Set up a web hook
+endpoint. So it will be this your
+domain.verl.app. app/ ai/webhooks/clerk
+and copy the web hook secret. So let's
+copy this over and go back to clerk. So
+we need to set up a web hook. So let's
+go to configure and then we're going to
+find web hooks in clerk. Then we're
+going to create a new web hook here. So
+let's add an endpoint. Let's paste this
+URL in and this is going to be your
+domain.app.
+So basically this is going to be
+scribe.co and/api/webhooks/clerk.
+That's what we need to do. We're going
+to need to subscribe to some events here
+as well. So, it hasn't outlined that in
+the steps here. So, let's just say like
+when we set up a web hook endpoint in
+clerk, what events do we need to
+subscribe to? So, claude code will be
+able to answer any of these questions
+for us. We need to subscribe to these
+four events in Clerk. User created, user
+updated, user deleted, and session
+created. So, let's go back and search
+for these events. So, it's going to be
+user created, deleted, and updated. And
+then also session created. So, let's
+subscribe to that. And then let's create
+our endpoint in clerk. And then we need
+to have this signing secret here. We're
+going to need to know. So let's go back
+to the step-by-step guide here. So
+that's the clerk web hook secret. So now
+configure polar for production. So we're
+going to go to polar. So this is let's
+close that. We've got polar here. Let's
+close the app and let's close that.
+Let's close some of these tabs. We've
+got our sandbox instance here in Polar
+basically. Now this is just for testing.
+So what we want to do is we're going to
+go to basically the actual version of
+Polar, not the sandbox. So that is just
+polar.sh. And so let's create a new
+organization for this and call this
+scribe test. So what we're going to need
+to do here is we're going to need to
+create everything the same inside polar
+that we had in the sandbox. So we need
+to create a product here. So let's go
+into Polar here and create a product. So
+let's do new product. And we're going to
+call this Scribe monthly your
+subscription. And we're going to do this
+as a recurring subscription. And this is
+going to be monthly and we're going to
+do it for a fixed price of $29. And then
+we are going to create this product. We
+also need to create a checkout link here
+as well. So let's create a checkout
+link. And this is going to be Scribe.
+And then let's select describe monthly
+product here. Let's double check in the
+sandbox what we've got in set in the
+checkout link. In this checkout, we
+don't have any specific success URL. So
+let's just keep that the same. Let's
+create that link. So now we've got our
+checkout. And then what we're going to
+need to do is we're going to need to set
+up our Polar access token and our Polar
+web hook. So let's go into settings in
+Polar here and we go down to the bottom.
+Do a new access token. Select all. Do
+expiration for no expiration. And let's
+just do scribe production. Let's create
+that. We're going to leave this showing
+here so that we can access that.
+Actually, what I'm going to do here is
+whilst we've got it, I'm just going to
+copy all of our environment variables
+here from our EMV.local file. So it says
+basically import project to versel
+configure environment variables add
+these in versel project settings
+environment variables. I think we should
+actually use these in convex. So let's
+just ask claude code here and say I
+think the right approach for environment
+variables would be to add this to
+convex. Can you check this is correct?
+So I think we can just add these
+environment variables into convex here
+instead of adding them in versel. Okay.
+Okay, so it says since all your external
+API calls are in Nex.js API routes, all
+your secrets go into Versel's
+environment variables, not convex. Does
+that clarify things or are you thinking
+of restructuring to run in convex? So I
+think we're fine there. So let's add all
+of these to Versel, which is the next
+part of setting this up for deployment
+here. So we're going to need to add our
+Git repository. So what I'm going to do
+is I'm actually going to open a new
+clawed code here. Let's say push all of
+this code to this remote GitHub
+repository. this project to this remote
+GitHub repository. Overwrite everything
+in the repo. So, generally this is not
+the best way of doing it, but we're just
+going to quickly push all of this code
+to GitHub so that we've got this. It
+says the remote is already set up, which
+I thought we already had. There's a bit
+of a gap in between filming this
+tutorial. So, I probably did the GitHub
+part earlier in this tutorial. Maybe a
+little bit different. It's allowing it
+to commit all the changes here and then
+we're going to push it to GitHub. Just
+committed. Complete Scribe. Would you
+like to start a review? So, we've
+committed that to GitHub. Just allow git
+push include code here. This is going to
+push everything to GitHub so that it's
+ready to go. We need to add all of these
+variables in Versell. So, we've got a
+Polar access token. We're going to set
+up the Polar web hook in a minute. We're
+going to get our Polar checkout link as
+well. Let's go to our Versel dashboard
+and create a new project here. So, let's
+go to Versell. We're going to go to
+overview and I'm going to go add new
+project. Let's create a new project. And
+then we are going to basically import a
+git repository once this has pushed. So
+done. All the code has been pushed to
+this repository for 54 file changes
+complete scribe application. So let's go
+and check that in GitHub. Just make sure
+this is updated. There we go. Okay. So
+this was 1 minute ago. It's pushed
+everything here. So we've got everything
+we need in this project ready to go.
+This is called scribe. So let's just
+find scribe and then let's import that.
+And then what we're going to do here is
+we are going to it says Versell will
+auto detect Nex.js. Step five configure
+environment variables. So in this
+environment variable section here what
+we're going to do is we're going to we
+can copy and paste or we can import a MV
+file here. So let's try and just import
+this. So let's try and drag this in
+here. Okay, we can just this is
+inscribe. So let's just import this this
+EMV file. So now we've got I've added in
+all the environment variables here
+before we click deploy. And I'm just
+going to go through and add all of the
+different variables in here. So we've
+got the convex URL which we've got from
+when we did MPX convex deploy in the
+terminal back in cursor. And now I'm
+going to go through and just add
+everything else that we've got here. And
+we're going to go for some of this
+stuff. We're going to go from ourv.local
+file because some of this is correct. So
+the anthropic API key for example we're
+going to use the same one. Let's put
+that into versel here. the fire crawl
+API key. We're going to do that as well.
+And let's go for the polar access token.
+It's going to be here. So, let's copy
+that over. Let's go back to versel.
+Polar access token. The clerk web hook
+secret, which is going to be here. So,
+let's copy that and put that into the
+clerk web hook secret. The clerk secret
+key, which if we go to overview, what we
+should be able to see. So, here we go.
+So if we go into API keys in clerk,
+we've got our publishable key down here,
+which we're going to copy. So clerk
+publishable key. Should we go back to
+here? So our clerk publishable key,
+which is there. And we're going to go
+back to clerk. And we're going to get
+our clerk secret key here as well, which
+we're going to copy. Go back to new
+project. Going to go clerk secret key in
+there. And then convex deploy. We
+basically need our polar checkout link.
+So let's go back to polar and get our
+checkout link here. So let's get that
+checkout link. go back to Versel then
+our convex deployment here which is in
+the convex dashboard. So let's go to
+convex and we should be able to go into
+our production instance in convex here.
+This should be on the dashboard our
+deployment URL here which we're going to
+copy. So this is our convex deployment
+which you can paste into there and then
+our polar web hook secret which is the
+last thing that we need to do here which
+we're going to go to settings and we're
+going to create a web hook. So add an
+endpoint. So let's just get it to break
+down how we set up our polar. So it's
+got here phase three initial deployment.
+Click deploy. So update web hook URLs.
+Now that you have your versel URL, you
+go to clerk dashboard web hooks update
+endpoint to then we're going to go the
+polar dashboard. Update the endpoint to
+this. Basically let's just add this in
+for now for the web hook endpoint. Let's
+not create it. I'm just going to add it
+to versel here. So that we have the
+actually we don't have the web hook
+secret in here. So what we need to do is
+have a polar web hook secret. So let's
+just create our polar web hook here
+basically and do it to scribe dot. It's
+going to be scribe.co
+api polar. We'll select this to raw and
+then we'll select all. Create this web
+hook because we're going to update this
+web hook essentially. So we're going to
+update this web hook later. All we need
+is this secret here to put into the
+environment variables in versel. Let's
+put that in here. We now have all our
+environment variables in here. Correct.
+These have been added. The project name
+is Scribe. We're just going to do this
+as Scribe test because I'll probably
+build some extra stuff in here and
+deploy this as the actual version of
+Scribe to a project called Scribe. And
+let's click deploy. And now Versell is
+going to go through and deploy our app.
+So this is phase three, the initial
+deployment here. And we're going to get
+our Versel URL as we do this. Now this
+is going to flag anything that's wrong
+with the build as we go through here. So
+I'm fully expecting to get some sort of
+error in this deployment that we have to
+go back to our application and then fix
+with claude code. But let's see how it
+goes. And looking through the next steps
+here, we want to basically then verify
+that our app works, that sign up and
+signin works, user syncs to convex. So
+that appears in convex in our dashboard
+that we can create an app in a project.
+The AI chat responds and the
+subscription flow works basically. And
+if I expand this in Versell, you can see
+a bunch of stuff that Versell is doing
+here. We don't really need to know
+what's going on here other than this is
+basically how we're deploying to a
+domain in Versell and then we're going
+to be able to point that domain
+basically at our custom domain so that
+people can access our app from the
+domain that we actually want them to
+access it from. And if you're doing this
+where you have like in this project,
+this app is built to exist on a
+subdomain and the landing page will
+exist on the main domain. We can
+basically point our versel deployment at
+the subdomain that we want to use. So I
+would point it at app.scribe.dev
+or app.scribe.co. co basically. So here
+we go. You've just deployed a new
+project to telescope. Continue to
+dashboard. So we can add a custom domain
+here. And that is how you take your app
+from your clawed code cursor setup that
+you've got running with local
+environment variables. And that is how
+you deploy it to an actual domain using
+Versel getting your environment secrets
+in there. We've got our production
+deployment in convex here. So we can see
+our basically everything that we have in
+the development version and we can see
+everything here and once this loads in
+versel we're going to be able to see the
+details of this deployment in this
+project. So here we go we now have
+access to our app is deployed on this
+scribe-esty.verel.app
+and what we can do to actually test
+this. So this is accessing our app now
+is built and live here. What we're going
+to do to test this is actually just take
+this domain here. We're then going to go
+back over to Clerk, go to our web hooks,
+and I'm going to change the web hook URL
+that we've got here. And we're going to
+edit this to basically this URL, which
+is the Versell one, so that we can test
+that this works. And we're going to do
+the same in Polar. So, I'm going to go
+back to Polar and I'm going to edit
+this. We can update this URL here to
+this Versel URL as well. And then just
+click save. That's going to update
+there. And now we can test our
+application actually works here. The one
+thing that is not showing is that we're
+not getting a clerk login at all. So
+clerk failed to load clerk. There is a
+reason that clerk is failed failed to
+load script here. So there is something
+happening here with clerk. Basically
+clerk failed to load time out. So let's
+go back to claude code and try and fix
+this issue. We'll start a new claude
+code chat here. So let's do a new cla
+code and let's say on our deployed app
+clerk is failing to load with this error
+message. Help me understand what is
+causing this. Don't make any code
+changes code changes yet. So let's see
+what's going on here with clerk. I
+reckon it's just something between like
+the clerk configuration or I think it's
+because the domain actually is not set
+correctly. So if we go back to our clerk
+our clerk project here. Let's go to
+settings because I think we set the
+domain to the wrong domain here. So, it
+seems here that basically the issue is
+probably something relatively
+straightforward if you're a developer
+and you've used Clerk before and you
+know what you're doing. But because I'm
+non-technical, I'm just like figuring
+this stuff out as I go. Basically, the
+reason that this happened is because of
+Clerk and the way that the domain is
+configured in Clerk. So, the way that we
+set up the production, basically the
+production deployment in Clerk was
+basically using scribe.co. co as the URL
+which the domain that we're going to use
+for our app. And so because this is set
+up to use this domain and it doesn't
+have all of these records in the domain
+basically set up. So add a CNAME record
+for clerk pointing to
+frontend-clerk-services.
+So we need to do this stuff for the
+account portal and for the frontend API.
+We don't need to worry so much about the
+email stuff right now because well maybe
+we should set up the email stuff because
+that's how people will get emails from
+Clerk when they sign up to our app. So
+let's just do this using the scribe.co
+domain here. So all we do is we click on
+domains in our project and we just add
+domain and add a domain that we've
+already we'll go for production and then
+we're going to add a domain that we
+already own which is scribe.co
+which is this one here. And we can
+redirect scribe.co to ww.scribe.co. code
+which is ticked. So let's do that. So
+save. So we've now added our domain to
+this project. Go back to build and
+deployment and let's go to scribe test
+here. This deployment is deployed to
+scribe.co. If I go to scribe.co you can
+see that the app is live here but clerk
+is still not working because we
+basically haven't added those records
+for clerk into you can see here we're
+still getting a clerk error here that's
+not quite working. So we need to add
+these records for clerk into the domain
+in Versell. So let's go to domains in
+our versel account. So let's go to
+domains. Let's go to scribe.co. Let's go
+to configure and let's go to the record
+section here. So what we need to add is
+we need to add a CNAME and we need to
+add the information for clerk pointing
+to this. So let's copy that to our
+clipboard and it's for clerk. So let's
+go back to domains. We're going to add
+clerk and we're going to add that as the
+value. We're going to add this CNAME
+record in here. Let's load all of these
+so we can see what's going on. So that's
+created that successfully. And then if
+we go back to clerk, we can verify
+configuration. And that should hopefully
+it should find a CNAME for accounts
+pointing at accounts.cl.services.
+So let's add this. Basically once we've
+got this set up, we should be able to
+click verify configuration and that
+should be able to let us know that we've
+configured clerk correctly in our
+domain. So, this takes a little bit of
+time, but you can see here that this
+stuff is starting to get verified in
+Clerk now that we've added those DNS
+records. If I go back to my app and
+refresh this, this should allow clerk to
+work here essentially. So,
+clerk.scribe.co
+failed to load in loadcript.
+Clerk.scribe.co
+failed to load JS time out. So, we got
+to figure out this issue here for clerk
+before we can get this actually working.
+So everything here in clerk is now
+green. It's just loading the SSL
+certificates for this domain. And I want
+to make sure that everything else is set
+up correctly here. So let's just double
+check. So the endpoint is set
+incorrectly here. So we need to set this
+ascribe.co and then save that. And we
+also need to go back to polar and we
+need to change this back to scribe.co as
+well cuz this will like this will make
+polar and clerk work. So let's go back
+to clerk. We've got the end point for
+our web hook there is correct. So I'm
+glad we checked that. Let's go back to
+refresh. We're still getting an error
+with clerk. Loading the script violates
+the following content security policy.
+Note that script was not explicitly set.
+So we're getting failed to load clerk
+with this error basically even though
+everything is configured in the domain
+settings with clerk. So let's say let's
+go back to claude code here. So, I've
+just said here I've set everything up
+correctly in domains for clerk and
+everything is using scribe.co and we're
+getting this error loading clerk. Help
+me figure out what might be causing this
+issue. So, the error is clear. The CSP
+is blocking the script. Interesting
+question is why is clerk trying to load
+from clerk.scribe.co instead of
+clerk.acounts.dev. This happens when you
+have a clerk proxy configured. So,
+attempting to load its JavaScript, you
+have a proxy domain configured in the
+clerk dashboard. Clerk is set to use
+clerk.scribe.co as a proxy domain. So go
+to dashboard, configure domains, and
+look for the proxy section. So I don't
+think we have a proxy section set up
+here. I don't think we have a proxy in
+our domains section here. Satellites,
+no. I'm going to do something here.
+Let's just see if we can find proxy in
+here. Be in settings. No. Basically, it
+doesn't look like there is. Let's say
+there is no proxy setup. We need to
+figure out what's causing this. So I
+just took a screenshot of clerk and I've
+added it as a screenshot in here to this
+project in cursor just so that I can
+reference it with claude code. So you
+can do at and then choose a file in your
+project basically. So we're going to
+choose this screenshot png file and then
+say here are the settings clerk help me
+figure out what's happening. There's no
+proxy set but the front end API is set
+to clerk.scribe.co.
+So let's send that off to claude code.
+It's going to read this image and
+hopefully see the settings from the
+image. Generally, you can do this. So,
+it will have a look at the image and
+extract any text from it. So, the
+front-end API set to clerk.scribe.co,
+which is pointing to frontend- API-click
+services. This is a custom domain
+configuration, not a proxy. It means
+clerk will load JavaScript from that.
+Your CSP only allows scripts from
+clerk.acounts.dev, but clerk is now
+trying to load from this. You need to
+update your content security policy in
+next.config.ts to allow your custom
+clerk domain. Add clerk.scribe to Okay,
+so basically like would you like me to
+make these changes to your next? So
+let's say yes, make these changes. So
+we're going to make those changes. Then
+we're going to push everything. We're
+going to update that file in our GitHub
+repo. And then we're going to redeploy
+our app. And that should fix this issue.
+So now let's say to claude code, commit
+this change and push the updated config
+file to the remote GitHub repo so that I
+can redeploy on first cell. So now
+claude code is basically going to commit
+this change in the project to git so
+that we have the history of this and
+then it's going to push this basically
+to our GitHub repo. So the changes have
+been committed and pushed to GitHub.
+Versel should automatically pick up the
+new deployment. Once deployed clerk
+should load correctly. So let's go and
+see what's going on here. Let's have a
+look in GitHub. Just make sure that this
+was updated. So let's refresh this. We
+should see that this was just updated
+now. Okay, perfect. And if I go into
+this file, you should be able to see
+that we've got this URL added in here,
+clerk.scribe.co. That's what is being
+allowed here, which is great. So now,
+let's go back to versel, and we want to
+do another deployment. So let's go to
+redeploy. We're going to redeploy
+production. We're going to deploy to
+this URL. So let's redeploy. Actually, I
+think redeploy here just redeploys with
+the previous code. So we're just going
+to go into this project actually. Now
+this should automatically update this so
+that we can actually use clerk on our
+app. So let's just create a new
+deployment manually here. So versel
+should automatically deploy from
+anything that's updated in the main
+branch on our GitHub. What we're going
+to do is we're just going to create a
+new deployment. So we're going to add
+this. We're just going to select the
+main branch here from the same GitHub
+repo and we're going to create a new
+deployment because we want to deploy
+that updated file. I've tried reloading
+the app after this redeploy. Okay. So
+basically I've figured out kind of
+what's going on here with the deployment
+is that my deployment wasn't triggering
+automatically in Versel. You can see
+this one has just triggered
+automatically here with that push is
+because I was using an old email for my
+commits in Claude code rather than the
+email that was associated with my
+account on GitHub. So just that's not
+going to be the case if you're setting
+this all up from scratch, but just
+something to be aware of if you are
+struggling with Versel deployment and
+it's not doing it based on the latest
+commit that you make to GitHub. This is
+now building and we're going to be able
+to hopefully get this all working with
+Clerk. Once this has finished building,
+we've got a new deployment from the
+updated GitHub repository that we did.
+We finally have clerk loading here. So,
+this is the loading screen for our app.
+Now, I've deployed this to Scribe.co,
+but I actually would rather have
+deployed this to app.scribe.co and then
+have scribe.co as the landing page. What
+I can do here if I wanted to is just to
+add in the landing page into my codebase
+if I didn't want to keep it separate,
+but I do kind of want to keep it
+separate. So, I'm going to update that
+at some point in the future. So, that
+this is going to exist on the subdomain
+of app.scribe.co instead. Now, let's
+sign in and see if this all works. So,
+we're going to go to sign up with clerk
+because we need to create an account
+first. We're going to create an account
+here. If I go to sign in, we don't have
+Google signin added here. So, we can add
+that later as well if we want. I just
+wanted to get email and password working
+first, but you can absolutely add in
+Google authentication using Clerk to get
+that set up and creating those settings
+in the Google console dashboard if you
+want to. Let's just test this for now to
+see that everything works here with
+Polar with our production deployment for
+Polar as well. So, let's create an
+account with Scribe. This is going to go
+into our app here, assuming that
+everything works correctly. Capture
+failed to load. This may be due to
+unsupported browser. Please try a
+different browser or disabling
+extensions if this continues to exist.
+We've got an issue here with the
+capture. So, I've just gone back to
+Claude Code here and just asked it to
+check why this capture might not be
+working. I'm actually going to move this
+tab back over to here so that we're
+working back on the left hand side here.
+Let's make this a little bit bigger so
+that we can see what's going on. So,
+basically found the issue. Your CSP
+configuration is missing the Cloudflare
+turn style domains that Clerk uses for
+capture. According to Clerk's
+documentation, you need to add these to
+our next doconfig.ts file. So, let's
+just add that. And now these changes
+have been made. And what we're going to
+do is we're going to commit and push to
+GitHub to trigger a Versel deployment.
+So, we're going to commit these changes
+that we've made to this file to our
+GitHub repository. And then we are going
+to trigger a new deployment on Versell.
+basically to see if this will allow the
+capture to load for our app so that we
+can finally test it to make sure that it
+is working. You can see that this new
+build has been triggered here which is
+great. Okay, so it seems that Scribe
+seems to now be working. We can log into
+our app on Scribe.co. I can go create a
+new app. We're going to name this app
+Scribe. Of course we are. We're going to
+do this as a web app. Let's continue.
+And then we're going to add in a builder
+here. Claude code. That's what we've
+been doing in Nex.js JS and React with
+Tailwind is in Typescript as well. I
+don't think we need TypeScript in there
+as the other option. It's just all
+written in Typescript. Going to use
+Convex for the back end, Convex for the
+database, Clerk for authentication, and
+then the clawed API. And then let's
+click create app. Now, this is not doing
+something right here. Something in
+convex is not working. If we go over to
+convex and have a look at our data, we
+can see that nothing is being created
+when we're actually doing this from our
+app. So let's have a look in the console
+and we're getting an error here. So
+fails to create app. Basically this is
+happening. So let's go back to claude
+code. We're going to try and fix this
+issue. So let's say when I log in on my
+production deployment and try to create
+an app, I get this message related to
+convex in the console. Can you help me
+identify the issue and fix this? And so
+we'll get claude code here to go through
+and try and identify what is going on
+here with convex. So basically the
+reason this is happening is because no
+user is being created when I sign in
+using clerk because of something that's
+happening with clerk. So it might be
+related to the web hook that we've got
+set up here. So we can see these
+sessions failed on the web hook. So
+there's something going on here that is
+not quite right on the web hook. Let's
+just see what Claude code comes back
+with here. Let's just stop Claude code
+here and say the clerk web hook is
+failing. help me get the clerk web hook
+set up correctly for scribe.co co as my
+production deployment so that it can
+fire correctly and I think this is just
+a configuration issue in clerk to be
+honest. So here's what we need to do. So
+clerk go to dashboard set your
+production instance which we're in. Go
+to web hooks add endpoint add this URL
+to the endpoint. So let's see we've got
+API web hooks clerk. That is correct.
+API web hooks clerk. Select the events
+to subscribe to. Maybe we didn't. We
+selected the events here. So those were
+firing. We're subscribed to those events
+which is great. Get the signing secret.
+After creating the endpoint, click on it
+to view the details. Copy the signing
+secret. Add the secret to your
+production deployment and clerk web hook
+secret. Redeploy your application. So,
+we're going to go into the environment
+variables in Versel and just check that
+is set correctly cuz that should be set
+correctly. Let's go to environment
+variables here. Scroll down. We've got
+clerk web hook secret. This might be set
+to that is 4 bhi. Let's go to this one.
+It's 4 BHI. That should be set
+correctly. This is the production
+deployment. So, I'm not sure what is
+happening there. I'm just going to edit
+this. So, it's the same. There's
+nothing. There's no change there. The
+web hook secret is set up correctly. The
+clerk web hook secret. So, I'm not going
+to redeploy yet because I haven't
+changed anything here. So, I've gone
+into the web hook in clerk here just to
+see what's failing. And it looks like
+there's something here with null, which
+might be the reason why this is failing.
+I'm just going to copy and paste all of
+this over. We can get the raw version of
+that. I'm just going to copy and paste
+all of this over to claude code and then
+see what it says. So the failing web
+hook is showing this information in
+clerk. The environment variables are set
+correctly for the web hook and the end
+point is set correctly. So let's see
+what claude code comes back with here.
+The web hook is listening looking for
+session created but looking at web hook
+handler the session created event tries
+to query for an existing user first. The
+problem is when a new user sign up clerk
+fires user created nearly simultaneously
+if the user web hook hasn't been
+processed yet. However, this shouldn't
+be cause a web hook failure. In the
+meantime, let me check if there's an
+issue with how convex's client is being
+authenticated. So, it's saying the next
+public convex URL environment variable.
+So, let's go and see what our next
+public convex URL environment variable
+is set to. It should be set to this
+here, which we're just going to go and
+have a look in our environment variables
+in versel. Let's have a look here. Next
+public convex URL is set to this. Let's
+edit that. Yeah, it's the same. It's the
+same. So, that's what it's set to one
+thing. So, let's say convex the next
+public convex URL is set to. So that
+should be correct. Okay. So basically I
+think there was an issue here that the
+polar SDK was interfering with something
+here. The polar SDK is configured with
+the sandbox server where it should be
+and polar access token is not set in
+production. However, the polar function
+the mobile issue is that we need to see
+the actual error for a start. The polar
+SDK should not be set to the sandbox.
+Let's change the polar SDK to use
+production not the sandbox. read the
+docs to make sure we implement this
+correctly. So, I don't know if that will
+fix the issue. I don't think it will,
+but if we go into Polar and have a look
+at the web hooks here, just refresh this
+to see if there's anything. There's no
+results. I mean, there's no results here
+because we got the settings wrong in our
+project here. So, there we go. We're
+going to make that change from sandbox
+to production. Let's say commit this
+change and push to GitHub. So, let's see
+if this fixes the issue. So claude code
+basically identified three issues here
+which is causing the web hook failure.
+So there is a convex or config issue.
+Basically it has the wrong domain set in
+the convex config here. So we it's just
+another step that we didn't do when we
+went to deploy. So claude code maybe
+didn't give us the full breakdown of
+exactly what we need to do to deploy. So
+we're just going to allow edits to these
+files. And it identified some other
+issues here as well. And all I've done
+for this basically was to copy like all
+the error messages that I was getting
+when I logged into account and didn't
+get a user created in convex. So this is
+onscribe.co.
+I logged in copied copied these errors
+from the console back into claude code
+to see what was going on. Then it's
+identified these issues and fixed that.
+It's also checking the EMV.ample example
+file to basically update something else
+that was not quite working here as well.
+So summary of fixed is it's fixed config
+orth convexorthconfig.js.
+So that's processing the clerk issuer
+URL as clerk.scribe.co. That's going to
+be the main issue that's going on here.
+It's also added a couple of other
+things. And it says before deploying you
+need to update your production
+environment variables. Add clerk issuer
+URL or your custom clerk domain. So
+we're going to add clerkisssuer URL.
+We're going to rename some of these
+clerk variables as well. So let's go and
+do that. So we also have to in clerk
+verify our clerk JWT template in the
+clerk dashboard. So let's go and do
+these things quickly and then we can
+push this to GitHub and redeploy. So
+let's first go into versel and let's go
+to settings and environment variables
+here. Let's add in these new environment
+variables. So let's add a new
+environment variable here. So, let's add
+this clerk issuer URL. Let's go back
+here and let's change this to
+clerk.scribe.co.
+Let's add that. Let's add another one
+here. Actually, we just need to save
+that to add that in. So, that's added
+that environment variable. Not going to
+redeploy yet because we're going to make
+some changes to these other variables
+here as well. So, we're going to rename
+next. So, public clerk after signin URL
+to this. Let's go back to versel. Public
+clerk after signin URL. Let's edit that.
+We're going to call that this sign in
+fallback redirect URL. So we're going to
+change that to that. We're going to also
+change after signup URL to this one.
+Sign up fallback redirect URL. After
+signup URL is here. So let's change
+that. Save that variable. That is going
+to update there. So those variables have
+now been updated. So let's go to
+configure our JWT templates in convex.
+So let's go to sorry in clerk. So let's
+go to configure and JWT templates. So
+let's go JWT templates. We've got convex
+already set up here, which should be
+fine because this was copied over from
+our development instance of clerk.
+Ensure you have the convex template with
+the audience set to convex. This issuer
+should match your clerk issuer URL. So
+let's have a look at this template.
+Clerk issuer URL. So that's right.
+That's set correctly. So let's go back
+here. So that is set up correctly. Now
+we have to do basically run MPX convex
+deploy. Let's do this again. Let's stop
+this using Ctrl C in this terminal and
+do MPX convex deploy. Let's do yes, we
+want to deploy that to our production
+deployment. Now there is an issue here.
+Now basically you're currently
+developing against your development
+deployment. Your production deployment
+ser traffic. Make sure that your publish
+client is configured with this URL. Do
+you want to push your code to your
+production point? Yes. environment
+variable clerk issuer URL is used in
+orth config file but its value was not
+set. So we need to set this up in convex
+basically clerk issuer URL. Now it's
+telling us basically we need to add that
+into convex. So let's go to convex.
+Let's go to settings. Let's go to
+environment variables. Let's add the
+clerk issuer URL. We're going to add
+this as clerk.scribe.co.
+Come back to here. Save that. Now let's
+try do MPX uh convex deploy again in our
+terminal. And that has deployed
+successfully. So now all we need to do
+is to commit and push these changes to
+GitHub to trigger a new deploy from
+Versell. Let's go back to Versell here.
+We want to check that there is a
+deployment happening. So this deployment
+is now happening here in Versell. And
+then we're going to go and create a new
+account in our app. Now we've got this
+environment variable set up here. We can
+have a look at the logs here as well.
+You can see these failures which were
+happening before basically which was to
+do with clerk not being able to send the
+information in the web hook failing with
+clerk. So we're just getting all these
+issues like tied up before we can
+actually get people using our app here.
+So now that's deployed. Let's go to an
+incognito window here so we can create a
+new account. Let's try creating a new
+account here. Let's create a new account
+on Scribe. And what we want to do here
+is we want to check that this will allow
+us to create an app. So let's call the
+app Scribe. And what we also want to
+check now is that let's have a look in
+the console to see what happened. If
+anything happened that's wrong here. So
+creating a worker. There's an issue here
+still with this to do with Cloudflare.
+Let's log into Convex. Let's have a look
+at our project in Convex and let's go to
+the logs and just see if anything has
+happened here. So it looks like a bunch
+of this is for the development one.
+Let's move over to production. Let's go
+to the logs here. Looks like something
+is happening successfully. Let's look at
+data and go to users. There's still
+nothing in users. Have a look in clerk
+to see if users are being created here.
+So users are being created. Let's go to
+the web hook section and just see what
+is happening here. So we're still
+getting failures on this web hook. Okay,
+so I figured out finally what the issue
+is. And it's taken ages, but I figured
+out what finally the issue was with
+getting basically clerk to create the
+user in convex. and it was that I didn't
+have www do on the web hook URL. So I've
+updated all the web hook URLs to use www
+do because Versel was redirecting from
+scribe.co to www.scribe.co
+and that was causing a redirect issue.
+And I've also updated the polar web hook
+URL here. So that is basically what is
+causing the issue here. So if I refresh
+clerk here, you will now be able to see
+hopefully if we go into this web hook,
+we've got successful web hooks happening
+and users are being created in the
+database on scribe. So let's go through
+using scribe the deployed version
+finally and actually create an app here
+and check that this all works. So let's
+do scribe. Let's do a web app and let's
+skip and create this. Let's create that.
+We now have created our app. We have our
+application live. We can add our text
+stack in here. Add knowledge. We can
+click this to get the AI assistant
+upgrade to pro, which is going to take
+us to Polar. That is not working
+correctly. So now we need to fix Polar
+here, which is basically it violates
+content security policy. So again, we're
+going to have to do some stuff with the
+content security to actually allow Polar
+the Polar Checkout to work here. So
+let's go back to Claude Code. clear this
+and let's say the polar checkout is not
+working correctly in production with
+this error message in the console help
+me fix this. So basically I think
+there's been a bunch of things that have
+happened here related to the content
+security policy which we got basically
+claude code to review and add in a bunch
+of stuff to allow or not allow certain
+URLs. So it's basically going to add
+like this URL by.polar Polar to the
+allowed list of URLs here that in the
+next config and that is basically what's
+going to allow polar to hopefully
+actually work here. So now it's made
+that change. Let us get it to commit
+this change and push to GitHub so that
+we can trigger another versel deploy and
+we can check that this works in
+production and actually trigger the
+polar checkout here. So we've committed
+that pushed it to GitHub that has
+updated. We've got our app here. Let's
+go back to versel. This should be
+triggering a deployment here, which it
+is. So, we can see this. And when this
+has loaded again, we're going to check
+this is working. We're going to open up
+a new incognito window here and go to
+Scribe. And then we'll just log into
+that account. So, here's Scribe. Let's
+log into this account that has now
+deployed our app. So, that is live and
+working. So, let's go to it. I'm just
+going to go into clerk here quickly and
+delete these users so we can sign up
+again. I'm just going to delete this
+user. So, let's sign up with this user
+again and go through and just check that
+Polar now works in our app as well. So,
+let's go to sign up. Going to refresh
+this. We're going to sign up. And this
+deployment part is really one of the
+hardest parts often with vibecoded apps.
+It can just take a long time. We had
+that. So, we created our account there.
+I'm going to go back to Convex just to
+make sure this has been created in here.
+So that has been created as a user in
+our app which is great. Let's create a
+new app. Let's call it Scribe. Let's go
+as a web app. Continue. Skip and create.
+Let's create this. And now we're going
+to click upgrade. Now we're still
+getting an issue with Polar here. So we
+also need to add this to our secure
+content policies. So we're now getting
+this error with polar date to fix this.
+So again, this is just another config
+issue. We're going to update this and
+then I'm going to reload the app and try
+again. So Claude Code has made this
+change and added that URL to the list of
+allowed URLs. We're going to go back to
+the app now and I'm going to click on
+upgrade again just see what happens.
+We're still getting content blocked.
+Let's go into here. So again this one is
+now being missed from we need to add
+that as well. So we've updated that
+again to allow even more URLs from Polar
+for this to work. Let's click upgrade
+and see what happens. So now we are
+getting the payment from Polar.
+Subscribe tests needs to complete their
+payment setup before you can make a
+purchase. So basically there so if I
+click upgrade now we are getting the
+polar checkout here which means we can
+pay and subscribe. Now it says that
+scribe test needs to complete their
+purchase. You can still test with free
+products or 100% discount orders. So
+this just means I need to complete their
+payment setup in Polar. So we can go
+into the Polar dashboard and figure out
+the final setup there. But essentially,
+we've got everything set up here and
+deployed for our app built using Claude
+Code. We had a bunch of issues in the
+deployment phase of this, but we worked
+through it eventually used Claude Code
+to actually build and deploy our app.
+And that is the end of the app building
+tutorial here to build an app with
+Claude Code, get it deployed using
+Versel, and use Clerk and Convex for
+your database, backend authentication,
+and Polar for payments. You made it to
+the end of the build. That is the full
+app build using Claude Code. Thank you
+so much for sticking through the whole
+video if you've got this far and I hope
+this helps you in your app building
+journey with Claude Code. Figure out how
+to set up Claude Code, how to use the
+Claude Code extension, how to use the
+terminal and how to start building your
+application using the most powerful
+coding agent in the world right now in
+Claude Code. And I do just want to take
+a moment to say if you are building an
+app with AI or this has helped you get
+started but you want to take it to the
+next level. I've got a community helping
+people turn their app ideas into real
+businesses over at school.com/aiapps.
+And you'll learn a ton more than just
+how to build your app. You'll also learn
+how to build a business around your app,
+how to design your app in the right way,
+and then how to launch and grow your app
+using proven strategies that have worked
+for hundreds of other startups. Plus,
+you'll also be able to join over 200
+other people who have gone through the
+same steps and are on the same journey
+as you who can offer you support and
+advice and answer any question along the
+way as you go on your app building and
+AI coding journey. Again, thank you so
+much for watching this video all the way
+through. If you have got this far, I
+massively appreciate it. I know it's a
+ton of time and I really hope that this
+has helped you to actually build an app
+and get it launched. And if you do want
+to see more content like this, just like
+and subscribe on the video down below.
+Thank you so much and I will see you
+next time.
+>> [music]

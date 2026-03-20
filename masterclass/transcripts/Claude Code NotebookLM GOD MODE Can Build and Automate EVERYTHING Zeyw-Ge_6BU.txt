@@ -1,0 +1,341 @@
+Notebook LM is Google's free AI research
+ 
+assistant that lets you upload sources
+like PDFs, stocks, websites, and YouTube
+videos, then query and summarize them to
+generate structured outputs while
+staying grounded in your materials with
+citations and minimal hallucinations.
+Honestly, it's quite an underrated tool,
+and the fact that it's free and that it
+can even generate cinematic audios and
+videos with summaries from your research
+is just incredible. Just take a listen
+to what you can do. Now
+>> both paths carry a strict protocol
+requirement. Developers must define an
+input schema using JSON schema. This
+standard vocabulary ensures the agent
+provides the exact required data types.
+>> And we all know of Claude code, the
+powerful Aentic AI coding agent that
+lives directly within your terminal,
+helping you ship faster. Today, what I'm
+going to be doing is creating the ideal
+workflow where you can combine both
+Claude Code with Notebook LM, something
+that you might have not even heard
+about. As a developer, you can treat
+Notebook LM as a free AI research
+engine, giving it documentation,
+tutorials, API references, or even
+entire code bases to understand
+frameworks, organize your knowledge, and
+generate implementation plans without
+wasting tokens within cloud code. You
+can even generate explainer videos to
+help onboard teammates or document a
+project. Think of this combo like
+Google's code wiki tool, but directly to
+your CLI. You can research structured
+knowledge in Notebook LM. Then cloud
+code can turn that knowledge into real
+implementations. And in this video, I'll
+showcase exactly how that workflow
+works. If you want the best AI tools,
+workflows, and drops before everyone
+else, join my free newsletter with the
+link in the description below, which is
+completely free. To get started, it is
+really simple. Just obviously make sure
+you have Cloud Code installed. You can
+do this through the terminal or through
+the VS code extension or through their
+desktop app, but you can easily install
+this with the terminal using the curl
+command for Mac OS, Linux or WSL. For
+Windows, you can use the following too.
+And I'll be showcasing it both with the
+desktop app as well as the terminal cuz
+you can access it via the MCP which
+we're going to be setting up. You also
+have the ability to use the notebook LM
+Python version with the Python
+compatible API for Google's notebook LM.
+They're both essentially the same thing,
+but I'm going to be using the MCP cuz
+it's going to be easier for me to work
+with different faucets like the desktop
+app as well as the VS Code extension.
+Then you also need to make sure you have
+a notebook LM account, which you can do
+easily with your Google account. And
+this is completely for free. And once
+you have all this set up, we can get
+started. I'll leave all these links in
+the description below. What we got to do
+first is install the MCP server. And you
+can install it with the pip command or
+you can use it using the UV command.
+What you got to do is just simply copy
+either depending on what you want to
+use. And you can install it by pasting
+in the command directly within your
+terminal and it will install it. After
+it has been installed, what you can do
+is you can start using it directly using
+the NLM command line interface or you
+can use the MCP server for AI assistance
+directly within cloud code, which is
+what we're going to be doing. But first,
+what you got to do is log in with
+notebook LM. And that is by
+authenticating it with Google. You can
+run the NLM login command, and that way
+you can authenticate it directly within
+your terminal globally. After it has
+been authenticated, you can use the MCP
+configuration setup process which is
+automatic. You can copy it for whatever
+supported tool. We're using cloud code
+in this instance. So we can copy the NLM
+setup add cloud code and this will
+actually register the MCP server connect
+it to our cloud code account directly.
+And what we got to do now is just simply
+restart Cloud Code to activate the MCP
+server. Now, if you are to type in /mcp,
+you're going to be able to see that it
+has been actually activated. You'll
+notice that the new notebook LMCP has
+been connected. And what you can even do
+is directly access it obviously through
+the cloud code instance and easily
+access it through the cloud code desktop
+app. Now you're set. You can easily
+start using this workflow to do almost
+anything. Like how I said, you can use
+it as a research assistant or a research
+engine directly built within cloud code.
+Like you can see, there's a lot of
+things you can do like researching and
+discovering various sorts of notebooks,
+creating a new notebook called AI
+strategy research and a lot of other
+things. You can have a workflow where
+you can use the research engine as in
+notebook LM having it process the
+research using Gemini models completely
+for free and then having cloud code
+implement on it. And that I believe is
+probably one of the coolest things that
+you can do. For example, you can just
+simply ask odd code create a notebook LM
+notebook on Python async patterns, add
+relevant sources, summarize them, and
+then generate an example code using
+those patterns. If I to send this in,
+what it's going to do is it's going to
+have notebook LM gather the research
+sources. It can even have Claude read
+the grounded summaries and then have
+Claude write the real working code
+afterwards which is kind of incredible.
+This is where it's extremely useful with
+this workflow that I'm talking about in
+new frameworks, APIs or architecture
+patterns. So you can see right now that
+if you are to go over to the notebook LM
+uh dashboard, you'll see that it has
+created the new notebook that is talking
+about Python async uh patterns. And
+right now it is working on doing the
+deep research portion of the phases of
+understanding what Python async patterns
+are. And you can see that it is going to
+lay out all the sources. It's going to
+focus on then having it create a summary
+based off of it. Now obviously notebook
+elem as a tool you can do this directly
+with it. But if you are working directly
+within the CLI you can easily have it
+work on the implementation and then
+easily have it conveyed to your AI
+coding agent to in this case generate
+the example code using the patterns that
+I researched upon. And there we go. Just
+like that we have the Python async
+pattern summarize talks about all the
+three sources which you see over here on
+the main notebook. And then you also
+have it so that it summarizes the
+patterns and it will also even provide
+the code that you can run within this
+generated Python file. So what we can do
+is now take a look at all of them. And
+here is what each of them demonstrated.
+Something cool that I'm going to
+showcase now is that say if I am to go
+over to a new cloud code instance and
+say if I say create a notebook that is
+called shaden CRM UI, I can have it work
+on adding sources of the latest UI
+documentations and registry commands.
+And in this case, I can tell it that
+first ask notebook LM to identify the
+newest Shatsen components and dashboard
+blocks and then have it extract the best
+UI patterns. Afterwards, I can have
+cloud code focus on using those new
+research components that it has found
+and the new patterns so that once
+notebook LM extracts the best designs
+and patterns for building CRM dashboards
+with that layout, tables, cards that it
+had found, I can have cloud code then
+use that structured knowledge to
+scaffold a full next.js JS application
+or whatever text stack you want to use,
+but essentially use those new Shaden
+components to create the best looking
+dashboard. And that I believe is going
+to help you prototype and use this new
+feature or this combination to help you
+get the best out of it to essentially
+turn documentations, UI research into
+specs that your cloud code instance can
+follow and actually code out. So you can
+see that the new Shad Cien CRM notebook
+has been created. talks about all the
+new uh components that Shadien has
+recently added like the badge component
+or you have a couple of other things
+like the new cards, charts, commands and
+now it is going to reference and it's
+going to give all the references to
+these new researched components directly
+to claude code and that is where cloud
+code is going to now build out the CRM
+dashboard thanks to the reference and
+implementation plan that the notebook LM
+agents had proposed and this is
+something that could even help you in so
+many ways where you can even ask
+questions about your code base or you
+can even have it work on a mind map or
+flashcards. A lot of different things
+can be enabled with this combination.
+And I'm currently showing you all this
+directly from Notebook LM, which is not
+the case. It's just for you to easily
+visualize all of these elements. But if
+you are to go over to the GitHub repo,
+there is a bunch of different commands
+that will showcase how you can use it
+directly from the CLI itself rather than
+going to notebook LM to visualize it cuz
+you can open it up directly from the CLI
+which is the most remarkable thing about
+this. There we go. It looks like it has
+finished using all of the new packages
+that the notebook LM agent had
+researched upon. And this is what it had
+actually generated. This is the CRM
+dashboard, guys. and it looks a lot
+better than a typical AI generated
+dashboard. Obviously, you can edit it
+and make it even better by configuring a
+lot of these elements. But the fact that
+it used the Shad CN packages to develop
+the CRM dashboard is the probably the
+best thing about this cuz you can easily
+use these components to build cuz you
+can use these updated components to
+build anything you'd like and you can
+see how qualitative the output is thanks
+to notebook LM doing the spectriven
+research for our Opus model to fully
+develop. And this is something that
+looks absolutely amazing guys. A lot of
+these things are fully built out and it
+was done in a single shot which is just
+great. Something cool that I can do is
+create an explainer video so that I can
+even potentially educate my team or even
+just reference it to understand this
+overall even better. So I can say like
+build a notebook for my repo
+documentation, summarize the
+architecture and then create a video
+style explanation for onboarding
+developers. And right away it is going
+to prompt the MCP and going to work on
+creating a cinematic video talking about
+what Python async patterns are. Sorry
+guys, I forgot to actually specify to
+create the cinematic video for that
+Python notebook. But in this case, it
+created a new notebook on grid works
+utilities dashboard. And now it has
+started creating and generating the
+video overview which it should open up
+within a couple seconds. Since Notebook
+LM is able to even process YouTube
+videos, say if you're learning about a
+documentation or a new process, you can
+have Notebook LM do the research
+directly from your CLI, prompting it to
+focus on what it learned from the video
+and then having it implement whatever
+Notebook LM researched upon with Cloud
+Code, which is a really cool, nice, and
+sleek workflow. So, it looks like the
+Grid Works video has been generated.
+Let's now take a look at it.
+>> Hey there, and welcome to the team. We
+are so thrilled to have you here. So,
+the whole idea of this quick explainer
+is to get you up and running on the Grid
+Works repository. We're going to walk
+through everything you need to know to
+go from cloning the repo all the way to
+making your very first commit
+started.
+So, here's Typescript and React
+Typescript, which is a huge help. If you
+like this video and would love to
+support the channel, you can consider
+donating to my channel through the super
+thanks option below. Or you can consider
+joining our private Discord where you
+can access multiple subscriptions to
+different AI tools for free on a monthly
+basis, plus daily AI news and exclusive
+content, plus a lot more. But there's so
+much more that you can do. You can use
+it for research and development. And you
+can even have it add content, AI powered
+analysis, content generation, smart
+management, and so much more. I will
+leave a link to this repo as well as
+other ones so that you can easily get
+started. But I personally believe that
+this is a perfect ideal workflow that
+you should definitely utilize. This
+notebook element is completely free and
+you can use it directly within cloud
+code to ease off the implementation
+planning from the Opus models to the
+Gemini models which you can use
+completely for free. So definitely make
+the most out of it. I'll leave these
+links there. But with that thought,
+guys, thank you guys so much for
+watching. Have an amazing day. Spread
+positivity. Make sure you subscribe to
+the second channel. Join the newsletter.
+Join the Discord. Follow me on Twitter
+as well as subscribe to the YouTube
+channel. Turn on notification bells.
+Like this video, and I'll see you guys
+fairly shortly. He suffers.

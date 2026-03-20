@@ -1,0 +1,935 @@
+If you're a business owner still
+ 
+manually doing tests that a machine
+could be handling in quite literally
+seconds, you're not just wasting time.
+You are actively losing to competitors
+who had figured this out months ago. So
+this video it's going to be about clawed
+code, but it's not what you think. Now
+most people, they hear clawed code and
+they immediately think that [music] it
+is some developer tool that they can't
+use. They're wrong. And that
+misconception, it is costing them dozens
+of lost hours every [music] single week
+and tens of thousands in operational
+inefficiency. If you're new to the
+channel, my name is Nick. I've been
+working with companies for over two
+years, helping them implement AI, either
+driving significant amounts of leverage
+or increasing their [music] bottom line.
+We've seen firsthand how impactful
+implementing AI actually is for
+organizations and where this is all
+leading us. Now, I'm going to be
+covering the exact framework that
+companies like Telis and Zapier [music]
+use to automate 500,000 plus staff
+hours. I'll also cover the three
+fundamental differences [music] between
+Claude Code and every other chatbot that
+just forgets everything, every single
+instance. And I'll provide you with
+examples with real numbers showing 25 to
+[music] 75% productivity gains. And of
+course, the step-by-step breakdown of
+[music] how to actually set this up and
+start using it across your entire team
+with practical walkthroughs for content,
+[music]
+proposals, outreach, operations, and
+much more. So, by the end of this video,
+you will know exactly how Claude Code
+works, how you can set it up, and how to
+get [music] your entire team using it
+for the daily tedious tasks that are
+constantly eating your time right now.
+Now, this isn't just going to be a quick
+tips video. This is technical where it
+actually matters. [music] But if you are
+serious about scaling without
+proportionally increasing headcount,
+stay with me. Let's get into it. So,
+let's first just start by destroying the
+biggest misconception when you actually
+hear cla code. You know, you are
+imagining having to do some sort of
+programming or needing some sort of
+technical prowess. Now, that's not
+wrong, but it is catastrophically
+incomplete because cloud code, it is
+simply an AI agent that operates inside
+of your local file system with the
+ability to read documents, write files,
+execute any commands, and connect to
+external tools and systems via MCPs and
+most importantly maintain persistent
+memory across every single project that
+you are working on. Now, all this is
+being done through simple natural
+language. So you just simply type in
+plain English what you want done and the
+system will write the code for you. Now
+why does that actually matter for your
+business? Because if we were to map the
+current AI tools on an axis. So high
+autonomy on one side meaning the tool
+actually does real work for you and ease
+of setup on the other side. Well claude
+code it is sitting at the top right. And
+that is where we want to be as business
+owners. We simply just want to tell
+something to do the work and it does it
+the way that we want it done. Now, if
+you compare this to ChatGpt, chat GPTt,
+it is pretty easy to set up. It's
+actually incredibly easy, which is why
+they have so many users, but it does not
+do the work for you. It just answers
+questions. It might write some text, but
+that's going to be it. You know, they
+have some other features, but you are
+very limited to its capabilities. So,
+you are still the one who is having to
+copy and paste, still the one executing
+everything. And if you compare this to
+other noode tools like N8N, Zapier, now
+there is improved agent capabilities.
+But the problem is you need to build
+every single path. Node one, then you
+have node two and then build out and map
+out node 3. While with clawed code, you
+simply just describe what you want in
+plain English as I mentioned, and it
+figures out the plan and actually does
+the work for you. And here's what makes
+this completely different is that
+traditional AI tools, they suffer from
+three fundamental flaws that actually
+make them useful for real operational
+work. So the first problem, this is what
+I call context window amnesia. This is
+where you're spending maybe 30 minutes
+explaining your business to chatbt. So
+let's say you do get good answers and it
+is helpful, but tomorrow it forgets
+everything. Now you can leverage their
+inherent memory and what they have in
+the system, but it is very limited in
+its window. So you are essentially just
+starting from zero every single time.
+Now I've watched business owners
+literally waste hundreds of hours
+reexplaining the same processes, the
+same client requirements, the same brand
+voice just over and over and over again
+because JBT it does not have a great
+memory system. That's not what it's
+really built for at least as of right
+now. Problem two is the siloed sessions.
+Now this is where your sales
+conversation does not connect to your
+support conversation. So you have two
+different systems or two different
+departments not communicating with one
+another. So for example your support
+operations. Everything it is quite
+literally isolated now. Nothing
+compounds. It's also just like having a
+few different consultants who are never
+talking to each other and you have to
+explain your entire business to each one
+every single day. Problem three is no
+operational execution. So, we already
+touched on this very briefly, but JBT,
+it does and can give you advice as you
+so know. It can draft documents, but it
+cannot actually do most of your work for
+you. So, it cannot read your client
+database, update your CRM, analyze your
+support tickets, generate reports, and
+update your project management system.
+They have recently released some
+different features where you can connect
+to your CRM and stuff like that, but
+again, it's pretty limited. So with all
+of this, you cannot tie it to one
+connected workflow. So what I often say
+is that CHPT, it's really just like a
+smart parrot where it can tell you what
+to do, but you still have to do the
+work. Claude code, it actually solves
+all three. And the best thing about it
+is that claude code can actually program
+and code these things for you, hence its
+name, claude code. But when you connect
+it to external tools and you give it
+specific agent skills, it can do real
+business work. So you do not need to
+build any infrastructure for these
+agents. Claude code, it will handle the
+entire orchestration for you. Simply
+describe in plain English what you want
+in Claude. It will build and do
+everything for you. So what you're
+getting from this is developer level
+power without having to be a developer.
+You know, I think it was Andre Carpathy
+or maybe one of those other um CEOs. He
+was saying quite literally just a couple
+weeks ago that software engineers like
+they're going to be completely
+non-existent in about 18 months from
+now. And that's completely true because
+from what I'm seeing with these systems,
+you can drive significant amounts of
+leverage without having to be a
+developer because where AI is nowadays
+it can do incredible amounts of
+programming for you and that is complete
+game changer as a business owner. Now
+let me show you guys exactly how this
+works visually so that when we actually
+get into the walkthrough you will
+understand what is going on. So on the
+left hand side we have you let me zoom
+in a little bit. We have you of course
+being the user. So you can interact with
+claude code in two different ways. You
+can either give it a prompt like a
+question or you can give it a task or
+you can have it packaged into a slash
+command. So we'll get into that in a
+second but I like to think of slash
+commands like a button. So when you
+click this button, it is going to just
+run a workflow that you have previously
+defined. So instead of explaining
+everything over and over again, you can
+just package everything once and Claude
+is going to run it predictably every
+single time for you. Now moving on, we
+have the claude.md file. This is going
+to be your business brain. So this is
+where Claude's memory actually lives. So
+the claude.md file, all this is is just
+a permanent instruction file that gets
+loaded every single time that claude
+code actually starts a brand new
+session. So it's going to contain all of
+your business rules. It's going to even
+contain your SOPs if you have them, your
+brand voice, how you want to write in
+your language, how you want it to create
+your emails and format it to talk like
+you, how your data structures, where
+tools and files live, what text stack
+you guys use. So let's say
+hypothetically chatbt is a consultant
+that you hire every single day who
+forgets everything overnight. claude
+code. It is just going to be that
+employee who shows up with that entire
+employee handbook all memorized and will
+never forget a single detail. And the
+most powerful thing is that you commit
+this file to your shared repository. And
+now every single person on your team,
+they will get that context in that same
+exact system automatically. So for
+example, you can upload everything into
+GitHub, which is just a database where
+you can store things securely amongst
+your team. Moving on, we have agent
+skills. This is just going to be your AI
+playbooks. So skills, they are
+essentially just packaged instructions
+that tell Claude exactly how to do
+specific tasks inside of your business.
+So you can think of them as standard
+operating procedures all for the AI
+system. So Claude, it doesn't come out
+of the box knowing how to write
+proposals exactly in your language or in
+your way or qualify leads using your
+criterias. But when you give it a skill,
+it can do that work predictably, even
+consistently in the way that you have
+done it previously and how you want it
+to done more importantly. And with that
+skills, they do stack. So your lead
+qualification skill, it can trigger your
+proposal generation skill, which
+triggers maybe your follow-up skill. So
+you're essentially just building a
+library of reusable components that all
+are going to be working together for you
+and your team. MCP, it just stands for
+model context protocol. And this is just
+what allows Claude to connect to your
+entire tech stack. So again, like Gmail
+or Outlook, Notion, Slack, Salesforce,
+whatever. I mean, there's over 8,000 MCP
+servers available right now, and there's
+[clears throat] only going to be more
+and more. So with MCPs connected, Claude
+can actually read your CRM and send
+emails. It can update your databases,
+post to Slack channels or Teams, and
+automate multi-step workflows all across
+every tool that you are using. and you
+just simply have to add an MCP with one
+command in Claude, it will handle the
+rest for you. Last but not least, we
+have the sub aents. So the sub aents,
+these are all just parallel execution.
+So this is where it gets extremely
+powerful because claude can spawn
+separate AI instances to handle focused
+substacks, each with its own context
+window. You can have one agent just
+researching any competitors while
+another one is going to be drafting
+proposals while this other one updates
+your CRM and it's all running
+simultaneously. And because each agent
+has its own context window, the main
+conversation, it stays super clean. So,
+I know this might sound a little bit
+complex and confusing, just stick along
+with me. So, with all of this, you're
+not going to be losing context. You're
+instead multiplying your output. So,
+what would take you 8 hours of work, it
+will take you 30 minutes because sub
+agents, they do all of the lifting for
+you. All right, that's enough theory.
+Let me show you exactly how to get
+started. And I want you to know that you
+do not need to be technical. Once again,
+I'm just going to keep reiterating that,
+instilling it inside of your brain. So,
+first thing is to just download an IDE,
+whether that's going to be VS Code,
+Visual Studio Code, Anti-gravity,
+Cursor, or even Windsurf. They're all
+going to be completely free. All you
+have to do is just search up
+anti-gravity and you can find download
+it right here or you can be searching up
+cursor and you'll just go ahead and
+download it onto your computer. Now, as
+I mentioned, they are completely free,
+but they do offer their own paid plans.
+Although, if you're just using Claude
+Code, you will just be utilizing your
+Enthropic subscription or the API. I
+recommend using the subscription instead
+of the API because things can get pretty
+out of hand in terms of the cost. So,
+once you have it installed, you will be
+prompted a window like this. So, I'm
+just using cursor and we can either open
+a project, clone a repo, or connect via
+SSH. We're simply just going to open up
+a project. We're going to navigate
+inside of our AI folder. Create a folder
+wherever you would like. We're just
+going to call this biz demo YouTube and
+we're going to open this up. Now, this
+may look a little bit different for you,
+but if you are using cursor or even all
+the idees, they all stem from VS Code.
+So, cursor, anti-gravity, windsurf, they
+are built off of VS Code. So VS Code is
+the kind of foundation. So they're all
+going to be inherently similar. You can
+change the layout where you can have the
+agents. We can remove this. We can
+remove the chat on the right hand side
+and we can include the panel on the left
+which is just going to show us this is
+our computer. These are all of our
+folders. So if we were to add new files
+inside of our file explorer, you would
+be able to see everything over here.
+Anyways, on the lefth hand side, you'll
+have to find whichever system you're
+using, whether that's cursor or
+anti-gravity. You'll have to search for
+an extensions section. So, inside of
+cursor, we just have to click on this
+dropown. You'll see extensions. I know
+with anti-gravity, it'll just be instead
+somewhere down here. It shouldn't take
+you too long to find it. And we just
+want to search up claud code. It's going
+to be available on every single one of
+these. You may have to do a little bit
+of scrolling, but make sure you're
+finding the one that has the highest
+ratings because that's going to be the
+real one. From here, feel free to read
+any of the description, but all you want
+to do is just click on the install. Now,
+to actually start using Cloud Code, we
+are just going to click on these three
+dots, click on Claude Code open. If you
+are using this for the first time, which
+I'd imagine you would be, you would have
+to input your own subscription, you
+know, log to your Claude or Enthropic
+account or you can apply it just an API
+key. Now, I again would recommend just
+signing in with your Claude
+subscription. So, I would recommend to
+either have the $20 a month, $100 a
+month, or the $200 a month. Start off
+with a 20, see if you need to upgrade
+later. How you actually do that? You
+simply just search up Claude on your
+browser. You'll be able to create an
+account. You'll go to the settings and
+be able to upgrade, do whatever you
+would like. And if you want to utilize
+the API, then you just search Claude
+developer API
+and you'll be able to log into the cloud
+developer platform and get your API key.
+You know, put in $10, $20, whatever you
+want to do. Going back into our ID,
+we're just going to remove this chat on
+the right. This is cursor's native chat,
+so we can just utilize any of these
+models that we would like. We don't have
+to utilize cloud code or anything like
+that, but that's not what we're focusing
+on. We're going to be focusing on using
+specifically cloud code. We're going to
+close out cursor's native AI features.
+Now, moving on, we want to actually
+create a claude.md file. So, again, this
+is going to be our memory. To do so, we
+just have to type out slash init. So,
+this is going to initiate our instance
+and autogenerate a claude.md file based
+on our existing files. But I do
+recommend customizing it. So, what is
+going to be going in here is your
+company overview. So what you guys do,
+who you serve. So this can also be your
+key processes at a high level, even your
+brand voice, how you communicate with
+customers, how you want to talk, your
+data structure. So like where different
+types of information actually lives, and
+of course your tool connection. So like
+what external tools you use and how they
+connect. So just start simple. Do not
+try to document everything right off the
+bat. Just start with one process that
+you want to automate first and you can
+expand from there. So it's going to ask
+us if we want to allow this bash
+command. So, do we want it to give it
+access to our computer and execute some
+some code for us? So, we're going to
+continue allowing. Now, you can if you
+would like, you are able to bypass all
+of this where it's not going to have to
+ask you for permission every single
+time. In which case, once we allow all
+of this, we can just press edit
+automatically and it would be able to do
+everything for us without asking for our
+permission. Now lastly, it's going to
+ask us if we are allowing it to write
+the claw.md file once it was able to
+read all of our files and everything.
+We're just going to press yes. Okay,
+awesome. So it said created a minimal
+claw.md file for this empty project.
+Since there's no code yet, the file is a
+stub. It should be updated as the
+project develops with build commands,
+architecture notes, and key conventions.
+Now, if we just navigate back to our
+file explorer, we can see we now have
+our file. And once again, this is just
+going to be associated with our file
+explorer. So, if we come into our
+Finder, we can go into AI and if we find
+where our YouTube business demo was,
+you'll see here's the claw.md file.
+Simple as that. Back in our IDE, this is
+just going to be mapped on the right
+hand side, but you can move this around
+wherever you would like. So, if you want
+to put it at the bottom, you can put it
+at the bottom. If you want to put it on
+this left window, you can do so as well.
+And the point of all of this is because
+if you are working simultaneously on
+different projects or different
+processes, working with different agents
+or sub agents rather, then this is where
+it's going to be important where you can
+see everything all at once. Obviously,
+as I mentioned, because we didn't have
+any files or anything like that, SOPs,
+documents, guides inside of our folder,
+it wasn't able to really do anything.
+But if there were, it would look a
+little bit something like this. In which
+case I just duplicated another folder
+that I had which is basically helping
+with creating long form scripts. So we
+have our claw empty file. All I did is
+above I typed init and it is going to
+instantiating our entire environment. So
+we have the claw emptyd file. We have
+the system overview operating principles
+directive quick reference. So directives
+are essentially just all of my
+instructions. So important files that it
+should understand like our ICP, who we
+serve, our language that we like to
+employ. And once again, this is going to
+act as our entire brain. So it's going
+to be the memory. Anytime you are adding
+something into here. So if I want to
+provide it with a new file, it would
+then instill this into our entire cla.md
+file and continue just expanding upon
+that. Now, next up, we're going to be
+building our very first skill. So, this
+is where Claude learns to actually do
+work your way and what I use 99% of the
+time when I'm actually using Claude
+code. Maybe not 99, but a lot of the
+time it is able to do a lot of my work
+for me through the skills feature. So,
+to actually showcase like how this is
+actually best used, I'm going to be
+showing you guys how we actually do this
+and use it for our own company. So, I'm
+going to say create a skills folder at
+the Claude skills exploration proposal
+generator and create a skills.md file
+inside of it. Here's the content for the
+skill. Now, from here, I already have a
+document of our SOP for how we actually
+create proposals. So, we can see um an
+example of what a proposal should
+actually look like. We have the output
+structure, what it should be containing,
+situation, appraisal, what is the
+expiration, so on so forth. So,
+everything that we want to include in
+our proposals that we send to our
+clients. So, I'm just going to copy all
+of this and I'm going to go back to
+Cloud Code and just paste in the content
+for the skill. And we could just be a
+little bit more specific.
+So every time I want to create a
+proposal
+from a meeting, you should have them
+look like this.
+All right, let's make sure we are using
+opus. It's actually on sonnet. This goes
+to opus 4.6 and we'll run this. So now
+it's going to ask us if we want to allow
+some of the commands. It'll probably ask
+a few more times. You can see I just saw
+something got populated. So we have a
+claude skills expiration proposal
+generator. All right. Now here it's just
+going to ask us to allow it to write the
+skill.md file. We're going to allow
+that. Of course we can actually open
+this up. And we can see now it is
+finished up. So we do need this to
+convert to YAML format. So YAML this is
+just going to allow us to actually call
+this every single time we want it to be
+used. Now we want to add on to this as
+well. And we wanted it to be able to
+every single time that I have a meeting
+or I wanted it to be able to pull from
+our meeting noteaker and take that
+information, take the transcript and put
+it into this proposal. So what I can say
+is I'm going to be using something
+called whisper flow. Now whisper flow it
+allows me to dictate whatever I'm saying
+into this text box right here. So, I'm
+just going to type out I need you to
+also create a skill where it is going to
+one when I ask you to create this
+proposal for a client, you should be
+able to pull from Fireflies and take
+that meeting transcript, put it into
+this uh skill to create the proposal
+generator. So, we may have to delete
+some of what I said at the beginning.
+Okay, no, it actually looks good. We'll
+run this off and we'll see what it does
+from here. Now, while this is running,
+what we can also be utilizing is we can
+go inside of Claude and just use the
+browser version or you can use Claude
+Co-work to interact with these skills as
+well. And you can create the skills
+inside of there. But I would recommend
+to do this on your own computer. Here's
+how my file looks. I believe it needs to
+be formatted better for it to be
+utilized as a skill, right? So, can you
+give me the prompt for that if I'm
+correct? Now, it's going to ask allowed
+to write skill.md. We will press yes
+once again. And we can see um where
+would it be? Okay, it's still
+generating. Okay, so it actually just
+updated the skill. So it's now it's
+going to be expanded upon where it's
+going to convert those meeting
+transcripts into this proposal. Now like
+I mentioned, we have to convert this
+into actually being able to be used as a
+skill. Now this is only going to be for
+if we wants to utilize this. So if we
+want to go into claude and we want to
+utilize these skills, you can go into
+the connectors or capabilities rather.
+And if you scroll down, you can see the
+skills. So this is where this is going
+to be more so important because it's
+going to have to follow that particular
+structure. So if you're just building
+these on your own computer, it's not
+going to be a huge deal, but all you
+will have to do is just type out read my
+skill and reformat to follow proper
+claude code skill format. And I'm just
+giving it some specifics of what I need
+it to be doing. But usually if you are
+just saying make sure to reformat so the
+follow the proper claude skill format,
+it's going to look up claude code, look
+up the documentation and find out what
+it needs to be doing specifically and
+handle everything for you. So this part
+isn't even completely necessary in which
+case it's going to be more so applicable
+to be doing something like this where
+you guys can see we have uh the pitch
+deck generator and the expo expiration
+proposal generator. So we also have some
+example skills. So, if he wants to um
+set something up with like skill
+creators where it's going to help you
+create new skills where you can just
+copy this, you can try it in the chat
+and it's going to help you create a new
+skill and handle everything for you. So,
+you don't have to everything that you're
+going to be doing. It's not going to be
+all done in just one way. There's a lot
+of different ways to get things done.
+So, what I'm going to personally say is
+I need you to grab my most recent
+reprise AI automation inquiry transcript
+from Fireflies and then I need you to
+created into a proposal using the skill
+that we just created.
+We'll run this off. I'm going to be
+using Sonnet 4.6. It's a little bit
+faster and it is going to be doing just
+as good of a job. So, we'll see what
+this can create for us. So it's going to
+interact with our MCP that we already
+have Fireflies connected to. So it just
+fetched the transcript.
+You can see the IDs reprise AI
+automation inquiry and it's going to
+start creating everything for us. We can
+even delete some of these folders. Quick
+note, if you press command W or control
+W if you're on Windows, then it'll close
+everything out. So now it's going to
+start creating the proposal in the exact
+format that I have just described. So,
+it's giving the primary contact, what
+the investment is going to be, what is
+the expiration going to be pertaining,
+what we're going to be doing for them,
+all the deliverables, everything. And we
+can even have this um put it into a DOCX
+or Google Doc if we would like. Now, you
+can be doing this for so many different
+functions inside of your business. So,
+if you want to be doing this for sales,
+like going through lead qualification or
+proposal generation, or for marketing,
+doing content repurposing or SEO
+analysis, you can absolutely do so. if
+you wanted to be able to scrape leads
+from the internet. So you let's say you
+have a process of lead generation in
+which case the first phase is going to
+be going on to Apollo and scraping leads
+finding all of those and you can use
+Amppify where you can just automatically
+scrape everything. So Appify is just an
+API marketplace where you're able to
+make calls to different third parties.
+So here you would be providing cloud
+code your API to apply where it's going
+to automatically scrape everything from
+Apollo and then you just provided
+directions on what else you wanted to
+do. So maybe you wanted to control your
+browser and then automatically create
+the emails based on the findings and
+maybe you have it as another step to do
+research into them and search their
+website so on so forth. So you can be
+doing 99% of your job just through
+making sure that there's an API
+available for at least some components
+of it. But if not, it's able to even
+control your browser. But with that,
+it's going to be as simple as, hey, I
+just want you to control my browser for
+this portion, and it'll be able to
+connect to Google Chrome and control
+your browser, in which that is going to
+be called a headless browser. But
+anyways, there is quite literally no
+limitation to what skills that you would
+like to be building out. And again, a
+skill is just a markdown file inside of
+this Claude skills folder containing
+structured instructions. So, you give it
+a name, you give it description, so
+Claude knows when to activate it, the
+tools that are going to be needed, and
+the step-by-step instructions for how to
+actually do the work. And once it's
+created, Claude can pull it up
+automatically whenever the context
+matches. So, maybe the first iteration
+or first time you build something out,
+it's not going to be perfect. In which
+case, just continue iterating. Tell
+Claude what you want to be done, how you
+want it to be done, what needs to be
+changed, what adjustments you would like
+to make, so and so forth. You couldn't
+tell already, Claude Code, it's not just
+a coding tool. The question isn't like
+is this going to be a coding task you
+know trying to transform what manual
+processes you are doing right now. It's
+more so coming from a stance of asking
+like can this be done digitally and if
+the answer is yes then cloud code can
+probably do it for you. Now we've been
+seeing the biggest lift and leverage
+being generated in content generation
+and marketing. So let's say you have a
+blog post that performed well and you
+want to just repurpose that into
+LinkedIn posts, Twitter threads and an
+email newsletter and YouTube scripts. So
+you could just build one content
+repurposing skill. You point Claude at
+the original piece. Claude will spawn
+sub agents, one for each platform, and
+then each one's going to apply platform
+specific formatting and tone. And 10
+minutes later, you're going to have a
+week's worth of content in your hands.
+So as I mentioned, you can also be doing
+this for email outreach and follow-ups,
+operations and admin. And I mean, you
+can do it for so many different things
+like where with email and outreach, you
+can have it read your inbox, draft
+responses matching your your voice,
+categorize emails by the priority,
+handle the follow-up sequences as well.
+Now, moving on to one of the most
+important sections is getting your whole
+team to be using all of this. And this
+is something that a lot of people
+actually miss is you can build the most
+sophisticated AI system in the world,
+but if your team doesn't adopt it, you
+have quite literally just built nothing.
+You've created an expensive science
+project that just sits unused. So, I've
+actually seen this kill more AI
+implementations than the technical
+failures. So, the system works, RAI may
+be there, but six months later, nobody's
+using it. So, why? That's because
+businesses treat this as a technical
+problem where it's actually just a
+people problem where your team is scared
+that AI will replace them. They're
+skeptical because they've tried tools
+before that just made things worse.
+They're overwhelmed because they're
+already buried in work. And if you don't
+address these fears directly, your
+transformation, it will fail. Point
+blank. Period. So, what I recommend for
+you in your business is starting small,
+starting with something that's actually
+going to drive a significant amount of
+leverage. You know, trying to find like
+the biggest bottleneck that you can
+solve. Of course, you want it to be a
+quick win. You don't want to spend too
+much time on it. You want it to provide
+a result relatively quickly. Now, from
+there, if it is going to provide some
+use to your team to actually share it
+with them. So, maybe if you have five
+people all having to do the same
+workflow every single week, well, in
+that case, all you will do is you can go
+ahead and go to your finder. You can
+find the folder that you are working. So
+this is called long form copy and you
+can just share it with them. So you can
+upload it to drive, one drive or Google
+drive. You can send it across email,
+teams, whatever you want to do and they
+will just have to install the IDE and
+they can just open up this particular
+folder. That is as easy as it can get.
+If you do want this to be shared
+synchronously, in which case every time
+you make a change or make an update,
+well there you will have to be using a
+repository. So you can utilize something
+like GitHub to share this. And if you
+want something to go live, so maybe you
+have triggers or you have web hooks
+installed where an email comes in, you
+want it to automatically run this
+system. Well, you can deploy all this
+code into publications where you can run
+this live. So you can push this to n or
+you can deploy this code onto a VPS and
+it will run this automatically for you.
+But I'm going to cover that in a
+different video. So if you guys want to
+see that sooner rather than later, just
+let me know if you guys have interest in
+that and I'll be happy to create a
+video. So once your team is actually
+using this your business, you will
+notice that you're operating
+fundamentally differently and your role
+it will slowly transform. So you go from
+being in the weeds, firefighting,
+responding to every issue buried in
+Slack channels to being the architect,
+you know, you're reviewing performance
+dashboard, you're identifying the
+improvement opportunities. You're even
+designing new workflows and you're
+thinking about strategic outcomes
+instead of having to react to any
+operational chaos. And this is really
+the shift from operator to owner. So
+you're no longer the bottleneck. You're
+instead becoming the designer of systems
+that all run without you. And you'll
+notice that your hiring changes, too,
+because eventually you'll add headcount
+again, but the roles are completely
+different. You're not hiring someone to
+manually process invoices. You'll
+instead likely be hiring someone to
+optimize the invoice automation system
+and analyze it. You're not hiring
+someone to respond to customer emails.
+you're instead hiring someone to train
+the AI on better responses and handle
+the complex edge cases that require any
+human judgment. You'll also find that
+your margins will improve dramatically.
+So when you eliminate 30 to 40 hours per
+week of manual work, either your team
+accomplishes dramatically more work or
+your revenue increases without cost
+increases or you can accomplish the same
+with far fewer resources and your cost
+decrease without revenue decreases. So
+most businesses they do a combination of
+both and your system it becomes your
+moat. Once you have built this
+infrastructure a competitor they can't
+just copy your website or your pricing.
+They'd have to rebuild your entire
+operational backbone which took you six
+to 8 weeks to build and optimize and by
+that time they ideally for you they
+cannot catch up and you're another year
+ahead of them. With all that being said
+the window for this transformation it is
+open right now but it will not last
+forever. There is this temporary period
+where the demand for sophisticated AI
+implementation, it just massively
+exceeds the supply. And companies that
+establish themselves as truly AI first
+in the next few months, I promise you,
+they will capture the majority of
+long-term value in their markets. And
+everyone else, they will just simply be
+fighting for the scraps, all years
+behind. And this is not hype. Bod, they
+just hit $1 billion in annualized
+revenue within 6 months of general
+availability. It's used by 70% of
+Fortune 100 companies. The ecosystem is
+maturing so rapidly that what cost
+$50,000 to implement last year costs a
+few thousand or maybe even a few hundred
+dollars today. And beyond that,
+Enthropic, the greater of cloud code,
+their own 2026 Agentic Trench report
+confirms that non-coders are now the
+fastest growing segment of cloud code
+users. So customer expectations, they're
+changing, talent expectations, they're
+changing. The businesses that move right
+now, they will be the ones that dominate
+their industries for the next decade or
+so, if they are still around. So, with
+that being said, if you are a business
+owner, you're looking to have a team
+like us come in as a transformation
+partner, handhold you, make sure you
+guys are doing everything right,
+teaching your teams to catch up to speed
+on everything they need to be knowing
+for the next decade to actually win in
+this AI era. Then check out the link
+down below to book in a call with us.
+We'll give you a free AI audit. And our
+ultimate goal is to either increase the
+bottom line or drive significant amount
+of leverage inside of your business. So,
+with that being said, thank you guys for
+watching. Let me know what you guys
+think, where you're at with this.

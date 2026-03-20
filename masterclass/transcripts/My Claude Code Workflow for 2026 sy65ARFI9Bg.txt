@@ -1,0 +1,686 @@
+Okay, so I'll be showing my AI agent
+ 
+coding workflow going into 2026. And
+hopefully you can learn a few things
+from this video to apply to your own
+workflow. And if your workflow does
+differ significantly from mine, then do
+leave a comment down below because I'm
+pretty interested in improving mine and
+it will help other people as well.
+Before getting started, this video is
+sponsored by myself and my cloud code
+masterass. It is the most comprehensive
+Cloud Code class you will find on the
+internet right now. And there will be a
+link down below alongside a coupon code
+because there's a New Year's sale going
+on right now. So you will be able to get
+it cheaper and I do update the cluster
+regularly with any new features
+available in cloud code. Now first of
+all you can save yourself a lot of time
+when it comes to creating a spec because
+you can use a screen recording. So if
+you have a brand new product idea or a
+feature idea, it's a very likely that
+product or feature already exists in
+some form of another on a different
+website or somewhere else. And in that
+case, you can save yourself a lot of
+time by going to the other website,
+doing a screen recording, and then
+talking as you're making the recording
+about any ideas that you have, features,
+and maybe using a program to draw on the
+screen as you're like going through the
+other product. And then you can
+basically upload that to Gemini 3 Pro in
+Google AI Studio. Say something like,
+"Can you give me a PRD based on this
+particular like product?" And then it
+will give you a rough PRD. And then once
+you transferred it over to Cloud Code,
+you can basically iterate and improve on
+it. Some people like using the BMAD
+standard or like GitHub spec kit, but I
+personally just like using the ask user
+question tool and there's a very good
+prompt that one of the enthropic
+employees has shared previously that you
+can do to improve on the spec that
+Gemini free pro has given you. So you
+can like say read the spec file that
+Gemini free pro gave you. Interview me
+in detail using the ask us a question
+tool about literally anything. And then
+you should see a bunch of questions that
+look kind of like this. So you can see I
+answered a few questions before and now
+it's asking me more questions like how
+should the formatting toolbar be
+positioned presenter how should the
+emoji keyboard be like add a full
+complete emoji picker for example and
+now that I have this improved
+specification through the ask us aer
+question tool I find a problem with many
+coding agents these days seem to be
+because of the outdated context window
+and a tendency to want to write
+everything from scratch it just builds
+out like custom implementation for
+things in a worse way. So for example,
+instead of using a what you see is what
+you get editor library, it just decides
+to make one itself. And whilst it is
+aware of many of the popular packages,
+there may be less popular packages that
+only have like 3 or 4 thousand GitHub
+stars that solve that particular issue
+that the agent isn't really aware of.
+And you have to make it aware of that
+particular package. So what I do is I
+give the specification over to something
+like Chad JPT turn on heavy thinking
+because it basically allows it to do
+more searching online and then say using
+this particular specification can you
+search online and find any relevant
+GitHub packages that may be useful in
+developing this feature. Search online
+and find any well-maintained packages
+that seem to be updated regularly have
+reliable communities and can simplify
+the development of this particular
+feature. When there are multiple
+options, propose different ones with
+their advantages and disadvantages, they
+should be compatible with Nex.js. And
+then that then leads me to even better
+specification that uses many libraries
+that will speed up the development
+process and make sure that it's working
+more reliably. And then I have cloud
+code break down the specification into
+phases like you can see here and then
+have it check off things as it's being
+completed. And between each phase, I
+then test out the application to make
+sure it works properly, refine the spec
+before moving on to the next phase. And
+that basically means that I now have a
+significantly better product that kind
+of aligns with my vision of what I
+should be. I find that the two most
+useful parts of this process is using
+Gemini free pro to basically like turn a
+screen recording into a spec and then
+also using chat GPT to find your
+relevant packages online. Now a lot of
+this AI tooling and not having to write
+much code. It may make you question like
+what is your whole role in the process.
+And for example last year I basically
+made this entire application hypoppper
+without writing any code. like I
+probably wrote like two free lines
+myself out of the tens of thousands of
+lines and I'm almost done with the
+Windows application as well. There will
+be a coupon code in sale on right now as
+well if you're interested. And basically
+the way that I see myself in this
+process is I'm here designing the
+feedback loop that basically allows the
+agent to build effectively fail and
+learn for identifying bugs and then make
+improvements to any internal
+documentation and prompts that I'm
+giving the agent whether that be through
+skills/comands and so forth. And then
+also improving prompts within the
+claw.md files and real files. I find
+that your role as orchestrator should be
+to actually watch the agent, see what
+it's doing. Look at any reasoning that
+it may be doing off regularly and then
+basically designing a feedback loop
+where it can work effects on the inside.
+And that could be something like using
+the agent to regularly make updates to
+its own claw.md file. So it prevents
+itself from making as many mistakes
+often. And you may have an idea that you
+quickly want to play with or test. So
+you just make a duplicate version of the
+application like play around without
+worrying about having the perfect
+implementation and then feel free to
+throw that away because like code is
+very throwwayable these days and then
+making sure you're using the right model
+or agent for that particular job using
+the right CLI tool for example and you
+still need to make higher level
+decisions that the agent may not be able
+to make for you at the very beginning
+such as the database you're going to be
+using which tools and skills you need in
+your project or what you're even passing
+to the context whether that's through
+MCP servers. So, for example, if you're
+implementing like a Stripe refund
+system, you want to guide the agent to
+like actually looking up the
+documentation because whatever Stripe
+information it's trained on may be
+outdated. The way that I see myself in
+the whole process is to just monitor the
+agent and then consider which ways that
+it could be improved and what mistakes
+it's making regularly and what I can do
+about it. And then also keeping up to
+date with the latest information such as
+sub agents, skills, slash commands, and
+any new features, most of which I have
+covered in my cloud code masterass I'll
+link down below. And yeah, that
+basically just prevents me from falling
+behind. But you do have to go through a
+lot of these problems yourself so you
+can actually appreciate the solution
+because some of the lessons in the class
+may not actually make sense if you
+haven't experienced that particular
+problem before. As for the kind of
+models that I find myself the most going
+into the year, I use Opus 4.5 the most
+because I find it to be best at making
+large scale features changing a lot of
+files through refactors and also just
+writing clean and focused code. Probably
+70 80% of the time I'm using Opus 4.5
+and I use that sort of every single
+session. But often I do switch over to
+Sonic 4.5 for any very small fixes, UI
+tweaks or doing a code review if I'm
+reviewing someone else's code and then
+also writing a nice change log and
+summary of all the changes that have
+happened. Whether that's for release
+notes or like product updates or
+something else. I do find myself using
+GPT 5.2 more when it comes to
+architecture and planning related
+decisions. I find that sometimes when I
+start building out a project with Opus
+4.5, then later on it becomes clear that
+like the architecture that it chose at
+the very beginning was not actually a
+very good idea. So when I know the
+project is going to be particularly big,
+then I pass that spec also through GPT
+5.2 to help like decide how things
+should be structured. It's also pretty
+good at debugging, which I will get on
+to in a second. And then Gemini 3 Pro
+for any design and creativity related
+tasks. I have used Gemini free flash for
+designer related stuff and I just did
+not find it to be like as good. There
+are a lot of videos already on YouTube
+about this of how you can use Gemini
+free pro for design. And since Haiku 4.5
+is really fast when it comes to
+answering questions, I use it for
+getting quick answers about the code,
+explaining things to me like basically
+teaching me something new and making
+very fast precise edits in files that I
+know the edit should be made in. Now I
+do use Opus 4.5 as my primary model for
+most of the time. But when I get stuck
+on a complex problem that it doesn't
+seem to be making any progress in going
+around in circles or just failing
+completely, then I just switch over to
+GPT 5.2 via Codeex CLI. And I use extra
+high reasoning effort for really hard
+problems. But I mostly stick to high
+reasoning effort when it just comes to
+making changes to codebase. And yeah,
+this is like a general trend that I've
+seen many people doing. when they
+struggle to have one model fix a
+problem, they basically just pass it to
+another model and because of the way
+that it was trained and the training
+data they may have and the biases and so
+forth, it may be able to figure out a
+solution to that particular problem that
+the other model failed to do. I have
+seen some other people doing pretty
+interesting things online where they,
+for example, get Gemini free because it
+has a much larger context window. They
+pass most of their codebase into Gemini
+free and get it to write a prompt which
+is like very fine and detailed and then
+pass it to like Opus 4.5 for the actual
+implementation. And I'm actually keen to
+experiment with that approach more this
+year to see how well that works for me
+and the problems that I'm facing when
+coding. Now since the release of Opus
+4.5, I have found myself to be using
+codeex CLI less. Before I used it like
+50/50 cloud codeci. Now it's more like
+80% cloud code 20% codec. But I do find
+it to be helpful when it comes to things
+that require a lot of context. It feels
+like the way that codeex CLI related
+models have been trained is that they
+basically first gather a lot of context
+throughout the codebase. So it could
+spend like 10 15 minutes just gathering
+files throughout the entire codebase
+reading a lot of code understanding the
+context building like a mental map and
+then whenever it makes an update usually
+the update or like the refactor that it
+makes is pretty accurate. So personally
+I find it to be better at longer
+background running tasks. So I can say
+look at the recent errors from Sentry
+and then figure out what are causing
+those sentry errors in the codebase.
+Basically tasks that I know will end up
+reading a lot of code require deeper
+understanding of the codebase and
+basically things that require less
+context switching because when you're
+using cloud code I actually find that it
+can have like shorter cycles like be
+more actively engaged. It is more chatty
+as well and it will ask you more
+questions before getting on with
+something and you can just interrupt the
+model more and like get it to make small
+tweaks and clarifications and then bring
+it back on track to like the main task
+at hand. I find that cloud code does
+seem to be more interactive in that
+sense and it has like a different rhythm
+to it. But ultimately, you should try
+out both and just see which rhythm you
+like when it comes to your own workflow.
+I find that Opus 4.5 does have a quicker
+start time, is more eager to make edits
+and can miss some critical context that
+usually codeex would have figured out
+because it just read through more files.
+And this can make the fix of Opus 4.5
+slightly less effective, especially when
+the fix is coming from like a more
+fundamental error that requires like a
+bigger mental map of the codebase from
+reading more files. I find that codeex
+does solve those errors more or better
+that are fundamental to the way the
+codebase has been architected or
+designed at the beginning than Opus 4.5
+is able to do. But of course, if you do
+have indefinite experience from me, then
+do leave a comment down below because
+I'm pretty interested in that. Now, one
+thing that I have been doing is having
+multiple CLI tools running in parallel.
+So it would have like three sessions of
+cloud code for example or two sessions
+of cloud code and two of codeexi
+basically working on different tasks in
+different projects. I tried to have it
+work on the same project like working on
+multiple features at the same time in
+different get work trees but I found
+like merging those features together
+into a new branch to be like a bit of a
+pain and most of the time I have like a
+main project that I'm working on or two
+main projects and then I have some
+satellite projects. So for example, I
+made a small add-on for myself and a
+couple hundred other users which is like
+a fun small satellite project and then I
+made a couple of small projects as well.
+So basically I have these small pain
+points that I usually turn into some
+kind of product or small micro
+application which only me and maybe a
+few people would use and that just makes
+my life significantly easier. I know
+that some people have been doing things
+like having 10 instances of cloud code
+running at the same time and honestly I
+don't know how they do it because like
+the amount of context shuffling or
+switching that I have to do between like
+each session of cloud code usually means
+I can only do like four sessions and
+then after a couple hours I feel pretty
+tired because of the amount of context
+switching that I have to do during those
+4 hours and that also means that like I
+have to be in silence and I can't be
+playing music or something and just like
+concentrating on the different sessions
+at hand. So, I guess if anyone does have
+an idea of how you can actually be using
+10 sessions in parallel like some people
+are doing, which I don't actually
+believe they're doing effectively, then
+do let me know. Unless most of the
+sessions that they actually have, they
+have these like boring tasks choking
+along in the background instead. Now,
+nowadays, I basically dictate all my
+prompts. I very rarely find myself
+writing out prompts anymore. And I use
+my own tool for this called Hypisper.
+There is a new year sale going on right
+now as well, so you can use a coupon
+code down below to get access to it. And
+basically the model that I use the most
+is parakeet to version two which is an
+offline model which means that it's like
+totally safe your data is not going to a
+cloud. And then within cloud code I
+would basically just press a shortcut
+and say can you list all the features
+that I have in this application press
+stop. And you can see usually in under 1
+second it's actually written out
+anything that I said. Sometimes
+dictating for over 2 minutes it's
+written out in under 2 seconds. So yeah
+right now it's a Mac OS. So if you
+interested there will be a link down
+below and there will be a Windows
+version of the application coming out
+later this month. So there will be a
+wait listed down below for Windows users
+who are interested. Now next up with
+cloud code is I basically use planning
+mode in almost every single session at
+the beginning of the session or whenever
+I want a decent sized feature changed
+and that's because if you're not using
+planning mode like it doesn't have a
+good pattern that's established. So
+sometimes what would happen is that if
+you just like give it some kind of
+prompt and you keep doing this, then you
+would have like one version of user
+authentication, one API pattern enabled
+and then another one and then another
+one and you'd have this kind of like
+architectural drift happening within
+your codebase where you have
+inconsistent patterns which lead to
+slower reviews and also like agents that
+are more confused in the future. But
+when you enable planning mode, basically
+what happens is that cloud code spins up
+multiple explore sub aents that search
+through the codebase to find existing
+patterns that are well established and
+then that data is passed on to the
+planning sub aent that then uses those
+existing patterns that have been
+established to then build upon them and
+basically prevents this kind of drift
+from happening in the future. And
+honestly, this is one of the things that
+has been a pretty big unlock this year
+when it comes to coding agents.
+Previously, people would use like rag
+based indexing to find relevant files in
+the codebase that would be passed onto a
+coding agent that would identify and
+identify patterns. But it actually turns
+out that when cloud code introduced
+agentic gp where gps through the
+codebase to find relevant patterns and
+has multiple sub agents doing that to
+find it throughout the codebase then
+this leads to significantly better like
+context retrieval than any kind of like
+grabbed strategy would. There have been
+interviews where the creators of cloud
+code have talked about this as well and
+yeah this is like what makes planning
+mode a pretty big unlock. Now cloud code
+will spin up explosive agents as well
+when needs be. But if you switch over to
+planning mode then you can ensure it
+actually does. And basically for any
+task that I know will change more than
+like 10 15 lines of code. I almost
+always use planning mode for and even
+though it can take longer in some cases
+I do find it tends to be more accurate
+overall. And I actually don't care as
+much about how long it takes because as
+I previously said, usually I just switch
+my focus to a different CLI uh working
+on a different project. Now at the start
+of 2025, I find myself inspecting every
+single line that a coding agent had
+written, like doing a line by line check
+to make sure that it looked good before
+committing it. But nowadays, I don't
+even check most of the lines. I
+basically just open up cursor and I do a
+quick look at the top right of how many
+lines have been changed and the files
+that were changed. And if it looks like
+the diff is a correct shape, then I just
+make that commit. Because often I find
+that when the plan is good and the shape
+is correct, then the code is almost
+always correct. But when the shape kind
+of looks off because it edited files
+that I did not expect it to edit in a
+different part of the codebase or it
+like changed too many lines, then I
+actually look through the code and then
+I'm like, okay, well clearly like
+something was wrong with my prompt or my
+plan or something else. So yeah, now I
+just generally look at the shape of the
+diff and that's been a big change of the
+last 12 months. So, I'm pretty
+interested in watching this video a year
+from now to see how much AI coding has
+changed and whether this is something I
+would still do. I find myself being more
+confident when using TRPC or Prisma
+because they're type safe and then I can
+rely on the shapes more instead. And
+then I also read through the agents
+reasoning and I add any things that I
+have like thoughts about to the claw.md
+file. So, if I think that I should have
+taken a different approach or like it
+missed architectural design or a
+pattern, then I would correct it. And
+then at the end of the session I would
+say can you update the claw.md file with
+x y and z or I would get it to make a
+claw.md file within that particular
+subfolder. And I do talk about
+hierarchical claw.md files in my cloud
+code master class as well that talks
+about that in more detail. Now one big
+change in my workflow has been when it
+comes to using sub aents when sub aents
+were first introduced about six seven
+months ago. I think I made one of the
+first videos on sub agents and I
+basically talked about assigning
+different roles to sub agents because
+many people were sharing that online on
+Twitter and everyone was like oh you can
+have a front end sub agent and backend
+sub agent like have all these sub agents
+and then assign them different roles and
+then have them like all run in parallel
+basically and I tried doing that for a
+while but I found that to be pretty
+effective because there were like
+coordination issues where the
+contributions that sub agents did make
+would not mesh well together. The sub
+agents would misinterpret requirements.
+there'd be over issues when it comes to
+like combining outputs and stuff like
+that. And to avoid a lot of this
+behavior, you would require complex
+specification to know what to give each
+sub agent that would lead to more hassle
+overall. So, because of like the
+coordination issues and the mess, I was
+like, okay, well, I'm not going to be
+like assigning different sub aents to do
+different edits within the codebase
+within the same codebase in fact. And I
+found that sub aents to be significantly
+better at just controlling the context
+instead. So often when using cloud code,
+I would just say can you spin up an OPA
+sub agent, a highQ sub agent, sonic sub
+agent that uses the XA MCP server to
+search online to figure out how this
+implementation for like superbase off
+should be made. I would spin up like
+three or four sub agents in parallel to
+basically look at the codebase, figure
+out what is causing a particular bug and
+consider it from different angles. For
+example, I'd get another sub agent
+search online, find relevant
+documentation for me, and return
+distilled relevant information back to
+the main session, which will then
+actually go ahead with the
+implementation. So, most of my sub aents
+that I use are research and thinking
+first. So, they're usually researching
+something online or like looking at the
+codebase trying to figure out a problem
+from different angles and benefiting
+from the isolated context window because
+they're isolated from the main session
+except for the assistant prompt that was
+passed on to sub agent. And yeah,
+basically after switching to this
+approach in like September time, I've
+been using sub agents pretty much every
+single day. So yeah, generally I would
+not make edits with sub aents,
+especially not large edits. But there
+are sometimes where I do make edits with
+sub aents. So for example, I may spot a
+mistake in one project when it comes to
+like an implementation. And I know that
+mistake exists in other projects on my
+machine because they've all been derived
+from the same template. So then I would
+spin up multiple sub aents to go and
+find those projects and then have one
+sub agent per project to actually make
+that fix to that particular project. And
+I think that this is fine because it's
+like a very small well- definfined fixed
+and you don't have multiple sub aents
+running within the same project making
+changes in the same project. So you
+don't have to worry about meshing
+issues. But sometimes I do get to
+paralyze many small edits within one
+project. So for example, if I decide to
+add I18N translations to a project, I
+could have a lot of hard-coded strings
+for the entire codebase and that could
+be like 500,000 strings and then I would
+basically come up with a plan and get
+different sub aents to paralyze all of
+this. So look through the project and
+make these very small edits where they
+extract the hard-coded strings into i89
+files. So basically most of the time I
+would avoid having multiple sub aents
+making large edits within the same
+project because I know the changes will
+not mesh well together. And now a final
+small handy thing that I do when it
+comes to using cloud code is I fork the
+session to help improve my understanding
+of what cloud code is actually doing. So
+when I notice it doing something kind of
+crazy or I'm like oh that's interesting.
+I wonder why I did that approach. I
+usually just do like split pane write in
+warp which is my like terminal of choice
+and then I do claude continue fork
+session and this will load the last
+session that was happening in cloud
+code. So you can see the exact same
+session is happening here but it
+basically duplicated that session. So
+like if I make edits over here, no
+editor will be like changed to the
+original session. It duplicated that
+session with a brand new session ID and
+then I basically ask any question. I'm
+like, okay, why did you choose that? Why
+did you go for that approach and that
+basically means that the main session
+can continue on uninterrupted and I'm
+not adding like random explanations and
+stuff like that into a main session and
+I'm basically having all of that
+happening in a new session. And then
+sometimes I would get it to search
+online, find like relevant information
+for me, draw mermaid diagrams, and
+basically help me improve my
+understanding of like what it's doing as
+a whole because I just enjoy learning
+that kind of stuff. And it also means I
+can switch over to a less powerful
+model. So I can switch over to Sonet
+instead in this fourth session and ask
+those questions in the fourth session.
+Anyways, if you do want to learn a lot
+more when it comes to using Claude Code
+and mastering every single feature of
+Claude Code, then that's all covered in
+my Claude Code master class. There will
+be a link down below if you're
+interested with a New Year's sale coupon
+code. It is the most comprehensive class
+on Claude Code on the entire internet
+and you can search online and check. And
+if you're interested in my speech to
+text application that I have that will
+also be linked down below. I also did
+start a brand new newsletter as well
+where I share my vibe coding techniques,
+my thoughts on any new models that have
+been released, any papers or research
+that I came across that was pretty
+interesting. If you're interested, there
+will be a link down below to check it
+out as

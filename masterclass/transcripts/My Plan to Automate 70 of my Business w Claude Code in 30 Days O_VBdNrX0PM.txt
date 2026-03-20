@@ -1,0 +1,556 @@
+All right, guys. So, you might have seen
+ 
+my recent video on me saying AGI is
+here. And my next steps after that is is
+sharing with you my plan on how I plan
+to implement this AGI into my business
+to automate 60 to 70% of the tasks that
+I currently do. And this video is going
+to be breaking down uh my kind of
+approach to it, what this model is, and
+and the methodology that I've come up
+with, and hopefully give you guys a bit
+of a pointer in the direction of how you
+can start with yours. Um, I'm going to
+be making a ton more content around how
+to actually get this set up. This is
+just a highle snapshot of what I'm doing
+with our businesses. I' I've been
+running AI businesses for the past three
+years now. I've got my content business
+which essentially runs it south cuz it's
+got sponsorships and stuff like that. So
+we treat that as a business. Um
+Morningside AI, my AI development and
+consulting agency or AI transformation
+partner as we call it now. Morningside
+education where I do my info stuff
+through my school community and also my
+accelerator program. And then
+Morningside Ventures where we have our
+SAS arm and investment arm as well. So,
+we've got a a product in there and we've
+got another one in partnership. So, been
+running AI businesses for ages. And this
+stuff that I'm about to talk about, this
+AIOS, AI operating system that I'm about
+to share with you is the biggest thing,
+the most exciting thing that I've seen
+since Chief D came out at the end of
+2022. Right? This I have the same
+feeling, maybe even more excited than
+how I felt like back then with the stuff
+I'm about to share with you. Because if
+you're a business owner or you're
+aspiring to become a business owner,
+this is the future of business. This is
+all you need to be thinking about right
+now. Please, business owners, drop
+[\h__\h] everything and listen to this
+stuff. Subscribe cuz I'm going to be
+like ramming the stuff down your throat
+for a while now because I will not stop
+talking about it. And when you see this
+sort of systems that I've set up here
+and what it can do for your business,
+you'll be totally on board as well. For
+those of you who are not familiar with
+any of the stuff I'm talking about and
+like, what the hell is this dude talking
+about? Uh, there's been a a big shift in
+AI capabilities and the ability to
+essentially you can automate anything
+now. And I do not say that lightly. I've
+always had a healthy skepticism toward
+uh vibe coding and and building and
+things like that. But this is different
+and it's different because I've seen it.
+And the things I'm going to talk about
+on here have proven to me that there is
+now this if you can dream it, you can do
+it. And you don't necessarily need to
+even be that technical. So if you're a
+business owner thinking you need to have
+a whole team of devs to achieve some of
+the stuff I'm going to talk about,
+that's not true. And it's all centered
+around claude code. And I know clawed
+code might sound like a dev tool, which
+it originally was, but it is so so much
+more than that. And all of the stuff
+that I built here is essentially putting
+layers and layers around a claude code
+setup that allows you to run your
+business from it. In my case, I'm
+running it from Telegram. Uh it's here
+on my phone. So, if I'm out at the
+beach, I'm actually going to film a a
+vlog if you guys want to watch kind of
+behind the scenes of of me and all my
+friends. We're here. I was supposed to
+have left here already, but we're going
+to stay here because we're so locked in
+on this. Hence the generational port
+code lock in. And we are just absolutely
+nerding out on this trying to automate
+as much of our business as possible. And
+so I haven't got much space but I'll try
+to explain what code is and how it
+applies to this. But you essentially
+have the model
+and the model is like GPT5 or you have
+uh anthropic opus 4.6 and then you have
+what's called a harness. I don't really
+know how people would visualize that but
+here's a harness around the model.
+Oh, that was pretty good.
+And what claw code is that built all
+these like tools that allow the model to
+do things in a much uh more powerful and
+fluid way. So these are like connectors
+to all sorts of different services. It
+can read files, delete files. And while
+this was originally intended as a
+development tool, you can connect all of
+this into a more general purpose
+business workspace um that does all of
+these things. So long story short, I
+have created a folder on my Mac. I have
+opened it in a coding environment. And I
+know that might sound scary, but I will
+be explaining in my next couple of
+videos on how to set these up. Uh it's
+really not that difficult. I've seen
+people right in front of me do it as a
+completely non-technical person, but you
+set up a couple of folders, you add in
+context about you and your business, and
+then you're able to start adding layers
+and layers and layers on top of that.
+Fame for context. I'm going to be aiming
+to if I go up here tick as many of these
+off as I can over the next few weeks uh
+so that I can get some kind of
+percentage 60 70% of my business will be
+automated with AI or at least the tasks
+that I currently do and there's of
+course there's many different things I
+could roll in. I was like there's
+there's always like a million projects
+or things that you want to do with the
+business but I'm just going to focus on
+the things that I'm currently doing that
+I can get off my plate or heavily
+augment or delegate to uh to this AI
+system. So the idea would be to get to
+60 to 70%
+70%
+uh automation. And so we have like zero
+out of however many this is. I need to
+count them up. But this is essentially
+my plan. I've gone through each of my
+businesses and I've written out what are
+the things that I'm doing in the case of
+content. I'm responsible for all of
+this. It's like really what I am
+responsible for the results for. Um then
+I have a business partner who's really
+responsible for the results here. Uh we
+have forest education and ventures and
+these are the things that I do within
+each of those. Business OS, however, is
+a little bit different in that these are
+the layers and layers and layers of AI
+that I've built up over the business.
+There's a bunch more that I'd like to
+do. These are the ones I currently have.
+But the way that you can think about uh
+what this AIOS model is is essentially a
+a business methodology or approach to
+business uh not a business model itself.
+So if you think of a a business model,
+call this the model. Uh for people
+watching my channel, it might be like an
+AI automation agency uh or an AI
+transformation partner, which are AI
+business models, which I've been pushing
+for years now because we've run it at
+Morningside and we've seen like me
+getting into that business model was the
+gateway to me learning all of this
+stuff, building multiple businesses.
+It's like the best on-ramp into AI for
+anyone who is uh even nontechnical or
+you're a developer or anyone who wants
+to get into AI doesn't have a boatload
+of money and can't afford to build a
+build the traditional startup route.
+This is the entry point that many people
+have been getting in through. So say you
+have a biz model and then around it you
+have your AIOS AI operating system and
+so this is a separate part on how you
+choose to operate uh and a sort of a
+methodology towards operating and uh
+automating your business. So when you
+start off with say context OS which is
+just getting the right folder structure
+set up uh adding the right documents in
+determining how you're going to document
+the workspace as it grows uh priming
+each clawed code session that is the
+base layer and you could treat that as
+okay I'm going to put one layer of AI
+around my business and the reason we
+need a business model by the way is cuz
+like you need some way to actually like
+some mechanism of making money some
+value creation in the case of AI
+agencies it's helping businesses to
+understand and input uh and actually get
+adoption to stick in them. So whether
+you're e-commerce, SMMA, service based
+businesses like roofing or whatever that
+is the business model at the core of
+this and the AIOS methodology is just
+adding layers of AI around that to help
+you manage it. So first layer might be
+context OS. Second one might be uh data
+OS. One of the first things I did was
+went and pulled all of my different data
+sources, my P&Ls, uh my Google
+Analytics, my YouTube data, all my
+marketing sheets and and sales numbers
+and was able to instead of having them
+all over the marketplace, pull them all
+into a single database that's stored
+locally on my machine within the cloud
+code setup and then be able to build
+dashboards off that so that I can in the
+morning see a full uh full breakdown of
+all the most important numbers in my
+business and it's like my mission
+control. So you could call that like
+another layer around it. And from there
+it's just like it's it's the most
+addicting video game I've ever played.
+Like me and me me and the guys here
+haven't been able to sleep daily. I've
+been going to sleep at 2 3:00 a.m.
+waking up at at 7:00 just to get back
+onto this stuff because it actually
+feels like I'm making real progress. Um
+when you build software and build
+automations, it's like check that's
+done. Like that is going to be handled
+for the foreseeable future unless
+something changes or breaks and in which
+case you can very easily fix it as well.
+But so what happened with me is I got
+addicted and kind of hooked into adding
+these layers and layers and layers of
+like well anything that I can think I
+can ask this thing to do and it's got to
+wrap it around my business and have
+access to it through my Telegram. Now
+there's a little bit of nuance as to how
+to get the most out of Telegram. And
+this may sound a bit like Claudebot.
+You'll be like how is this different to
+openclaw or Claudebot? I'll probably do
+a whole video breaking that down. So if
+you think back to that claude code
+harness that I have the little ball on
+the cube, the cube has had millions or
+hundreds of millions of dollars at this
+point spent on it to make a really great
+harness around it. And what Open Claw or
+Claudebot did was take the model out,
+the the C base model, rip it out of that
+really expensive and well-gineered
+harness and put it in some kind of
+shoddy harness. Like no disrespect to
+the dude. Incredible work. I could not
+have done that myself, but it's a shoddy
+harness. It's like ripping the arms off
+pl code which is very natively excellent
+at a lot of the things you needed to do
+agentically. Ripping the arms off and
+then sticking some like like for example
+web search. Web searching comes native
+in claude code. You have to add it on as
+an add-on to your claudebot. So that's
+just a little bit of a teaser if you
+want to get my full breakdown on like
+it's it's been pretty hard for me to
+actually convince people to quit and
+move over to this when they just they
+don't really see the benefits. But over
+the long term, uh, you might get a get a
+lot of quick results with clawbot cuz
+it's a lot more beginner friendly at the
+beginning, but you'll plateau, whereas
+with a claw code set up, it seriously is
+like infinite. So, getting back to these
+layers of AI around the business. I've
+just continued to stack them more and
+more and more. I've got a daily brief OS
+that uh plugs into my meeting
+intelligence OS. I'm trying to come up
+with naming naming conventions here,
+guys. Like, give me a give me a second
+to figure it out. But this these
+different operating systems that you
+could plug in. I guess it doesn't really
+make sense if you have a business OS or
+AIOS and you have another operating
+system inside it. But you get the idea.
+These are kind of modules. I don't know
+what to call them. Modules or plugins or
+yeah modules plugins. I'm going with
+modules at the moment really. And that
+is the case. We are like having to map
+this new a new area out. This feels just
+like when I got into into AI business
+and we're like trying to figure out how
+to make money with AI and the business
+models that we could make money with.
+And we ended up finding an AI automation
+agency. This is the same thing. We've
+found this model of business methodology
+and I've been doing workshops every
+single day in my accelerator for the
+commas in there as we're actively like
+sharing all the knowledge around. I'm
+sharing what I'm doing. They're sharing
+what they're doing. I'm trying to figure
+out what you guys don't know and what
+sort of knowledge gaps I need to fill.
+So, if you are wanting to get like
+directly into this, um I don't ever
+really pitch my accelerator on these
+videos, but if you do want to be in the
+community that is spearheading the
+discovery of the stuff and the mapping
+of the landscape, can be the first to
+apply this AGI stuff to your business,
+um then you can book a call with one of
+my team in the description to see if
+it's a good fit for you. Meeting
+intelligence is if you got Firefox or
+Fathom, you're able to grab the API key,
+pull all of that into a database
+locally, then you're able to chat and
+you can say, "Hey, remember in that
+meeting that I had two weeks ago with
+Jimmy? can you please just dig in and
+see what I said that I'll do or can you
+please see if he mentioned this uh and
+this so that's just the start then you
+can add things like Slack OS where you
+can plug into your Slack get all the
+messages that have been sent over the
+past 24 hours and then you can start to
+roll these modules into sort of bigger
+functions like I have a daily brief OS
+which analyzes all the calls that happen
+across my entire business over the past
+24 hours. It will also do the same for
+Slack and analyze what happened and from
+that information and also all the
+context it has about my business cuz it
+loads in the context OS. It will be able
+to see the big picture, help me identify
+patterns in the sales team, coaching
+team, all of that. Give me content
+recommendations off the back of that
+like, hey, content gap that you can make
+in your program or you could put into uh
+your YouTube videos. And it also acts as
+a like a co-CEO or strategist uh
+business strategist because I tell it to
+given everything you know there, can you
+please see if there's any like do a SWAT
+analysis? I get it to do a SWAT analysis
+on the business and so I know my
+strengths, weaknesses, opportunities,
+and threats and things that I just need
+to be aware of. And it means I don't
+have to keep up with everyone. I don't
+need to be monitoring Slack nearly as
+much as I used to. And so I think you
+kind of get the point. I've layered
+things onto this more and more and more.
+My productivity OS so that I've got a
+full productivity system in there. I can
+just chat through Telegram on my
+computer or my phone and I can say,
+"Hey, I just finished this or uh I've
+just got a new task that I need to send
+to this or a new project." and it can
+automatically update that and it checks
+in with me throughout the day to say,
+"Hey, how are you going with your tasks?
+By the way, we've got all this stuff in
+your inbox, which is another thing.
+Capture OS, like a lot's going on. Um,
+but you have to build this up in layers
+and layers and layers to really get the
+most out of it. So, for me, I've got so
+many layers here that it's really
+starting to get a lot thicker. And once
+I've got a lot of these set up and I've
+got better management of my
+productivity, daily brief, etc., meeting
+intelligence. Um, even like being able
+to automate my inbox, so it's attached
+to my iMessage and and WhatsApp and
+Gmail and stuff. So any incoming
+messages, I will get briefed in the
+morning and I can just say, "Hey, yeah,
+say this to them. Say this to that." And
+it's going to send all those messages
+cuz I hate having to check my WhatsApp
+and and messages. I just have really
+slow reply. And then with that all under
+your belt, you've got the sort of
+breathing room or space to start getting
+into chopping away at these sections. So
+over the next few weeks, I'm going to be
+trying to cross off as many of these
+that's going to be up there. But I'm
+already a decent amount of the way
+through a bunch of these main ones being
+like editing, ideation, scripting. Uh
+this whole section here on my agency is
+actually already covered by a tool that
+we built for really internal use called
+autoflow. Um you guys can't get access
+to that just yet, but if you are an AI
+agency um and you want to get access to
+that, just keep an eye on my socials and
+stuff for the next over the next few
+weeks. We'll be letting more people into
+the beta there. So we've already got a
+big chunk of the agency operations
+handled there with our own tool. And
+then it gets down to things like where
+the value is really being created like
+MVP development and actual development
+systems for my engineers. And I'm
+actually booking a session with my
+engineers at Morningside next week to
+walk them through the end toend
+engineering pipeline that I've created.
+I can literally take a feature or an NDP
+or a spec from a client and just crunch
+through it non-stop for 1 2 3 days,
+however long it takes, testing all of
+its work. And I mean that's a whole
+video on its own, but we are we are
+cooking on medium high here and I'm
+really excited to share this stuff with
+you as well if you're in our agency
+owner. So I think you get the picture
+here, but I just want to give you guys
+the big picture of my plan. I'm trying
+to get 60 to 70% of these crossed off.
+I'm a decent chunk of the way there
+already. So if you want to keep in the
+loop on how I go with this and want to
+see sort of the behind the scenes, I'm
+doing a lot of vlogs out here at the
+moment. So you'll be able to see me and
+the guys all nerding out about this uh
+trying to do the same thing with their
+business as well. So ton of source if
+you want to get a full breakdown.
+There's so many people who want to know
+about this stuff and so many business
+owners who are excuse my French for
+[\h__\h] around with openclaw and not
+getting any and like getting frustrated
+and biting into the wall because it is
+limited as a platform. I'm trying to
+convert as many people over to this
+system because I see uh the light at the
+end of the tunnel that we may not have
+to to work anywhere near as much as we
+used to. So if you guys want to
+understand the system a bit more, see
+how exactly how I'm running it, I'm
+doing a webinar. Uh the link will be in
+the description and I wanted to do that
+format to get as many people in as
+possible. When you sign up to that
+webinar, you'll also get access to my
+daily telegram where I'm just dropping
+all the source like every time I find a
+new one of these I'm dropping voice
+notes in there constantly just giving
+all of the like I'm calling it ground
+zero for AIOS. All the information is
+being poured in there and then also you
+get signed up for a daily digest that
+summarizes my learnings and the people
+around me who are here cooking up into
+an email for you. If you're an email
+person, you'll get a daily email
+summarizing the learnings we're getting,
+the new territories that we're charting
+out so that you can start to apply those
+in your own system. And most
+importantly, in that webinar, not only
+am I going to show you my system and how
+I've got it set up, I'll be walking you
+through how to set it up for yourself
+and giving you my starter template to do
+this cuz it's really important to get
+that folder structure right. And I've
+also built in a ton of what they call
+slash commands or skills to really help
+you as a completely non-technical person
+if you are. I've been testing this with
+the people around me, completely
+nontechnical people. if you give them
+the right uh set of instructions to give
+the chord code, it can act as a as a
+consultant or a helper to walk you
+through figuring out what you want and
+how it can help you to build it. So, all
+of that is going to be packing to that
+webinar. It's going to be a freaking
+awesome one. I'm so excited to be
+sharing this with you guys. But since
+the webinar is a live one, you're going
+to have to wait a while for that date to
+roll around. So, if you interested, of
+course, apply to that. But if you want
+to get access right now to the
+information that I'm discovering as I
+chart this out as the guys around me
+here in this house are working this
+stuff out. I'm also doing those
+workshops on my accelerator every single
+day. We're actively charting out this
+landscape together and I'm in there
+helping them plan and execute on those
+plans for building their AOS system. I
+hope you guys are as excited as I am for
+this stuff. Never been a better time to
+get into business. Never been a better
+time to be alive. And if you aren't
+already subscribed, I'd make sure you do
+that because I'm going to be dropping so
+much sauce here over the next few weeks.
+You do not want to miss any of that. But
+yeah, be excited guys. Webinar link in
+the description. I look forward to
+seeing you there. Um, and we can step
+into this AGI era together. If you want
+to watch my previous video on this topic
+explaining why I think AGI is here based
+off this stuff, that's going to be
+linked up here. But that's all for the
+video, guys. Thank you so much for
+watching. I'll see you in the next haul.

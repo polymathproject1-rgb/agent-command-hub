@@ -1,0 +1,432 @@
+All right, so to get started, first
+ 
+thing first, we're going to install claw
+code onto our local machine. So we're
+going to copy this command here for our
+npm. Make sure to have NodeJS 18 and
+above installed. And here we're just
+going to run this on our terminal. So
+once we have this installed, we're just
+going to navigate to our project and
+start using cloud from there. Okay, so
+back to terminal. Now we can just type
+in cloud since I have already CD into a
+project. And here I can set up our
+terminal style for the text. And I'm
+just going to stick with the dark mode
+for simplicity. And then here we are
+prompted to select a login method. So,
+I'm just going to choose the clock code
+account with the subscription, which is
+only 20 bucks per month for the pro
+plan. So, I'm going to use that for this
+demonstration. Once we authenticate
+oursel, then we can start to set up our
+terminal setups. So, here we're just
+going to say yes for the use recommended
+settings for claw code. Now, we can be
+able to grant access for claw code to
+read files inside of this folder. So,
+we're going to say yes to proceed. And
+now, we can see that we can start to use
+claw code officially in our terminal for
+this project. Now, we can also use claw
+code inside of our visual studio code
+with cursor. So here inside of my Visual
+Studio Code, I'm just going to open a
+terminal. And here I can be able to do
+claude. And now we can be able to start
+use cloud code inside of our VS code
+here. And to get started, first thing
+first, we're going to press enter to
+continue. And then because this is a new
+codebase, we also need to use claw to
+initialize this project. So in this
+case, we're going to use the /nit
+command. And this will basically
+initialize the codebase by having claw
+to read through every files inside of
+our project. So let's try to initialize
+our project using this command.
+And what's really cool about this is
+that it start to list out the tasks that
+they're going to do. First thing first,
+it's going to explore the project
+structure, the readme file, analyze the
+main applications, architecture, and
+then it start to create the claw.md
+file. All right. So now you can see that
+has made some progress for this to-do
+list. And right now it's asking us
+permission to edit our claw.md. And in
+that case, I'm just going to say yes.
+Okay. So now you can see that we have
+our cloud. MD file generated. And pretty
+much every time when we open a new chat
+session with clock code, it uses this
+file as kind of like a system message or
+the instructions or memory about this
+codebase. You can see that these are
+some core important things about our
+codebase. So our accentual commands, our
+database, our architecture, our text
+stacks, also things about our database
+schema, our authentication, app
+structure, state management. Uh there's
+a lot of details going on here. It's a
+full stack application. It pretty much
+lists out everything that AI needs to
+know about this project. So pretty much
+whenever we start a new conversation, it
+will feed this MD file into the large
+language model to be able to have
+context about what this project is
+about. All right, so now let's start
+using claw code inside of our terminal.
+So the first command we're going to use
+is /mod, which we can be able to view
+which AI model we're using for our clock
+code. And here you can see I only using
+the sonet 4 because I am using the pro
+plan. But if you're using the max plan
+or different plans, you can actually
+change different models here. All right,
+so the next basic thing we're going to
+talk about is the files referencing. So
+how do we reference file inside of our
+claw code? So what I can do here if
+let's say if I want to reference the
+readme file I can just drag it here and
+it will basically just paste the file
+path to the chat. So we can be able to
+reference this file inside of claw code.
+And if we don't want to do this we can
+also do the other way where we can be
+able to do at and we can also use at
+symbol here to reference files much more
+easier. For example, I can also
+reference a file for source and I can
+also reference file inside of that
+directory as well. for example, slash
+lip folder/s schema and I can be able to
+reference different files here. But then
+you might be asking, what if I take a
+screenshot for something and I want to
+use that image inside of a cloud code.
+So if I were to take a picture of this
+thing right here and I can just drag it
+here and you can see it basically paste
+the path for the screenshot and I can
+ask what is this? And then here I'm just
+going to grant access to let it read
+this file and then it's going to read
+the screenshot and tell you exactly what
+this is. And it also works if you copy
+an image. So if I were to copy this
+image in my clipboard and instead of
+using commandV on Mac, I'm just going to
+use controlV and this will basically
+paste the image from my clipboard onto
+this chat input. So here I'm just going
+to say what this is and here I'm going
+to ask claude and you can see that claw
+gives you the answer which is the clot
+logo. Now you can also select the code
+use that as a context when you interact
+with claw code. So for example, if I
+were to select this line right here and
+I want claw code to explain what this
+command does. Now here you can see I
+have one line selected. So I'm just
+going to ask what does this mean in
+package.json
+and claw code knows exactly what we
+select. And here you can see it give us
+an explanation on what each of those
+commands does for the code that we
+select. Now to access clock code of
+course we can actually do this in a
+terminal. But the other way we can do
+this which is using command escape. So
+if we were to do this it will
+automatically start a clock hole session
+inside of our code editor. And now
+without having us to type in claude it
+will basically start our clock ho
+session inside of our editor. So all we
+have to do just use a shortcut which is
+the command escape or we can click on
+this icon here for claude and this will
+basically start multiple claw code
+sessions inside of our code editor. All
+right so next thing we're going to talk
+about which is the custom commands
+inside of a claw code. So if I were to
+do slash here you can see that these are
+all the commands that we can use. But we
+can actually create our own custom
+commands here based on our development
+process. For example, let's say if I
+want claw code to write unit test for us
+for react components. Instead of just
+saving the prompt, reusing that the same
+prompt every single time, we can
+actually put that prompt into a MD file
+and then we can let clock to use that
+command that we create and be able to
+instruct it to create that unit test
+every single time. So for example, I'm
+just going to first let clock here to
+create a custom command for us. And this
+command is going to help us to create
+our unit test for React components. So
+here's the basically the prompt.
+Basically, I want the clock code to
+create a custom command to create our
+React component unit tests. And this
+unit test should be able to cover the
+happy path, the edge case, the air
+handlings and etc. So we're going to uh
+enter this and let cloud code to create
+the custom commands for us so that we
+can be able to reuse it inside of our
+project. So here you can see start to
+list out the to-dos and first is going
+to examine the do.cloud/comand structure
+to see what are the commands that we
+have and then we're going to analyze the
+project setup for the testings and the
+patterns. So it's going to searching for
+the patterns and reading through the
+test file that we have inside of our
+project to see how we write tests,
+right? And then it's going to searching
+for the config file for the chest and
+also looking for the package to see if
+we have the right package installed on
+our project. And the last step is
+basically creating that custom command.
+So here you can see it has created this
+and this is basically the title for this
+command. And now you can see these are
+the instructions on what are the things
+that we need to worry about when
+creating our tests. And then here at the
+bottom you can see that we also have the
+arguments. So that's going to be our
+file reference, our selected code.
+Anything that we want to write our unit
+test for, then we're going to pass it
+here. Right? So that's going to be the
+argument. So now if we were to save this
+inside of that folder, we have our
+command here. So now if I were to select
+a code, for example, this loading
+components in our React project. Now
+what we can do is we can be able to
+reference this. So if I were to do
+slash, you can see that we have our
+command and this is going to be the same
+title that we put for our uh MD file
+here. So we can use this command here
+and reference the file. So that's gonna
+be the file reference on where that file
+is located. I want basically want claw
+here to write this unit test for this
+component. So if I were to run this, so
+right now you can see it starts reading
+this component right here and it start
+to look for the package.json the just
+setup. Now it start to create a
+comprehensive test suite for loading
+components which is pretty cool. All
+right. So now you can see that it
+creates the test and I can drag it here
+to full screen. All right. So let's try
+to take a look at this test. So you can
+see that it first loads up the
+components, right? It uses the React
+testing library here to test the uh
+React components. So here you can see we
+have our happy path and then there's
+also some edge cases which is very
+detailed and there's also component
+structure test and it also checks for
+accessibility which is also pretty cool
+as well. So let me just try to save this
+and now you can see that it saves the
+test inside of our test folder. So now
+what we can do is we can be able to run
+the test. Now you can see that's what
+exactly asking us to do is to run the
+test to verify the changes. So let's run
+this and see what happens. All right. So
+now you can see it started to run the
+test and here you can see if we were to
+scroll down it started to run into error
+because it found that the just
+configuration is not handled for
+TypeScript and JSX. So it started to
+create that just doconfiguration file
+here. And then we can see that once the
+file is created it started to rerun the
+test again. And here you can see that it
+founds another issue which we can see
+that the just environment jsdom is
+missing. So it's going to install this
+package and rerun the test again without
+having us to do anything. And then here
+you can see it found another issue for
+the react handle the white space
+incorrectly. So it's going to fix it by
+itself. And now you can see it runs the
+test again. And here you can see we have
+all the tests are now passing. And at
+the bottom here it gives you a summary
+for each test. And I also have verified
+this change myself. So if I were to run
+npm run test in my terminal and you can
+see that all the test has passed. All
+right. So the next thing we're going to
+talk about is multi- aents. So we can
+have multiple concurrent coding agents
+running to perform a task. So here you
+can see I have created another custom
+command called UI design variations. And
+if you were to look at this, you can see
+that it basically try to generate
+different types of variations for the UI
+design. So I basically provide a react
+component. It's going to generate
+multiple different versions for this
+component. But most importantly, I tell
+it to use concurrent task agents to run
+for parallel generations for all
+variations here. So we have multiple sub
+aents concurrently running for a task.
+So here inside claw code, I'm just going
+to use this custom command. And here
+we're just going to use the UI design
+varations. And here I'm just going to
+find a component. So back to the project
+here. I just want to show you quickly
+that this is a simple dating application
+where users can be able to find their
+ideal match through this platform using
+the match features, the like features,
+the filter features, and they can also
+message the people, which is a really
+simple dating application. And if you're
+curious on how I built this application,
+you can check out this video right here
+where I made a full video on my YouTube
+channel on how to build a dating app
+like this. But enough said. Let's take a
+look at how we can be able to redesign
+this navbar right here. So back to claw
+code. We're just going to specify the
+location. In this case, the component
+itself is from the navbar. And there is
+a component called top navbar here. So
+here I'm just going to reference the
+file here. And let's run this and see
+how this going to work. All right. So
+first it's going to read this file. Then
+it start to create a to-do list. Then it
+start to launch the multitask agent
+concurrently to generate the designs.
+All right. So now you can see that it
+has created all five designs and each
+design has a name. So we have glass,
+corporate, compact, outline, gradient,
+which is pretty cool. So here you can
+see it asks us permissions to write the
+file. So I'm just going to say yes to
+this. And then here it's going to write
+each of those file inside of our navbar
+folder. So here you can see inside of
+navbar we have our five nav bars here.
+Right? So now what we can do is we can
+be able to change the place where we use
+the original navbar to the new navbar
+that we created. So in that case, let me
+go to top nav here and let's find where
+it uses this. So it's being used in the
+layout.tsx. So inside of our layout.tsx,
+select the file. So in that case, the
+topnavglass.tsx.
+And here I'm just going to change the
+source from topnav to topnav glass. All
+right. So now you can see if I were to
+come back to the web app, this is what
+it looks like. So we can be able to
+change to different tabs here, which
+this is what it looks like. And here,
+let's try the compact version for this.
+So if I were to refresh. Okay. So this
+is the compact version. So let's try
+with another one, which is the gradient
+version. So if I were to save this and
+now you can see this is the gradient
+version. But basically you can see that
+we can use sub agents here to run task
+concurrently inside of our clock code to
+achieve what we want to build. And by
+the end of this we could just choose
+whatever version we like and stick to
+that. And before moving forward one
+thing that I always want to stress about
+is to make sure to use version control
+to save the versions that you have. Now
+inside of my kit control you can see
+that for each versions that it generates
+I basically commit those changes one by
+one making sure that I put detail
+commits for each changes that clock code
+made. And if I satisfied with the
+version, I will basically add it on to
+the branch tree. All right. So now you
+can see I have commit those changes. And
+let's moving on to the next one. All
+right. The last one we're going to talk
+about in this video is going to be the
+yolo mode. So whenever we try to execute
+something, we often get like ask for
+permissions for editing things. If you
+want to use the yolo mode instead, which
+means that it will not ask permissions
+every time when I try to edit the files.
+In that case, what we can do is if I
+were to stop the clock session and I can
+simply just do claw dangerously skip
+permissions. And by having this running,
+it will bypass permission mode so that
+it will not ask us for approval before
+committing things. And that's why the
+last tip that I gave you, which is the
+doing version control, which is so
+important because every time when claw
+code make a change, let's say if it's
+doing something that's not what it's
+supposed to do, then we can always
+revert back to previous working version
+and be able to continue our claw code
+session from there. Always to make sure
+using version control whenever you're
+dealing with claw code here. So for this
+part, if you want to use bypass
+permission mode, you're just going to do
+yes, accept. And now if I were to ask
+anything and now you can see that here
+at the bottom it says bypassing
+permissions. So every time when I try to
+ask cl code to do something it's not
+going to ask us for permissions again.
+All right. So that's pretty much how we
+can get started with claw code and some
+tips that I use for using claw code. So
+if you found value in this video, please
+make sure to like this video, consider
+subscribe for more content like this.
+But with that being said, I will see you
+in the next video.

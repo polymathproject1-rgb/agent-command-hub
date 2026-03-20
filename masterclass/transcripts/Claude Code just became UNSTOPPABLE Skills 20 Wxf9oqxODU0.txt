@@ -1,0 +1,990 @@
+Anthropic have just released Claude
+ 
+Skills 2.0, which are AI employees that
+will automate your work, if you know
+though how to set them up correctly.
+Now, most people just scratched the
+surface when it comes to skills. But in
+this video, I'm going to show you
+exactly how to set them up from scratch
+and five practical business use cases
+that you would actually use. They're
+going to help you automate stuff to save
+more time, to generate more money, and
+get light years ahead of your
+competitors. So, Claude Skills has just
+gotten a brand new update. We're calling
+it Cloud Skills 2.0. Now, essentially,
+it will let you build amazing things
+consistently, very quickly, and it
+essentially allows you to capture expert
+knowledge that the language model
+wouldn't have on its own. And you can
+also obviously eliminate repetitive
+work, which is the core crux and why
+it's so cool for your business and your
+personal life. It also lets you enforce
+business rules and your standards. And
+obviously it's great for things like
+ensuring compliance and reducing down
+your risk, but there are two big
+problems. The first one is how do you
+actually know that the skill is working
+the way that you expect it to? And
+secondly, is Claude even going to use
+this in the first place? It's always
+this black box of is it triggering the
+right skill? These have been two huge
+problems that have plagued the land of
+Claude skills. And I'm very happy to say
+that Claude Skills 2.0
+our our kind of superhero here is
+actually solving those two problems. So
+without understanding though what skills
+are, it's tough to know how valuable
+this is. So a quick TLDDR skills
+themselves are instruction manuals for
+Claude. So they are goals, steps, tools,
+and standards. And think of it as like
+an onboarding documentation for Claude
+on your specific way that you want to do
+something. So you and I might have very
+different skills for our intended
+purposes. Now, if we take Gordon Ramsey
+at his restaurant, very cool. Or should
+we say Claude Ramsey in this case. Let's
+think about all the tools that Claude
+has like a kitchen. You'd say the MCPS.
+These are the things that connect to
+different tools like notion, like
+Stripe, like your bank. These are the
+hands that basically they connect to
+services and provide real-time data to
+Claude. Then you have the skills, which
+is what we're talking about today. These
+are the the recipe books, right? The
+instructions on ingredients, how to do
+certain things. And then you have
+connectors, the bridge to actual apps,
+email, calendars, database, stuff like
+that. So Claude Skills 2.0 tells you if
+they work. So imagine this as an
+analogy. Say that we were driving in a
+car, but we didn't have any speedometer.
+We had no idea where our GPS was going
+or how fast we were going. That is
+essentially what using skills was like.
+You didn't know if it was working or if
+it was engaging it at all. Whereas now
+we get the data. We actually get how
+fast we're going in the direction. We
+get to see everything that's happening
+and we can have asurances that the
+skills are actually working to our
+standards. Skills are portable which
+means that they can work across many
+different aspects of anthropics
+ecosystem. They are stackable so you can
+use multiple skills in the exact same
+workflow. They're also sharable so you
+can give it to your team to ensure you
+all get the same output and they can
+also ensure most importantly that you
+get consistent output on everything that
+you're doing. Now there are two types of
+skills and this comes to the crux of it.
+The first one is what we call a
+capability uplift. So this fills in the
+gaps what the model can't do very well.
+So this could be things like filling out
+PDFs, front-end design, PowerPoint
+creation, but it problem is that these
+skills have a retirement date. There
+comes a point when Anthropic releases
+Opus 5 or Opus 5.5 and all of a sudden
+it is better at doing the thing than
+your skilled. A good example of this is
+filling out PDFs. So the cool thing that
+this actually does now is that this new
+Claude Skills 2.0, Oh, this new chord
+skill creator asks and it tests. So, it
+will test regularly. Is Opus 5.0 better
+than your skill? If it isn't, it keeps
+your skill. If it is, it will
+automatically delete it for you, which
+is amaz. So, it means that you're always
+getting the very best output than
+anything else. Secondly, we have what we
+call encoded preferences. There's a
+second type of scum. So, here your
+specific workflow regardless of model
+capability is stuff like NDA review
+checklist, code review tools, client
+onboarding sequences. They're more
+durable. they won't become obsolete via
+testing because it's your specific way
+of doing things. The why this is
+important is because the capability
+uplift essentially is this guy's doing a
+kind of shoulder presser tests if the
+skill beats the baseline. But your
+encoded preference is something that we
+can keep going in perpetuity. And with
+that in mind, let's actually find out
+what these skills are and start
+building. So, we're going to cover five
+incredible use cases. And when you learn
+how to build these, you can apply them
+to anything. But the first thing we need
+to do is actually get this brand new
+Claude skill creator plugin live in your
+environment. So I'm in anti-gravity, my
+preferred integrated development
+environment. Of course, you could do
+this in the terminal if you want to by
+just coming down, installing Claude and
+getting started. This is the place I
+like to build the stuff. So we're going
+to do it here. We're going to come over
+now to terminal and we're going to click
+on new terminal. And what we're going to
+do is load up Claude in our browser in
+excuse me in our environment. And what I
+want you to do is forward slash and if
+you type in plugins, what this will do
+is pull up a list of all the plugins
+that you have available within Claude.
+Now, what you're looking for is this
+skill creator plugin. So, you'll be able
+to find down here if you just come down
+and you type in skill creator plugin, it
+will appear. Mine has already appeared,
+so we don't need it. And once you've
+installed that, it'll take like a second
+or two. What we then want to do is
+forward slash and actually enable it.
+You may need to restart your environment
+to make sure it's loaded. But once it
+is, when you go forward slash and you
+type in skill creator, it's now telling
+an opic and claude, hey, I want you to
+create a skill for me. So check this
+out. I'm ready to help you create or
+improve a skill. What should we focus?
+So let's just do one as a random
+example. I'll say, hey there, I would
+like you to build for me an SEO
+checklist skill. Okay? It could be
+anything. And by the way, once you've
+got it in the terminal, I'm just going
+to bring this on the right hand side,
+but come down panel position. throwing
+this on the right cuz I want to show you
+the mechanics of this. You can also if
+you double click here and you've
+installed on the left hand side the
+Claude plugin which is over here in
+extensions. You can type in Claude here
+and just add this to your environment
+and it will appear there for you
+essentially. As you can see it's already
+right there. So if you double click on
+this you can then use Claude here as
+well. It's just a little bit of a nicer
+chat interface. It's really down to your
+preference. But we're going to come back
+here. What should this do? When should
+it trigger? What should the output look
+like? and what SEO areas matters the
+most to you. So you could say give it
+any particular examples you want to. So
+I might say something like I want this
+to trigger when I give you an article. I
+want to make sure that the article is
+SEO optimized and I will give you that
+myself. The SEO areas that basically
+matter most to me are the ones that are
+going to help me rank highest on Google.
+So essentially you engage in a dialogue
+with them. Now, there's a couple of
+steps to this which are really cool
+because essentially what Claude is going
+to be doing here for us is chatting
+about all the different use cases we
+want to make sure it's fine. Now,
+[clears throat] it's actually validated
+come with a few further questions. Will
+you provide a target keyword and phrase?
+Actually, I would like you to manage all
+of that for me, please. And I want the
+output to be a reviewed a new article
+that I could potentially then use,
+please. Just like that, Claude has
+generated this goal for us. It describes
+what it is. So it gives a revised
+article with SEO metadata at the top and
+SEO change log group by category showing
+what's changed and this is what it
+checks. Do you want me to test it with a
+sample article so we can see how it
+performs and iterate if needed. That
+sounds a wonderful idea. Please go ahead
+and test that. So this is one of the
+core cool things about the Claude skill
+creator is the fact that it will not
+essentially create allow us to create a
+skill that is inferior to Claude's own
+natural ability. and you're going to see
+it's going to test it across several
+different benchmarks. Now, this is
+really cool because it's come back and
+said, "Look, this is what's worked
+really well. Coffee has been inserted.
+I've expanded a thin 150word article and
+it tells you, hey, here's everything it
+did really well. Here's a few things
+that we should tweak." So, it's actually
+now working with you in tandem
+conversationally to improve the output
+of that. And I had it also just for your
+benefit spin up a quick SEO optimization
+report. So, this is the revised article
+that it created for us. This is the
+change log of everything that it did. So
+expanded the article from 150 words to
+over a thousand. It added what is a cold
+brew coffee copy section. It did this
+because searchers often need to have the
+foundational context. Here's everything
+it did. H1 URL slug. All of this is done
+instantaneously by Claude. And of course
+we can take this to a new level as I'm
+going to show you in this video by
+giving it custom knowledge bases. This
+is amazing. And then it shows us the
+original. I I really think that this is
+really really exceptional. So once
+that's happened and let's just say for
+argument sake you're happy with the
+output. We'd come down and we'd say hey
+dude that looks awesome. Please turn
+that into a skill and let's call it the
+SEO optimization skill. So when you're
+happy with it, we then basically send it
+off to Claude to validate that we're
+happy with that particular skill. Now
+once that skill has been created, you'll
+see it exists on the left hand side and
+you can see it's got SEO checklist, it's
+got assets, it's got loads of really
+cool stuff here, which is awesome and
+it's all been validated. But we want to
+make sure is that it's saved to your
+global skills directory. So just say,
+hey, awesome. Save it to my global
+skills directory. And it's done there.
+And you can see it's claude/skills/seo
+optimization. So just to show you as
+well that this works across every one of
+the claude apps. So if I swing over to
+there you go I'm in the claude desktop
+app here. Right? As you can see if I do
+for/ SEO I should see that SEO
+optimization explains what it is. And
+now I can just say hey that sounds
+great. And as you can see we've come
+down here and we've got all the things
+that it does and we just throw our URL
+in or article and then this will work
+for us in the background whenever we
+want to do that. Now, our very first
+skill is going to be leveraging Nano
+Banana 2 and specifically the API to
+create gorgeous graphics for whatever
+use case you want, social media or even
+explainers. So, what I'm going to do
+here, as you can see, I've got this
+prompt over here, which essentially is
+what I call a designer skill. And what I
+want to do essentially is have a very
+specific style. So, you'll notice in
+this video, you probably saw in the
+presentation that I had this kind of
+style. This uses my brand colors. I
+really like the look and feel of it,
+right? So, we're going to have Nanabana
+API. we can give it a prompt and then
+we're going to get all these beautiful
+graphics that come out for what we want
+to do. But instead of just having to use
+a software provider or maybe Gemini,
+wouldn't it be cool if let's say when
+I'm doing a video and I've got a point I
+want to make, I can throw my ideas and
+it can generate a graphic that helps you
+understand and visualize it better. So,
+how would we go about doing that? Well,
+what we would do is understand our brand
+guidelines. So, I've got a bit of an
+overview of mine here, which again, it's
+got my fonts, it's got the style, and I
+essentially said to Claude, "Hey, I want
+you to help me craft a prompt that
+mirrors this. This is the kind of style
+I want." And a little hack, by the way,
+what you can do is find infographics and
+feed those as examples for the kind of
+thing that you would like. So, once
+you've got there's some kind of sample
+text of what that would be, you're going
+to copy this. You're then going to head
+over to Claude, we're going to do here,
+and give it a following prompt. I'm
+going to say, "Hey there, dude. What I
+would like you to do for me is design
+for me a skill saved in my global skills
+directory where effectively you're going
+to use an API um so API I'll provide
+that to you in your variables and
+essentially what I want you to do is go
+ahead and create for me an infographic
+in 16x9 based on the below guidelines
+and what I want the way I want this to
+work is I'm going to give you some text
+it could be a brain dump or some points
+and then I want you to turn that into a
+beautiful infographic here is the below
+prompt all right now once we've done uh
+and we've given that information to
+Claude. I'm going to come down here and
+actually paste everything in and then
+send it off. Now, once again, Claude can
+now work with us to create this skill.
+So, what we do need to do is give it an
+API key. Well, that's kind of um
+thinking and percolating around in the
+Claude ecosystem. So, the platform that
+we're going to use for this one is going
+to be Kia API. The actual pricing on
+this one's really cool. So, I believe
+it's like 50% cheaper. So, we want the
+Nano Banana 2K. Uh we should also, to be
+fair, be really specific on that. So,
+let me come over and just be really
+explicit. Also, dude, it's really
+important that you use the 2K, not just
+the regular. Okay, I'm going to give all
+those There we go. And pump that one
+through. Make sure it knows everything
+is fine. Great. And then we can come
+back over into here. And we can see that
+this is 50% cheaper. So, it's roughly 6
+cents per image, which I think is pretty
+awesome. So, the only thing we're going
+to need from here is on API keys. So, if
+you haven't got one, you can create one.
+I feel like a few dollars in here and
+it's like lasted quite a while. So, I'm
+going to copy this one. And wonderful.
+Claude's come back with some
+suggestions. So, the good stuff. The
+style DNA is enabled. API integration is
+solid. 2K plus 16x9 are locked in as
+default. The quality boosters mentioned
+8K resolution as a prompt tag when we're
+generating 2K mix signals blah blah
+blah. All right, cool. So, next step,
+how do you want to proceed with refining
+the still? Let's do we could improve and
+test. We can run test cases first. Why
+don't you just improve and test? I think
+that's cool. Send that one off. Oh, I
+should also add right what would be
+really cool is if I give you the
+information plus a logo that you're
+actually able to send that logo with it.
+So, the graphics that I get have that
+logo included in it. I think that's
+really important. So just make sure
+you're leveraging that aspect of their
+API. Wonderful. And so now basically
+Claude is asking for the basically the
+environmental key for Kia. So all you're
+going to do is you can ask it to add the
+environmental variables here. And what
+you do is you're l going to come here,
+highlight this, and then paste in your
+API key. Wonderful. And so anti-gravity
+and claw code have created this image
+which is an exact same style if you
+remember from what you might have seen
+earlier in this video. So now I can
+refine this and be like, you know, I
+like it, I don't like it. What do I
+think? Well, let's come back here and
+say, "Dude, I think what we need to
+change is too much cursive. It should be
+something that is beautiful to see
+visually and easy to follow along." So,
+I wouldn't mind it if it was more
+diagrammatic and less textheavy.
+Although, little bits of text is fine.
+There should be balance and I think
+better illustrations that follow
+through, but it's a little bit over
+complicated. So, let's improve it with
+that in mind. And when we've done that,
+it's great. And it's just so cool. We
+get to spar back and forth with it. So,
+it's gives some some good feedback. It's
+going to test a few different things.
+It'll refine it. And the cool thing is
+we can just work with it now and to get
+to a standard that you and I are happy
+with. Then at any point we can be within
+anti-gravity or any other claude
+ecosystem and be like, "Hey dude, build
+this thing for me." And so now let's
+come back with this one. I think this is
+a step backwards. So we just give some
+feedback. Hey there dude, this is a step
+backwards. Let's go back to the way that
+it was previously. Also, the way I would
+like this to work is I want to drop
+down, say, a document with like five
+different sections. And I would like you
+as Claude to programmatically fire off
+five different variations and give me
+back five different images rather than
+having me to come back and forth all the
+time. And that's going to save us way
+more time. Let's come back. It said it's
+all ready to rock and roll. Just say no.
+That's great. And then why don't we just
+come ahead and say something like save
+to my Claude skills directory and send
+that off. And then we can just go to a
+different part of the Claude ecosystem.
+I don't need to. I could do it here
+obviously just to show you how that all
+connects together. And all we did is we
+had an intended outcome. We had an API
+key connection. And then we just
+basically described what we wanted to do
+and went back and forth until we got it.
+So you can see how cool this process is.
+Beautiful. So now I open up a brand new
+terminal to test the skill. So all we're
+going to do is come up and we're going
+to do for slash the skill we want to
+summon which is infographic. And then we
+can give it a little bit of a prompt and
+ask it to do anything we want to. Okay
+guys. So I've given a prompt which is
+hey there I want you to create for me
+diagram on large language models
+explaining how club works. using this
+called superhero graphic and this is the
+one we've got there and we're going to
+see now exactly how this infographic
+skill works based on everything that we
+created and what's really interesting
+here guys it says it needs a publicly
+available image URL for the API so what
+we could do if we got this online is
+copy it another option is to use a
+website called imageb.com and if you
+scroll to the bottom of this page you'll
+see an API key you can give that to
+Claude so whenever it's generating
+images it can upload them and then use
+that to create anything that's exactly
+what we're going to do right here and
+just like that guys we now have the five
+graphics. Look at this using the exact
+superhero image that I did all with the
+skill in my exact style. So how clair
+works it's given us multiple different
+examples. So we can go through this pick
+the one that we like and then rock and
+roll with that which I think is really
+freaking incredible. Especially this
+one, the fact that I can give it as many
+images, give it a text, and I can reckon
+and use that skill whenever I want to.
+And so now we've got the ability to
+create any images we want to and
+infographics for our business. The next
+one I'm going to show you is how you can
+repurpose, let's say, a transcript or a
+piece of content into a actual lead
+magnet. So, how can we create something
+that's valuable for people based on
+something else? So, the way that I'm
+going to do this is I'm going to use a
+YouTube scraper. So, for example, what I
+would like to do is to get, let's say, a
+URL from a video and then have the
+ability to turn that into something
+else. So, let's come up and first of all
+activate the uh skill to create new
+skills. So, I come down here to skill
+creator, which it is right there. And
+then once it's ready to rock and roll, I
+can give it command. So, dude, what I
+like to do is to create for me a skill
+where I give you a YouTube URL. And then
+what you're going to do is go ahead to
+that YouTube URL. You're going to scrape
+the information, scrape the transcript,
+and then you're going to turn it into an
+actionable, helpful guide that my
+audience would find helpful. In other
+words, you're going to create a lead
+magnet. And what I want you to do is
+create a brand new notion page and paste
+it in notion in such a way that it would
+look beautiful and gorgeous and take
+full advantage of all of Notion's
+individual stylistic um capabilities.
+Awesome. And then I've also got here
+guys cuz I scrape as part of my
+dashboard that I have my community this
+YouTube chat where you can ask Jack
+questions. We even got a whole button
+there. You can ask it things like hey
+how do I grow my business? And this
+basically needs you to scrape YouTube
+every single day. So I've cracked that
+down to a T. Very very cool. So, I can
+just give it the strategies I already
+use and you can completely recycle stuff
+like that. And so, after I bring the
+file in, I'll drop it. And of course,
+I'll share all the sources down below in
+the description. So, you can basically,
+if you want to scrape YouTube, use the
+exact same strategy. Beautiful. And it's
+got some followup questions. So, let's
+answer them. Yes, I would like you to
+actually go ahead and grab the captions
+using the attach style. Obviously, if
+there's a better way to do it, feel free
+to go and do it. Leader magnet style. I
+want it to be as valuable as humanly
+possible. So, could be action steps.
+Take a judgment call based on the video.
+Notion destination. Yeah, I'd like to
+create a brand new notion page, please.
+And branding, you know, make it in my
+tone of voice that you get from the
+video. Short, concise, valuable, don't
+make it cringe. And then, should this
+reference your existing Superbase data?
+No. Keep this one completely separate uh
+and fully individual. Wonderful. So, now
+it's done. It wants a sample URL. So,
+let's come over and grab this one. In
+fact, let's go to this anti-gravity
+course here. This has got loads of
+really cool actionable stuff. Come down
+here. We'll paste it in. Then, it can
+turn that transcript into an actual
+resource that people find really
+valuable. And again, I'm doing
+YouTubetubes, but in reality, this could
+be anything. Anything you want to
+repurpose into a lead magnet. Could be
+your website, could be podcasts that
+you've done, could be emails, whatever
+you want to. The point is that you can
+repurpose that and turn this into
+anything you want to on any platform.
+And all I do is give it URL and it does
+the rest of the work. I think that's
+crazy. All right, guys. So, apparently
+it has created all six levers. So, I'm
+going to open up the notion page and see
+what we are dealing with. All right,
+here we go. The antiraft cheat sheet.
+Six levels to actually build things at
+shipping. The quick version level one
+setup project organization. Wow,
+dude. This is really cool. I mean, and
+the cool thing is we can repurpose this
+in any direction that we want to. We can
+get to create the cover images, whatever
+we want. This is freaking sick. And
+obviously then you've got the whole
+video. You've got additional resources
+at the bottom. And that can be a skill
+them. All I do now is I drop in a URL.
+So why don't we come back and just say,
+"Dude, looks really cool. Don't use
+hyphens. That's a dead giveaway. Also,
+could you add a cover image to every
+video going forward?" Then just go ahead
+and save this skill. I'd also like you
+to really leverage my tone of voice in
+building these please. And then after we
+give this feedback, it can run, it can
+iterate, and now we have something that
+can repurpose content if you like. I
+mean, I personally always create the
+resources that I actually make. I think
+there's some things that are wonderful
+to do as a human being. Responding to
+comments, creating creating assets, but
+the ability now to repurpose things is
+amazing. So now I know how to repurpose
+content as a skill, and that could be
+triggered by absolutely anything. The
+next thing I want to do is to be able to
+build a custom rag database. rag
+database standing for retrieval
+augmented generation. Fancy way of
+saying long-term AI memory. I want to be
+able to pick somebody, give somebody's
+YouTube channel or Instagram, grab all
+of their content, and then be able to
+have a conversation with almost like an
+AI version of themselves. So, as always,
+we're going to go ahead and we're going
+to start with/skillcreator.
+Cool. And then let's give it a prompt.
+Hey there, dude. All right. So, what I
+would like to do is to go ahead and I'm
+going to give you a YouTube URL. You are
+going to go ahead and scrape that
+individual's last 10 videos. Then I
+would like you to vectorize those and
+store it in a pine cone database. And
+once you've done that, I would then like
+you to build for me a chatbot that I can
+have a conversation with or maybe even
+you and I can ask questions to that
+channel about content that they've
+actually done. I will provide for you
+the Pine Cone API API key. You also have
+a YouTube scraper skill if you need to
+know how to scrape YouTube content if
+you want to bundle into this one
+secondarily. That is also really cool.
+Fantastic. So, we're going to give this.
+Now, when I built out the memory system
+in my community, I actually built a very
+interesting memory system that
+essentially has every post I've ever
+written and also all my YouTube videos.
+So, you can ask it questions like you
+could say, "Hey there, dude. What is a
+great uh give me five anti-gravity
+tips." Okay, whatever the thing is,
+right? What's cool about this is
+sometimes this guy remembers stuff that
+I forget, which is cool. So, as you can
+see, here are five tips I can do to get
+99% of users. master school creation.
+Yeah, use environmental variables API
+keys, switch model strategically, blah
+blah blah. And then what my guy will do
+is actually recommend to you areas to
+check out either in the classroom or
+YouTube videos. So here's a community
+post. You could open that up and all of
+a sudden we're in the community and
+we're learning about all this cool
+stuff. So this is all run on a rag
+database. Now the idea of the rag
+database is that effectively we all know
+that AI has a limited memory. So when
+it's too large, we want to store it in
+rag. There was some debate about whether
+you do, you know, agentic markdown
+files. I get that that's a discussion,
+but this is a wonderful way to store
+unbelievable amounts of data that you
+can ask and retrieve with something
+called semantic search, which basically
+just means the it will understand what
+your question is and then find the
+relevant things to it by chunking. So
+instead of having like every Harry
+Potter book, instead of putting like,
+you know, all that in one context
+window, it splits into sections and just
+brings back the relevant section. And if
+you come over to Pine Cone, you can
+create an account for free. You're just
+going to grab create a brand new API
+key, head back over to anti-gravity and
+provide that there so that Claude can
+actually use that to begin the scraping
+process and actually vectorizing it in
+this database. Well, hack for you. By
+the way, when you're creating an index,
+I found that the best one is this
+multilingual E5 large. I actually
+flocked to New York to compete in a
+competition. I don't basically it means
+I spent a week learning really deep rag
+stuff and one of the biggest takeaways
+is that the the the model we use to
+vectorize and store the data can really
+improve the performance. I have found
+this one amazing like most people just
+use the small it's but it's it's I found
+it so much better and it gets results
+that are just so freaking cool. But the
+cool thing view is you won't even need
+to physically touch your stuff because
+we can do this with cold code now. They
+will actually do that for us
+automatically. And this is asking for
+the YouTube API key. So, let's go ahead
+and grab that if you don't have that
+already. So, you're going to come down
+and create a project. When you do that,
+you're going to type in the search bar,
+YouTube API. And this will pull up the
+YouTube API, YouTube data API v3. This
+is console.cloud.google.com.
+Um, they need to update this cuz it is
+very uh let's just say 1990s. It's very
+1990s. So, we've got this stuff over
+here. And then what we're going to do is
+create an API key, which is cool. So,
+you basically you'll see activate. You
+just click on that. Great. We've got it.
+Come left hand side. Do a favor for me.
+Click on credentials. Okay. And when
+we're on credentials, what we're going
+to see is an API key. So if you don't
+have this, you can click on create
+credentials. You can come down here and
+actually on API key right here. Click on
+this. And when that is loading up, you
+can then give it a name and then you can
+actually copy that. Come back over to
+anti-gravity provider and then it'll
+have access to basically scrape anything
+with YouTube. All right guys, wonderful.
+So it says it's ready, rock and roll. So
+let's give our API. Let's give it our
+YouTube channel and see what it does. So
+I'm going to say sounds good. do this
+one. Now, I want to explain why this is
+important. So, I had a meeting with
+someone who's a very successful
+entrepreneur, and we had a strategy call
+together. I don't really do one-to- ones
+anymore, but we had a call. She she was
+really cool, and she was asking me
+specifically, I want the ability to give
+for my clients like their Instagram or
+their YouTube or their LinkedIn and have
+an AI that would actually scrape all
+that stuff. And then we'd have this
+wonderful knowledge base that would know
+exactly how they communicate. So that
+when I have my own methodologies for
+content creation, it already knows all
+their stuff and exactly how they sound.
+Because the idea of this is we keep it
+frictionless. So say for example in my
+community, if I wanted to offer
+something for them that was like look
+what I'm going to do here is all you do
+is just give me a YouTube channel, just
+give me a LinkedIn, just give me your
+Instagram and I'm already going to
+scrape all that instantaneously. I'm
+going to have a specific knowledge base
+that is the you knowledge base. And by
+the way, it's going to refresh every
+single day to keep it up to date in what
+we call upsert. So update and insert and
+then from that we can create organic
+authentic posts in your tone of voice
+and we can query and ask as many
+questions as we want. So you can see the
+capabilities of these kinds of skills.
+So for her for example, which partly
+inspired me to do build this skill right
+now, she could then just say, "Cool,
+here's new YouTube URL. Go and do it."
+And all of a sudden, she's got this
+database fully scoped, locked, and
+loaded. This is insane, guys. A year ago
+when I was building on NA10 and meg.com,
+this would have been a by itself an
+hourong plus tutorial. All I've done is
+give it a couple commands and it is
+sprinting ahead. Wonderful guys. I want
+you to look at this. It's already done
+it. It just needs an API key for the
+chat. So let's go over to open routter,
+shall we? And create a I much prefer
+open route because I can dynamically
+switch between the models for different
+things. So come over here. I'm going to
+create this one. Call this one test 1 2
+3 credit limit. We'll put it at like $2
+and then no expiration and click on
+create. Okay, wonderful. So, it's gone
+ahead and changed anthropic to open
+route. Beautiful. So, now it's done
+running at localhost 4,000. And by the
+way, guys, you wouldn't chat to it this
+way. I'm just showing you that it works.
+So, I haven't tested install. Let's have
+a quick question. Hey there, dude. Uh,
+so Jack did a video on
+how to use anti-gravity on your phone
+via claw code. Can you tell me a few
+tips about that? Okay. So, we're going
+to see if actually know some specifics
+and we'll see exactly what comes up. is
+having a think and we can see if it can
+reference that information for us. And
+what we can also do is validate this in
+pine cone too and show you all the data
+to vectorzed. And guys, when I say that
+every prompt I gave it, you saw on
+screen, nothing else. Like it literally
+has gone ahead and done this. So let's
+go check pine cone. Well, he's g us an
+information. And there we go. I didn't
+even have to wait. It's right there. Hey
+Jack, getting started. You climate
+control feature set up process blah blah
+blah. Oh my gosh, that's crazy. And it's
+got us the links there as well, which is
+insane. And if you think about it like
+this, that is the core technology that
+sits behind this. And obviously I just
+pitified it. I did various different
+things to make it look really snazzy and
+jazzy. But we can build on that. And if
+you want a feature video on exactly how
+I did this using this technology, just
+let me know down below in the comment
+section. Also, when you subscribe and
+videos, if you want to see more content
+like this, it tells me the kind of stuff
+that you really like. So now I know how
+to create rag systems that can power any
+software we could possibly imagine
+creating using this new claw code skill.
+The next thing I want to do is show you
+how you can generate any document and
+just automate parts in your business.
+So, as always, we're going to come
+to/kill creator over here. Now, this
+one's really cool and it's one that I
+genuinely use all the time. And I'll
+tell you what it is. Hey there. What I
+would like to do is go ahead and create
+for me an invoice generator skill. I
+would like every invoice to have my
+address and also which I'd like you to
+put as 9 Diamond Avenue, Manchester,
+M26BL.
+And then what I want you to do is create
+a beautiful onepage maximum HTML
+document as an invoice where we can
+customize who the invoice is for and
+their address. And when I give you I'm
+all going to give you as an input as a
+company and amount. You're then going to
+go create this invoice. I also want my
+photo on that HTML document. If you go
+to my downloads, you'll see there's a
+photo. It says something like Jack Mine
+and it's a screenshot of me, my face. I
+want that on there as a in a sort of
+circle format. Please. Beautiful. We
+send that off. and let Claude start to
+work his magic. And just like that,
+guys, it has created it. But it has gone
+crazy. It has put loads of stuff on the
+outside. So, I just need to make sure
+that it doesn't have that. So, let me
+come back and give it that feedback.
+Okay, wonderful. It's come back and it's
+done. And the cool thing is you can give
+it example screenshots and go back and
+forth until you're happy with it. Then,
+what I want you to do is come back and
+give it the following. One key thing you
+must always do is that you must always
+check that the page never exceeds one
+page. So, I never want to bleed over
+onto a second page. Once you've done
+that, please do go ahead and save that
+as a skill. So, now we've got the
+ability to correct documents. The fifth
+and final claude code skill that we're
+using in Google's anti-gravity is going
+to be a competitive intelligence skill.
+Essentially, what I want to be able to
+do here is drop a competitor's name or
+any kind of brand, and I want my army of
+agents essentially to go forth and
+scrape and grab all the key details from
+that brand and bring me a very polished
+report that I can then go ahead and make
+decisions on. And of course, to do this,
+we're using Firecrawl. This is like the
+best software I've seen at going out and
+scraping things. And we're going to need
+this API key. Just a quick case if
+you've never seen it before. If you come
+and scrape on the left hand side, you
+can see all the ones I've done
+previously. If you look at Glido, our
+speech attack startup, which is in beta
+at the moment, you can see you can
+search by branding and get all of this
+information. So, let's head over now to
+anti-gravity and let's give it a
+command. So, let's go over and again,
+once again, we're going for skill
+creator uh for/skill creator. Hey there,
+I would like you to build for me a
+competitive intelligence research skill.
+The idea of the skills I'm going to drop
+a brand or a URL and what I want you to
+do is ruthlessly and mercilessly
+research this using firecrawl and what
+I'd like you to do and any other
+research you think are valuable. I want
+you to understand key personnel, find
+out information about them that they
+wouldn't even know is on the internet.
+Maybe find out information about the
+brand and history. So just a little bit
+of depth and I'd like all of that in one
+really simple, clean, crisp report that
+is visually beautiful for me to have a
+look at. Awesome. So we give this detail
+and then cl code can run ahead and
+create that for us. And just like that
+we now have a competitive intelligence
+document use fire crawl to pull through
+all this crazy stuff. This is pretty
+impressive and obviously we can refine
+this in ways we want to look at pull up
+these beautiful documents and have
+insights that we can make decisions from
+to run our business to work with
+partners whatever the thing is that we
+want to do. So now I know exactly how to
+leverage the new cla code skills to
+level up. That's one thing. But if you
+really want to unlock the biggest
+potential using claude code, we need to
+combine it with notebook LM. And you can
+learn exactly how to do that with
+anti-gravity by watching this video
+right

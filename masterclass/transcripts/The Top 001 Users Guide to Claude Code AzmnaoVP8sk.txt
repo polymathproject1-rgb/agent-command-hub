@@ -1,0 +1,1325 @@
+All right, so about one year ago today,
+ 
+Claude Code was released. And since
+then, I've used it for over 1,600 hours
+and have made dozens of videos about it
+over the last few months that you can go
+back and watch. But in this video, I
+will be sharing 60 tips that will make
+you a Claude Code Power user because
+it's becoming increasingly clear that
+this is one of the most important skills
+for 2026. Now, before getting started, I
+want to make it really clear that the
+only limitation is your imagination with
+Claude Code. So, Claude Code edited 95%
+of the video that you're watching right
+now. I use it for my video editing. It
+solved pretty much every minor problem
+in my life. So, for example, at my
+nearby Starbucks, it automatically
+disconnects you from the Wi-Fi every
+hour. So, you have to manually
+reconnect. I just told Claude Code, "Can
+you make a script to do that for me
+automatically?" People have even been
+exploring their DNA with Claude Code and
+making visualizations for it as well.
+Now, to prevent me from spending 14, 15
+hours every single day in my room using
+Claude Code, Claude Code has been
+helping me find a girlfriend and also
+set up dates for me. Many people seem to
+think you can't do this for some reason.
+But in reality, you can because cloud
+code reverse engineered the API
+endpoints of a pretty popular
+application for me. And every 10 minutes
+it looks at all the new users who have
+signed up and classifies them according
+to this prompt here. And then it will
+automatically reply to any simple
+messages that it knows answer to and it
+will ping me on Telegram if there's a
+message that it doesn't have the answer
+to. Now, there are two benefits here.
+Firstly, there are thousands, if not
+tens of thousands of people signing up
+every single day that it's physically
+impossible for a human to read through
+all the new profiles. And secondly, you
+can avoid the algorithms of these
+applications because actually working
+against you instead of in favor of you
+because if they were really helping you,
+then you would leave the application
+pretty quickly and they would make less
+money from you. But the value of AI is
+firstly it can sift through a lot of
+data very quickly and secondly you can
+align it to your goals. So honestly this
+has been pretty successful for me and
+the few of the friends who have tried
+this approach out. So, I'm actually 100%
+serious because the only limitation to
+using Claude Code is your imagination.
+And the reason I like it so much is it
+basically feels like playing life on
+Minecraft creative mode. And if you want
+to learn more about this, then you can
+go to my Claude Code master class where
+I cover a lot of these ideas. It is the
+most comprehensive Claude Code class
+that you will find online. There's a
+sale going on right now to celebrate the
+one-year birthday of Claude Code. So, if
+you use a coupon code birthday at
+checkout, then you should get a
+discount. Now, next up is you always
+want to be trying to update your mental
+model of what the models are capable of.
+I find that many people have old habits
+and assumptions and they're like, "Oh, I
+tried that a couple months ago and the
+model could not do it." And then they
+never bother to retry again. And I find
+my biggest limitation are my bad
+assumptions of like, oh, the model would
+never be able to do that. But then when
+I actually give the task to model, it
+gets like 80 90 95% of the way there.
+For anything that cloud code struggles
+with or is not able to do, I make a note
+of that in a separate document. And then
+once there's a new model release, I
+basically try that prompt again. Another
+mistake that I see people making is they
+try to frontload the model with a bunch
+of files that they think may be relevant
+for the task. But this can fill up the
+context window way too quickly and
+degrade the performance of cloud code.
+So it's much better that you let the
+model figure it out and search through
+the codebase to find any relevant files.
+And this helps because it means that you
+don't end up polluting the context
+window with a bunch of irrelevant files.
+Another tip is for avoiding code bias in
+claude code. So, one problem is that
+claude code can get stuck in existing
+coding patterns, which is really handy
+when it comes to adding a new feature
+because you want it to follow existing
+patterns in your codebase. But if the
+patterns in your codebase are really
+bad, then it can't really think outside
+the box and come up with new ones
+because it just ended up loading in all
+the existing ones into its context
+window. So often what I do is I make a
+brand new folder empty folder with cloud
+code inside and I say okay can you
+implement this feature like just make
+this feature in isolation and then once
+it makes that feature and it works in
+isolation then I would get it to copy
+over that information into the older
+project and integrate that new code into
+the older project. So when cloud code is
+stuck in a loop isolating the problem in
+a new clean environment can help it get
+a fresh perspective. Another problem
+that I see happening is that many people
+use dangerously skip permissions.
+basically all the time on their local
+machine and they never actually go ahead
+and restrict internet access for the
+model to specific websites. So what you
+can actually do is you can enable a
+sandbox and then make a HTTP proxy and
+with a proxy script you can put in an
+allowed list of domains that cloud code
+will be able to access which may be
+relevant for your work and you can be
+sure don't contain any prompt
+injections. So you can either get cloud
+code to implement a script like this
+yourself or you can go to my cloud code
+masterass and download it from there.
+But the main benefit here is that you
+can have a white list of company
+websites or websites that you trust for
+particular tasks. So this is essentially
+restricting cloud code to fixed number
+of domains that are relevant for that
+particular task. Next up is using ghosty
+as your terminal and then customizing it
+to use claude code better. So the cloud
+code team personally loves using ghosti
+and one of the ways that I have it set
+up. I can make a brand new tab pretty
+easily by doing ctrlt and then also
+rename any tab using keyboard shortcut
+that I have which is control shiftr.
+type in a name like the project name and
+if I want to have a sidebyside panel
+then I can just do control D or control
+shift D and then split the window pretty
+easily kind of like this. If you get
+cloud code search online and look at the
+ghosty docs and it can do all these
+adjustments for you such as setting up
+the control shift R to rename a terminal
+window and you can combine this with
+hooks as well. So often I'm working on
+many different projects at the same
+time. So I'd have like five tabs open
+and often claude code would be done on
+one particular tab or require
+permissions but I don't know which tab
+to actually go back to. So what I have
+set up in my root folders claude
+settings JSON file is basically a
+permission dialogue hook. When claude
+code requires a permission then it sends
+me a notification on my system and a
+stop hook which will basically show a
+tiny bell near the tab once cla code is
+done. So if I ask it to do something.
+So, let's say I just said hi. Switched
+over to another tab. Then you can see
+right at the top over here, there's a
+little bell icon to say that cloud code
+is done. This helps me make sure that I
+don't miss anything that is on another
+tab. Of course, a better option would be
+to have multiple sessions running side
+by side, but if you're at a cafe and
+your monitor is pretty small, there's
+only so much that you can have running
+side by side. I do also cover hooks in
+much more detail as well in my cloud
+code class if you're interested. Now,
+when I have parallel cloud code sessions
+running, I basically treat it like the
+game factorial. Having one session, one
+task at a time is pretty slow. So what I
+usually do is I have three, four or five
+instances per project running in
+parallel. And the benefit here is that
+there's pretty much always something for
+me to do. Like I'm not sitting down and
+waiting for the agent to complete a
+task. There's always one agent that kind
+of has a question or needs attending to
+or like a plan that I could be
+developing or something like that. So
+across like three or four projects, I
+probably have 10 12 cloud code sessions
+running in parallel and there's
+literally always something that I can be
+doing. And one of the fun parts about
+this is that you can basically be
+spotting bottlenecks that cloud code
+consistently makes across different
+projects and sessions, coming up with
+any slash commands or skills to automate
+particular workflows. And the bottleneck
+kind of shifts from how fast can a
+single session of cloud code complete a
+task to how well can I design my
+pipeline. I can spot mistakes and
+improvements to cloud code more often
+and then I can improve my pipeline
+across all my projects. Something I
+started doing recently is using Obsidian
+with Claude Code. And the benefit is all
+your notes are basically just markdown
+files on your disc that Cloud Code knows
+how to navigate really well. And it can
+do stuff like make back links for you,
+generate graphic views, generate HTML
+files that like explain ideas better.
+You can link it to Skills and MCP
+servers as well to make like a live
+operating system in Obsidian. And I
+basically use Cloud Code to edit all my
+files for me and generate these kind of
+images as well. And as of yesterday,
+it's become even easier for Claude Code
+to do that because they released
+Obsidian CLI and agents such as Claude
+Code are just better at running CLI
+commands. So you can make Cloud Code
+even more powerful by giving it a skill
+that helps it use Obsidian CLI
+effectively. So I basically won't have
+to read through files as often and can
+discover back links automatically and
+just save on context. Now when giving
+prompts, I basically only ever dictate
+my prompts now. I very rarely type on my
+keyboard because I use my own
+application called Hyposper. If you set
+the accuracy to highest, then you will
+find that it is the most accurate voice
+to text tool. And many people have been
+switching over from bigger competitors
+for exactly that reason. You can try out
+for free using the link in the
+description for Mac OS and Windows. And
+a pro license is also included for free
+for those who join the Claw Code
+Masterass. So essentially, I would have
+all these sessions running in parallel
+and then dictate prompts to all of them
+and switch between them really quickly.
+And I find that to be much more
+productive than typing out anything. Now
+because I am working on many different
+projects at the same time, I may
+implement something in one project that
+I simply want copied over to another
+project and integrated into that. So
+essentially I would get cloud code to
+add another directory and then do yes
+remember for the session. Now it has
+access to both of these directories as
+working directories. And I would
+basically say something like hey can you
+look through the agent site codebase
+identify how stripe has been integrated
+and then copy over that integration and
+functionality into hypersper plan this
+approach out ask me any clarifying
+questions if needs to be. So after
+saying that and going to plan mode I
+press enter and then it would come up
+with a plan to basically transfer
+features over and that saves it from
+having to figure out something from
+first principles that was already
+figured out in a different project. I've
+used this quite a lot because I've been
+migrating a lot of my projects over to
+trigger.dev for background jobs and
+workflows and I had it set up on one
+project and then I just told Cloud Code,
+can you copy that implementation from
+that project into this one? Now, when
+the models weren't really that great,
+Cloud Code always showed you the
+thinking process of the model. But as
+the models have gotten better, they
+found that this is no longer necessary
+for most people because they don't have
+to like interrupt the model as much or
+steer it as much because more often than
+not, it's doing the right thing. Now you
+can turn this back on by going to
+slashconfig searching for verbose and
+then setting this to true. So by default
+it will be false but setting it to true
+will show you a token count on the right
+hand side over here. And it also shows
+you the thinking process grayed out kind
+of like this. And I just enjoy reading
+the thinking process because it makes me
+feel like wow this model is like really
+small or they've gotten really good
+recently because often the thinking
+process reveals something that I would
+have never thought myself. Now I make
+extensive use out of hierarchical claude
+MD files. So you have your one in your
+root user folder. So right over here,
+this is the one that applies to all
+projects. And then you have your project
+level ones. And then you can also make
+personal preferences ones that exist
+only on your machine and should not be
+committed to GitHub. And I do this even
+when I'm working alone for the different
+development environments that I have. So
+on my Windows computer, I always run
+cloud code in Windows Subsystem for
+Linux. I just have a local MD file which
+basically just says you're running in
+VSSL. And you have to remember that
+these are loaded top down into claude
+code. So your most important
+instructions should be in the highest
+relevant one. I also have cloud MD files
+across my entire project in different
+subfolders for different kinds of tasks.
+So rather than having a massive cloud MD
+file with things about NexJS, Mac OS
+like uh general rules and stuff. I split
+this up as much as I can into separate
+ones. So for example in my project hypo
+I have the root one and then I have a
+Mac OS specific one. Then I have a
+window specific one as well. I have one
+for the back end. I have another one for
+a task management system. And the
+benefit here is that your claude MD
+files are progressively disclosed. So
+only the most relevant ones are loaded
+in. So if my task to claude code was
+only making edit to the landing page
+website of the application, then the Mac
+OS one and the backend one would never
+be loaded in. And that keeps the context
+window narrow, focused, and as sharp as
+possible. To prevent my Claude MD files
+from getting too long, I also have
+references within them to other files.
+So, for example, in this project, I
+noticed that Claude code really
+struggles when it comes to handling
+custom vocabulary. So, rather than
+having this long reference file within
+the Claude MD file, I basically have it
+in a separate file instead, and it's
+only used when it's doing something
+related to vocabulary stuff. And this is
+really handy for situations where Claude
+Code doesn't really know how to work
+well with a particular package or
+library, or there's like a weird quirk
+inside it that it always struggles with.
+Once you figure out, just make a
+reference file and then reference it
+from your claude MD file. Whenever I
+notice cloud code make a mistake, then I
+tell it to find the relevant Claude MD
+file and make a change there instead of
+the root one. I try to have my Claude MD
+files as short as possible. And every
+time there's a brand new model update,
+then I look at what I can remove. I very
+rarely follow these like random Twitter
+hype threads where they just talk about
+like, oh, you should add all of this to
+your Claude MD file. I do share more
+Claude MD best practices in a free video
+in my mastercloud code class if you
+interested. Next up is I noticed that
+many coding agents basically like to
+keep adding to the same file instead of
+making a brand new file and modularizing
+your codebase. So I regularly modularize
+my codebase because it just keeps my
+file shorter. If you don't do this and
+all your files are like many hundreds or
+like over a thousand lines, every time
+cla or another coding agent has to make
+an editor file, it will always first
+read the entire file. And this can be
+problematic if most of your files are
+really long. So for example, you can see
+I came up with a plan and I started
+implementing the plan over here and then
+it's like okay, let me just start
+reading all the files I need to modify
+in parallel. It ran through all these
+files, some of them being 700 lines. And
+after reading through like 2 3,000
+lines, the context window ended up being
+about 47% full before it decided to make
+any changes. And the main problem here
+is that all my files are really long. If
+they were much shorter, then claude code
+would just be reading shorter files
+instead and the context window would not
+fill up as quickly. So I often get times
+where I tell claude code, can you
+identify all files that are over 500
+lines and then make them smaller or
+modularize it more? And that means
+anytime I make changes in the future,
+claude code does not like pollute the
+entire context window immediately before
+it started making changes because it had
+to read a bunch of files that were
+really long. Now I'm also aggressive in
+deferring any searching related tasks to
+sub agents. Now cloud code does this
+automatically in planning mode because
+it searches for your codebase to
+establish patterns and finds out which
+files need changing. But I find that
+outside of planning mode, if you get it
+to quickly check some docs or something
+or like try to find in the log file the
+error that just happened, then it will
+load that into main context window which
+will quickly fill it up. So it often
+jumps from like 30% to 55% because it
+just loaded in a bunch of log files. So
+in my user level cloud MD file, I
+basically have this always and
+aggressively offload online research eg
+docs codebase exploration and log
+analysis to sub aent. When you're about
+to check logs, defer that to a haiku sub
+agent. For complex problems you're going
+around in circles with, get a fresh
+perspective by asking sub agents. And I
+find that this means I can stay within
+the optimal range of the context window
+for longer, which is between the 0 to
+50% mark. Now, since that is in the user
+cloud MD file, this will apply across
+all the projects on my computer. I also
+get Claude code to include a Y whenever
+spins up a sub aent and I found that led
+to better results especially when you
+have multiple sub aents running in
+parallel in different parts of the
+codebase. So without a Y if you were
+adding a off related feature then cloud
+code would often just search how off
+works with an explore sub aent and then
+you would get pretty generic results. If
+you have multiple sub aents they may be
+overlapping and if your authentication
+system is really big then you may end up
+getting a lot of noise. But by including
+a Y or a specific purpose for each sub
+agent in its system prompt, you now have
+how off works for rate limiting because
+you're improving your rate limiting. And
+that means that you will have less
+overlapping summaries. If you do have
+multiple sub agents, the right stuff
+will be filtered and returned back to
+the main session from the sub agent. And
+overall, you just see better results. By
+default, cloud code doesn't really
+include a Y. So, uh you can see this is
+an explore sub agent that is spun up.
+And there isn't really any Y over here
+except this part where it says to
+understand what a scraper would see
+versus a real user. So in my user level
+cla MD file I have when spawning a sub
+agent include a Y in the sub agent
+system prompt because it will help it
+filter the signal from the noise. Now I
+often try to speak the agents language
+as well. Though one of the benefits of
+having verbose output on and seeing the
+reasoning trace and reading for it is
+that you get a sense of how cloud code
+refers to different things in the
+codebase because the way that you refer
+to something may be different from how
+cloud code refers to the thing. And by
+you using like weak terminology or
+inaccurate terminology, it can end up
+wasting the agent's time when it comes
+to searching and it may just end up
+doing the wrong thing. So you may use
+the word download URL in your prompt,
+but in reality you actually have a
+couple different potential download URLs
+and the one that you were referring to
+was a CDN download URL. So if you read
+through the reasoning trace or just what
+cloud code is thinking, then it would
+say like I updated the CDN download URL.
+And then if you use that word or phrase
+next time, the agent will be faster and
+better at that particular thing. And
+this is the same reason why developers
+and also designers have an easier time
+using claude code because they know all
+the terminology that will help claude
+code better understand what they mean.
+So designer would explicitly refer to a
+button as like hey can you edit the
+secondary button or the danger button on
+that page whereas a non-designer may
+just refer to that as a button instead.
+Likewise you can massively shorten your
+prompts by having screenshots especially
+the right size screenshots. Often some
+people have a really small screenshot
+kind of like this in the top right and
+they're like, "Oh, this is wrong." Like,
+"You should change this." And Quad Code
+can't really find that part of the
+codebase, but if it was a little bit
+bigger, kind of like this, then that
+would be a good size because it can rely
+on the related text to find that part of
+the codebase more easily. But if your
+screenshot is like way too big, then it
+has no idea what you're referring to. So
+having the right size screenshot,
+especially for debugging UI related
+tasks, is pretty important. The same
+thing also applies to like using
+competitor references. You can have a
+big screenshot and then a smaller zoom
+up of the thing that you're actually
+referring to. And in situations where
+you find yourself going around in
+circles, you may just want to switch
+over to Gemini CLI instead because I
+find that the Gemini models have a
+better visual understanding and or
+better like just visual aesthetics
+compared to the Claude models. Next up,
+I almost always ask Claude Code whenever
+building out a brand new big feature to
+ask me any clarifying questions about
+how I want something implemented. Now,
+it will do this sometimes. It will ask
+you up to four questions, but I find
+that is not enough. And I'm often like,
+can you ask me 20 clarifying questions
+using the ask question tool for how this
+should work? I also use the rewind tool
+a lot. So, when I find that Claude Code
+has made a mistake or it just kind of
+went down the wrong track, but the
+conversation up until that mistake was
+still really good. Instead of arguing
+with it and saying, "No, go back to the
+previous thing. You should not have done
+that." I just rewind to the earlier part
+of the conversation and then just give
+it better guidance from there because
+otherwise you have the bad decisions
+lingering in the conversation that have
+essentially now polluted the
+conversation. So if you do slashreind
+then you can go back to any earlier
+points in the conversation and you can
+do something like restore code and
+conversation restore code restore
+conversation and summarize from here.
+Now, my workflow for adding any feature,
+no matter how small it is, is to start a
+brand new conversation, switch to plan
+mode by doing shift tab, and then
+describe what I want using Hyper
+Whisper, my voice to text tool, and then
+let Claude code explore the codebase.
+Often, it will ask me some clarifying
+questions as well, and then I review the
+plan. And if it was a really small
+feature, then I just let it proceed with
+the plan, implement the thing. And
+nowadays, I don't even check the code
+because like Opus 4.6 text gets it
+almost perfectly every single time if
+the plan is robust and good enough. I
+know a lot of people just don't read the
+plan anymore, but like you should still
+be reading the plan so you know what's
+going on. Now, when it comes to much
+bigger features, I basically use the
+spec developer skill and that looks kind
+of like this where Cloud Code will ask
+you a lot of non-obvious questions, some
+of which are actually really insightful.
+So, what I basically do is when I'm
+working on a brand new feature, so for
+example, I have a tasks folder in this
+project. The very initial plan that
+Claude Code comes up with is often kind
+of short. So it's like 150 lines, 200
+lines and it may not cover all the edge
+cases that I actually care about. So
+what I do is if I'm making a big feature
+when reviewing the plan for
+implementation, I often just reject the
+plan and then I trigger the spec and
+developer skill. It will then massively
+improve on the plan for a lot of
+questions and then my plan will often
+end up being like 5, 6, 700 lines, but
+it covers basically every single edge
+case that I care about. Now, I do go
+into this into much more detail inside
+of a free video in my Cloud Code
+Masterass called adding new features.
+And this is part of my uh daily
+workflows class, which I'm updating on a
+month-to-month basis whenever one of my
+workflows significantly changes. So, if
+you want to stay up to date with what
+I'm currently doing, you may find this
+class useful because it has a bunch of
+free videos. Now, the biggest benefit of
+using that skill is you have peace of
+mind and you have an understanding of
+how your codebase actually works. You
+don't have to read through the code
+through the questions that cloud code
+has asked you. You already understand
+many of the key decisions that needed to
+be made in regards to adding that new
+feature. So I can explain how a lot of
+my codebase works at a pretty deep level
+even though I've never read through the
+codebase through the questions that
+Cloud Code decided to ask me when it
+came to developing plans. And this piece
+of mind is really important because
+before I started doing this and having
+those questions asked with each update,
+I was always kind of worried like, okay,
+is this going to suddenly break
+everything for end users? Like, but now
+because of the spec developer skill, I
+basically never worry about this
+anymore. Now, what I also do with the
+spec developer is that if I feel that it
+needs to understand the codebase a bit
+better before asking me those questions,
+I use a different slash command, which
+is spec developer explorer. And because
+I've saved everything into a tasks
+folder, often I would get Cloud Code to
+plan out four or five new features at
+the same time, save them all as tasks,
+and then load one of these task files
+into brand new chat. And then I trigger
+my spec developer explore, which is
+exact same as spec developer with one
+difference being uh read the plan, use
+it to spin up three to five explosive
+agents in relevant parts of the codebase
+to understand it, and then interview me
+in detail. And I find that these
+questions are much better than just
+generic spec developer questions. But of
+course, you can still use a generic spec
+developer if cla had previously explore
+the codebase before earlier on in the
+conversation. Now, one of the benefits
+of using the spec developer to make
+these really long plans is that after
+this big feature has been implemented, I
+can then tag the plan file and then tell
+cloud code, can you spin up like three,
+four, five different explore sub agents
+to make sure that everything listed in
+that plan file had been successfully
+implemented. And then you can also tag a
+nova agent for example like codeex
+instead to just confirm all the changes
+required had been made from the long
+plan file that you used spec developer
+to write. I also do have a mermaid
+diagram generator skill that is shared
+across all my projects that helps me
+understand how data flows for my
+applications especially for critical
+features. So I would either tag the
+mermaid diagram generator skill at the
+very end after a plan has been
+implemented to understand how things
+work or if I'm just kind of worried
+about something then I will tag it and
+then ask it to look into something for
+me. Can you describe how the
+organization creation flow works in this
+application and how it integrates to
+stripe as well and now the skill seems
+to be done and made me a mermaid
+diagram. So, I have the auto
+organization creation and then the
+manual one and then a bunch of other
+similar logic as well like the member
+invitation flow. And this basically
+gives me and anyone that I'm working on
+a project with a good understanding of
+what Cloud Code actually did behind the
+scenes. And honestly, I'm really
+surprised by how detailed that is
+because it says, for example, all
+subsequent TRPC calls include the
+organization ID. Now, you can either get
+Cloud Code to make a skill like this
+yourself or download it from the
+relevant video in the Cloud Code
+masterass. But the main benefit here is
+that I just get a better mental model of
+my codebase so I know how things work
+behind the scenes, which makes me feel
+more secure when shipping to customers.
+And this is really helpful when it comes
+to diagnosing a problem that a user may
+be facing. So if I get an email
+complaining about their latency or
+something, then I can get Clauddio code
+to make that diagram for me and then see
+all the steps involved and then maybe
+condense it or simplify it down a bit.
+Now I pretty much always plan in one
+session and then execute in another one.
+So for example, Claude Code came up with
+this plan over here. I almost always do
+yes context and auto accept edits and
+then it will load that plan into brand
+new like session make all the changes
+are required and then that means I still
+have a good amount of context left to
+make any minor adjustments after
+checking out the implementation. Now I
+save every plan that Claude code came up
+with into the project folder. So in this
+project I have basically all the past
+plans from the last 2 weeks. And the
+reason that I do this is because
+nowadays I'm moving much faster with
+cloud code and sometimes I add a feature
+add five more features after that and
+then I decided the first feature I added
+I no longer want and I can't just revert
+the get commit history because otherwise
+the five other features that I did want
+would be lost. But by having all the
+plans in a folder, I can tell cloud
+code, okay, find the plan where we
+implemented that particular thing also
+use a get commit history as reference
+and then undo that particular feature
+change add. And with that additional
+context, it just does a better job at
+removing any feature that I added on a
+whim. And I like archiving the plans
+because I can get Claudico to analyze it
+in the future and then give me a history
+of how this project has evolved over
+time and it also compare different
+models in the future to see how the
+planning process or planning abilities
+have improved. If you want some better
+plan management organization for past
+plans, then there is a pretty good skill
+that you can download from this project
+that will be linked down below and it's
+this plan manager skill and it has a
+whole bunch of features that you can
+pause and read here. Now, when Claude
+Code has added a feature and then they
+have a pretty good follow-up feature, I
+just stay in the main session, switch
+back to plan mode to make a brand new
+plan. And this is better because it has
+a bunch of context earlier on to help
+him make improvements. And then after it
+comes up with a brand new plan, I would
+clear the context and have it be
+implemented in a brand new context
+window. So, essentially, I just re-enter
+plan mode whenever I want to make some
+more changes to what Cloud Code has
+done. Likewise, I'm pretty aggressive in
+starting a brand new chat when I'm
+working on something new to avoid
+context switching the model. So, I would
+get it to do like a profile API fix in a
+different chat to a landing page
+redesign and so forth. I know many
+people do it in the same chat for some
+reason and then they just see worse
+results. I instead batch similar tasks
+together and when it seems the next task
+is going to be a big task, I then
+re-enter plan mode. And the way I think
+about this is basically, is the context
+that we've accumulated so far related to
+next task? If so, I would reenter plan
+mode and do that. If not, then I would
+just start a brand new chat. Now,
+previously, when the models were not
+that good, I basically never compacted
+the conversation. But nowadays, I've
+been compacting a little more often
+because they have gotten better. And my
+methodology is basically, is a model
+still doing the same task? Is a model
+still progressing clearly, as in editing
+the right files? And have I compacted
+under free time so far? If so, then
+compaction is safe. But if the model is
+making consane or confused edits and I
+keep having to correct it to the right
+part of the codebase or if I already
+compact it too much, then I would just
+start a brand new chat. Next up, when it
+comes to some pretty tricky bug fixing,
+then I would get Claude Code to make a
+document of all the attempts that it
+made so far to fix that particular bug
+and then start a brand new chat instead
+of compacting, load in the document of
+all the fixes that we've attempted so
+far. And then eventually on the fourth
+or fifth attempt, it would find the
+right problem and fix that instead. And
+then because I prefer to have the
+smallest possible fix in the codebase,
+if I've logged everything that was done
+in previous attempts, then I can remove
+the unnecessary changes that happened in
+previous attempts that didn't actually
+fix the root cause of the problem. It's
+basically like Okam's eraser where I
+would want to have the simplest possible
+fix. Likewise, if you have a really
+complicated problem and cloud code just
+can't figure it out, then instead of
+trying again over and over in the same
+session, just start a brand new session.
+Because it has been observed in many
+agents that as the context grows
+significantly, then the agent shows a
+tendency to favor repeating actions
+instead of symphasizing novel plans. And
+that is exactly why starting a new chat
+may just solve the problem for you. Now,
+I also do have autocompaction off
+because I like to manually compact
+instead. And you can do that by going to
+/config, searching for autoco compact,
+and turning that to false. And that's
+basically because I just like having
+more control over the way that the
+context window is behaving. Now, the
+cloud 4.5 models and onwards are aware
+of their own context window. And there's
+a good blog post by the team at
+Cognition AI who made Devon, and they
+found that this causes context anxiety
+where the model begins taking shortcuts
+or leaving tasks incomplete when it
+believes it's near the end of its
+context window. They found the best way
+of addressing this issue is to use the 1
+million token context window model, but
+don't go beyond 200,000 tokens. But if
+you don't have access to 1 million token
+context window, then you can put this in
+your Claude MD file instead. And
+essentially, when combining this with
+one of the long plans that I have, I
+would then say, okay, can you now tick
+off everything that you've done from the
+plan so far and then compact the chat
+and then have it continue on by tagging
+the plan file again. Now, I also
+regularly audit my context window by
+doing /context. And nowadays, you don't
+actually have to worry too much about
+MCP servers because they are loaded on
+demand when needs be, but any memory
+files and also skills here can be pretty
+important. Some people can end up having
+a lot of memory files that probably need
+deleting. Some people end up having
+their skills taking up 10 20% of the
+context window because they have like a
+100 skills installed and that can be bad
+because you have way too much for the
+model to think about at every turn about
+what it should consider using. Which is
+why for any skills that you don't ever
+need the model to use, you should be
+adding this to your formattera, which is
+disable model invocation. So this can
+prevent cla code from ever loading the
+skill and can be handy for situations
+where you would only ever trigger that
+skill manually. So it would look
+something kind of like this where I have
+the skill formatter added this new line
+and set that to true. And that means
+that if I do /context, then I won't see
+the Windows release skill here, but I
+can still tag the Windows release skill
+by doing / Windows release. So this kind
+of draws this distinction between the
+skills that you would ever invoke or the
+skills you want the model to invoke as
+well. And also reducing the amount of
+skill description that you have loaded
+in at all times in your context window.
+Likewise, I also like to define a model
+for a skill by doing model and then like
+haiku for example because some of the
+skills that I have don't really require
+like much reasoning or thinking. It's
+just a set of steps that the model
+should be following instead. If you
+don't set this, then this by default
+will be your main sessions model. But
+since my main session is always an opus
+model, I prefer to have this set for all
+my skills. So they're like sonet models
+or highq models. I also like to have the
+status line at the very bottom that you
+can make by doing / status line and then
+saying show the model name a battery
+showing how much of the context window
+has been filled up so far the branch
+that we're currently on and whether we
+have any unstage changes. So this
+asterisk is for unstaged changes. If you
+do have a burst mode on then you can see
+the number of tokens here as well. But
+the model here can be pretty handy
+especially if you switch models quite a
+lot. I also do slreame and sl resume
+quite a lot in my ray OS folder in
+particular because I want to come back
+to certain sessions where claude code
+was doing online research for me or
+drafting emails or something like that.
+But I very rarely use these commands
+outside of my ray OS life OS folder and
+you can just do / rename and then
+pressing enter cla code will think of a
+default name based on what the
+conversation was about so far but if you
+want to specify another name then you
+can do / rename and then like mcp
+workers or something. The handy thing
+here is it also renames the tab if
+you're using a different terminal like
+warp and it also renames the input bar
+here which can be handy if you have many
+sessions side by side. When I am torn
+between a few different ideas for how
+something should be implemented, then I
+get clawed code to spin up a set of sub
+agents to then explore that possibility
+in more detail by exploring the codebase
+or doing research online. For example,
+have all the information then passed
+back into main session and then I let
+the main session decide what should be
+implemented and present a plan to me
+rather than trying to have all the
+approaches happening within the same
+context window. And if I'm curious about
+the details of one particular approach,
+then I would tell Claude Code to resume
+that sub agent. Have it do a bit more
+searching online and then present me an
+updated version because Claude Code
+supports resumable sub aents. So you can
+just tell it to resume a sub agent, do a
+bit more and then give the result back
+to you. Now I also do use custom slash
+commands and skills for any repeated
+prompts pretty heavily in cloud code. So
+for example, I have a slash command
+called branch commit PR which basically
+does exactly that. it creates a new
+branch, does a commit, and then makes a
+PR into main. But as of a couple months
+ago, Claude Code began to treat slash
+commands as skills, which means that if
+you do like /context, then you will see
+that as a skill instead. But of course,
+with skills, you do get a bit more
+flexibility. So if I move this into a
+brand new skill instead, kind of like
+this. And then opening it up, I can add
+front matter to the very top, kind of
+like this, including the disable model
+invocation, which means that claude code
+will never trigger this itself. only I
+will be able to trigger this. So these
+ones I basically repeat across many
+different projects and my user level and
+then I have some project level ones
+mainly when it comes to doing releases,
+syncing localizations which I do in a
+forks context window because I don't
+want to pollute the main context window.
+Then a couple other skills such as
+syncing different models. Also for
+writing blog posts, looking at logs and
+a bunch of more things. Something I do
+when I find that claude code is stuck in
+a loop rather than trying to have it
+guess where the error is happening. I
+basically tell it to add logs throughout
+that entire part of the application as
+much as it can at each point and then
+run through it, click the buttons that
+are required and then either copy and
+paste the logs over or if the logs exist
+on my computer then I get a sub agent to
+then go ahead find those logs load them
+in find the irrelevant error pass it
+back to cloud code it fixes a problem
+and then I remove all the logs and that
+is exactly why I have a Windows log
+explorer sub aent and a Mac OS one. I
+also find that when the sub agent is not
+able to correctly explore the logs to
+find the relevant error, then upgrading
+it from the haiku model to the sonet one
+instead seems to solve that issue in
+many cases. I also use well-known
+packages whenever possible because
+there's more training data for them,
+which means that agent will get it right
+first time when using that particular
+package such as TRPC or next.js. But in
+many cases when there are packages or
+libraries that I really want to use that
+that are very recent but don't have much
+training data for I always have the XMCP
+server enabled for all my projects which
+allows cloud code search online and find
+any relevant documentation. And for
+libraries that I use pretty heavily such
+as like trigger.dev which I've been
+using quite a lot. I have the official
+MCP ser installed. So when I do like
+/mcp I have trigger.dev here. And then I
+can see that I have the search docs tool
+which is really handy. And these other
+tools help Cloud Code do a good job at
+just debugging any errors when it comes
+to using trigger.dev because it's still
+pretty new and like not readily
+available in the training data. I also
+do mix models and modes pretty heavily
+as you may have saw earlier. So the vast
+majority of the time I'm using Opus and
+then I only switch down to Sonet when I
+have like any quick questions about how
+something was implemented. And very
+rarely do I use Haiku unless the thing
+that I'm doing is really well defined
+like a workflow inside of a skill. And
+instead of always switching between
+them, I have the model that I want
+defined at the very top. So for example,
+the Mac OS log explorer uses this model.
+The localization syncer uses the HiQ
+model because it does not need anything
+more complicated. The SEO blog writer
+uses the sonet model. And then I use
+something like the HiQ model for the
+Windows release and the Mac OS release.
+My heristic here is basically if the
+skill has a really well- definfined
+workflow that doesn't require much
+thinking, then a haiku model is
+perfectly fine because it just runs
+through the steps. But if it does
+require a bit more thinking because it's
+doing something slightly more
+complicated, then I prefer to use a more
+powerful model. I personally use
+headless mode a lot in cloud code. And
+the most powerful thing is that you can
+define a JSON schema. So essentially,
+when you have a $200 month plan of cla
+code, you're getting about $2,000 of API
+usage out of it. And that means that you
+can process a lot of data in the
+background through headless instances of
+cloud code. But essentially, I may run
+cloud code hundreds of times in the
+background to do like receipt validation
+or do some kind of data research for me
+where every hour it would trigger a
+research skill to collect any
+information and then save into a folder.
+And you can do that by defining chrons
+on your local computer if it is running
+all the time. And I also do use headless
+mode with cron and skill to basically
+make sure that my claude code class is
+up to date. So it would look at the
+change log and the transcript and then
+it would identify any videos that need
+archiving, any ones that need updating
+and any new videos that I need to
+record. And you can kind of do this by
+making like other workflows. But the
+benefit of using headless mode with
+cloud code is that firstly you get to
+use all these skills that you're
+normally using in cloud code and
+secondly it's much cheaper because it's
+going through your anthropic
+subscription instead. I also do use
+/copy pretty heavily to copy over any
+emails that cloud code may have drafted
+or results that I got from doing some
+experimentation. So, for example,
+recently there was some kind of like DOS
+attack that happened on a client server
+and then I got cloud code to basically
+look through all the logs, figure out
+what happened and then if I want to
+share this on Slack, I can basically
+just do /copy and it will copy this all
+to my clipboard which preserves the
+formatting as well in markdown which
+means I don't have to like do this like
+weird selecting and copying it because
+that may not be preserved correctly. So
+if I do /copy often if it's a return to
+function then I can choose a small
+section kind of like this or choose a
+full response and then I would go to
+slack or something and then I would just
+paste it in here to send over to the
+client. So you can see it says this
+looks like markdown and I can press
+apply formatting and then it formats it
+a bit better. And likewise if I want to
+export the entire session I can do
+/export then save to a file and just
+send that file directly to the client
+instead so they can kind of like know
+how I diagnose issue and stuff like
+that. Next up, there is slash insights.
+And I actually have not found this to be
+that useful myself because I think I'm
+already really good at using cloud code,
+but you may find it to be helpful
+because Claude will look through your
+entire sessions. I think it looks
+through the last dozens of sessions and
+then gives you insights in a file of
+what you could be doing better. So often
+Claude Code will do this automatically.
+But when I have a really long plan, then
+I tell it to turn that into a task list.
+So, for example, I have a pretty long
+plan that I made with the spec developer
+and I'd say turn this into a task list.
+And after doing that, I would either say
+complete each task itself inside of a
+sub agent or if the task list is like
+pretty long and big, then I would say
+spawn up an agent team to complete that
+task. So, yeah, you can see it's now
+made the task list and it's waiting for
+me to tell it what to do next. Okay.
+Okay. Now, when it comes to using work
+trees, I use the built-in work trees
+inside of cloud code. And I would do
+claw-w feature one and then claw-w
+feature 2. Now, I only use git work
+trees when I'm having two features being
+built in parallel that will kind of
+overlap in some way in the codebase
+because the main benefit here is that
+when cloud code comes up with a plan, so
+let's say made a plan on the left hand
+side and on the right hand side for
+implementing each feature, it knows
+exactly what files to change. But if you
+were not using gate work trees, if the
+code base suddenly changed as it was
+implementing something because it
+expected a file to be in one location
+but it actually got moved to a different
+location or one session of cloud code
+refactor the file but the other session
+was expecting it to be in a specific
+format. The way that I think about it is
+that having work trees when two features
+are being implemented holds the codebase
+static for each feature and then once
+implementation has happened I would do
+branch commit PR and then it would open
+up a new PR. But I don't always use work
+trees. So for example, if I was making
+changes to backend API and I was doing
+some small changes to the homepage, then
+I know that these changes will not be
+overlapping with each other in any way
+because I know those two parts of a
+codebase are distinct from one another.
+So if I'm just changing some copy on the
+homepage in one session and making
+backend changes in another session, I
+don't mind if they happen on the main
+branch without work trees. And finally,
+I use a clinging chrome MCP extension
+quite a lot. Now, this is mostly for
+pretty simple background repetitive
+tasks, but also when it comes to
+debugging any network errors, for
+example. A pretty simple example is that
+in my rayos folder, I have my own to-do
+list that exists on to-doist and then I
+have a to-do list for Claude Code. So, I
+told Claude Code which to-dos I should
+assign to me and which ones I should do
+itself. And when I upload a video or
+make a post online or something, I then
+tell Claude Code, okay, add to your
+to-do list three days later, check how
+that posted in terms of views and likes
+and so forth and any learnings that you
+have from the comments. Then it would
+automatically open up Chrome, go to that
+relevant post or video, and then read
+through everything. It's also pretty
+handy for scraping data from websites
+that are pretty anti-scraping data, and
+also just filling in forms online,
+especially really long ones. So, what I
+would do is I would see a pretty long
+form that I got to fill in. I would then
+just dictate everything to cloud code
+and then get it to fill in the form for
+me. And I've actually been using it to
+do my taxes as well. So, it just fills
+out all the forms for me. I then give it
+any like materials that it needs. It
+does the calculations for me and then
+fills them out. So, anyways, this is a
+small fraction of all the ways in which
+I use Claude Code. And if you want to
+learn more, then I cover many of these
+topics in more detail in my Claude Code
+Masterass and a lot more things that
+have not been covered in this video as
+well. I do update it regularly with all
+the cloud code updates and anytime I
+have a new workflow or technique then I
+also share that in the class in the
+relevant my daily workflows class.
+There's also a lot more things that I
+haven't covered before on the channel
+like advanced context engineering if you
+are also interested in my cloud code
+newsletter which is completely free and
+gives you access to a bunch of free
+videos from the class. There will also
+be a link for that down below. And I do
+send it kind of regularly whenever I
+discover something new or like have a
+new tip to share or something. And many
+people do reply to newsletters sharing
+their thoughts which in turn informs my
+thoughts going forwards. So links to
+that and many other things that I
+mentioned will be down below if you're
+interested. And if you have enjoyed this
+video then do subscribe to the channel
+because it lets the algorithm know that
+this is a good one and it pushes it to
+more

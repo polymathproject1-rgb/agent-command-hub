@@ -1,0 +1,2074 @@
+If you think code is just for developer,
+ 
+you're missing something huge. Close
+code runs my entire business. And I'm
+not a developer. This is not about
+coding. It's about business leverage. In
+this course, I will show you every
+features and mechanism in clo code that
+matters for business. Not theory, not
+fluff. Real tasks, real results. Cloat
+code solves every limitation of fac GPT,
+Gemini or even standard code. The memory
+problem, the context problem, the
+scattered word problem. Gone. I am
+Darren Viner and I coach business owners
+in the world first AI community. The AAA
+by Liam Otley. For the last three years,
+I've spent thousands of hour building
+system with AI agents for real business
+scenarios. Now, let's dive in. Okay,
+let's start. Why are we stuck with Chad
+GBT and other AI tools? First problem is
+context window management issue. We are
+limited by the context window and the
+models whatever the platform glow jgd
+gemini take whatever platform they all
+have the same problem the model lose
+performance as the context fields there
+is loss of details the models forgets
+important stuff and at the end
+hallucinate another big issue is the
+siloed sessions you cannot share context
+across chat sessions or across projects
+or between custom GPTs in a easy manner
+and it's a real problem when you're
+working on complex projects with
+different information scattered among
+different folder different sub project
+or different location inside cloud chpd
+and so on really that's a huge limit
+then there is another problem which is
+the self orchestration problems in chptt
+you can use teams of custom gpts but you
+have to call them manually using the ad
+command in code you cannot do this in
+geninai you cannot use multiple gyms in
+one's chat sessions and so in all those
+tool you have to orchestrate manually
+either with a command like in chat GBT
+or copy pasting stuff between chat
+session between project between gems
+between different chat sessions and so
+that's painful another thing that is
+painful these tools is the connection
+with external tools let's face it you
+can connect chat GPT with connectors or
+cloud with connectors in code but it's
+still very early and it's still basic
+like for instance the Google connector
+the Google drive connector Google sheet
+and Google Docs connectors. You can't
+you cannot even have your custom GPT or
+your cloud project write Google Docs.
+That's crazy. So it's useless for me.
+And in addition to that, even if you use
+OpenAI schema with custom GPTs inside CH
+GP, it's clunky. Let's face it, it's
+techy. It's not straightforward. I
+really it's I hate it. And when you use
+it, it's really painful. You have to
+always authorize connection and so on.
+That's my god, that's so hard for
+nothing, right? So the capability to
+connect with external API is really
+limited. Then you have all these other
+tools like N8 and Meg.com, Zapper and so
+all these automation tools and at the
+end of the day when you want to do
+automated workflows you need to combine
+all these tools it's really techy once
+again it's brittle even if you don't pay
+any money you will spend time it's
+expensive to build expensive to use
+expensive to maintain and it's it
+becomes obsolete very fast think about
+it has just released agent builder when
+I'm recording this video which means
+tools like nn or make.com most likely
+they can be threatened by that. Who
+knows if N8 will still be something in
+six months. Not sure. I'm not making any
+prediction here because I don't know and
+anything can happen. But just to show
+you that this complex tools, you take
+times to learn them and then you have to
+learn something else because now it's
+not it's not the best way to do stuff
+any longer. Once again, what we do here
+is not technical. We want to use simple
+AI tools that are evergreen. Let's face
+it, if you work with GPTs, it will last
+longer than working with specific AI
+tools. And here what I will show you
+working with code code is definitely the
+future and it is there to stay for a
+very simple reason. Entropic is
+investing massively on upgrading this
+tool maintaining this tool making it
+better adding features adding
+capabilities. So it's just the beginning
+which mean it's the right time to jump
+on train and side note here cl code is
+initially it's a tool that is built for
+coders but actually you don't need to
+know any code to work with it and in
+particular with what I will show you
+which means using cloud code inside
+visual studio code and with the cloud
+code extensions you will see it's it's
+like a actually it's an experience that
+is quite close to a chatbot so you don't
+need any tech skills to use what I will
+show you and the original thing that we
+do in CCG and that I show you in this
+course is that we are using cloud code
+not for code but for business related
+work using AI agents using processes
+systems inside cloud code leveraging the
+capabilities of cloud code but for
+business purpose and that's really super
+powerful and super easy actually once
+you have the right system once you know
+how to use the cloud code capabilities
+in a business context that's pretty
+straightforward so now let's see how to
+install cloud code in few seconds it's
+very easy to install cloud code I
+recommend to use visual studio your
+code. It's free and then to install
+cloud code extension and then the only
+thing that remains to be done is
+authenticate with paid code
+subscription. And once again, I
+recommend you to use your paid code
+subscription rather than the API because
+you can also use code with the entropic
+API. But if you use the entropic API,
+you will pay for every token you use.
+And I don't like this uh this approach.
+Why? Because basically you're paying for
+mistakes that AI will do. when AI
+consume too much content, it's because
+AI is not effective enough enough to do
+the job in a limited amount of of token.
+And so I don't want to pay attention to
+the number of token that the AI is is
+using, right? So that's why I recommend
+to use a paid cloud subscription. So let
+me show you how it looks. First, you go
+in Visual Studio Code and here you you
+choose the the right one for you. I'm on
+Windows, so I would download the file
+here and I would just execute it and I
+would just follow instructions. It's
+really straightforward. Then when you
+are in Visual Studio Code, you go in
+extension here. You look for code and
+here you have cloud code for VS code.
+You click on that and then you can
+install. For me it's already installed
+so I won't do it but you click install
+and it will do everything alone. And the
+first time that you launch cloud code
+and to launch code you just have to be
+in a folder. So let's open a folder like
+this one for instance. Once you're there
+you just click on a file or somewhere
+and you will see that here you can
+launch with the upper right corner. You
+can launch as many cloud code session
+you want. And so the first time you you
+connect with cloud code before having
+this beautiful interface you will have
+something that says hey a authenticate
+and then you can choose the method
+between API or between your code
+subscription and I recommend to use the
+cloud subscription and it's pretty
+forward you click on it will open the
+browser and then you just say accept or
+you just read what is on screen follow
+the process it's really really easy
+straightforward and you're good to go as
+easy as that and you see no coding no
+nothing it's pretty simple and you will
+see Visual Studio Code is really simple
+because It's a bit like Windows. You
+have folders with files and you can
+navigate your computer there and then
+you have a bunch of feature in Visual
+Studio Code. But that's not the point of
+this course to explain that to you. You
+will discover you will see it's pretty
+straightforward. Just quick tip. You can
+see in a cloud code session here I have
+access to the past conversation here. I
+don't have any but in a folder I have
+worked on for instance that one here. If
+I open another close code session now I
+have past conversations. Okay. So that
+means I can find my past conversation if
+I need to. So pretty simple. That's it.
+You now you're ready. First thing to
+understand is the memory system. This is
+what we will cover next. Yeah. When you
+first connect with cloud code or
+sometimes when your access token has
+expired, cloud code will tell you that
+you need to you need to login again and
+so you use the command slash login and
+then you will end up on this screen and
+then that's where you can choose between
+cloud AI subscription or entropy console
+which is the API or this. I haven't I've
+never used that. And so you click cloud
+AI then you have this box. You say yes.
+Then it opens this in your browser and
+then you just click authorize and you're
+good to go. Then you go back to your
+interface code interface. The code MD
+file that's your business brain or
+that's the brain in more general
+context. That's the brain of code. The
+code MD file is a bit like a system
+prompt and actually you can have a code
+MD file in any folder you are working on
+with cloud code. This is some sort of
+permanent instruction files that you can
+use at in each folder and for each
+project you're working on really it's
+like a system or if you have worked with
+um chat GPT project it's like the custom
+instruction for CH GPT project or if you
+have work with custom GPS it's like the
+system prof
+and same for cloud project if you work
+with cloud project you have custom
+instruction for cloud project so here
+the cloudn is the same same concept the
+the thing to understand is that you for
+each folder you can have a cloudend ND
+file and so if you have a folder with
+subfolder and so on you can basically
+have a hierarchy of project folder and
+for each of them you can have a code ND
+file and the cool stuff is that each
+time you open a cloud code session
+inside a folder it will look for a code
+and file to get instruction and context
+of what we were working on in this
+folder or project in this course I will
+call folder project it's the same I will
+use the same the two words for the same
+concept so obviously the advantages of
+that is that you don't have to reexplain
+a project context or business context
+you can have different instruction per
+project or per folders. You can compound
+the knowledge because each time you're
+working on a project, you can ask to
+update the cloud.nd file so that the
+permanent memory or the system prompt if
+you prefer is always up to date. So it's
+super powerful. You can also use that to
+have some mechanism that cloud code will
+execute when it opens. You can like
+really the sky is the limit with this
+super effect. Cloode can help you design
+the code ND file of course, but you can
+also decide and tell cloud code to put
+stuff you find you find important for a
+given project or given folder inside a
+code file. So let's have a look at the
+code ND file. Here I am in my CCDG
+business operation. And if I open a uh a
+a project for instance this one you can
+see here I have a code MD file. Okay.
+And you can see here this is the a
+markdown file with information about the
+project the scope etc. Okay. And if I
+got if I go in another sub project for
+instance this one once again I have a
+clone and D file somewhere. So now cloud
+has memory and context with the cloud.nd
+file. What if you need multiple AI teams
+working in parallel? That's where sub
+agent come in. Sub agents are AI workers
+inside cloud code. The cool stuff with
+them is that there are specialized AI
+assistants. They have isolated context
+window. Each context window has 200,000
+tokens available to the date of this
+video. That means you don't pollute the
+main context when you're working with
+agents. The cool stuff with agents is
+that cloud code can call them in
+automatically invoke them and cloud code
+can run them in parallel or can run them
+sequentially according to the work they
+are doing. The sub agents have access to
+the files in the folder you're working
+on and so they can communicate with each
+other using the file they have access to
+or cloud code can also pass context.
+I've seen that cloud code can pass
+information from one agent to the other
+sharing context. Okay, this is technical
+it doesn't really matter just cloud code
+can orchestrate automatically sub aents
+sharing context between the different
+agents even if each sub aent has its own
+context window. So the advantage is you
+can run multiple task at once so you can
+go faster. You can specialize them as
+well. So that can be a team of
+specialized sub agent that work on the
+workflow orchestrated by cloud code not
+by you. You don't have to do it. Of
+course, if you want to specifically ask
+code to work with a given sub agent, you
+can do it. No problem. But that's super
+useful. And at the end, what a sub agent
+is, it's a it's a MD file. So, let's
+look at this. This is my GPT Express
+mastery team. It's my I call that my HR
+department. This is where I build all my
+sub aent in code and also where I build
+all my custom GPTs when I'm working on
+Chad GB. Okay. And so an agent is you
+can see here in my in my HR team I have
+se several agents they correspond to my
+GPT express mastery framework if you
+you've watched the course inside CCG
+community and if I open one this one for
+instance you can see that an agent has
+always the same meta data here and in
+the met metadata I have the name I have
+the description of the cell agent its
+mission that's what code will use to
+know what the sub agent does and also to
+invoke automatically the sub agent if
+the task match the description you can
+specify the
+You can specify a color uh especially if
+you're working on terminal so you can
+see what agent is working and you can
+also specify the tool it has access to.
+It's optional but you can do it. The
+classical procedure to create an agent
+in cloud code is using the command
+agents and here configure agents. I will
+have to continue in terminal because
+here I'm in the extension for visual
+studio code. But if you want to make the
+the / aents command work you need to go
+in the terminal. So if I go in the
+terminal it looks like this. And then I
+have the list of agents I have access to
+in my system. And if I want to create a
+new agent, I can just click here. And
+then I can choose between project or
+personal. If I put my agent in project,
+that means the the agent is available at
+the project level in the folder I'm
+working on. If I put it in personal
+here, that means the agent will be
+available everywhere. That's a hierarchy
+of availability. That is true for
+agents, for skills, for MCPS, for all
+the key features of code. You can either
+have them available globally or have
+them available locally. I won't create
+any agents because once again I don't I
+don't use this approach to create
+agents. What I use to create agents is
+my is my HR team. And for instance here
+here I have my team working on a on an
+agent. It's an example that I I I
+started just to show you. I just said
+hey I need an agent can can answer
+questions about code for business. Then
+what did code? It's refined my demand or
+at least it uh identified inputs it
+needed and started answering the inputs
+automatically so I can review. I said
+okay and then what it did it created a
+folder that is this GPT project code
+business expert it's in there code
+business expert and then it it called
+multiple agents to work on this sub
+agent creation or this custom GPT
+creation first the purpose the purpose
+refiner that refined the purpose
+statement and here it's a better uh
+definition of what the agent is meant to
+do better than what I did initially and
+then you can see here that the todos of
+code using different sub aents to work
+one after the other executing my GPT
+express mastery framework to craft
+custom GPTs and then you can see a good
+example of parallel execution. So it's
+not sub agents that are execute
+executing in parallel here. It's the web
+search tool that ex is used by to code
+in parallel. So that means code code is
+making these different queries in
+parallel to go faster. Okay. A bunch of
+query to collect knowledge and then it's
+fetching several URL to collect the
+knowledge some other web search queries
+and it's still making some research.
+Okay. And then after we craft the
+knowledge base and then the system
+prompt and then potentially some tools
+and then I'm good. I have my custom GP
+on my sub agent ready to rock and roll.
+I call that my HR team. And this is
+something that is available in CCG here
+in the cloud code OS so that you can
+plug it immediately just copy paste it
+and have it available inside your cloud
+code environment without spending time
+setting this up. It's already done and
+available in cloud code OS. So sub
+agents handle complex task but what if
+you need reusable workflows or standard
+SOP standard operating procedure that
+activate automatically and that cloud
+code can call in anywhere globally which
+means these are standard way of working
+that you can use in any project anywhere
+in cloud code that's skills okay
+consider skills as reusable workflows or
+standard operating procedure which mean
+when you know how to do something well
+and you want it to be done always the
+same time by code code you will create a
+skill And these skills can be called in
+any folder in any project. So the key
+feature of skills is that code can
+trigger them automatically can can use
+the skill automatically according to the
+work you ask it to do. It will detect
+context match. Then skills are really
+optimized for context window using a
+mechanism that is called progressive
+disclosure which mean when cloud code
+uses skills it won't load the entire
+skills. It will just start discovering
+what the skill is about reading the
+beginning of it and then reading more if
+needed. And that's really super useful
+for context window optimization. Another
+cool thing with skills is that skills
+mix deterministic code. You can put
+scripts inside skills and also knowledge
+files that can be processed by LM which
+mean you combine both world code
+deterministic tasks and LLM for flexible
+AI automation or AI execution let's call
+it. And finally another stuff that is
+cool with with skills is they're they
+are sharable which mean first and
+foremost you can use them globally in
+your on your system in many different
+projects don't have to specify again
+they are available and also you can
+package them and share them with other
+people for instance with your customers
+or for instance with your teammates
+which mean you can enforce SOPs you can
+ensure that your teammates using cloud
+code or your employees using cloud code
+will use the right SOP because you share
+the skills with them and guess what in
+the cloud code OS I'm sharing ing the
+skill I use for myself and ideas for
+myself. I share them with you so that
+you can use them right away. It's copy
+pasting so simple. So like I told you
+the advantage of skill is context window
+friendliness and you know how much
+context window friendliness matters for
+large language model performance.
+They're reusable across projects
+globally anywhere from cloud code except
+if you put the skill in one single
+folder then they are available only on
+this folder. But if you put them
+globally and this is what I advise you
+to do if you put them the code subfolder
+in your user folder they are available
+globally code decide automatically how
+to use them if you want to be ensure
+that code use the right skill you can
+also tell it to use the right skill and
+the cool stuff is that you build once a
+skill and you can use it anywhere and
+guess what you can also improve the
+skill right so let me show you what a
+skill looks like okay here I'm in the
+cloud folder in my user folder on
+Windows and so That means everything
+that is there is globally available
+everywhere in my cloud code environment.
+Let's check skills factory. Guess what
+they when entropic released skills few
+weeks ago I guess 3 weeks ago now the
+first thing I crafted is a skill to
+create other skill. Obvious
+custom GPT I created or maybe the third
+one I created is a custom GPT to create
+other custom GP and back in the day the
+first sophisticated prompt I created it
+was met what I call I used to call meta
+prompt was a prompt to create other
+prompt. It was in February 2023.
+Anyways, so this is how a skills looks
+like. A skill as always a skill ND file.
+Any skill has a skill ND file. You can
+see here there is another one etc. And
+so a skill ND5 basically has once again
+metadata. You will see that in cloud
+code all files all system files let's
+call them that way as always a metadata
+that help cloud code understand what it
+is what it does when to invoke it.
+Right? So here same for skills we have
+skill.nd identify with this metadata,
+the name of the skill, the description
+of the skill, as simple as that. And
+then you have a description of the
+skill, what it does, the process inside.
+Basically, it's defined how code should
+do the work when it's applying these
+skills. You can see it's pretty short
+file, right? And if we check the outline
+of it, you can see in this specific one,
+we if we check the outline of the of the
+skill.nd file for the skills factory,
+there is the metadata, there is a more
+extended description of what it does.
+There is a skill creation process. There
+is some troubleshooting. There is some
+reference documentation. And that's the
+progressive disclosure. When cloud code
+see reference documentation, it is how I
+have some other document. I have access
+to so potentially I can retrieve them.
+Some example skills, some script and
+some version history. Okay. See it as a
+table of content. And then in in the
+skill I have some other documents. So
+that's a knowledge about how to do the
+skill properly. And you can have also
+code. Here I have some scripts. So these
+are Python script that cloud code will
+execute when it's using the script. I
+can give you an example about how skills
+are used. For instance, I have a skill
+that is um my standard operating
+procedure to create new uh projects
+inside my business OS. That's the
+project creator skill. And so let me
+show you how it looks like in real life.
+If I am in my CCG business operation
+system. So that's the one. Let's create
+a project using a skill. Okay. By the
+way, this operating system has many
+super useful processes, mechanism and so
+on that makes it super effective to run
+any aspect of my business. And guess
+what? It's available in cloud code OS so
+that you can copy paste it with all the
+mechanism and the routine already set
+and you can tweak them and make them
+specific for your own business. And of
+course the implementation calls inside
+cloud code OS are meant to help you
+customize it for your business. These
+implementation calls are group group
+call. we do about each systems I share
+inside cloud code and it's also Q&A code
+so that when you have question about
+implementing your cloud code OS systems
+I can help you back in the main topic so
+here let me illustrate how to use skills
+or a skills is used by cloud code so I
+will create a mock project so that so
+that I can show you how cloud code
+project creation skill to create the
+project the right way inside my CCG
+business operation so that will be a
+mock project just to show you it works
+hey use the right skill to create a
+project inside CCG business operation
+that's a mock project just to
+demonstrate how you invoke skills to do
+stuff specifically here to create a mock
+project right oh that's a clunky ask I
+did here but it should work so here you
+can see it's calling the skill project
+creator and it's reading it's
+discovering it's discovering the the
+skill that's progressive disclosure then
+the proc the process is normally asking
+me some questions about the project but
+here it has understood it's a mock
+demonstration so it's just answering ing
+itself following a procedure and then I
+say yes that's good let's go and it will
+create it and so now it will follow the
+process to create the mock project as
+per as as defined in the skill okay so
+it will create project structure
+generate the clone file seed file what
+you should have in any project a readme
+as well then uh do some other stuff that
+are defined in the skill okay I will
+stop there okay if you have created
+anything please clean clean that it was
+just an example okay thing to to
+remember about skills the progressive
+disclosure mechanism the mix of
+deterministic script code which is
+really reliable and LLM that is more
+flexible and you can mix that inside a
+skill if you want to ensure that the
+skill is used. Normally cloud code auto
+invoke the skills but sometimes it might
+just try to do it on its own especially
+if it's simple task you're asking. So if
+you really want to enforce a skill
+mention the skill when you ask cloud
+code to do something. So definitely
+skills are super powerful individually.
+But what if you run multiple skills and
+sub agent at once called that parallel
+execution. Let's have a look. We already
+saw a bit how to do this with sub agents
+or tool calls like when we I show you
+web search in the previous example.
+Let's talk a bit more about parallel
+execution. So the cool stuff in cloud
+code is that you can execute in parallel
+either tools either sub aents and
+sometimes just code sessions. Okay. So
+the basic two approaches are multiple
+sub aents in one session and in this
+case code will invoke multiple sub aents
+simultaneously to do a workflow. Once
+again, each agent will get isolated
+context window but can share information
+either code give different information
+to the different sub agent to coordinate
+them or you can use also files inside
+your folder that these agents have
+access to to refresh their context,
+share information, share their work.
+Right? The cool stuff is that cloud
+orchestrate automatically. You cannot do
+this in Chad DP code or Gemini or these
+other AI tools. Cloud code here allows
+you to do it. The other approach is to
+use multiple cloud code chat session
+which mean you open several cloud code
+windows inside the same folder or
+sometimes in different folders and each
+session work on different topic. Here
+it's you orchestrate and check the what
+they do. Something to understand if you
+want to orchestrate multiple agents or
+if you want to have cloud code
+orchestrating multiple agents you can do
+it in parallel if there are no
+dependencies if task A done by agent A
+doesn't need task B B's output for
+instance and if they're working on
+different files. Okay, you want to avoid
+having two agents working on the same
+files at the same times in parallel
+because it's messy. So the advantage
+here obviously is massive time saving
+with parallel execution. And really the
+way I see it is I'm the CEO and I
+distribute work among my teams. And so
+that's why most of the time I'm working
+with multiple department. Here I'm
+working with my operational team in my
+business OS. Here I'm working with my HR
+team GPT Express Mastery. And here I'm
+working with my content team. Okay. It's
+like I'm a CEO with multiple teams,
+multiple department. I can distribute
+work and they can all work in parallel.
+Okay, I can run some stuff in my with my
+operational team. Then in parallel I can
+run stuff with my HR team and then in
+parallel I can work work on some stuff
+with my content team. Now if I check in
+my content team actually we have several
+sessions. So there my content team is
+working on several stuff in parallel.
+Same here if I check my operational team
+I have several several session in
+parallel. When I work like this I'm
+really the co with multiple teams
+multiple department. I distribute work
+they do their stuff in parallel. I check
+what they're doing. I give them
+feedback. I give them direction and
+that's the way we can really have super
+high leverage in what we do. I want to
+insist how powerful it is to have
+self-chestrated sub aents by cloud code
+and the capability of cloud code to
+invoke tools to invoke sub agents to
+invoke skills and for tools and sub aent
+to invoke them in parallel. So far we've
+seen different capabilities that cloud
+code has but what if you need to connect
+cloud code with external services for
+instance APIs that's the next one. The
+cool stuff with cloud code is that you
+can connect your environment with
+external tools. Okay, so far in the
+course we've covered internal tools,
+internal features that code has. Now
+let's talk about external tool. So first
+API, don't be afraid. That's really
+simple. An API is just an interface that
+allows software to discuss with each
+other. And usually what you do if you
+have an external tool you want to work
+with, you check if they have an API and
+then you check the documentation of this
+API, you put it inside cloud code, you
+explain what they want to do and cloud
+code, we figure out how to discuss with
+this external tool because once again an
+API is just an interface that allows
+programs to discuss together. And in an
+API, you have endpoints which are
+internet addresses. And when you want to
+work with an API, you just find the
+right endpoints, the right internet
+address you want to use and then you
+send authentication. You send a
+formatted message to this address and
+then the address the tools external
+tools does it its stuff and then give
+you back an answer, right? And that's as
+simple as that. So typical use case is
+when you want to connect your code with
+email like Gmail, Google doc or to your
+CRM to add data or pull data from your
+CRM or post on social media. Every
+social media platform has an API which
+is one again an interface that you can
+discuss programmatically with. Or if you
+want to fetch data from a database, you
+will use the API of the database tool.
+Okay, you want to work with an external
+tool, find the API you need. And if I go
+for instance if I take the example of
+gamma which is the API I'm using to
+create presentation automatically. So
+you can see in my business OS I have
+some files related to gamma API. Let's
+suppose I want to connect to notion.
+Okay never done that before but I could
+ask cloud code to hey find the
+documentation of the notion API so that
+I can create notes in my notion account
+and I can pull data from my notion
+account. Okay as simple as this. And
+then third code will just make some web
+research to find the API documentation.
+Hopefully it won't be too long. Search
+fetch it. So read it. And then once
+again remember authentication then
+sending formatted message then receiving
+answers and doing your stuff with the
+answer. So here basically what I would
+need to do is to get my API key from
+notion put it in a NV file that is here
+where I put all my credential and then
+to code will write the script according
+to what I need to do. Of course I can I
+can make that evolve and if I just
+explain in plain English what I want
+code knowing the notion API
+documentation can just translate what I
+want into okay what are the URL in the
+notion API we need to work with what's
+the format of the data what's the
+protocol to authenticate and then it
+will manage that and create the script
+that allow allows me to do this of
+course I would test that and so on but
+that's as simple as that according to
+the API and how well they are built and
+It depends on the external tool. You may
+take some times to make it work. But
+basically with close code, you don't
+need any coding skill which means once
+you know an API you want to work with.
+Once you get API keys or whatever is
+necessary to authenticate with this API,
+you're good to go. You can create a
+bridge and then you can get this
+external tool working with your
+environment. Okay. If you see here, it's
+looking for the the right format to
+discuss with the notion API. Okay, I
+will stop there because actually I'm not
+using notion. For me, notion is a
+distraction. But I know that many people
+like notion. So that that would be a
+simple manner to connect notion to your
+cloud code environment. Okay. You can
+see here authentication the API basics
+here. And then it's it's here it's
+documenting how to create a page or
+notes in notion programmatically. We
+don't care about this. That's the format
+okay of the message we should post which
+means send to the notion API URL to
+create a page. Okay. That's the type of
+format that we need to send. An example
+if you want to retrieve something from
+from notion we send that to the right
+endpoint the right URL which is database
+can you see here the URL was a page here
+it's database and then of course a
+database ID which is the identification
+of the database you want to pull
+information from and that's it and so
+now here would you like me to create a
+complete Python or JavaScript script for
+a specific use case I could say yes I
+will stop there because once again I'm
+not using ocean but just to show you
+that you don't need to be a coder and
+the concept is pretty simple API once
+again It's a external interface you can
+use to to programmatically connect with
+an external tool and that is just URLs
+and you send message to this URL you get
+answers okay you send message which are
+request on the URL the external tool
+does it it stuff based on the message
+you send the only thing is that the
+message need to be properly formatted
+the authentication must be properly
+handled most of the time with API keys
+and then once the tool has done its job
+it gives you back the the whatever
+results you needed and then you can
+process it inside your cl code very
+simple okay So advantages ah we can stop
+copy pasting between tools and look we
+don't need AI workflows we don't need
+zap year we don't need magg.com we don't
+need all that any longer can do it like
+side note the only use case when you
+need a meg.com or a zap year or a n is
+when you want an automation to be
+triggered whenever when you're not in
+front of your computer and when you're
+not working if you want background
+automation yes this these scenarios are
+useful why because code code works only
+when your computer is alive and when
+you're working on your computer but in
+my case I have very few few use cases
+where I need this workflow automations
+and most of the time if I need them it's
+super simple anyways so when you have an
+external tool that you're using being
+notion Figma miro whatever your your CRM
+air table and so on they all have API
+and they all have API documentation and
+so you can make research with cloud code
+to find the API documentation and and
+make cloud code ingest the API
+documentation and then create whatever
+bridge you want with this uh these
+external tools. Okay, that works great.
+This being said, there is a new protocol
+that makes working with external tool
+theoretically easier and these are MCPS.
+It's worth having a look at this because
+it's it's a very promising standard and
+might probably be the best way to
+connect with external tool in the
+future. It's still in development so
+it's not perfect but let's have a look
+at this. MCPS are a standardized manner
+for AI agents to communicate with
+external tools. It's a protocol that
+helps your agent understand what are the
+tools available in an external app and
+call this tool properly. In MCPS, you
+can have also additional stuff like you
+can have prompts and stuff like this.
+But hey, let's keep it simple. So sync
+MCPS as a power adapters for different
+countries, different tools. Clo is the
+device, the services are the countries
+or the tools and the MCPS is the
+standardized adapter. Okay, so that's
+easy matter to connect code, cloud code
+or any AI agent to external tools. So
+there is lots of hype around MCP because
+MCPS bring official plugins, pre-made
+toolbox for a given external app that
+your agent immediately understand and
+can tap into and use. Right? That's the
+theory. Everything being standardized
+that means it's easy to develop MCPS and
+also it's easy for any AI agent or code
+to use an MCPS. It knows the standard it
+knows how to identify the tools that are
+available. It knows how to use the tools
+and then apply the tools the external
+app right and normally it's auto
+integrate which means cloud code is able
+to understand what tools it needs look
+for the right tools then use it and
+that's it. Okay. So you don't even need
+normally to request for the use of the
+tool. Even if it's always better to
+enforce it to be sure that everything is
+done fine. Okay. But the reality is that
+it's a new technology. So there's
+there's big hype but it still need
+maturity. I've seen many MCPS popped up
+with big claims and actually they are
+crap. Why? Because they are poorly
+developed. they are not stable or do you
+can install it them in an easy manner on
+some AI agent like include but not
+necessarily include code like that's a
+mess and even when you use them actually
+they're not necessarily fulfilling the
+promises so if I were you I would only
+use official MCPS that are supported by
+the community and that are well
+documented and up to date obviously for
+reliability issues I will be very
+cautious with open source MCPS. Why?
+Because you don't know the quality of
+them. You don't know if they are up to
+date. You don't know if they're well
+documented. That's that's really tricky.
+Theoretically, you can create your own
+custom MCPS because MCPS is just a
+protocol that ends up making easier to
+connect your code or your AI agents with
+external tool. Easier than having to do
+it manually, understanding the APIs and
+creating scripts to make API calls. But
+at the end of the day, this is packaged
+API calls, right? just it helps AI
+agents to automatically understand what
+are the tools so that they can invoke
+them automatically without you doing
+nothing and understand immediately what
+are the set of tools endpoints that are
+available and how to use them. Okay. So
+it's it's it's really a protocol to make
+life easier for AI agents and leverage
+AI to use XML tools properly according
+to context. That's that's at the end of
+day it's a packaging. This is what it's
+it's a communication protocol. So when
+to use MCP? Use MCP when you have a
+proven official idly MCP for an app, an
+external tool you want to plug on your
+cloud code or AI agent system. If no MCP
+exist, I advise you or if you can just
+find some crappy open source MCPS, I
+advise you to use API script. The thing
+we we've seen just before same if you
+need custom logic or specific use of
+external tool, use API script. Uh let me
+show you how to install MCP and what it
+looks like. Okay. So, I like this uh
+this uh this ditab repo model context
+protocol which is what MCP
+means/servers. Why? Because it's an
+official one. You have lots of uh MCPs
+here. Let's pick one. We'll pick
+playright which is is a Microsoft MCP.
+It's a browser automation MCP that use
+playrite to run test, navigate pages,
+capture screenshots, scrape content,
+automate web interaction reliably. So
+pretty much giving your cloud code if
+you're using cloud code access to
+internet and visualizing web pages and
+working with web pages. So that's pretty
+cool right? So if I click there I go in
+this page here and here I have the
+information about the MPs but since we
+are not coder we won't check that but
+just here click quick review here 23k
+stars that means lots of people are used
+that and rated here you have the
+releases like the latest one is this one
+it was released yesterday which mean
+it's it's a MCP that is actively worked
+on and updated right many contributors
+etc. It's a really good indication that
+the MCP is actually legit. And so if you
+want to in install your MCP in code, you
+can either ask code directly. Hey, I
+want to use this MCP, do it. What I like
+to do is I like to check uh that there
+are something in the MCP that is perfect
+to install in cloud code. Okay, they
+have they have they have implemented
+quick installation for cloud code. And
+so here that means if we want to use it
+in cloud code, we just need to use that
+that line here in cloud code. So let's
+go back in code here. Okay, we paste it.
+uh I can say I will give some context.
+Hey, I want to install globally the
+playright MCP and then I validate and so
+it will execute the command and that's
+it. It's installed. It's as easy as
+that. When you want to install validated
+MCPS legit one, it's pretty
+straightforward. Now I'm I've seen
+myself struggling a lot with some
+underground MCPS and so I don't
+recommend to spend too much time on
+that. Okay. So now I have my playright
+MCP that has been successfully installed
+globally and so it's added to the cloud
+configuration. I should find it in this
+folder if I want to check. Let's keep
+things simple. And then it can automate
+web browser, scrape dynamic web content,
+test web application, interact with web
+page programmatically. This one is
+really good when you're developing a UI
+by the way. And so it's normally
+available globally. So I will log that.
+Yes, let's do the three three steps. By
+the way, in the meantime, I use the
+command /mcp. I can check mcp status and
+I can see a playright is connected
+whatever. And if I use the mcp manage
+mcps now I to continue in the terminal
+with just no big deal. And so it will
+open code in my terminal whatever. And
+now I am mcp and so you can see here
+playright is connected. If I click on it
+I can configure it. Okay. So that's my
+playright mcp server. It's connected and
+there are 21 tools. Okay, you can see in
+display right and speed there are 21
+tools. So let's let's see what is in
+there. You can see there are many tools.
+Upload files, field form, install
+browser, specify for in the config,
+press key, navigate. Basically it's all
+these tool are actions that my agent my
+cloud code can do on a web interface to
+navigate it through the playright. Okay,
+so nothing big here. Just I wanted to
+show you how to install a MCP really
+really quick and how to check that
+everything is running fine and how to
+check what kind of tool your cloud code
+has access to through this MCP. Okay, so
+no no big deal here. Let's remove that.
+Oh, let's clean that properly. We've
+covered a lot. Now let me show you how
+all these pieces fit together in to a
+complete system. Let's make a quick
+recap. So we've seen that with cloud
+code you you have several features and
+also several capabilities that makes it
+a complete AI powered system especially
+in a business context. Once again cloud
+code has been highly pushed for
+developers and coding use cases but
+actually we are using it for business
+and it's amazing. In cloud code we have
+basically our folder structure which
+represents our different projects or
+tasks or teams according the way to want
+to call that I call that either project
+or my teams and we have coded file that
+gives for each project each team each
+folder instructions mechanism way of
+doing stuff inside the project which
+means each time cloud code is called it
+check the cloud MD files and it knows
+everything about the current work inside
+this project. So you can consider that
+as the business brain and the way your
+business or your business operating
+system is structure. Then you have your
+sub agent teams can be available
+globally or locally at project level and
+I consider that as my different
+department my teams working for me.
+Okay. And there are self orchestrated by
+cloud code and there are many manners to
+do this but let's not enter into the
+detail. Then you have tools that you
+don't necessarily see internal tools for
+instance uh cloud code as tools for to
+read files to do web search and so on.
+Let's not take too much time on this.
+Let's keep things simple. Cloode manage
+I mean use the right tools at the right
+moment without you doing nothing. So
+it's kind of working in the [snorts]
+background. Then you have the skill
+which are reusable workflows that are
+packaged and they can be shared between
+your teams of sub agents or even between
+other users like your teammates or your
+customers or exactly what I'm doing in
+CCTG. I'm sharing skills some skills
+with you guys and so all that folder
+structure cloud.mdi sub agent teams
+skills tools inside cloud code these are
+internal capabilities on top of that you
+have also the possibility to add
+external capabilities external tools
+through APIs and MCPs so you could build
+your own system trying to understand how
+to use all that and then do trial and
+errors and so on but there is so much
+value to having pre-built system so that
+you don't build from scratch you Don't
+spend months of work on just building
+the stuff, designing the folder
+structure, writing the code.md files,
+creating the sub aents, testing them,
+improving them, removing the one that
+are not working well or building skills
+library which takes time because each
+time you're building a skill, you need
+to test it, you need to improve it.
+That's that's work, right? Or setting up
+integration, testing API connection,
+testing MCP. So you could do this and
+spend lots of time doing this. Or you
+could deploy mine the entire business OS
+with folder structure cloud.mmd5s
+mechanism already built in as well as my
+content team with the 14 sub aents that
+I have in magnetic content OS the
+strategic console the AI gross engine
+plug-in which is yours that that would
+be the AI growth engine with its
+framework it structure but apply to your
+business with the productivity system
+with the daily planning productivity
+assessment already built in taking your
+information what you work on with code
+on a daily basis to give you assessment
+about your productivity to help you also
+prioritize using the brutal
+prioritization framework on the right
+stuff for your business. Having AI
+support to be productive and focused of
+course would have also my HR team, the
+GPT creation team, the GPT express
+mastery OS and skills and scripts
+library that I develop for myself only
+focusing on stuff that are useful for
+business. Of course, you can have access
+to all this here in the cloud code OS.
+This is what I'm sharing cloud code OS.
+I'm sharing my systems, my teams that
+you can deploy that right away inside
+your own business and leverage this full
+system. And of course, you're not alone
+with just the system. I'm here through
+implementation calls to help you
+customize it or make it evolve as you
+see fit based on your need inside your
+business. And so that's the power of
+this code OS program. And so this
+program is definitely the fastest path
+for you if you want to have a fully
+integrated AI powered business operating
+systems that helps you work on what
+matters inside your business with the
+right tool leverage in a maximum manner
+the latest AI approach. I'm using these
+systems daily for my own business which
+mean I update them I improve them and of
+course all these improvement and updates
+are transferred to you in the cloud code
+OS. It's not a static product. It's a
+living evolving system that is driven by
+my conception of the business which is
+all about focus prioritizing the right
+stuff inside the business solving the
+image bottleneck and improving the
+aspect of the business that I call
+attract attract the right customers
+convert convert the right customers
+retain them ensure that they are
+satisfied with the service delivering
+outstanding service and ascend them like
+selling them more stuff I build
+everything around this like the right
+focus and maximizing the attract convert
+retain ascend function or dimension of
+the business. So we'll talk more at the
+end about this. Uh but first let me show
+you how collo code itself operates
+because understanding this gives you
+more control. And here in the next part
+I will show you some ways to use cl code
+in a better manner. Uh cool stuff to do
+with code is use the plan mode. With the
+plan mode you basically ask cl code to
+think about what you ask it to do and it
+will write a plan. And also you can use
+uh natural language command like uh sync
+hard sync harder or hress sync to really
+push cloud code to use more token and
+think more about whatever problems you
+have asked it to solve or whatever task
+you want it to do. And so this plan mode
+is a readonly architect mode to to
+activate it. I will show you you can use
+shift tab or you can click on the right
+uh part of the interface and then cl
+code will analyze and propose the plan.
+You read the plan you approve before
+execution. for huge pl huge task or huge
+work I have to do with cloud code I
+always use the plan mode so that I can
+review its approach I can correct it and
+sometimes I can better understand also
+how to implement a given task or a given
+project and then I approve and then it
+execute it write the to-dos you've seen
+that there is a tool that cloud code
+often which is to-do list that help it
+be align with what it needs to do and
+not forget things and so really the plan
+mode is super powerful it's and I really
+recommend that you use it each time
+you're working on significant project so
+that you have architect code mapping the
+the plan suggesting the plan and then
+you can validate and it gives you also
+the blueprint of what would be done and
+so that you have no surprise when cloud
+code implements the advantage of it of
+course it's safety and control it's also
+helping you to better think about a
+given project or given thing you want to
+implement with cloud code and that's
+super useful right it's ensure that you
+have a structured approach you know back
+in the day when we were working with
+just prompt or even with just custom
+GPTs we used to say and that's a
+prompting technique proceed step by
+step. Explain to me what you will do
+first so that I can validate and so on.
+Here it's same idea but automatically
+done by cloud code in an optimal manner.
+So let me show you what plan modes look
+like. Okay to activate plan mode you can
+use here this clicking here you can
+shift to plan mode. You can use shift
+tab as well and it would change it. And
+then I don't have any example here. I'd
+like to know how I can best explain to
+CCG member the power of code OS program
+and what is the value they would get
+from from it and what they would avoid
+what what's the pain they will avoid by
+implementing it and what's the huge
+benefits they will get if they implement
+it can you help me with that okay in
+here I want to use plan mode so that
+code can think about it find some
+resources inside my CCG business OS and
+give me a plan to explain that to to you
+obviously. So you can see now it's
+collecting information. Yes, don't ask
+again. And here the cool stuff is that
+cloud code won't implement anything. It
+will just collect information, process
+that and then come up with a plan based
+on my request. So here it's gathering
+context and so on. You can see it has
+find the information about code business
+OS value proposition and now it's
+compiling findings into a clear
+organized response for me. The plan. So
+now it's the plan following my query
+here. So cloud code business OS complete
+value proposition framework the
+transformation from chat GP chat session
+to cloud code business OS with
+integrated system that knows your entire
+business persistent memory strategic
+partner automated operations and
+intelligence pain point they will avoid
+morning where was I friction strategic
+drift weeks lost on low value work what
+should I work on paralysis okay decision
+fatigue daily inconsistent productivity
+with no pattern visibility you cannot
+analyze your work manual tracking hover
+okay here we automate tracking blocked
+without knowing what's blocking you.
+Hidden dependencies, huge benefits they
+will get. Time freedom, strategic
+certainty, compounding intelligence,
+execution clarity, productivity
+optimization, project continuity,
+strategic leverage plus seven integrated
+workflows. You have the daily operating
+system, you have the strategic layer,
+the AI growth engine, you have the
+infrastructure layer with project cycle,
+life cycle, workflow, system
+maintenance, different proof points,
+implementation path. You can start with
+the basic feature then work with the
+strategic feature and then use the
+complete system positioning for CCG
+members and key messaging by avatar
+simple pitch structure fudge ready for
+you for you use okay so that's a plan
+and then I can say yes would you like me
+to create a specific deliverable using
+this framework including YouTube script
+sales page copy workshop etc so it's
+going beyond what I ask but here I have
+a plan it has gathered information
+processed it and then suggest me a plan
+with the different elements I could use
+and then told me about the resources
+possibly implementation. So that's
+that's a a simple example of to use plan
+mode. Now I can shift back to normal
+mode or I can just say execute and then
+it will execute the plan. Plan mode is
+super powerful to plan your work and be
+sure that cloud constructure your
+approach and execute it in a sound
+manner. Now let's talk about
+configuration control. Uh I will cover
+here the next part will cover settings
+versus instructions. Let's roll here.
+What I want to cover quickly is
+settings.json. JSON and code MD file. We
+have already covered code.mmd file but
+there is another file which is
+settings.json and this is the way it
+looks like in my CCG business OS. I have
+a settings.json here and actually in the
+settings.json you can uh set up
+environment variables. Of course you can
+use code to do it for you but just I
+want to show you what is inside setup
+setup setup variables some specific
+rules that you want to use at the
+project level here that can be at the
+full system level. If you go in your
+user/clode
+subfolder because in there see the very
+same settings JSON. Basically the
+settings.json is in any project you have
+inside code. Let me show you that. Okay.
+In my root folder, my system root folder
+I have also setting.json. There is
+nothing in there. Why? Because I I don't
+work globally. I work only in my CCG
+business operation. In this CCG business
+operation folder. So here in my
+settings.json my global settings.json,
+there is nothing. Okay. In addition to
+variables and specific rules, you have
+also permissions and deny. You can see
+for instance, I don't want anything from
+this project to write in my AI engine
+knowledge base. Okay, why? Because I
+want to keep the knowledge base
+untouched when I'm working actively on
+operations. Thing you need to understand
+is they add some layer of automation in
+your cloud code system. You have a
+hierarchy of settings.json. You have the
+settings.local.json
+that will work on your local project
+only for you. That's the one that will
+be taken into account first. Then if you
+don't have that one, you have the
+settings.json that works at the project
+level, but that can be used by other
+users as well if they have access to
+your project. And then you have the the
+general one that I showed you before,
+which is this one here in the code
+subfolder of the root user folder. And
+this is a settings of JSON that works
+globally, but it's the weakest. That's
+the one that will be used the last only
+if there is no nothing else in the
+previous one. Just the thing to
+understand is that the settings.json
+JSON set machine readable controls in a
+JSON format that gives tools permission
+model selection hooks environment
+variables MCPS and so on. Most of the
+time you don't need to take care about
+this even if you can use it to enforce
+permission authorization and so on but
+really in a business context most likely
+you won't pay too much attention to that
+but I want to mention it anyways and you
+have the code files which is human
+readable so that's good for you to
+understand also what is done in a given
+project and that of course is exploited
+by cloud code also to have context when
+it's starting a new session inside a
+project or inside a team or inside a
+department or inside a folder for me
+folder on your machine can correspond to
+specific project to specific team and
+and workflows or specific department
+like I call them department like in a
+company you have your department with
+your teams your sub agents and all that
+sit inside a folder that can have a
+clone file that gives context and
+instructions and a settings.json JSON
+that that gives some configuration
+elements and per permissions. They work
+together. You don't need to pay too much
+attention attention to the
+settings.json. I I've spent I mean I've
+worked hundreds of hours of my cloud
+code and I'm barely pay attention to
+that one. The cloud MD file is the most
+important in my opinion from my
+experience. Now, can you have tools
+everywhere and tools only for specific
+projects? Yes, there that's the notion
+of hierarchy. I already covered that a
+bit when explaining the settings.json.
+Maybe I did a poor job explaining this
+to you. So I hope you're not confused
+but let's try to clarify this notion.
+Okay, let's talk about hierarchies
+settings hierarchy from the highest to
+the lowest. So that's what I tried to
+explain like few minutes ago. You have
+local project settings in the code
+settings.local.json.
+That's your personal tweet. It won't be
+available for other teammates. It won't
+be available on GitHub if you have
+synchronized what you do in cloud code
+with GitHub. Then you have shared
+project settings in the code/
+settings.json JSON in all all these dot
+clothes subfolder are available in all
+folders you're working on with cl code
+right it's everywhere in every project
+or department or teams or workflows
+you're working on inside a folder on
+your computer there is a code subfolder
+and they have settings.json J most of
+the time there is nothing in there. Side
+note here. Okay. So the two first layers
+local project shared project. You can
+see in the shared project actually it's
+checked on G on G. So it can be used by
+other teammates who have access to the
+same project. If you share a project and
+then you have the personal global
+settings in your user folder
+subfolder.load and file is settings.json
+and that's your preferences but personal
+everywhere. An analogy to understand
+that is that you can have a personal
+toolbox and that's what is in the
+clothes subfolder of your root user
+folder. So that's the tools you carry
+everywhere personally. Then you have
+team workshops inside your project in
+the cloud subfolder of a project folder.
+And then you have your personal tweaks
+which is a settings.local.json. Okay.
+The setting merge they're not replaced
+but with another priority and the higher
+priority overrides a specific value. And
+from what I've experienced and
+understood, this one for you has more
+priorities as this one that has more
+priorities. This one, this logic of
+hierarchy is true for other object
+inside code. For agents, for instance,
+you can have agents in a specific
+folder. You can have agents in your code
+subfolder of your user root folder. And
+if they are just local, they are applied
+to the project only. If they are the
+subfolder of the user root folder, they
+apply everywhere. Same for skill. I know
+that like currently November 2025 there
+are some issues about the capacity to
+invoke skills that are locally
+implemented. Well, this being said
+that's a detail. It has not prevented me
+from from from doing what what I wanted
+to do. So it's a detail but I mention
+it. Okay. Key mechanism automatic
+discovery. So when cloud codes work it
+scans folders and so you don't have to
+say anything to cloud code. It will just
+scan folder and see what is available in
+the settings.json files. And the same
+with cloud.md files by the way. Some
+element like skills are autoactivated.
+And once again skills can be in your
+user folder. It can be in a project
+folder right normally they automatically
+invoked by cloud code. Sometimes I
+recommend you to enforce the invocation
+by cloud code by mentioning that you
+wanted to use the skill. That's the safe
+path. I would say there is another thing
+in that I've I've shown you previously
+without mentioning too much about this.
+It's command. When you use the slash key
+if I go there you have access to
+command. You can see here you can
+navigate to different commands and you
+have the slash command here. Okay, like
+compat content formatter and so on. To
+be honest, I rarely use the command. But
+this is your way also to trigger
+specific command manually without
+relying on cloud code to invoke
+automatically skills or other stuff like
+this. Okay. So the difference I see with
+skills and command is that skills can be
+auto invoke whereas common it's you ask
+cloud code to do specifically something
+using a command. And I I will tell you
+more about command in a few minutes. And
+so this hierarchy of settings.json but
+also on skills on agents helps you to
+contain this object or this feature at
+different level either just for you
+personally or globally on your system
+with other people having access to part
+of your project. For in I've tried to
+cover configuration control control.
+This being said most of these I I told
+you that so that you understand and you
+you you know that it exists. But really
+when you're using your system, when
+you're using cloud code, you don't need
+to manage that too much, especially if
+you're using it solo. Now if you're
+using with other teammates, that's
+another story. Now, how can you track
+what cloud code does? Let's talk about
+logging. Let's cover logging and
+tracking. So in cloud code, you have
+building cloud code logging stuff. Cloud
+code track tool usage. It logs error and
+it keeps session history. So if you open
+a cloud code session, I already showed
+you that. But if I open a if I check
+this one for instance here you can see I
+have my session history and I can open
+one and I will go on with what I did in
+the in this given session. Okay so that
+means you can reuse sessions. So cloud
+code is keeping history and logging
+stuff but that's not enough. Why?
+Because it's mostly technical stuff or
+just chat session. I've implemented my
+own custom business logging logic using
+several mechanism logging different
+operation in a structured manner and
+integrating that with different other
+workflows and processes. This is not
+part of cloud code by default. This is
+part of cloud code OS and this is
+something you can access to in the cloud
+code OS program. Okay, I'm continuously
+improving this because what I want to do
+with the right logging system, I want to
+be able to track the work that has been
+done to do some analysis over time about
+the work that is done about alignment,
+strategic uh priorities and many many
+other stuff for which logging what you
+do in a structured manner and clever
+manner is super useful. Really here we
+are leveraging if you have the right
+systems and you will have when you join
+cloud code OS you can really take
+another step in term of tracking your
+work planning your work analyzing your
+work understanding what happened if
+there is any derail or issues and many
+many other stuff understanding what
+teams are doing teams or project or
+workflow inside load code are doing
+understanding how to improve that doing
+some improvement analysis do like the
+sky is the limit this is what you would
+like to to have in your normal business
+with your teammates. Okay, except here
+you don't need them. It's automated and
+it's well structured and you can process
+cross cross project cross team across
+time analysis and so on. You have a real
+business journal optimized for business
+perspective for business objectives and
+for business use. You can feedback
+anytime. You can track your progress.
+You can analyze patterns. Like that's so
+powerful and that's where real business
+value sits with such a system as the
+cloud code OS because now you know
+exactly what you what cloud code has
+worked on but also what you are your
+teammates if you put them in the system
+have worked on you can spot patterns you
+can check efficiency of workflows you
+can find bottlenecks you can fly find uh
+productivity derail you can find like
+many stuff you can do audit tray for
+compliance you can you use use it for
+continuous improvement and the cool
+stuff is that all this is is done
+automatically and that's super powerful.
+If I show you an example for instance if
+I check yesterday I did a productivity
+assessment. So you can see here I can
+come back to the the right chart session
+and that's my productivity assessment
+and look what it has spotted pattern
+identified infrastructure building
+crowds out execution for two consecutive
+days. Why? because I had set business
+priorities I should have worked on uh
+last Saturday and actually I spent some
+times creating what he calls
+infrastructure which are basically
+systems instead of working on the
+business priorities I worked on
+infrastructure and so it has spotted
+this because obviously I haven't been
+able to address some priorities I I
+needed to work on and it's analyzed why
+I did that and did some recommendation
+which is hey it's okay to work on
+infrastructure but do it after the one
+thing after working on the main topics
+you you have planned for the day and it
+was able to do this because it track
+everything I do and it understand the
+strategic environment strategic how to
+say that priorities and also the
+different projects I'm working on the
+different task I'm working on okay can
+see the power of it that's crazy anyways
+sometimes you want to trigger specific
+workflows manually and so that's when
+you use custom commands it's so we have
+already covered really quickly custom
+commands in the previous chapter but
+let's take a closer look to this you
+already have pre-built commands in cloud
+code and I already show this if you type
+slash you have pre-built commands or all
+that okay but [snorts] you can also set
+up your own commands which are basically
+workflows and processes simple processes
+that you can trigger manually so that
+code could code could execute that and
+so what are custom commands there are
+user initiated multi-step workflows they
+are stored in once again in a doc code
+folder in a subfolder that is commands
+and you can invoke them just using the
+command name some analogy it's a bit
+like a macro in excel or a shortcut on
+your phone it's just a a sequence of
+preparation that you can trigger
+anytime. And the difference between
+skills and command because that might be
+a question you have is that skills are
+auto invoked by code. They're automatic
+context based which mean cloud code
+understand the context and identify the
+skills that match the context and then
+we use the skills and use progressive
+disclosure uh go deeper if necessary
+take some resources that are inside the
+skills maybe a script that is inside the
+skills and execute. Whereas custom
+command it's you invoke manually and
+trigger explicitly something that cloud
+code has to do. And so typically it's
+very useful for recurring workflows. For
+instance, if you want to do weekly
+planning, you can have a custom command
+to do this. It's also useful for complex
+sequences when you have multi-step
+processes to do. And when you want to
+standardize process and printer them
+manually with full control and so how
+you can create that commands, custom
+command, you use cloud code and you ask
+for custom command. Okay, you explain
+what you want and cloud code will help
+you create the custom command. And
+basically what cloud code will do, it
+will create a file that it will put in
+the code/comands subfolder. Once it's
+done, you just call the custom command
+with the slash and the name of the
+command. Okay. And if I show you what a
+custom command looks like. Let me find
+one for you. In my CCG business
+operation in my code folder, I have here
+a command which is in it business. And
+you can see like skills like sub aents.
+It's a markdown filed file with a YAML
+header metadata with a description. And
+this is what this command does. It init
+initialize business project cloud.md
+with business specific guidance. It has
+some tools it can use read write edit
+globe which are the basic tools of cl
+code and then just the md file instruct
+what cloud code should do when I trigger
+this command init init business. It's a
+custom command I have created so that I
+have cloud code creating a project
+infrastructure with a cloud. MD file
+that is specifically structure for what
+I want to do. So I want cloud code to do
+something in a specific manner and I
+want to trigger it manually. I use a
+custom command. Enough with commands.
+Now how about syncing codes work with
+external system. Interesting, right? So
+let's talk about GitHub and how to do
+backup version control and
+collaboration. So GitHub is really for
+coder. But guess what? We are using
+cloud code not for code. We are not
+developers. We are just normal people,
+entrepreneurs who have businesses and
+want to leverage the power of AI to run
+our business in a lean, effective and
+focused manner so that we can get free
+right okay so we I'm using GitHub to for
+different purpose to back up the work I
+do inside my business OS of course to
+control the version to be able to revert
+back in a more automated manner if need
+be and also to sometimes collaborate
+with other people right so what is
+GitHub quickly it's kind of a dropbox
+for code with time travel. So you can
+back up stuff, you can control version,
+you can collaborate, you can time travel
+that means you can revert back what you
+did and there are lots of many other
+stuff but for all purpose that's the
+main stuff to understand the main the
+main features of GitHub to understand
+there are many other stuff you can do
+for GitHub. It's very powerful tool for
+coders but for us it's good enough. You
+can work in parallel and test different
+approach in parallel to check the ones
+you prefer and then merge the one you
+prefer on the main project like you can
+do so many stuff whatever the advantages
+for business is that you can recover for
+any issues that's a backup okay which
+means you can also use your system on
+another computer if need be right why
+like let's suppose that your your
+computer is dying because one of the
+problems code is that you work on local
+file right and what if you have a virus
+or what is your your your computer is
+dying now you're screwed not any longer
+if you have a backup system on GitHub
+Because now you can open another
+computer, log inside your GitHub
+account, import everything inside your
+new installation and you're good to go.
+You can also control the version history
+so you can see the system evolution. You
+can collaborate with other people,
+experiment safely. You can audit stuff,
+understand who work on what and who
+change what. If you have several people
+working on the same cloud code business
+OS and it gives you remote access
+because you can access from any machine
+as well. And so how it work, you ask
+cloud code to create a GitHub repo. You
+connect close code to GitHub. It's
+something you do once and then if you
+give access to cloud code to the GitHub
+CLI which is some sort of module, cloud
+code is able to create whatever repo in
+your GitHub account. And so that makes
+stuff way easier. And then of course
+cloud code can commit changes which mean
+push changes on your GitHub repo and and
+commit them so that now they're alive.
+You can also syn synchronize between
+your local cloud code business OS and
+what is inside GitHub. You can clone,
+revert, collaborate anytime. That's
+super powerful. That's really easy to
+set up. You ask code and it at some
+point it will ask you to connect to
+GitHub with your uh your
+authentification method. You you do
+this. You accept connection. You accept
+the the synchronization the connection
+between cloud code and GitHub and you're
+good to go. That's really
+straightforward. Let me bring it all
+together because we have covered many
+things here. And let me show you what's
+next. So we have covered a lot. We have
+covered filebased memory and system
+prompt with cloudnd files. We have
+covered sub agent organized as teams
+that allows you sequential or parallel
+execution having the sub agent auto
+orchestrated by cloud code. We have
+covered skills with our usable reusable
+workflows which are standard operating
+procedure that you can equip your cloud
+code system with or that you can also
+equip your teammates using cloud code
+with so that you can enforce SOPs at the
+company level. We have covered parallel
+execution whereas it is with sub aents
+working in parallel or tools that cloud
+code calls in parallel. We have covered
+access to external tools through API
+integration and MCPS. We have covered
+some feature that makes the work of
+cloud code more effective like plan
+modes some commands. We have covered the
+difference between settings with
+settings.json files that are more for
+machine reading and cloud.md
+instruction. well fit for you to
+understand what happens at the project
+level and also for code to load context
+when it start a new session in any
+project. We have talked about hierarchy
+how you can organize skills agents and
+settings.json files at different levels
+so that it can be used by only you
+locally on your machine everybody
+working on the given project or globally
+on your system. We have covered logging
+mechanism quickly that is super useful
+for many business use cases like
+productivity assessment, planning,
+strategic alignment checking and many
+other stuff. We have covered custom
+commands quickly how you can set up
+small automation or specific workflows
+that you can trigger manually which is a
+bit different from skills where skills
+skills are triggered automatically
+invoke automatically by cloud code.
+Custom commands helps you standardize
+some stuff you do and trigger them
+manually. And then we have covered
+backup and version control using GitHub
+in a very quick manner. So you can see
+that when you understand all these
+features, you have a complete system.
+But actually that's just step one.
+Knowing the features, understanding how
+they work and where you can access them.
+It's only step one. Step two, it's
+implementing a cohesive system that
+combine all these feature in a smart
+manner for a business context in order
+to increase business efficacy. in order
+to increase focus on what matters inside
+the business and in order to increase
+the power of execution your business
+leveraging AI powered system the best
+manner of course you can make your own
+trial and error and spend weeks maybe
+months to try to set up the system or
+you can use a pre-made one and that's
+exactly what I give you in cloud code OS
+inside CCG community in the cloud code
+OS you have the entire business OS
+that's the one I use for myself so you
+can be sure that it's topnotch and I
+make it better consistently when you
+have my business OS you have the folder
+structure that is directly applicable to
+your business. You have the cloud MD
+files which has the system prompts and a
+smart logic for the different folder and
+different project. You have an already
+integrating mechanism for productivity
+for planning for cross project analysis
+and so on. You have also my own teams my
+department. You have my content team
+with the magnetic content OS that has
+more than 14 sub aents to work on any
+type of content on LinkedIn, Twitter,
+YouTube, Instagram, etc. Working on
+hooks, working on Sundays, working on
+all that stuff related to content,
+applying the content framework that I
+teach also in CCG. You have what I call
+my strategic console which is the AI
+growth engine plug-in with all the
+frameworks to really describe in a
+strategic manner your offer your target
+avatar your strategy your funnels your
+different products and so on. You have
+my productivity system with the daily
+planning with the productivity
+assessment with the logging systems to
+log the different projects to log the
+different tasks to log the different
+change that you do with cloud code
+inside your business environment. You
+have of of course my HR department, what
+I call my HR department, which is the
+GPT creation team, the GPT Express
+Mastery OS that use my GPT Express
+mastery framework to craft custom GPTs,
+but also some agents but at a superior
+level. way better than what you would do
+with just cloud code or just code or
+just ch why because it's using a method
+that I've experimented with for more
+than two years and that I talked to many
+people who just can tell you that it's a
+crazy good frameworks to craft superior
+custom GPTs and AI agents but there is
+more you will also access to essential
+skills like the skills factory for
+instance the skills to build other crazy
+good skills and other skills that I
+develop based on business use case and
+business needs you also have some
+scripts library to connect with external
+tools and you just need to put your own
+API keys and you're good to go and there
+would be much more because once again
+this is the AI part business system to
+grow lean GPT business a business that
+is optimized with lean processes to
+focus really on what matters to grow the
+business implementing the best
+approaches to attract convert retain
+ascend customers without having to spend
+months to learn them that would be much
+more. I will update this based on how I
+use the system and how other member in
+the cloud code OS are using the system
+to get results and also based on the new
+stuff that entropic will release for
+cloud code because guess what clothes is
+a big bet that entropic made. This is a
+tool they are investing investing
+massively to make better and there are
+so much great stuff that will come in
+the future and that will be updated
+inside cloud code. Here the key
+difference is that you're not building
+anything from scratch. You can just take
+the the resources I share with you.
+These are folders basically that you put
+on your computer and you're good to go.
+You open cloud code in your Visual
+Studio Code interface and you go in the
+right folder and good to go. Everything
+is there already set up, right? So you
+can deploy in minutes what I've built,
+tested and refined for days, weeks,
+months. If you join the code code OS
+program, you have my support through
+implementation group calls that we do
+and also you have access to me through
+DM and so we can discuss about your
+specific case and I can help you tweak a
+bit the pre-made system that already
+there and that you can deploy in
+minutes. It's a living system. I update
+it constantly and my updates are
+directly implemented in cloud code OS so
+that you can benefit from them and of
+course you may have some specific
+requests and if they all make sense I
+can implement them as well which mean
+here we are leveraging in cloud code OS
+we are leveraging collective
+intelligence to make our business OS
+better with time so finally if you're
+business owners whereas you have online
+business where are you you're a coach
+you are service provider you you do
+consulting or you need to create content
+or you do product development this is
+for you. If you want an AI team to end
+end hand end hand end hand end hand end
+hand endle execution inside your
+business so I can focus on strategy and
+you can just orchestrate your teams your
+department as a CEOs that's for you
+because this code OS is the business
+operating system that you can use right
+away to have these teams working for you
+and you can treat it also with the
+support inside the community and so if
+you want proven systems that are ready
+to deploy immediately you can learn more
+about this in CCG my school community
+and here in cloud code OS this is the
+module where everything happens and
+where the resources to have your own AI
+powered business OS inside cloud code
+are sitting waiting for you. So, I hope
+you enjoy this Toad Code Mastery for
+Business course and I see you inside
+CCG.

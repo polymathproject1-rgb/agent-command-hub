@@ -1,0 +1,1474 @@
+You probably suck at using Claude code
+ 
+or maybe you're not using it at all,
+which is even worse. But in this video,
+I'm going to break down exactly how I
+use it as an AI founder. I run multiple
+different AI companies at this point,
+how I use it myself to automate certain
+parts of my roles. But that can also be
+taken to whether you're a student or an
+employee looking to just automate your
+whole degree or automating parts of your
+work so that you do a whole lot less. Or
+you're a business owner as well wanting
+to be able to use it for yourself or
+teach it to your teams. This is the
+exact training that I put all of my
+staff through so that they can use it
+and set these up to automate parts of
+their role as well. This is probably the
+best general purpose AI tool for
+productivity right now. When set up
+correctly and when used correctly, it
+can automate up to 90% of the stuff that
+you do. So, I'm going to be breaking
+down in this video the exact template
+that I use and give to my staff, them to
+start and create their own workspace.
+I'll be breaking down the four biggest
+mistakes that I see beginners make that
+stop them from getting the most out of
+it. And then I'm going to be showing you
+step by step how you can get this set up
+on your machine as a beginner the right
+way using all the sort of shortcuts and
+commands to make this really fast to
+use. and then show you a real and live
+example of me using the template to
+automate certain parts of my own
+workflows so you see how it works in
+action. I haven't seen anyone else on
+YouTube dropping this kind of source on
+claw code. So let's get into it. So
+we've got all this to get through but
+we're just going to start with the first
+thing that you have to understand is
+that an agent which is what claude code
+is acts as a digital employee for you.
+So what does that mean? A digital
+employee will need to have some kind of
+uh tools or access or context or
+knowledge about what it's doing, right?
+And the first thing you need to
+understand with getting this set up and
+how to get the most out of it is like
+claude code is going to be your digital
+employee or your assistant to do
+whatever you set it up to do. But in
+order to do that correctly, it needs to
+have what I call a workspace. So what is
+a workspace? It is one folder on your
+computer that contains other folders and
+context and files and scripts required
+to do a task or set of tasks that you
+want to be performed through call code.
+So in this case, as you can see on
+screen here, this is what we'll be
+working with later. And this is VS Code.
+Don't worry, this is like it's not
+coding. It's nothing. It's just chatting
+away to a chatbot in here. And if you
+can't wrap your head around using one of
+these IDs at this point, you're kind of
+cooked. So, this is for those of you who
+are extra intelligent and uh believe you
+can wrap your head around a basic tool
+like this. So, this is what a workspace
+looks like. And this is essentially one
+folder. You can see it's called clawed
+workspace here. This is a clawed
+workspace template that you guys are
+going to get. But inside this folder,
+this is just any old folder on your
+machine. Inside it, there are a bunch of
+other folders. So, we have the commands
+folder, which we'll go into in a second.
+We have the skills, we have the context,
+we have outputs, plans, reference
+scripts, and the claude.mmd. So when you
+are thinking about setting up claude
+code to be your personal assistant to
+automate parts of your work, you need to
+create a workspace for it to operate
+within. And that means, okay, what
+context does it need to understand who I
+am, the stuff that I do, the priorities
+and strategies we're working on right
+now, things like these command files,
+which take a workflow, like looking up
+or researching a podcast guest, how you
+break that down into simple text, which
+we'll go through in a bit. But
+basically, a workspace is a folder with
+a bunch of folders and files in it that
+you can configure in a certain way. And
+this is by far the best setup and kind
+of template that I've found for training
+my teams on this. Um, it's just a great
+default starting point. Has all the key
+points you need to really get the most
+out of it. And you can use clawed code
+using these like create plan things,
+which I'll show you in a bit, to very
+rapidly turn it into something that you
+can use for yourself and modify it. So,
+for a workspace, I find it's most
+helpful to split them by a a kind of key
+function. Um, at least for me as a
+founder, I've got multiple different
+businesses. So, for me, I have multiple
+workspaces, one for each function or
+area of my my work that I do. So, um, I
+think of it as like a digital teammate
+or employee for each of these areas for
+my personal brand and for the content I
+do. I have a workspace for that. I have
+a workspace for my agency helping us
+with proposals and scoping. I have one
+for my uh, education product. So, it has
+full context of all of the course
+material that I've created so that I can
+create new stuff easily. and one for my
+SAS as well, which is an engineering
+kind of prompt engineering workbench,
+which I'll actually show you guys a
+little bit later. But in my case, I've
+split it into different areas. I could
+try and ram it all into one, but I like
+to keep them a little bit clearer and
+more separate so that I can really tune
+the uh tune the content and context a
+little bit better. But uh if you're just
+an employee or a a student and you're
+looking to automate parts of your work,
+you'll probably only need one and it's
+going to basically take all the job
+functions that you do. Say you're a
+marketing person and you need to like do
+the weekly marketing report. You need to
+uh come up with a new campaign idea or
+like do some brainstorming or yeah
+analyze the last campaign and figure out
+what you can do next. All of these are
+are tasks that you do that can be turned
+into a a command or a list of
+instructions and put into a command file
+here and then you're able to call those
+very quickly and say like /marketing
+report and it's going to do all those
+things. So, it's kind of like any other
+kind of automation, but in this case,
+you're doing it through just text files
+from claw code. Having enough context
+about you, it can kind of just read
+these text files, have access to all of
+these bits of uh context and documents
+and folders and be able to do things for
+you like maybe pull information in from
+the web, which we're going to talk about
+a bit that falls into the scripts here.
+So, as a bit of a walk through of uh
+this, we'll just break it down a little
+bit further here. We have firstly the
+commands folder. And you can think of
+commands as reusable prompts to automate
+work functions or do things within the
+workspace. And like I said, these use
+natural language, just regular plain
+English or whatever language you speak
+to guide Claude code through a workflow
+or set of steps using the content and
+scripts and tools within the workspace.
+So these are the main way we're going to
+be working as you'll see in a bit. And
+these are the ways of baking in your
+workflow into a set of instructions that
+Claude can do uh on your behalf. Then we
+have the skills folder here. And so
+these are kind of like commands. They're
+kind of merging a little bit at the
+moment. Uh but skills I like to think of
+as a as a bit more substantial in a lot
+of cases. and they're kind of like
+installable plugins for your workspace.
+They're typically created by others and
+you can go on to like skills
+marketplaces and try to find ones made
+by other people. There's a few security
+risks inherent in that which we'll touch
+on a little bit later. But skills are
+like kind of plugins or packages that
+you can plug in um from other people a
+lot of the time and it's going to
+enhance or give more capabilities to
+your workspace. They're a little bit
+more advanced than I would like to go
+into within this uh within this
+tutorial, but I will be covering these
+two skills here cuz I think it's good to
+have in part of the template. And then
+we have the context folder. And this is
+essential context on who you are, what
+you do, how you're doing it, and why.
+And Claude Code reads this every session
+to come up to speed on who you are and
+what you do. So every time we spin up
+Claude Code, it's going to be reading
+all that information. So it fully
+understands the the big picture. This is
+something we'll be touching on in a bit,
+but it's really important that every
+time you spin up Claude Code, it knows
+exactly who you are and what you're
+working on, current state of the
+strategies, current data that that's
+come back from different platforms.
+Context is essential to give it sort of
+a base for you to have an intelligent
+conversation on. And in this template,
+I've broken it down into the key
+different contexts that I found to be
+most effective. And they all build on
+top of each other, which we'll go into
+in a second. Then we have scripts down
+here. And scripts are like, I know it
+might sound scary, but they're code
+snippets uh that are created by Claude
+Code. You don't have to write the code
+yourself. Claude Code can intelligently
+figure out when it needs to create some
+kind of code or write a script. And a
+script is just a bit of code that can
+sort of be triggered at a certain point.
+It might take in some inputs, do a
+certain couple things on the internet,
+uh process some data in a certain way,
+and then pass it back to Claude code. So
+it might be I write a script to fetch
+some information from my uh CRM or from
+some sort of API like you want to get
+the real-time weather data. It can pull
+it from a weather API. So scripts are a
+handy way a bit more advanced tool but
+something we're going to be jumping into
+as well. But these are a key thing for
+pulling external data into your claude
+code instance. And then we have the
+claw.md which is an essential document
+that describes the entire workspace to
+claude code every session that spins up.
+So combined with the context folder, it
+basically means that every time we start
+cla code, it fully understands the
+workspace it's operating in, reads all
+of these different context documents and
+knows who you are, what you're doing
+within the business, what your
+strategies are right now, any current
+data, and it's like fully understands
+where it is, what it's doing, and is
+ready to start taking action like an
+employee. So just like when a new person
+comes into the company or you're hiring
+someone, you would need to give them all
+that context. And as you'll see when
+we're actually working with claw code in
+here, we're starting it up. We're
+starting a new version of claw code all
+the time. So that we need to give it
+that onboarding every time it starts up.
+All right, so that brings us down to the
+next and probably most important thing
+you need to know about Claude Code,
+which is priming and context management.
+As you may or may not know, the latest
+Claude models only have 200,000 tokens
+available for us to play with. So we
+want to essentially have Claude code
+fully contextualized, understand who we
+are, what we do, uh what we're what it's
+able to do within the workspace with as
+minimal tokens used as possible. So as
+you can see here, this is actually from
+Claude Code itself. You can run this
+command /context and it will tell you
+how much context you've got available,
+how much you've used up already. And
+basically, we want to be sending and and
+like interacting with claude code with
+as many of those tokens available
+because there's an effect called context
+bloat, which means the more tokens are
+used up out of that 200,000, like the
+more diluted your instructions are going
+to be. So, you want to have it fully
+dialed in, fully aware of who you are,
+what it's working within, and then
+you're just going to kind of drop your
+task on top of that. So, it's got all of
+this room, it's very clear on what it's
+working on, and you don't get any of the
+negative effects of context blow. So,
+this all ties into something that we're
+going to be covering here in a second.
+But first, let's go over the the biggest
+mistakes that people face when it comes
+to priming and context management and
+just generally using clawed code. And
+the first is using claude code like a
+chatbot means you're just sitting there
+kind of chatting away like you would
+with chat GPT. And this is not really
+the best way to use it because you end
+up in these big long uh conversations.
+And here you can see the messages take
+up a significant amount. In this case,
+when I took the screenshot, my messages
+were taking up 26% of the context. So
+the if you're chatting away and you've
+filled up that uh that chat history with
+messages and like 150,000 tokens are
+filled up with all of the messages
+you've had back and forth with all code
+then you're going to have this context
+blo your instructions and messages are
+going to be so diluted that the chance
+of it actually getting exactly what you
+want in the first go is going to be
+massively reduced. So so the first
+mistake is using it like a chatbot. We
+are not going to be doing that as you'll
+see in a bit. And the result is that
+you're going to get inconsistent and
+lowquality outputs due to lack of
+structured prompts and processes. So, we
+want to be baking our workflows or the
+tasks that you do into reusable prompts.
+You don't want to be like, "Uh, hey, I
+want to do this today. Can you do this
+for me?" Because one, you're wasting a
+whole lot of time writing that out. And
+two, it's going to be different each
+time, right? You want to make
+standardized uh command files, which
+I'll show you in a second. Just a simple
+markdown file walking through the steps
+that you want claw code to take so that
+you have a structured and reusable
+prompt. It's going to save you tons of
+times and ensure that it's consistent.
+And so, yeah, the solution here is to
+create reusable commands. And mistake
+number two is not contextualizing clawed
+code at the start of every new session.
+Like I was talking about before, if you
+have an employee, you need to give it
+context on who you are, what it's trying
+to do, what business environment it's
+operating in, what the goals are, what
+the values are of the business, all of
+this context that you have to give to
+someone in order for them to actually
+function. You don't give a new employee
+that context. How could you expect them
+to do well? It's the exact same thing
+with using an agent like this. So, the
+result of not giving context is going to
+be poor quality output. You know, when
+you're like talking with Claude to
+ChatBT and it's just like not quite got
+your tone of voice right or it's just
+missing a bit of the picture. It's like,
+"No, well, I'm not doing that right now
+with the strategy." So, because we've
+had change or like this is a new quarter
+and you always have to go like what's
+called in the loop and you're chatting
+back and forth just giving it nudges to
+get the final outcome you want. When you
+fully contextualized it and you've used
+one of these reusable commands, it can
+freaking nail it like get it right on a
+button the first time. And that's when
+you think about how much time you're
+wasting and chatting back and forth. The
+70% completed one might take you half an
+hour to finish whereas the 95% one might
+take you 2 minutes. So, if you're going
+to do this stuff, you need to do it
+right because there's a massive
+difference in the amount of time spent.
+And so, the solution to mistake two is
+to always be running a /prime command,
+which we're going to go into in a bit.
+But basically, whenever you start a new
+cla code session, we're going to run /
+prime. It's going to look at the context
+and the template like we have up here.
+It's going to basically read the
+claw.md. It's going to read the context
+here, and then basically, we have an
+intelligent base to have a conversation
+on, which we'll be getting into in a
+second. Mistake number three that I see
+noobs making is not utilizing, planning,
+and implementing loops. Now, this means
+using a clawed command to say, "Hey, I
+want to do this within the workspace.
+Can you write a plan for how we could
+create this?" Like, "Hey, if I have a a
+new function, say I'm a marketing person
+and I'm using this and I've want to add
+a new command or a new task that I want
+Claude to be able to do for me." Some
+people will try to do this all manually
+or just chat in the in the chat with
+Claw Code to try to get it to do it. But
+that often means that it's not going to
+fully consider everything in the
+workspace. And when it sets it up, it's
+not going to be fully aligned with
+everything else. So, you start to get
+this janky workflow. When you have it
+set up the way that I'm going to show
+you in a second, it can fully analyze
+how everything else is set up. And when
+you say, "Hey, I want to add this in."
+It will go, "Okay, we can fit this in
+here." It'll relate to this and this and
+this, and I need to update and change
+this, this, this, this to be aware of
+what we have in here. So, you always
+have this really fresh and aligned
+workspace that saves you tons of time
+ultimately. And so, that's where they
+slash create plan and/implement
+commands, which come as part of the
+template. Mistake number four is not
+utilizing scripts. Like I said before,
+scripts are a little bit of code might
+be a bit scary, but if you aren't able
+to wrap your head around this or get cla
+to do it for you, then your hands are
+tied and you won't be able to get
+real-time data brought in. You cannot
+take meaningful actions of like reaching
+out to do things for you in the digital
+world. And the solution to this again
+comes back down to using the /create
+plan and/implement commands. Because
+when you ask claw to create a plan and
+figure out, hey, how how could I
+automate this part of my work? It can
+think, hm, okay, well, I could go search
+the web and figure out what different
+tools or what bits of code I could
+write. and then it can actually
+implement and create those scripts for
+you without you having to do it. So the
+planning is really important so that you
+can kick over to claude code the brain
+work of having to figure out hey what
+scripts could I plug into this
+particular workflow. All right so those
+are the biggest mistakes and like I said
+all of these are kind of already
+factored into the template. So we'll see
+those in action in a bit but I want to
+give you this diagram here which I think
+is really important. I have to teach
+this all the freaking time to my team.
+So this is the most important diagram to
+not only claw code but basically any
+kind of AI usage these days and it's all
+around context stacking and how you can
+get things brought up to speed so that
+it can have an intelligent conversation.
+That's what these guys are doing up
+there. They're having a an intelligent
+conversation but they're doing that
+standing on top of all of this context.
+So I think of it in layers. Like we need
+to start with the claw.md file which is
+just a text file and it contains the
+purpose of this workspace and kind of
+gives it an orientation of like who it
+is, who you are, what the hell is going
+on within this workspace. Then on top of
+that I layer information about the
+business, whether it's your own business
+or whether you're working for one. Um
+information about you, how you relate to
+the business and where you fit in, what
+your roles and responsibilities are. So
+the what, the who and the why. Then we
+have strategy. So what is your latest
+like this quarter strategy? without
+knowing that it's going to not have the
+full context and maybe be misaligned
+with the the objectives that you have
+right now. And then I like to add on top
+of that when possible the current data
+that relates to that strategy whether
+it's your website views or YouTube data
+or any kind of data that relates to what
+you're trying to do within that
+workspace. And the reason we have this
+/prime command which is going to be run
+every time we start code up is so that
+it understands everything here and we
+can start to have an intelligent
+conversation on top. It's like I'm going
+to bring you up to speed. Here's all the
+documents, but it's important that we
+have these set up correctly, which is
+what we're going to be doing in a
+second. And so, this is incredibly
+important to understand because this is
+the key to getting the best results by
+having it fully contextualized about you
+and your business and the stuff that you
+do. Now, the thing is, we don't just
+have a conversation on top of this. We
+actually start to build workflows on top
+of it. So, that is where we get to what
+I call the workflow layer. Maybe let's
+bring one of these guys down here. So,
+what we have here is our Power Claw code
+here standing on top of all of that
+information, right? Every time we start
+a new session, we're going to be
+bringing Claude code up to speed. And
+then we're giving our buddy or I mean,
+I'm not going to assume the bro's
+gender, but we're going to be giving him
+or her or it some tools to use. And
+these are in the form of markdown files,
+which is just text files. Example, we're
+going to be doing one in a second called
+analyzing competitors. So, if I want to
+like for my own podcast, sometimes I
+want to pull a competitor's podcast and
+I want to dig into it, figure out, hey,
+what are they doing? who have they
+recently uh who have they recently
+interviewed and be able to figure out
+what sort of their positioning is, what
+are their links are so that I can do a
+bit further research on my own. All we
+need to do to create these reusable
+tools is to create this markdown file,
+this text file. Give it a sequence of
+steps like create a competitor analysis
+report on X person. Start by researching
+Y or using Y cuz claude code has
+researching built in. Use the Zcript. So
+going back to our thing up here how we
+have scripts as well. So we can
+reference the scripts that we have in
+here. So, hey, I want you to pull in
+some external data with this script and
+then use the skill, which I'll show you
+in a bit as well, how we can pull in
+other people's skills that allow us to
+add things into these workflows, like
+using the PowerPoint skill to be able to
+create a PowerPoint out of this data.
+So, you can see that automating your
+work is literally as simple as a
+sequence of uh instructions written in
+natural language. When your Clawude Code
+agent has access to the right
+information and the right tools, we
+don't just give one. We can stack a
+whole bunch depending on any function
+that you have in your job or role or
+business. We can stack them. So, another
+one for me might be a market scan. Can
+you please scan my competitors? I can
+make a list of my competitors like 20
+people. Um, it's going to read that
+competitors file. It's going to go out
+and scan all of theirs and then collect
+kind of a whole market scan, say, "Hey,
+for this on the Sunday, I want to see uh
+where the state of the market is, what
+sort of trends are popping off. Do a
+scan of the market. Come back and give
+me a presentation on it." And from here,
+the possibilities really are endless.
+You can get it to do basically anything
+you want. But that is the model. All
+right. So, this is what we're working
+towards. a priming command that primes
+them on the context of who we are and
+what we do. And then we build tasks and
+workflows on top of that that come in
+the form of reusable prompts. And so
+without further ado, let's jump into
+this Claude Workspace template that you
+guys will be able to get for free in the
+first link in the description. Um you
+better download that and then follow
+along or just watch this and then go
+have a play around with it after. That's
+probably a better way of doing it. And
+so in order to open this up and start
+using it for core code, you're going to
+want to go to your favorite browser and
+search up VS Code. You can come here and
+then come up here and click download.
+whatever machine you're on, Mac or
+Windows, and follow the setup
+instructions that come with it. I'm sure
+you guys can figure that out. And then
+the next thing you want to do is go to
+Claude Code. Click on Claude Code here.
+And then once you have VS Code open,
+you're going to want to go to file and
+open folder. And then you're going to
+want to click on the Claude Workspace
+template folder that you just
+downloaded. So it probably come in a
+zip. You want to unzip the zip. And then
+it should just be a folder. And then you
+go file, open folder. And then you'll
+see something that looks just like this.
+So we've opened the folder, the root
+folder of our workspace, and in it there
+are all the other folders. The next
+thing we need to do is get Claude code
+installed. What we can do is go to the
+terminal tab at the top here. Click new
+terminal. And then we get this thing
+down the bottom here. And this is
+important that you get very familiar
+with what's on screen here. We have the
+side panel which has all of our files
+and folders. And then up here as our
+editor. So whenever I open up a file, it
+comes here. I can kind of like command W
+uh to close the tab or I can click the
+X. If I've changed it, I can command S
+to save it and then close it. I like to
+have my screen split 50/50 here. So I've
+got this up the top and I've got these
+down the bottom. Now this is your
+computer's terminal. We can run commands
+here to get it to do things for us. I
+won't over complicate it more than that,
+but what we want to do is head over to
+Claude Code. So, just Google Claude
+Code. It'll come up with this website.
+We want to copy this. Uh, head back to
+VS Code. And then you can just paste it
+in here and press enter. Now, it's going
+to take you to a setup wizard and ask
+you to do a few things. Pretty damn
+straightforward to do. All you're going
+to need is either a Claude uh Pro or Max
+account. So, whether you have a a paid
+subscription for Claude already, uh, if
+you have that, then you can just choose
+to use the Clawude uh account that you
+already have. If you don't have one and
+you don't want to get a clawed account,
+you can go to console.anthropic.com.
+You can sign up for a developer or a
+business account here. And once you've
+created your account, you can go to
+settings, set up your billing. You'll
+want to add a card on file here and then
+add five bucks into your balance. Uh
+just so that it's show that you've
+credited it and your card is good. And
+then you'll be able to go to API keys
+down here, create an API key. Copy that.
+Then go back to VS Code and select the
+API key option and paste it in. Once
+it's all set up and you should have
+something like this and you'll be able
+to type in Claude and actually wait I
+will not jump ahead there. If you want
+to clear this so say I've written I've
+said a whole bunch of rubbish here. If I
+go command K then it's going to clear
+it. That's a nice one to know. Just
+command K. Um you can rightclick and go
+kill terminal if you want to start fresh
+and just start a new terminal here. But
+what you want to do now is type in
+claude which is a command to start cla
+code and it's going to get it running
+here. So here we have it. I know it
+might not look like much but this is
+your gateway to insane levels of
+productivity. Now, the first thing you
+need to set up with Claude Code is
+something that I found to save so much
+time because, as I've said, we always
+want to be spinning up a new version of
+Claude Code so that we're starting with
+the minimal amount of context bloat
+possible. So, as you can see here, I've
+just asked Claude Code to uh look up
+these commands that I already have set
+up. And it's going to write a little
+file for me here because as you see
+here, it's asking me like, hey, do I
+have permission to do all of this stuff?
+Naturally, Claude Code is quite hesitant
+and it's always asking permission to do
+certain things. Now, you can say yes,
+allow all edits during the session, but
+it gets a bit repetitive and honestly
+wastes a ton of time. So, what these two
+commands here are are basically ways of
+starting Claude in what's called
+dangerously skip permissions mode or
+yolo mode or whatever you want to call
+it. Basically, this means that Claude is
+not going to ask permission to do
+things. It may sound scary, but if you
+have it within a a a world context like
+this, it is completely fine to use. I
+mean, I'm not taking any liability for
+that, but I've never had an issue. None
+of my team members have had an issue.
+Just don't put stupid stuff in here.
+Don't hook it up to a live production
+database, which you won't be doing
+anyway. So, you are good to do this. But
+what this gives us is allows us to skip
+over all of these hey yes no yes no uh
+like yes you can do that but because
+we're going to be spinning up claude
+code so often we want to be able to
+start it in that yolo mode every time
+and we also want to automatically run
+our / prime command. So as I explained
+before our prime command is really
+important because we're going to be
+using this at the start of every claude
+session. So this is one of our commands
+over here just a bunch of text and
+Claude is going to read this and do what
+it says. So, it's going to basically
+look at all of the files in this
+project. Get an idea of all the
+different files and where they're
+located. It's going to read our claw.md,
+which is that base level of context.
+It's going to read everything in the
+context folder here. So, dot slash means
+in the root directory. So, dot / context
+means in the root. We're going to go
+slash and go into this context folder
+here. So, if you close them all down,
+we've got slashcontent, we've got slash
+outputs and so on. So, this is just
+saying go into context and read
+everything that's inside it. and then
+after reading come back to us giving a
+brief summary of who I am, what this
+workspace is for and so on. And because
+the prime command is what we want to
+have run every time, we want a way of
+easily starting Claude in YOLO mode and
+also ensuring that it always runs the
+prime command. So if you see here, this
+will be included in
+uh the project file for you. So you guys
+can just copy this and paste it into
+claude code. I've already got it set up,
+but this sets up two aliases, CS and CR.
+CS is for claude safety, which just runs
+the prime command. So, this is if you
+want to run it in that permissions mode
+where it's always asking for yes or no.
+I basically never run it in CS, but it
+is there if you want it. But that's
+going to prime it and you're ready to go
+in safe mode. And then I have CR, which
+is clawed risky. And that's running
+Claude uh skip permissions or YOLO mode
+and then gets it to automatically run
+the prime command. So, what you guys
+want to do is to copy this and head to
+your power cord code down here and say,
+"Hey, can you set up this please?" Paste
+it in. It may ask for permission a
+couple of times, but trust me, you can
+just say yes. And then you'll have the
+ability to do this. So if I kill this
+terminal, open up a new one, and I go
+CR. Hell, I might even do two side by
+side. So you can see I can go CR and CR
+and spin up two of them side by side.
+You can see bypass permissions is on.
+That means yolo mode is on and it's
+automatically running a / prime. So you
+can see it's going to read the workspace
+context. It's going through this prompt
+here. You can see that it's reading all
+of those context files and then we get a
+summary back. So, it's really important
+to get Claude to send that information
+back to us and give us that summary.
+It's like, hey, this is a fresh clawed
+workspace. It has all of the
+placeholders. My role is to serve you as
+an agent assistant. Here's the workspace
+structure. Here's what is yet to be
+defined and I'm ready to assist and so
+on. So, that is just it repeating back
+to you, confirming that it understands
+the environment it's working in. That's
+so important to make sure that we're
+standing on that on that base that
+allows us to have an intelligent
+conversation. And so, here we have two
+instances of Claude code side by side,
+primed and ready to go. And if you want
+to be able to create more, like when I'm
+doing development, I'll have even more
+of these ops. This is just me pressing
+command and then the button below
+delete, command backslash, and that
+allows you to very quickly open up a new
+terminal. So, command backslash and go
+CR. So, that's the workflow you're going
+to be using a lot because sometimes you
+want to kick off a create plan,
+sometimes you want going to want to kick
+off an implement. But that is the basics
+of how to use this workspace. Now, let
+me walk you through a little bit more on
+each of these documents and why they've
+been set up in this template this way.
+So, we'll start with the context
+building from the base up. We have the
+claw.mmd file here. This is a template
+that's going to be changed around by you
+as you go. So, when you are making
+changes using the create plan command,
+it is instructed in here very clearly
+that uh the claude.md should always be
+kept up to date with what is in the in
+the project. So, that is already baked
+in. You don't need to worry about that.
+But, this gives Claude every time it
+spins up, Claude is going to read this
+and also the context file. This is
+basically the overview of the whole
+workspace and what it's supposed to do.
+Then we have the scripts which you're
+aware of. Reference is a folder that you
+can kind of figure out what you want to
+put in it. It might be a outreach
+template that you wanted to have access
+to. It might be a list of your
+competitors, but reference is just for
+any docs that don't fit into the other
+ones. Plans are for using the plan
+command. It will automatically put the
+completed plan into the plan folder,
+which you'll see in a second. We have
+the outputs. So, in this case, you're
+going to see me creating like competitor
+analysis reports, and they're going to
+be put into the outputs there. Then we
+have the context. And each of these four
+documents have a purpose. So the
+business context is kind of layer one.
+Uh I've got a bit of a kind of primer in
+here for you guys to fill out because
+you do need to get this information
+really dialed in. So you can fill these
+templates out yourself or with Claude's
+help. We've got the personal info, which
+is who you are and how you relate to the
+business. You've got the strategy
+document on like what sort of quarterly
+or yearly or project based strategies
+are in play right now. And then you've
+got the current data. And for current
+data, you can either copy information
+off of your analytics or wherever it is,
+or you can connect it up using a script,
+do in a more automated way, pull your
+latest data, and update this document,
+but I'm not going to touch on that
+within this tutorial. And the last
+things we need to look at are these two
+commands here of create plan, which
+we're about to use in a second. This is
+your kind of workhorse uh command or
+prompt that allows you to do stuff
+within this workspace in a very very
+efficient way. It basically says create
+a detailed implementation plan for
+changes to this workspace. And then when
+you run this command, as we will in a
+second, it takes the input that you put
+in and goes, okay, now I'm going to
+flesh this out into a big plan. It's
+going to read the whole workspace,
+understand what files are where. It's
+going to again refresh itself on the
+workspace. It's going to write a full
+plan breaking down why it matters, the
+specific files that need to be changed.
+So you can, it really can
+comprehensively change the workspace
+without you having to chat back and
+forth and do all of this messing around.
+And once it's created that plan, we then
+pass it into this implement command
+where it's going to take that plan file
+and then ask Claude code to fully
+implement it and give us an update at
+the end of it when it's done. So that
+might not seem super clear, but let's
+just jump into having a play around with
+it. And I think things will start to
+make a lot more sense. So here we have
+Claude Code and we're ready to start
+giving it some input. So to use any of
+our commands, you just go slash and then
+type in the command. So create plan. I'm
+going to press tab to fill that out and
+then I can type into it what I want it
+to create a plan for. So in my case, I'm
+going to talk into it. I highly
+recommend if you guys aren't already
+using something like Whisper Flow here.
+Uh Whisper Flow is something that allows
+you to very quickly uh talk into your
+computer. It's going to transcribe your
+voice and immediately dump stuff in. And
+when you're working in this kind of AI
+workflow workspace uh environment, being
+able to talk into it and dump a lot of
+information onto Claude Code um or any
+of your AI tools and let it kind of
+figure it out from there is a very it's
+not super precise workflow, but it's
+definitely a lot faster than typing. So,
+here we go. So in this case for me I
+want to turn this workspace into one
+that I can use to manage my podcast. I
+have podcast where we have guests on
+talking about their success with AR
+business, what's working, what's not,
+new tools that came out and so on. And
+part of running that podcast is doing
+computer analysis. So I'm actually going
+to swap out a few of these files here
+and just delete these because uh you
+need to go and change those and update
+them to be uh related to you. In this
+case, I can pretend like I've already
+done it because I have.
+And I'm going to put these in as
+context. Then actually because I've
+added that context and things have
+changed around, I'm going to kill these
+terminals because they've been primed
+with the wrong information. I'm going to
+start up a new terminal.
+Going to go CR. And so while that's
+priming, I have two documents in here.
+One is the about Liam and about me and
+my businesses. And then I have our
+podcast strategy and a bit of context on
+that. So what I actually want to do as
+the first step to set this up is to
+write a plan that's going to analyze
+your two documents and then update the
+claude.md and anything else that it
+thinks is relevant to be aligned with
+this purpose of the workspace. So this
+is the first step that you guys are
+going to have to do. So I can go /create
+plan. Okay, I want to set up this
+workspace as a podcasting workspace to
+help do things for my podcast. I have
+provided context files about me and
+about my podcast. And what I want you to
+do is put together a plan to update the
+claude.mmd and any other parts of this
+workspace to properly reflect the
+purpose of this as being a hub where
+claude is going to assist me in doing
+all the key functions of writing my
+podcast. Things like competitor analysis
+and market scans. All of these are
+things that I'm going to build in
+future. Um so probably don't include
+those just yet because I'll get you to
+plan those later. But can you please
+make a plan to figure out how how we can
+update this workspace to be fully
+aligned with this podcasting purpose?
+It's probably just going to start with
+the claw.md file. So basically, I'm just
+saying this needs to be fully aligned
+around this new function and we're going
+to see what it says. And if you want to
+get the cool icons like I have here on
+my folders, you can come in and find
+different themes. I think uh material
+theme is what I have or icons. I don't
+know if it's VS Code icons or material
+theme icons, but it makes them look a
+little bit cooler. It's kind of nice.
+Okay, so here you can see it has created
+the plan for us. If you press command
+and click, it's going to open it up. And
+here it has written a plan. This was
+definitely overkill for just changing
+the MD file here if I'm honest, but it
+shows you the workflow that we're going
+to go through for these changes. So, as
+you can see here, the planning is
+extremely thorough and absolutely
+overkill for what we're trying to do
+here. But it shows you just how detailed
+it is. It's about these are the new
+files to create, these are the files to
+modify, the the key decisions made,
+gives all the context needed, and then
+what we're able to do is we're able to
+then use the /implement command and then
+actually implement this plan. So, copy
+this, paste it in here, and then if you
+run this, it's going to make all of
+those changes for you all in one go. Or
+it's going to make a big list for Claude
+to do and it's going to tick tick tick
+tick tick until it's all fully reshaped.
+But in this case, I'm just going to say
+that was overkill. Can you please just
+update the claw MD file? But you get the
+idea. If you're making major changes,
+you're always going to want to use a
+plan step. take that plan, pass it into
+the implement command, and then it's
+going to fully implement it throughout
+the workspace, making sure everything is
+fully aligned and change it at the same
+time. Now, if we go to the clawd file
+here,
+we can see that it's changed. This is
+the command center for running AI for
+the rest of us, Liam's interview
+podcast, focus on AI from Bootstrap
+Business Perspective, and it's given
+context around what this workspace is
+and the commands that are in it as it
+currently stands. All right, so now that
+our claw.md and everything about this
+workspace is fully aligned around what
+we're trying to do here, I'm going to
+command S to save that.
+And you can see the plans end up in the
+plans folder here. If you ever need to
+go back to them, I'm going to save that,
+too. And now we get into the fun bit of
+actually taking a workflow and sort of
+putting the cherry on top out of all of
+the stuff that we've done. We fully
+contextualize the workspace. We've added
+in our context documents. Now, we get to
+go to the fun part of actually creating
+our custom commands to do things for us.
+So the example I'm going to use here is
+an analyze competitor command which is
+going to take in a podcast name or any
+other information about a podcast might
+be a person's name and then I'm going to
+get Claude code to research the person,
+use an external API like ampify to pull
+more information in about real time uh
+data on the channel's videos and then
+use a PowerPoint skill to be able to
+turn that into a PowerPoint presentation
+for me. So we're going to do a lot in
+this all in one go. You could and
+probably should as a beginner chop this
+into baby steps and say, "Hey, I just
+want to start off with just searching
+the web. And then I'm going to add in
+the external data. And then I'm going to
+add in the PowerPoint, but we're going
+to just yolo it and try to get all four
+done at once." So, what I'm going to do
+is spin up a new claw code. Command
+backslash there. CR. Get a fresh one
+going. Then I'm going to start writing
+this up actually. So, create plan. I
+want to All right. So, here's the plan.
+I've already done a bit of thinking on
+this, but if you're a bit more of a
+beginner and you don't really know that
+these things exist as I'm going to go
+through and point some of them out, you
+can kind of just say, "Hey, I want to do
+this. Can you figure out how like in it
+say search the web to figure out the
+best way to do XYZ or I want to connect
+to this and pull the data in. Can you
+figure out the best ways or the best
+options? In this case, I'm saying I want
+to create a new command called /analyze
+competitor which will do the following.
+It will take in the name of a person or
+a podcast. It will use one claude code
+deep research agent which is a thing
+where it can prompt it to say go into
+background research mode. That's much
+more powerful way of searching. It's
+kind of like deep research but for
+claude code. Um so I want to trigger one
+of these background research agents
+which will go on the web to find all the
+links of the podcast background
+information positioning of the pod
+information on the host etc. Then I want
+to use the MTP integration skill up
+here. So this basically is a skill that
+shows our claude code when it needs to
+how to use MTPs. MTPs in this case is
+just allowing us to easily connect to
+Apify which is a a platform which we'll
+go into in a second that has tons and
+tons of you of of scrapers. So I can
+connect to Ampify. I can use one of
+these scrapers to pull in this case
+YouTube data. So it's going to take the
+URL that it found in that first step of
+research. It's going to go onto a
+YouTube scraper and it's going to allow
+me to pull the real-time data from that
+channel on the on the YouTube views of
+the 20 most recent videos. And then I
+want it to take all this information,
+write me a research report and markdown
+or MD that provides a full competitor
+analysis breakdown. And then finally, I
+want to install the PowerPoint or PPTX
+claude skill and use that as the final
+step to turn that research report into a
+presentation for me to skim visually. So
+doing tons and tons of work here. That's
+the point of creating a plan is that we
+can get Claude code to go and do all
+this thinking and come back to us with a
+plan on how to implement it. So as you
+can see, Claude Code is going away and
+doing all the research for me on how to
+create this or how to automate this part
+of my workflow. Now here it is
+downloading the clawed PowerPoint skill
+and also the MCP required for the
+YouTube scraping. And here we go. It is
+created our plan here. So we can skim
+through it. It wants to do this. It's
+got a good summary. So it's made all the
+key decisions about the background
+agent, the MCP integration, claude
+skills for PPTX, and then it's got
+step-by-step tasks for it to take action
+to actually do this. So we're all good
+to take this now and go.
+There we go. If we just press tab, it
+already had it filled in for us. and we
+can send that off to do the work for us.
+So, we just kick back and we wait. So,
+here it's asking us a few questions for
+the Appify API token. I'm going to head
+to Appify and grab an API key for this.
+So, Appify is a great one for you guys
+to have a play around with. Very easy to
+sign up, very low cost as well, but it
+gives you access to tons and tons of
+scraping abilities. Very easy to
+integrate through MCP, which is what
+we're using for this. So, create an
+account on Ampify if you want to. While
+we're waiting for that, I'm going to go
+to the Claude Skills Marketplace. Uh,
+this one here, skillsmpp.com, I think.
+So, this is like a marketplace for
+Claude Skills if you want to pull some
+functionality in. In this case, I want
+to find a PowerPoint one. It doesn't
+look like Claude Cob was able to find
+the one that I like to use. So, I can
+come onto this marketplace here. Great
+thing for you guys to do is just come
+and have a have a look around on this.
+I'm going to go back to home. Then, I'm
+going to go PPTX. And here, this is the
+one from Anthropic. I'm going to
+download this as a zip. While that's
+doing its thing, we can come back to
+Ampify here. You'll need to set up your
+billing. In my case, I'm just going to
+go to settings. Going to go API and
+integrations.
+And our skill has successfully
+downloaded. I'm going to create a new
+one, set an expiration date so you guys
+don't steal it. And then I'm going to
+copy this, head back over here, and say
+here is my API key for Apify.
+And then I'm going to
+unzip this agent skill and I'm going to
+move it into my skills folder. And I say
+also I just added this. So read that,
+understand it, and get it integrated
+into this build. To pause it, as you saw
+me pause it there, it's just pressing
+escape and it will stop code. You can
+give it some more information. Then it
+will continue on. So it's going to
+continue with this implement command
+here. Just now that the bit more
+information that I've given it, right?
+So here we can see it is going through
+and doing all the steps as laid out in
+the plan. So it has created the MCP
+configuration to connect us into
+amplify. It has created the output
+directory. So, if we go into outputs
+here, there we have competitor analysis.
+It's made a new folder inside of our
+outputs, which has made sense because
+that's where we want them put. And now
+up here, we should see any second the uh
+command that it's writing is going to
+pop up here. We'll be able to skim over
+that before we actually put it into into
+action. So, we go analyze competitor.
+It's written the whole command for us to
+use form a deep competitive analysis.
+It's going to take in some information
+that we provided about who we want it to
+research, prerequisites around setting
+up the appy correctly, and then it
+breaks down the workflow. First step is
+deep research. Second is amplify scrape.
+Then report generation and then
+PowerPoint presentation. Then it walks
+it through exactly what it should be
+doing at each of these steps, which is
+great. So this is really comprehensive
+prompt breaking out everything it needs
+to do. And as you can see, it's also
+updating our claw. MD. And here I'm a
+bit confused as to why it's made a
+script. So we can say, why did you make
+a script? So this is when we do actually
+use it as kind of a chatbot if we want
+for some more information. But in the
+meantime, I'm going to spin up another
+CR here so that I'm ready to run the
+actual command for doing a computer
+analysis. And we can let that do it. And
+that'll be kind of the pulling
+everything together that we've talked
+about here and seeing this in action.
+Oh, and look, it's even gone and updated
+the plan with an breakdown of the
+implementation that it's done. So, it's
+very nice and keeping everything uh in
+shape here. So, why did you make a
+script? Can you just do it for me? So
+you need to get used to just chucking
+everything back at claude code and it
+will basic because it can run these
+commands for you. It doesn't need me to
+go in and do it myself. Boom. There you
+go. And so we have new one primed and
+ready to go here. It should have full
+understanding of I'm primed and ready to
+go. Let's go /analyze competitor Lenny's
+podcast. So it says our command here is
+all ready to use. I'm going to
+rightclick and close out of that. And
+now we just sit here and wait as it does
+all of our work for us. So we've just
+automated. Well, we'll see how it goes,
+but I'm pretty confident it's going to
+go and follow all of the steps in this
+analyze competitor file. And we should
+get back in this outputs folder in
+competitor analysis. Probably a folder
+for Lenny's podcast. It's going to do a
+research. Oh, there you can see it
+started a background agent. So, I can go
+O to see that. So, the deep research
+agent is cooking away. All right,
+people. I had internet issues finishing
+that off last night, but we are back and
+I'm here to show you the output that we
+got from this. So, we ran the prime. It
+started the uh deep research agent.
+We're searching the web for any
+information about uh Lenny and his
+podcast. Deep research agent came back.
+Then, it's going to prepare the MCP
+integration. Uh making sure everything's
+all good. The MCP and Appy is ready to
+go. I did have to play around with the
+Ampify API key. So, I highly recommend
+I'll leave it in the template for you
+guys, but here in AENV file is where you
+can put your tokens. And this is going
+to be a sort of persistent place for you
+to store all your API keys so that your
+claude code agent can grab the
+information from there when it needs it.
+So once I've got that working properly,
+then it used the ampify uh MTP to pull a
+whole bunch of information about the
+channel uh using the scraper. We have
+this YouTube scraper that we are using
+that uh Claude code figured out that
+this is the best one for us. It's able
+to do a whole bunch of things, but for
+us it is taking the YouTube URL of
+Lenny's podcast and pulling back all the
+information on those latest 20 videos.
+So then it pulled a whole bunch of
+information back. Got the 20 videos. Let
+me examine the data structure. And then
+it put together the competitive analysis
+markdown report which we can look at
+here. Remember click holding command and
+then clicking is what opens those up.
+And we have our report here. What you
+can do with the markdown file is right
+click up here and go open preview. And
+then you get it nice and pretty in in
+proper markdown formatting. So massive
+reach and product manager space. Silicon
+Valley bubble. Um premium monetization.
+He's got a newsletter. Here's the name,
+his background, his handles,
+positioning, the go-to resource of
+product managers, etc. So, all of this
+is great, bringing me up to speed on
+what this guy's podcast is about and how
+often he posts, episode lengths, 1 to
+two hours, frequency, 1 to two episodes
+per week, high polish, well edited, and
+so on. So, this is great for me to just
+come up to speed very quickly. And then
+we have the final outcome, which is what
+we're really looking for here, which is
+it then taking that markdown report that
+we have here and all the context it has
+and turning it into a presentation. So
+that instead of me having to read that
+big document, I can just pull up the
+presentation and we have that uh here.
+It's created a couple folders on the
+left hand side here in our outputs
+folder. I'm just going to commandclick
+on this. I'm going to drop this down.
+And here we go. Overview. Great. average
+views, posting frequency, engagement
+rate, top performing videos. So, all of
+this is real data that's taken from
+YouTube at the time of running this
+content strategy, competitive analysis,
+doing a SWAT analysis of them, which is
+great. Strategic recommendations,
+positioning moves, and so on. So, this
+is a full breakdown of a competitor
+analysis in a spreadsheet that's been
+able to be done through this analyze
+competitor command. And this is really
+just the start of what I'd do with this
+workspace if I was turning it into a
+podcast hub for me. I can do market
+scans. I can do uh guest research. Hey,
+I want to research guests. Appify even
+has scrapers on here if I try to find
+them. YouTube channel email extractors.
+So, I can integrate this app a through
+MCP. And that's going to then be able to
+take a guest. Say I'd scan Lenny's
+podcast, figure out what guests were
+popping off. Or maybe I do a market scan
+and figure out that, hey, these certain
+guests keep getting high views. Then I
+could say, okay, research this guest.
+And it will kick off a similar research
+process to what we just did here. And
+then I can say great, can you go like
+slreach out to? Then it could look at an
+outreach template that I give it from
+the emails. Then it can use the uh
+YouTube channel email scraper here, pull
+their email from their channel, and then
+send them an email or at least draft it
+for me before I'm able to tell it to
+send it. So I hope you guys can see just
+how crazy this can get, how much you can
+build into this. But these workflows are
+really the key thing that I wanted to
+get like baked into your brain here. The
+importance of the priming, right?
+Remember, we need to be priming our
+session every single time when we spin
+it up. We want to be using new sessions
+of claude code as often as possible
+rather than chatting away non-stop. We
+want to be able to say slash do this.
+It's as fresh as possible, minimal
+context. Remember, we've only got
+200,000 to work with. And then we have
+the tools on top of it. And we're going
+to be using those to fire off the
+actions. And this is our task layer. So,
+I hope that's been eye opening for you
+guys on how I'm using Claude code, how
+I'm teaching my teams to use it. This
+setup has completely transformed
+productivity within our organization.
+So, I highly recommend you guys give it
+a go. The first link in the description
+down there will be a link to get this
+template and just follow the steps that
+I've showed you in this video on how to
+set it up. Remember that we have the
+shells alias here which you need to copy
+and paste the claw code when you're just
+getting things set up. So you'll have
+quick access to the sort of yolo mode
+and priming setup here so you can spin
+this claw code up as quickly as
+possible. So yeah guys, that's about all
+for this video. I think I'm going to
+leave it there. There's a ton more I
+could show you, but this will give you
+the sort of starting skills to and the
+starting template to have a crack at
+this yourself. And yeah, like I said, I
+highly recommend you actually give it a
+go cuz this is one of this is what
+everyone who's being super productive
+using right now. And if you can't figure
+it out now, you're probably going to get
+left behind a little bit this year. So
+guys, thank you so much for watching.
+Leave a like, subscribe if you enjoyed
+it, you want to see more of the stuff,
+and check out up here if you want to
+watch another video from me that's just
+as good, if not better, than this
