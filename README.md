@@ -71,16 +71,6 @@ Compatible with:
 - **Python / Node.js** — Standard HTTP requests
 - **Any language** — Just POST JSON with your webhook secret
 
-## Masterclass
-
-The `masterclass/` directory contains the complete planning docs for a Claude Code video course built around this system:
-
-- `MASTERCLASS_BLUEPRINT.md` — 18-module course plan with savings counter
-- `HANDOVER.md` — Context handover for continuation sessions
-- `COMPETITIVE_RESEARCH.md` — Analysis of 27+ competitor videos
-- `analysis/` — Deep breakdowns of top creators (Nick Saraev, Nate Herk, etc.)
-- `transcripts/` — 34 cleaned YouTube transcripts
-
 ## Deploy
 
 Deploy the frontend to Netlify, Vercel, or any static host. Backend runs on Supabase (free tier works).
